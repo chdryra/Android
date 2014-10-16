@@ -15,6 +15,8 @@
     }
 //-->
 
+
+
 </script>
 <noscript>
     <div>JavaScript is disabled on your browser.</div>
@@ -63,6 +65,8 @@
   }
   //-->
 
+
+
         </script>
     </div>
     <div>
@@ -90,184 +94,184 @@
     <h2 title="Class FactoryReview" class="title">Class FactoryReview</h2>
 </div>
 <div class="contentContainer">
-    <ul class="inheritance">
-        <li>java.lang.Object</li>
-        <li>
-            <ul class="inheritance">
-                <li>com.chdryra.android.reviewer.FactoryReview</li>
+<ul class="inheritance">
+    <li>java.lang.Object</li>
+    <li>
+        <ul class="inheritance">
+            <li>com.chdryra.android.reviewer.FactoryReview</li>
+        </ul>
+    </li>
+</ul>
+<div class="description">
+    <ul class="blockList">
+        <li class="blockList">
+            <hr>
+            <br>
+<pre> class <span class="strong">FactoryReview</span>
+extends java.lang.Object</pre>
+            <div class="block">Factory for creating Reviews and ReviewNodes.
+                <p/>
+
+                <p>
+                    Not a "classic" factory that returns top level interfaces/classes, but a
+                    convenient place to
+                    put constructors so as to minimise the use of constructors in multiple
+                    places. Plus the range
+                    of return types is relatively small so not too cumbersome.
+                </p></div>
+        </li>
+    </ul>
+</div>
+<div class="summary">
+    <ul class="blockList">
+        <li class="blockList">
+            <!-- ========== METHOD SUMMARY =========== -->
+            <ul class="blockList">
+                <li class="blockList"><a name="method_summary">
+                    <!--   -->
+                </a>
+
+                    <h3>Method Summary</h3>
+                    <table class="overviewSummary" border="0" cellpadding="3" cellspacing="0"
+                           summary="Method Summary table, listing methods, and an explanation">
+                        <caption><span>Methods</span><span class="tabEnd">&nbsp;</span>
+                        </caption>
+                        <tr>
+                            <th class="colFirst" scope="col">Modifier and Type</th>
+                            <th class="colLast" scope="col">Method and Description</th>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colFirst"><code>(package private) static <a
+                                    href="../../../../com/chdryra/android/reviewer/Review.html"
+                                    title="interface in com.chdryra.android.reviewer">Review</a></code>
+                            </td>
+                            <td class="colLast"><code><strong><a
+                                    href="../../../../com/chdryra/android/reviewer/FactoryReview.html#createReview(com.chdryra.android.reviewer.Author, java.util.Date, com.chdryra.android.reviewer.ReviewNode)">createReview</a></strong>(<a
+                                    href="../../../../com/chdryra/android/reviewer/Author.html"
+                                    title="class in com.chdryra.android.reviewer">Author</a>&nbsp;author,
+                                java.util.Date&nbsp;publishDate,
+                                <a href="../../../../com/chdryra/android/reviewer/ReviewNode.html"
+                                   title="interface in com.chdryra.android.reviewer">ReviewNode</a>&nbsp;reviewNode)</code>&nbsp;
+                            </td>
+                        </tr>
+                        <tr class="rowColor">
+                            <td class="colFirst"><code>(package private) static <a
+                                    href="../../../../com/chdryra/android/reviewer/Review.html"
+                                    title="interface in com.chdryra.android.reviewer">Review</a></code>
+                            </td>
+                            <td class="colLast"><code><strong><a
+                                    href="../../../../com/chdryra/android/reviewer/FactoryReview.html#createReview(com.chdryra.android.reviewer.ReviewNode)">createReview</a></strong>(<a
+                                    href="../../../../com/chdryra/android/reviewer/ReviewNode.html"
+                                    title="interface in com.chdryra.android.reviewer">ReviewNode</a>&nbsp;reviewNode)</code>&nbsp;
+                            </td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colFirst"><code>(package private) static <a
+                                    href="../../../../com/chdryra/android/reviewer/ReviewTreeEditable.html"
+                                    title="class in com.chdryra.android.reviewer">ReviewTreeEditable</a></code>
+                            </td>
+                            <td class="colLast"><code><strong><a
+                                    href="../../../../com/chdryra/android/reviewer/FactoryReview.html#createReviewInProgress()">createReviewInProgress</a></strong>()</code>&nbsp;
+                            </td>
+                        </tr>
+                        <tr class="rowColor">
+                            <td class="colFirst"><code>(package private) static <a
+                                    href="../../../../com/chdryra/android/reviewer/ReviewTreeEditable.html"
+                                    title="class in com.chdryra.android.reviewer">ReviewTreeEditable</a></code>
+                            </td>
+                            <td class="colLast"><code><strong><a
+                                    href="../../../../com/chdryra/android/reviewer/FactoryReview.html#createReviewInProgress(java.lang.String)">createReviewInProgress</a></strong>(java.lang.String&nbsp;subject)</code>&nbsp;
+                            </td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colFirst"><code>(package private) static <a
+                                    href="../../../../com/chdryra/android/reviewer/ReviewNode.html"
+                                    title="interface in com.chdryra.android.reviewer">ReviewNode</a></code>
+                            </td>
+                            <td class="colLast"><code><strong><a
+                                    href="../../../../com/chdryra/android/reviewer/FactoryReview.html#createReviewNodeAlone(com.chdryra.android.reviewer.Review)">createReviewNodeAlone</a></strong>(<a
+                                    href="../../../../com/chdryra/android/reviewer/Review.html"
+                                    title="interface in com.chdryra.android.reviewer">Review</a>&nbsp;review)</code>&nbsp;
+                            </td>
+                        </tr>
+                        <tr class="rowColor">
+                            <td class="colFirst"><code>(package private) static <a
+                                    href="../../../../com/chdryra/android/reviewer/ReviewNodeExpandable.html"
+                                    title="interface in com.chdryra.android.reviewer">ReviewNodeExpandable</a></code>
+                            </td>
+                            <td class="colLast"><code><strong><a
+                                    href="../../../../com/chdryra/android/reviewer/FactoryReview.html#createReviewNodeExpandable(com.chdryra.android.reviewer.Review)">createReviewNodeExpandable</a></strong>(<a
+                                    href="../../../../com/chdryra/android/reviewer/Review.html"
+                                    title="interface in com.chdryra.android.reviewer">Review</a>&nbsp;review)</code>&nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                    <ul class="blockList">
+                        <li class="blockList"><a
+                                name="methods_inherited_from_class_java.lang.Object">
+                            <!--   -->
+                        </a>
+
+                            <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+                            <code>clone, equals, finalize, getClass, hashCode, notify,
+                                notifyAll, toString, wait, wait, wait</code></li>
+                    </ul>
+                </li>
             </ul>
         </li>
     </ul>
-    <div class="description">
-        <ul class="blockList">
-            <li class="blockList">
-                <hr>
-                <br>
-<pre> class <span class="strong">FactoryReview</span>
-extends java.lang.Object</pre>
-                <div class="block">Factory for creating Reviews and ReviewNodes.
-                    <p/>
+</div>
+<div class="details">
+    <ul class="blockList">
+        <li class="blockList">
+            <!-- ============ METHOD DETAIL ========== -->
+            <ul class="blockList">
+                <li class="blockList"><a name="method_detail">
+                    <!--   -->
+                </a>
 
-                    <p>
-                        Not a "classic" factory that returns top level interfaces/classes, but a
-                        convenient place to
-                        put constructors so as to minimise the use of constructors in multiple
-                        places. Plus the range
-                        of return types is relatively small so not too cumbersome.
-                    </p></div>
-            </li>
-        </ul>
-    </div>
-    <div class="summary">
-        <ul class="blockList">
-            <li class="blockList">
-                <!-- ========== METHOD SUMMARY =========== -->
-                <ul class="blockList">
-                    <li class="blockList"><a name="method_summary">
+                    <h3>Method Detail</h3>
+                    <a name="createReviewInProgress()">
                         <!--   -->
                     </a>
-
-                        <h3>Method Summary</h3>
-                        <table class="overviewSummary" border="0" cellpadding="3" cellspacing="0"
-                               summary="Method Summary table, listing methods, and an explanation">
-                            <caption><span>Methods</span><span class="tabEnd">&nbsp;</span>
-                            </caption>
-                            <tr>
-                                <th class="colFirst" scope="col">Modifier and Type</th>
-                                <th class="colLast" scope="col">Method and Description</th>
-                            </tr>
-                            <tr class="altColor">
-                                <td class="colFirst"><code>(package private) static <a
-                                        href="../../../../com/chdryra/android/reviewer/Review.html"
-                                        title="interface in com.chdryra.android.reviewer">Review</a></code>
-                                </td>
-                                <td class="colLast"><code><strong><a
-                                        href="../../../../com/chdryra/android/reviewer/FactoryReview.html#createReview(com.chdryra.android.reviewer.Author, java.util.Date, com.chdryra.android.reviewer.ReviewNode)">createReview</a></strong>(<a
-                                        href="../../../../com/chdryra/android/reviewer/Author.html"
-                                        title="class in com.chdryra.android.reviewer">Author</a>&nbsp;author,
-                                    java.util.Date&nbsp;publishDate,
-                                    <a href="../../../../com/chdryra/android/reviewer/ReviewNode.html"
-                                       title="interface in com.chdryra.android.reviewer">ReviewNode</a>&nbsp;reviewNode)</code>&nbsp;
-                                </td>
-                            </tr>
-                            <tr class="rowColor">
-                                <td class="colFirst"><code>(package private) static <a
-                                        href="../../../../com/chdryra/android/reviewer/Review.html"
-                                        title="interface in com.chdryra.android.reviewer">Review</a></code>
-                                </td>
-                                <td class="colLast"><code><strong><a
-                                        href="../../../../com/chdryra/android/reviewer/FactoryReview.html#createReview(com.chdryra.android.reviewer.ReviewNode)">createReview</a></strong>(<a
-                                        href="../../../../com/chdryra/android/reviewer/ReviewNode.html"
-                                        title="interface in com.chdryra.android.reviewer">ReviewNode</a>&nbsp;reviewNode)</code>&nbsp;
-                                </td>
-                            </tr>
-                            <tr class="altColor">
-                                <td class="colFirst"><code>(package private) static <a
-                                        href="../../../../com/chdryra/android/reviewer/ReviewTreeEditable.html"
-                                        title="class in com.chdryra.android.reviewer">ReviewTreeEditable</a></code>
-                                </td>
-                                <td class="colLast"><code><strong><a
-                                        href="../../../../com/chdryra/android/reviewer/FactoryReview.html#createReviewInProgress()">createReviewInProgress</a></strong>()</code>&nbsp;
-                                </td>
-                            </tr>
-                            <tr class="rowColor">
-                                <td class="colFirst"><code>(package private) static <a
-                                        href="../../../../com/chdryra/android/reviewer/ReviewTreeEditable.html"
-                                        title="class in com.chdryra.android.reviewer">ReviewTreeEditable</a></code>
-                                </td>
-                                <td class="colLast"><code><strong><a
-                                        href="../../../../com/chdryra/android/reviewer/FactoryReview.html#createReviewInProgress(java.lang.String)">createReviewInProgress</a></strong>(java.lang.String&nbsp;subject)</code>&nbsp;
-                                </td>
-                            </tr>
-                            <tr class="altColor">
-                                <td class="colFirst"><code>(package private) static <a
-                                        href="../../../../com/chdryra/android/reviewer/ReviewNode.html"
-                                        title="interface in com.chdryra.android.reviewer">ReviewNode</a></code>
-                                </td>
-                                <td class="colLast"><code><strong><a
-                                        href="../../../../com/chdryra/android/reviewer/FactoryReview.html#createReviewNodeAlone(com.chdryra.android.reviewer.Review)">createReviewNodeAlone</a></strong>(<a
-                                        href="../../../../com/chdryra/android/reviewer/Review.html"
-                                        title="interface in com.chdryra.android.reviewer">Review</a>&nbsp;review)</code>&nbsp;
-                                </td>
-                            </tr>
-                            <tr class="rowColor">
-                                <td class="colFirst"><code>(package private) static <a
-                                        href="../../../../com/chdryra/android/reviewer/ReviewNodeExpandable.html"
-                                        title="interface in com.chdryra.android.reviewer">ReviewNodeExpandable</a></code>
-                                </td>
-                                <td class="colLast"><code><strong><a
-                                        href="../../../../com/chdryra/android/reviewer/FactoryReview.html#createReviewNodeExpandable(com.chdryra.android.reviewer.Review)">createReviewNodeExpandable</a></strong>(<a
-                                        href="../../../../com/chdryra/android/reviewer/Review.html"
-                                        title="interface in com.chdryra.android.reviewer">Review</a>&nbsp;review)</code>&nbsp;
-                                </td>
-                            </tr>
-                        </table>
-                        <ul class="blockList">
-                            <li class="blockList"><a
-                                    name="methods_inherited_from_class_java.lang.Object">
-                                <!--   -->
-                            </a>
-
-                                <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
-                                <code>clone, equals, finalize, getClass, hashCode, notify,
-                                    notifyAll, toString, wait, wait, wait</code></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-    <div class="details">
-        <ul class="blockList">
-            <li class="blockList">
-                <!-- ============ METHOD DETAIL ========== -->
-                <ul class="blockList">
-                    <li class="blockList"><a name="method_detail">
-                        <!--   -->
-                    </a>
-
-                        <h3>Method Detail</h3>
-                        <a name="createReviewInProgress()">
-                            <!--   -->
-                        </a>
-                        <ul class="blockList">
-                            <li class="blockList">
-                                <h4>createReviewInProgress</h4>
+                    <ul class="blockList">
+                        <li class="blockList">
+                            <h4>createReviewInProgress</h4>
                                 <pre>static&nbsp;<a
                                         href="../../../../com/chdryra/android/reviewer/ReviewTreeEditable.html"
                                         title="class in com.chdryra.android.reviewer">ReviewTreeEditable</a>&nbsp;createReviewInProgress()</pre>
-                            </li>
-                        </ul>
-                        <a name="createReviewInProgress(java.lang.String)">
-                            <!--   -->
-                        </a>
-                        <ul class="blockList">
-                            <li class="blockList">
-                                <h4>createReviewInProgress</h4>
+                        </li>
+                    </ul>
+                    <a name="createReviewInProgress(java.lang.String)">
+                        <!--   -->
+                    </a>
+                    <ul class="blockList">
+                        <li class="blockList">
+                            <h4>createReviewInProgress</h4>
                                 <pre>static&nbsp;<a
                                         href="../../../../com/chdryra/android/reviewer/ReviewTreeEditable.html"
                                         title="class in com.chdryra.android.reviewer">ReviewTreeEditable</a>&nbsp;createReviewInProgress(java.lang.String&nbsp;subject)</pre>
-                            </li>
-                        </ul>
-                        <a name="createReview(com.chdryra.android.reviewer.ReviewNode)">
-                            <!--   -->
-                        </a>
-                        <ul class="blockList">
-                            <li class="blockList">
-                                <h4>createReview</h4>
+                        </li>
+                    </ul>
+                    <a name="createReview(com.chdryra.android.reviewer.ReviewNode)">
+                        <!--   -->
+                    </a>
+                    <ul class="blockList">
+                        <li class="blockList">
+                            <h4>createReview</h4>
                                 <pre>static&nbsp;<a
                                         href="../../../../com/chdryra/android/reviewer/Review.html"
                                         title="interface in com.chdryra.android.reviewer">Review</a>&nbsp;createReview(<a
                                         href="../../../../com/chdryra/android/reviewer/ReviewNode.html"
                                         title="interface in com.chdryra.android.reviewer">ReviewNode</a>&nbsp;reviewNode)</pre>
-                            </li>
-                        </ul>
-                        <a name="createReview(com.chdryra.android.reviewer.Author, java.util.Date, com.chdryra.android.reviewer.ReviewNode)">
-                            <!--   -->
-                        </a>
-                        <ul class="blockList">
-                            <li class="blockList">
-                                <h4>createReview</h4>
+                        </li>
+                    </ul>
+                    <a name="createReview(com.chdryra.android.reviewer.Author, java.util.Date, com.chdryra.android.reviewer.ReviewNode)">
+                        <!--   -->
+                    </a>
+                    <ul class="blockList">
+                        <li class="blockList">
+                            <h4>createReview</h4>
 <pre>static&nbsp;<a href="../../../../com/chdryra/android/reviewer/Review.html"
                     title="interface in com.chdryra.android.reviewer">Review</a>&nbsp;createReview(<a
         href="../../../../com/chdryra/android/reviewer/Author.html"
@@ -275,39 +279,39 @@ extends java.lang.Object</pre>
                   java.util.Date&nbsp;publishDate,
                   <a href="../../../../com/chdryra/android/reviewer/ReviewNode.html"
                      title="interface in com.chdryra.android.reviewer">ReviewNode</a>&nbsp;reviewNode)</pre>
-                            </li>
-                        </ul>
-                        <a name="createReviewNodeAlone(com.chdryra.android.reviewer.Review)">
-                            <!--   -->
-                        </a>
-                        <ul class="blockList">
-                            <li class="blockList">
-                                <h4>createReviewNodeAlone</h4>
+                        </li>
+                    </ul>
+                    <a name="createReviewNodeAlone(com.chdryra.android.reviewer.Review)">
+                        <!--   -->
+                    </a>
+                    <ul class="blockList">
+                        <li class="blockList">
+                            <h4>createReviewNodeAlone</h4>
                                 <pre>static&nbsp;<a
                                         href="../../../../com/chdryra/android/reviewer/ReviewNode.html"
                                         title="interface in com.chdryra.android.reviewer">ReviewNode</a>&nbsp;createReviewNodeAlone(<a
                                         href="../../../../com/chdryra/android/reviewer/Review.html"
                                         title="interface in com.chdryra.android.reviewer">Review</a>&nbsp;review)</pre>
-                            </li>
-                        </ul>
-                        <a name="createReviewNodeExpandable(com.chdryra.android.reviewer.Review)">
-                            <!--   -->
-                        </a>
-                        <ul class="blockListLast">
-                            <li class="blockList">
-                                <h4>createReviewNodeExpandable</h4>
+                        </li>
+                    </ul>
+                    <a name="createReviewNodeExpandable(com.chdryra.android.reviewer.Review)">
+                        <!--   -->
+                    </a>
+                    <ul class="blockListLast">
+                        <li class="blockList">
+                            <h4>createReviewNodeExpandable</h4>
                                 <pre>static&nbsp;<a
                                         href="../../../../com/chdryra/android/reviewer/ReviewNodeExpandable.html"
                                         title="interface in com.chdryra.android.reviewer">ReviewNodeExpandable</a>&nbsp;createReviewNodeExpandable(<a
                                         href="../../../../com/chdryra/android/reviewer/Review.html"
                                         title="interface in com.chdryra.android.reviewer">Review</a>&nbsp;review)</pre>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
 </div>
 <!-- ========= END OF CLASS DATA ========= -->
 <!-- ======= START OF BOTTOM NAVBAR ====== -->
@@ -354,6 +358,8 @@ extends java.lang.Object</pre>
     allClassesLink.style.display = "none";
   }
   //-->
+
+
 
         </script>
     </div>

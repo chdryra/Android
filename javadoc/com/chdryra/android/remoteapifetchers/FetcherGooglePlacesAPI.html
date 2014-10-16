@@ -15,6 +15,8 @@
     }
 //-->
 
+
+
 </script>
 <noscript>
     <div>JavaScript is disabled on your browser.</div>
@@ -64,6 +66,8 @@
   }
   //-->
 
+
+
         </script>
     </div>
     <div>
@@ -91,250 +95,250 @@
     <h2 title="Class FetcherGooglePlacesAPI" class="title">Class FetcherGooglePlacesAPI</h2>
 </div>
 <div class="contentContainer">
-    <ul class="inheritance">
-        <li>java.lang.Object</li>
-        <li>
-            <ul class="inheritance">
-                <li>com.chdryra.android.remoteapifetchers.FetcherGooglePlacesAPI</li>
+<ul class="inheritance">
+    <li>java.lang.Object</li>
+    <li>
+        <ul class="inheritance">
+            <li>com.chdryra.android.remoteapifetchers.FetcherGooglePlacesAPI</li>
+        </ul>
+    </li>
+</ul>
+<div class="description">
+    <ul class="blockList">
+        <li class="blockList">
+            <dl>
+                <dt>Direct Known Subclasses:</dt>
+                <dd>
+                    <a href="../../../../com/chdryra/android/remoteapifetchers/FetcherAutoComplete.html"
+                       title="class in com.chdryra.android.remoteapifetchers">FetcherAutoComplete</a>,
+                    <a href="../../../../com/chdryra/android/remoteapifetchers/FetcherNearbySearch.html"
+                       title="class in com.chdryra.android.remoteapifetchers">FetcherNearbySearch</a>,
+                    <a href="../../../../com/chdryra/android/remoteapifetchers/FetcherTextSearch.html"
+                       title="class in com.chdryra.android.remoteapifetchers">FetcherTextSearch</a>
+                </dd>
+            </dl>
+            <hr>
+            <br>
+<pre>abstract class <span class="strong">FetcherGooglePlacesAPI</span>
+extends java.lang.Object</pre>
+            <div class="block">Fetches results for queries on Google Places API. Exactly which
+                type of query is carried out
+                depends on the implementation of <code>getUrlString()</code> by a subclass.
+                <p/>
+
+                <p>
+                    Access this API through FetcherPlacesAPI static methods.
+                </p></div>
+            <dl>
+                <dt><span class="strong">See Also:</span></dt>
+                <dd>
+                    <a href="../../../../com/chdryra/android/remoteapifetchers/FetcherPlacesAPI.html"
+                       title="class in com.chdryra.android.remoteapifetchers"><code>FetcherPlacesAPI</code></a>,
+                    <a href="https://developers.google.com/places/">Google Places API</a></dd>
+            </dl>
+        </li>
+    </ul>
+</div>
+<div class="summary">
+    <ul class="blockList">
+        <li class="blockList">
+            <!-- =========== FIELD SUMMARY =========== -->
+            <ul class="blockList">
+                <li class="blockList"><a name="field_summary">
+                    <!--   -->
+                </a>
+
+                    <h3>Field Summary</h3>
+                    <table class="overviewSummary" border="0" cellpadding="3" cellspacing="0"
+                           summary="Field Summary table, listing fields, and an explanation">
+                        <caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+                        <tr>
+                            <th class="colFirst" scope="col">Modifier and Type</th>
+                            <th class="colLast" scope="col">Field and Description</th>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colFirst"><code>(package private) static
+                                java.lang.String</code></td>
+                            <td class="colLast"><code><strong><a
+                                    href="../../../../com/chdryra/android/remoteapifetchers/FetcherGooglePlacesAPI.html#ALL_TYPES">ALL_TYPES</a></strong></code>&nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </li>
+            </ul>
+            <!-- ======== CONSTRUCTOR SUMMARY ======== -->
+            <ul class="blockList">
+                <li class="blockList"><a name="constructor_summary">
+                    <!--   -->
+                </a>
+
+                    <h3>Constructor Summary</h3>
+                    <table class="overviewSummary" border="0" cellpadding="3" cellspacing="0"
+                           summary="Constructor Summary table, listing constructors, and an explanation">
+                        <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span>
+                        </caption>
+                        <tr>
+                            <th class="colOne" scope="col">Constructor and Description</th>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colOne"><code><strong><a
+                                    href="../../../../com/chdryra/android/remoteapifetchers/FetcherGooglePlacesAPI.html#FetcherGooglePlacesAPI(java.lang.String, java.lang.String)">FetcherGooglePlacesAPI</a></strong>(java.lang.String&nbsp;searchPath,
+                                java.lang.String&nbsp;resultsTag)</code>&nbsp;</td>
+                        </tr>
+                    </table>
+                </li>
+            </ul>
+            <!-- ========== METHOD SUMMARY =========== -->
+            <ul class="blockList">
+                <li class="blockList"><a name="method_summary">
+                    <!--   -->
+                </a>
+
+                    <h3>Method Summary</h3>
+                    <table class="overviewSummary" border="0" cellpadding="3" cellspacing="0"
+                           summary="Method Summary table, listing methods, and an explanation">
+                        <caption><span>Methods</span><span class="tabEnd">&nbsp;</span>
+                        </caption>
+                        <tr>
+                            <th class="colFirst" scope="col">Modifier and Type</th>
+                            <th class="colLast" scope="col">Method and Description</th>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colFirst"><code>JSONArray</code></td>
+                            <td class="colLast"><code><strong><a
+                                    href="../../../../com/chdryra/android/remoteapifetchers/FetcherGooglePlacesAPI.html#getResults()">getResults</a></strong>()</code>&nbsp;
+                            </td>
+                        </tr>
+                        <tr class="rowColor">
+                            <td class="colFirst"><code>(package private)
+                                java.lang.StringBuilder</code></td>
+                            <td class="colLast"><code><strong><a
+                                    href="../../../../com/chdryra/android/remoteapifetchers/FetcherGooglePlacesAPI.html#getURLStem()">getURLStem</a></strong>()</code>&nbsp;
+                            </td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colFirst"><code>(package private) abstract
+                                java.lang.String</code></td>
+                            <td class="colLast"><code><strong><a
+                                    href="../../../../com/chdryra/android/remoteapifetchers/FetcherGooglePlacesAPI.html#getURLString()">getURLString</a></strong>()</code>&nbsp;
+                            </td>
+                        </tr>
+                        <tr class="rowColor">
+                            <td class="colFirst"><code>(package private) void</code></td>
+                            <td class="colLast"><code><strong><a
+                                    href="../../../../com/chdryra/android/remoteapifetchers/FetcherGooglePlacesAPI.html#performQuery()">performQuery</a></strong>()</code>&nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                    <ul class="blockList">
+                        <li class="blockList"><a
+                                name="methods_inherited_from_class_java.lang.Object">
+                            <!--   -->
+                        </a>
+
+                            <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+                            <code>clone, equals, finalize, getClass, hashCode, notify,
+                                notifyAll, toString, wait, wait, wait</code></li>
+                    </ul>
+                </li>
             </ul>
         </li>
     </ul>
-    <div class="description">
-        <ul class="blockList">
-            <li class="blockList">
-                <dl>
-                    <dt>Direct Known Subclasses:</dt>
-                    <dd>
-                        <a href="../../../../com/chdryra/android/remoteapifetchers/FetcherAutoComplete.html"
-                           title="class in com.chdryra.android.remoteapifetchers">FetcherAutoComplete</a>,
-                        <a href="../../../../com/chdryra/android/remoteapifetchers/FetcherNearbySearch.html"
-                           title="class in com.chdryra.android.remoteapifetchers">FetcherNearbySearch</a>,
-                        <a href="../../../../com/chdryra/android/remoteapifetchers/FetcherTextSearch.html"
-                           title="class in com.chdryra.android.remoteapifetchers">FetcherTextSearch</a>
-                    </dd>
-                </dl>
-                <hr>
-                <br>
-<pre>abstract class <span class="strong">FetcherGooglePlacesAPI</span>
-extends java.lang.Object</pre>
-                <div class="block">Fetches results for queries on Google Places API. Exactly which
-                    type of query is carried out
-                    depends on the implementation of <code>getUrlString()</code> by a subclass.
-                    <p/>
+</div>
+<div class="details">
+    <ul class="blockList">
+        <li class="blockList">
+            <!-- ============ FIELD DETAIL =========== -->
+            <ul class="blockList">
+                <li class="blockList"><a name="field_detail">
+                    <!--   -->
+                </a>
 
-                    <p>
-                        Access this API through FetcherPlacesAPI static methods.
-                    </p></div>
-                <dl>
-                    <dt><span class="strong">See Also:</span></dt>
-                    <dd>
-                        <a href="../../../../com/chdryra/android/remoteapifetchers/FetcherPlacesAPI.html"
-                           title="class in com.chdryra.android.remoteapifetchers"><code>FetcherPlacesAPI</code></a>,
-                        <a href="https://developers.google.com/places/">Google Places API</a></dd>
-                </dl>
-            </li>
-        </ul>
-    </div>
-    <div class="summary">
-        <ul class="blockList">
-            <li class="blockList">
-                <!-- =========== FIELD SUMMARY =========== -->
-                <ul class="blockList">
-                    <li class="blockList"><a name="field_summary">
+                    <h3>Field Detail</h3>
+                    <a name="ALL_TYPES">
                         <!--   -->
                     </a>
+                    <ul class="blockListLast">
+                        <li class="blockList">
+                            <h4>ALL_TYPES</h4>
+                            <pre>static final&nbsp;java.lang.String ALL_TYPES</pre>
+                            <dl>
+                                <dt><span class="strong">See Also:</span></dt>
+                                <dd>
+                                    <a href="../../../../constant-values.html#com.chdryra.android.remoteapifetchers.FetcherGooglePlacesAPI.ALL_TYPES">Constant
+                                        Field Values</a></dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- ========= CONSTRUCTOR DETAIL ======== -->
+            <ul class="blockList">
+                <li class="blockList"><a name="constructor_detail">
+                    <!--   -->
+                </a>
 
-                        <h3>Field Summary</h3>
-                        <table class="overviewSummary" border="0" cellpadding="3" cellspacing="0"
-                               summary="Field Summary table, listing fields, and an explanation">
-                            <caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
-                            <tr>
-                                <th class="colFirst" scope="col">Modifier and Type</th>
-                                <th class="colLast" scope="col">Field and Description</th>
-                            </tr>
-                            <tr class="altColor">
-                                <td class="colFirst"><code>(package private) static
-                                    java.lang.String</code></td>
-                                <td class="colLast"><code><strong><a
-                                        href="../../../../com/chdryra/android/remoteapifetchers/FetcherGooglePlacesAPI.html#ALL_TYPES">ALL_TYPES</a></strong></code>&nbsp;
-                                </td>
-                            </tr>
-                        </table>
-                    </li>
-                </ul>
-                <!-- ======== CONSTRUCTOR SUMMARY ======== -->
-                <ul class="blockList">
-                    <li class="blockList"><a name="constructor_summary">
+                    <h3>Constructor Detail</h3>
+                    <a name="FetcherGooglePlacesAPI(java.lang.String, java.lang.String)">
                         <!--   -->
                     </a>
-
-                        <h3>Constructor Summary</h3>
-                        <table class="overviewSummary" border="0" cellpadding="3" cellspacing="0"
-                               summary="Constructor Summary table, listing constructors, and an explanation">
-                            <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span>
-                            </caption>
-                            <tr>
-                                <th class="colOne" scope="col">Constructor and Description</th>
-                            </tr>
-                            <tr class="altColor">
-                                <td class="colOne"><code><strong><a
-                                        href="../../../../com/chdryra/android/remoteapifetchers/FetcherGooglePlacesAPI.html#FetcherGooglePlacesAPI(java.lang.String, java.lang.String)">FetcherGooglePlacesAPI</a></strong>(java.lang.String&nbsp;searchPath,
-                                    java.lang.String&nbsp;resultsTag)</code>&nbsp;</td>
-                            </tr>
-                        </table>
-                    </li>
-                </ul>
-                <!-- ========== METHOD SUMMARY =========== -->
-                <ul class="blockList">
-                    <li class="blockList"><a name="method_summary">
-                        <!--   -->
-                    </a>
-
-                        <h3>Method Summary</h3>
-                        <table class="overviewSummary" border="0" cellpadding="3" cellspacing="0"
-                               summary="Method Summary table, listing methods, and an explanation">
-                            <caption><span>Methods</span><span class="tabEnd">&nbsp;</span>
-                            </caption>
-                            <tr>
-                                <th class="colFirst" scope="col">Modifier and Type</th>
-                                <th class="colLast" scope="col">Method and Description</th>
-                            </tr>
-                            <tr class="altColor">
-                                <td class="colFirst"><code>JSONArray</code></td>
-                                <td class="colLast"><code><strong><a
-                                        href="../../../../com/chdryra/android/remoteapifetchers/FetcherGooglePlacesAPI.html#getResults()">getResults</a></strong>()</code>&nbsp;
-                                </td>
-                            </tr>
-                            <tr class="rowColor">
-                                <td class="colFirst"><code>(package private)
-                                    java.lang.StringBuilder</code></td>
-                                <td class="colLast"><code><strong><a
-                                        href="../../../../com/chdryra/android/remoteapifetchers/FetcherGooglePlacesAPI.html#getURLStem()">getURLStem</a></strong>()</code>&nbsp;
-                                </td>
-                            </tr>
-                            <tr class="altColor">
-                                <td class="colFirst"><code>(package private) abstract
-                                    java.lang.String</code></td>
-                                <td class="colLast"><code><strong><a
-                                        href="../../../../com/chdryra/android/remoteapifetchers/FetcherGooglePlacesAPI.html#getURLString()">getURLString</a></strong>()</code>&nbsp;
-                                </td>
-                            </tr>
-                            <tr class="rowColor">
-                                <td class="colFirst"><code>(package private) void</code></td>
-                                <td class="colLast"><code><strong><a
-                                        href="../../../../com/chdryra/android/remoteapifetchers/FetcherGooglePlacesAPI.html#performQuery()">performQuery</a></strong>()</code>&nbsp;
-                                </td>
-                            </tr>
-                        </table>
-                        <ul class="blockList">
-                            <li class="blockList"><a
-                                    name="methods_inherited_from_class_java.lang.Object">
-                                <!--   -->
-                            </a>
-
-                                <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
-                                <code>clone, equals, finalize, getClass, hashCode, notify,
-                                    notifyAll, toString, wait, wait, wait</code></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-    <div class="details">
-        <ul class="blockList">
-            <li class="blockList">
-                <!-- ============ FIELD DETAIL =========== -->
-                <ul class="blockList">
-                    <li class="blockList"><a name="field_detail">
-                        <!--   -->
-                    </a>
-
-                        <h3>Field Detail</h3>
-                        <a name="ALL_TYPES">
-                            <!--   -->
-                        </a>
-                        <ul class="blockListLast">
-                            <li class="blockList">
-                                <h4>ALL_TYPES</h4>
-                                <pre>static final&nbsp;java.lang.String ALL_TYPES</pre>
-                                <dl>
-                                    <dt><span class="strong">See Also:</span></dt>
-                                    <dd>
-                                        <a href="../../../../constant-values.html#com.chdryra.android.remoteapifetchers.FetcherGooglePlacesAPI.ALL_TYPES">Constant
-                                            Field Values</a></dd>
-                                </dl>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <!-- ========= CONSTRUCTOR DETAIL ======== -->
-                <ul class="blockList">
-                    <li class="blockList"><a name="constructor_detail">
-                        <!--   -->
-                    </a>
-
-                        <h3>Constructor Detail</h3>
-                        <a name="FetcherGooglePlacesAPI(java.lang.String, java.lang.String)">
-                            <!--   -->
-                        </a>
-                        <ul class="blockListLast">
-                            <li class="blockList">
-                                <h4>FetcherGooglePlacesAPI</h4>
+                    <ul class="blockListLast">
+                        <li class="blockList">
+                            <h4>FetcherGooglePlacesAPI</h4>
 <pre>FetcherGooglePlacesAPI(java.lang.String&nbsp;searchPath,
                       java.lang.String&nbsp;resultsTag)</pre>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <!-- ============ METHOD DETAIL ========== -->
-                <ul class="blockList">
-                    <li class="blockList"><a name="method_detail">
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- ============ METHOD DETAIL ========== -->
+            <ul class="blockList">
+                <li class="blockList"><a name="method_detail">
+                    <!--   -->
+                </a>
+
+                    <h3>Method Detail</h3>
+                    <a name="getURLString()">
                         <!--   -->
                     </a>
-
-                        <h3>Method Detail</h3>
-                        <a name="getURLString()">
-                            <!--   -->
-                        </a>
-                        <ul class="blockList">
-                            <li class="blockList">
-                                <h4>getURLString</h4>
-                                <pre>abstract&nbsp;java.lang.String&nbsp;getURLString()</pre>
-                            </li>
-                        </ul>
-                        <a name="getURLStem()">
-                            <!--   -->
-                        </a>
-                        <ul class="blockList">
-                            <li class="blockList">
-                                <h4>getURLStem</h4>
-                                <pre>java.lang.StringBuilder&nbsp;getURLStem()</pre>
-                            </li>
-                        </ul>
-                        <a name="getResults()">
-                            <!--   -->
-                        </a>
-                        <ul class="blockList">
-                            <li class="blockList">
-                                <h4>getResults</h4>
-                                <pre>public&nbsp;JSONArray&nbsp;getResults()</pre>
-                            </li>
-                        </ul>
-                        <a name="performQuery()">
-                            <!--   -->
-                        </a>
-                        <ul class="blockListLast">
-                            <li class="blockList">
-                                <h4>performQuery</h4>
-                                <pre>void&nbsp;performQuery()</pre>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </div>
+                    <ul class="blockList">
+                        <li class="blockList">
+                            <h4>getURLString</h4>
+                            <pre>abstract&nbsp;java.lang.String&nbsp;getURLString()</pre>
+                        </li>
+                    </ul>
+                    <a name="getURLStem()">
+                        <!--   -->
+                    </a>
+                    <ul class="blockList">
+                        <li class="blockList">
+                            <h4>getURLStem</h4>
+                            <pre>java.lang.StringBuilder&nbsp;getURLStem()</pre>
+                        </li>
+                    </ul>
+                    <a name="getResults()">
+                        <!--   -->
+                    </a>
+                    <ul class="blockList">
+                        <li class="blockList">
+                            <h4>getResults</h4>
+                            <pre>public&nbsp;JSONArray&nbsp;getResults()</pre>
+                        </li>
+                    </ul>
+                    <a name="performQuery()">
+                        <!--   -->
+                    </a>
+                    <ul class="blockListLast">
+                        <li class="blockList">
+                            <h4>performQuery</h4>
+                            <pre>void&nbsp;performQuery()</pre>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
 </div>
 <!-- ========= END OF CLASS DATA ========= -->
 <!-- ======= START OF BOTTOM NAVBAR ====== -->
@@ -382,6 +386,8 @@ extends java.lang.Object</pre>
     allClassesLink.style.display = "none";
   }
   //-->
+
+
 
         </script>
     </div>

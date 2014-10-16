@@ -15,6 +15,8 @@
     }
 //-->
 
+
+
 </script>
 <noscript>
     <div>JavaScript is disabled on your browser.</div>
@@ -63,6 +65,8 @@
   }
   //-->
 
+
+
         </script>
     </div>
     <div>
@@ -90,220 +94,220 @@
     <h2 title="Class Controller" class="title">Class Controller</h2>
 </div>
 <div class="contentContainer">
-    <ul class="inheritance">
-        <li>java.lang.Object</li>
-        <li>
-            <ul class="inheritance">
-                <li>com.chdryra.android.reviewer.Controller</li>
+<ul class="inheritance">
+    <li>java.lang.Object</li>
+    <li>
+        <ul class="inheritance">
+            <li>com.chdryra.android.reviewer.Controller</li>
+        </ul>
+    </li>
+</ul>
+<div class="description">
+    <ul class="blockList">
+        <li class="blockList">
+            <hr>
+            <br>
+<pre> class <span class="strong">Controller</span>
+extends java.lang.Object</pre>
+            <div class="block">Controls editing of new reviews. Holds 2 objects:
+                <ul>
+                    <li>Review controller: controls access to the review in progress</li>
+                    <li>Collection of controllers being passed back and forth between
+                        activities: There
+                        maybe multiple controllers associated with the potential tree structure
+                        of the review in
+                        progress that may need to be passed back and forth between activities.
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="summary">
+    <ul class="blockList">
+        <li class="blockList">
+            <!-- ======== CONSTRUCTOR SUMMARY ======== -->
+            <ul class="blockList">
+                <li class="blockList"><a name="constructor_summary">
+                    <!--   -->
+                </a>
+
+                    <h3>Constructor Summary</h3>
+                    <table class="overviewSummary" border="0" cellpadding="3" cellspacing="0"
+                           summary="Constructor Summary table, listing constructors, and an explanation">
+                        <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span>
+                        </caption>
+                        <tr>
+                            <th class="colOne" scope="col">Constructor and Description</th>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colOne"><code><strong><a
+                                    href="../../../../com/chdryra/android/reviewer/Controller.html#Controller()">Controller</a></strong>()</code>&nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </li>
+            </ul>
+            <!-- ========== METHOD SUMMARY =========== -->
+            <ul class="blockList">
+                <li class="blockList"><a name="method_summary">
+                    <!--   -->
+                </a>
+
+                    <h3>Method Summary</h3>
+                    <table class="overviewSummary" border="0" cellpadding="3" cellspacing="0"
+                           summary="Method Summary table, listing methods, and an explanation">
+                        <caption><span>Methods</span><span class="tabEnd">&nbsp;</span>
+                        </caption>
+                        <tr>
+                            <th class="colFirst" scope="col">Modifier and Type</th>
+                            <th class="colLast" scope="col">Method and Description</th>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colFirst"><code>(package private) static <a
+                                    href="../../../../com/chdryra/android/reviewer/RDId.html"
+                                    title="class in com.chdryra.android.reviewer">RDId</a></code>
+                            </td>
+                            <td class="colLast"><code><strong><a
+                                    href="../../../../com/chdryra/android/reviewer/Controller.html#convertID(java.lang.String)">convertID</a></strong>(java.lang.String&nbsp;id)</code>&nbsp;
+                            </td>
+                        </tr>
+                        <tr class="rowColor">
+                            <td class="colFirst"><code>(package private) <a
+                                    href="../../../../com/chdryra/android/reviewer/ControllerReviewNodeExpandable.html"
+                                    title="class in com.chdryra.android.reviewer">ControllerReviewNodeExpandable</a></code>
+                            </td>
+                            <td class="colLast"><code><strong><a
+                                    href="../../../../com/chdryra/android/reviewer/Controller.html#getReviewInProgress()">getReviewInProgress</a></strong>()</code>&nbsp;
+                            </td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colFirst"><code>(package private) Bundle</code></td>
+                            <td class="colLast"><code><strong><a
+                                    href="../../../../com/chdryra/android/reviewer/Controller.html#pack(com.chdryra.android.reviewer.ControllerReview)">pack</a></strong>(<a
+                                    href="../../../../com/chdryra/android/reviewer/ControllerReview.html"
+                                    title="class in com.chdryra.android.reviewer">ControllerReview</a>&nbsp;controller)</code>&nbsp;
+                            </td>
+                        </tr>
+                        <tr class="rowColor">
+                            <td class="colFirst"><code>(package private) void</code></td>
+                            <td class="colLast"><code><strong><a
+                                    href="../../../../com/chdryra/android/reviewer/Controller.html#pack(com.chdryra.android.reviewer.ControllerReview, Intent)">pack</a></strong>(<a
+                                    href="../../../../com/chdryra/android/reviewer/ControllerReview.html"
+                                    title="class in com.chdryra.android.reviewer">ControllerReview</a>&nbsp;controller,
+                                Intent&nbsp;i)</code>&nbsp;</td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colFirst"><code>(package private) <a
+                                    href="../../../../com/chdryra/android/reviewer/ControllerReview.html"
+                                    title="class in com.chdryra.android.reviewer">ControllerReview</a></code>
+                            </td>
+                            <td class="colLast"><code><strong><a
+                                    href="../../../../com/chdryra/android/reviewer/Controller.html#unpack(Bundle)">unpack</a></strong>(Bundle&nbsp;args)</code>&nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                    <ul class="blockList">
+                        <li class="blockList"><a
+                                name="methods_inherited_from_class_java.lang.Object">
+                            <!--   -->
+                        </a>
+
+                            <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+                            <code>clone, equals, finalize, getClass, hashCode, notify,
+                                notifyAll, toString, wait, wait, wait</code></li>
+                    </ul>
+                </li>
             </ul>
         </li>
     </ul>
-    <div class="description">
-        <ul class="blockList">
-            <li class="blockList">
-                <hr>
-                <br>
-<pre> class <span class="strong">Controller</span>
-extends java.lang.Object</pre>
-                <div class="block">Controls editing of new reviews. Holds 2 objects:
-                    <ul>
-                        <li>Review controller: controls access to the review in progress</li>
-                        <li>Collection of controllers being passed back and forth between
-                            activities: There
-                            maybe multiple controllers associated with the potential tree structure
-                            of the review in
-                            progress that may need to be passed back and forth between activities.
+</div>
+<div class="details">
+    <ul class="blockList">
+        <li class="blockList">
+            <!-- ========= CONSTRUCTOR DETAIL ======== -->
+            <ul class="blockList">
+                <li class="blockList"><a name="constructor_detail">
+                    <!--   -->
+                </a>
+
+                    <h3>Constructor Detail</h3>
+                    <a name="Controller()">
+                        <!--   -->
+                    </a>
+                    <ul class="blockListLast">
+                        <li class="blockList">
+                            <h4>Controller</h4>
+                            <pre>Controller()</pre>
                         </li>
                     </ul>
-                </div>
-            </li>
-        </ul>
-    </div>
-    <div class="summary">
-        <ul class="blockList">
-            <li class="blockList">
-                <!-- ======== CONSTRUCTOR SUMMARY ======== -->
-                <ul class="blockList">
-                    <li class="blockList"><a name="constructor_summary">
+                </li>
+            </ul>
+            <!-- ============ METHOD DETAIL ========== -->
+            <ul class="blockList">
+                <li class="blockList"><a name="method_detail">
+                    <!--   -->
+                </a>
+
+                    <h3>Method Detail</h3>
+                    <a name="convertID(java.lang.String)">
                         <!--   -->
                     </a>
-
-                        <h3>Constructor Summary</h3>
-                        <table class="overviewSummary" border="0" cellpadding="3" cellspacing="0"
-                               summary="Constructor Summary table, listing constructors, and an explanation">
-                            <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span>
-                            </caption>
-                            <tr>
-                                <th class="colOne" scope="col">Constructor and Description</th>
-                            </tr>
-                            <tr class="altColor">
-                                <td class="colOne"><code><strong><a
-                                        href="../../../../com/chdryra/android/reviewer/Controller.html#Controller()">Controller</a></strong>()</code>&nbsp;
-                                </td>
-                            </tr>
-                        </table>
-                    </li>
-                </ul>
-                <!-- ========== METHOD SUMMARY =========== -->
-                <ul class="blockList">
-                    <li class="blockList"><a name="method_summary">
-                        <!--   -->
-                    </a>
-
-                        <h3>Method Summary</h3>
-                        <table class="overviewSummary" border="0" cellpadding="3" cellspacing="0"
-                               summary="Method Summary table, listing methods, and an explanation">
-                            <caption><span>Methods</span><span class="tabEnd">&nbsp;</span>
-                            </caption>
-                            <tr>
-                                <th class="colFirst" scope="col">Modifier and Type</th>
-                                <th class="colLast" scope="col">Method and Description</th>
-                            </tr>
-                            <tr class="altColor">
-                                <td class="colFirst"><code>(package private) static <a
-                                        href="../../../../com/chdryra/android/reviewer/RDId.html"
-                                        title="class in com.chdryra.android.reviewer">RDId</a></code>
-                                </td>
-                                <td class="colLast"><code><strong><a
-                                        href="../../../../com/chdryra/android/reviewer/Controller.html#convertID(java.lang.String)">convertID</a></strong>(java.lang.String&nbsp;id)</code>&nbsp;
-                                </td>
-                            </tr>
-                            <tr class="rowColor">
-                                <td class="colFirst"><code>(package private) <a
-                                        href="../../../../com/chdryra/android/reviewer/ControllerReviewNodeExpandable.html"
-                                        title="class in com.chdryra.android.reviewer">ControllerReviewNodeExpandable</a></code>
-                                </td>
-                                <td class="colLast"><code><strong><a
-                                        href="../../../../com/chdryra/android/reviewer/Controller.html#getReviewInProgress()">getReviewInProgress</a></strong>()</code>&nbsp;
-                                </td>
-                            </tr>
-                            <tr class="altColor">
-                                <td class="colFirst"><code>(package private) Bundle</code></td>
-                                <td class="colLast"><code><strong><a
-                                        href="../../../../com/chdryra/android/reviewer/Controller.html#pack(com.chdryra.android.reviewer.ControllerReview)">pack</a></strong>(<a
-                                        href="../../../../com/chdryra/android/reviewer/ControllerReview.html"
-                                        title="class in com.chdryra.android.reviewer">ControllerReview</a>&nbsp;controller)</code>&nbsp;
-                                </td>
-                            </tr>
-                            <tr class="rowColor">
-                                <td class="colFirst"><code>(package private) void</code></td>
-                                <td class="colLast"><code><strong><a
-                                        href="../../../../com/chdryra/android/reviewer/Controller.html#pack(com.chdryra.android.reviewer.ControllerReview, Intent)">pack</a></strong>(<a
-                                        href="../../../../com/chdryra/android/reviewer/ControllerReview.html"
-                                        title="class in com.chdryra.android.reviewer">ControllerReview</a>&nbsp;controller,
-                                    Intent&nbsp;i)</code>&nbsp;</td>
-                            </tr>
-                            <tr class="altColor">
-                                <td class="colFirst"><code>(package private) <a
-                                        href="../../../../com/chdryra/android/reviewer/ControllerReview.html"
-                                        title="class in com.chdryra.android.reviewer">ControllerReview</a></code>
-                                </td>
-                                <td class="colLast"><code><strong><a
-                                        href="../../../../com/chdryra/android/reviewer/Controller.html#unpack(Bundle)">unpack</a></strong>(Bundle&nbsp;args)</code>&nbsp;
-                                </td>
-                            </tr>
-                        </table>
-                        <ul class="blockList">
-                            <li class="blockList"><a
-                                    name="methods_inherited_from_class_java.lang.Object">
-                                <!--   -->
-                            </a>
-
-                                <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
-                                <code>clone, equals, finalize, getClass, hashCode, notify,
-                                    notifyAll, toString, wait, wait, wait</code></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-    <div class="details">
-        <ul class="blockList">
-            <li class="blockList">
-                <!-- ========= CONSTRUCTOR DETAIL ======== -->
-                <ul class="blockList">
-                    <li class="blockList"><a name="constructor_detail">
-                        <!--   -->
-                    </a>
-
-                        <h3>Constructor Detail</h3>
-                        <a name="Controller()">
-                            <!--   -->
-                        </a>
-                        <ul class="blockListLast">
-                            <li class="blockList">
-                                <h4>Controller</h4>
-                                <pre>Controller()</pre>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <!-- ============ METHOD DETAIL ========== -->
-                <ul class="blockList">
-                    <li class="blockList"><a name="method_detail">
-                        <!--   -->
-                    </a>
-
-                        <h3>Method Detail</h3>
-                        <a name="convertID(java.lang.String)">
-                            <!--   -->
-                        </a>
-                        <ul class="blockList">
-                            <li class="blockList">
-                                <h4>convertID</h4>
+                    <ul class="blockList">
+                        <li class="blockList">
+                            <h4>convertID</h4>
                                 <pre>static&nbsp;<a
                                         href="../../../../com/chdryra/android/reviewer/RDId.html"
                                         title="class in com.chdryra.android.reviewer">RDId</a>&nbsp;convertID(java.lang.String&nbsp;id)</pre>
-                            </li>
-                        </ul>
-                        <a name="getReviewInProgress()">
-                            <!--   -->
-                        </a>
-                        <ul class="blockList">
-                            <li class="blockList">
-                                <h4>getReviewInProgress</h4>
+                        </li>
+                    </ul>
+                    <a name="getReviewInProgress()">
+                        <!--   -->
+                    </a>
+                    <ul class="blockList">
+                        <li class="blockList">
+                            <h4>getReviewInProgress</h4>
                                 <pre><a href="../../../../com/chdryra/android/reviewer/ControllerReviewNodeExpandable.html"
                                         title="class in com.chdryra.android.reviewer">ControllerReviewNodeExpandable</a>&nbsp;getReviewInProgress()</pre>
-                            </li>
-                        </ul>
-                        <a name="pack(com.chdryra.android.reviewer.ControllerReview)">
-                            <!--   -->
-                        </a>
-                        <ul class="blockList">
-                            <li class="blockList">
-                                <h4>pack</h4>
+                        </li>
+                    </ul>
+                    <a name="pack(com.chdryra.android.reviewer.ControllerReview)">
+                        <!--   -->
+                    </a>
+                    <ul class="blockList">
+                        <li class="blockList">
+                            <h4>pack</h4>
                                 <pre>Bundle&nbsp;pack(<a
                                         href="../../../../com/chdryra/android/reviewer/ControllerReview.html"
                                         title="class in com.chdryra.android.reviewer">ControllerReview</a>&nbsp;controller)</pre>
-                            </li>
-                        </ul>
-                        <a name="unpack(Bundle)">
-                            <!--   -->
-                        </a>
-                        <ul class="blockList">
-                            <li class="blockList">
-                                <h4>unpack</h4>
+                        </li>
+                    </ul>
+                    <a name="unpack(Bundle)">
+                        <!--   -->
+                    </a>
+                    <ul class="blockList">
+                        <li class="blockList">
+                            <h4>unpack</h4>
                                 <pre><a href="../../../../com/chdryra/android/reviewer/ControllerReview.html"
                                         title="class in com.chdryra.android.reviewer">ControllerReview</a>&nbsp;unpack(Bundle&nbsp;args)</pre>
-                            </li>
-                        </ul>
-                        <a name="pack(com.chdryra.android.reviewer.ControllerReview, Intent)">
-                            <!--   -->
-                        </a>
-                        <ul class="blockListLast">
-                            <li class="blockList">
-                                <h4>pack</h4>
+                        </li>
+                    </ul>
+                    <a name="pack(com.chdryra.android.reviewer.ControllerReview, Intent)">
+                        <!--   -->
+                    </a>
+                    <ul class="blockListLast">
+                        <li class="blockList">
+                            <h4>pack</h4>
 <pre>void&nbsp;pack(<a href="../../../../com/chdryra/android/reviewer/ControllerReview.html"
                        title="class in com.chdryra.android.reviewer">ControllerReview</a>&nbsp;controller,
         Intent&nbsp;i)</pre>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
 </div>
 <!-- ========= END OF CLASS DATA ========= -->
 <!-- ======= START OF BOTTOM NAVBAR ====== -->
@@ -350,6 +354,8 @@ extends java.lang.Object</pre>
     allClassesLink.style.display = "none";
   }
   //-->
+
+
 
         </script>
     </div>
