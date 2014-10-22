@@ -26,41 +26,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cbecc251-2e59-4e4e-b243-801cf0d21d57" name="Default" comment="More work on refactoring fragments and dialogs to be more abstract and modular.&#10;&#10;Tags, Children, Facts, Comments, use a unified AddEdit framework for dialogs, Images uses the Edit part of the framework. Locations and URLs instigate activities for editing and unique dialogs for adding so don't fit into this set up. Added ConfigAddEditActivity to define appropriate classes for aforementioned data that use this framework. Removed old versions of DialogTagAddFragment, DialogTagEditFragment etc. as now defined using one line in ConfigAddEditActivity.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/ConfigAddEditActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DHComment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DHImage2.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DHTag.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogHolderAddEdit.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FactoryDialogHolder.java" />
-      <change type="DELETED" beforePath="C:\Dev\Android\Reviewer\src\com\chdryra\android\reviewer\DialogChildAddFragment.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Dev\Android\Reviewer\src\com\chdryra\android\reviewer\DialogChildEditFragment.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Dev\Android\Reviewer\src\com\chdryra\android\reviewer\DialogCommentAddFragment.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Dev\Android\Reviewer\src\com\chdryra\android\reviewer\DialogCommentEditFragment.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Dev\Android\Reviewer\src\com\chdryra\android\reviewer\DialogFactAddFragment.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Dev\Android\Reviewer\src\com\chdryra\android\reviewer\DialogFactEditFragment.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Dev\Android\Reviewer\src\com\chdryra\android\reviewer\DialogImageEditFragment.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Dev\Android\Reviewer\src\com\chdryra\android\reviewer\DialogTagAddFragment.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Dev\Android\Reviewer\src\com\chdryra\android\reviewer\DialogTagEditFragment.java" afterPath="" />
-      <change type="MOVED" beforePath="C:\Dev\Android\Reviewer\res\layout\dialog_image_view.xml" afterPath="$PROJECT_DIR$/Reviewer/res/layout/dialog_image.xml" />
-      <change type="MOVED" beforePath="C:\Dev\Android\Reviewer\src\com\chdryra\android\reviewer\DialogAddReviewDataFragment.java" afterPath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogReviewDataAddFragment.java" />
-      <change type="MOVED" beforePath="C:\Dev\Android\Reviewer\src\com\chdryra\android\reviewer\DialogEditReviewDataFragment.java" afterPath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogReviewDataEditFragment.java" />
-      <change type="MOVED" beforePath="C:\Dev\Android\Reviewer\src\com\chdryra\android\reviewer\UIDialog.java" afterPath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogUI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/ConfigReviewDataUI.java" afterPath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/ConfigReviewDataUI.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/InputHandlerChildren.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/InputHandlerImage.java" />
+      <change type="DELETED" beforePath="C:\Dev\Android\Reviewer\src\com\chdryra\android\reviewer\DHImage2.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/ConfigAddEditActivity.java" afterPath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/ConfigAddEditActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DHChild.java" afterPath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DHChild.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DHFact.java" afterPath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DHFact.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogHolder.java" afterPath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogHolder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogHolderBasic.java" afterPath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogHolderBasic.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogURLFragment.java" afterPath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogURLFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogReviewDataAddFragment.java" afterPath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogReviewDataAddFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogReviewDataEditFragment.java" afterPath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogReviewDataEditFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewBuild.java" afterPath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewBuild.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewChildren.java" afterPath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewChildren.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewComments.java" afterPath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewComments.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewFacts.java" afterPath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewFacts.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewGridAddEdit.java" afterPath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewGridAddEdit.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewImages.java" afterPath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewImages.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewLocations.java" afterPath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewLocations.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewTags.java" afterPath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewTags.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewURLs.java" afterPath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewURLs.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/GVCommentList.java" afterPath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/GVCommentList.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/GVImageList.java" afterPath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/GVImageList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/GVReviewDataList.java" afterPath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/GVReviewDataList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/GVTagList.java" afterPath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/GVTagList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/GVText.java" afterPath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/GVText.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/GVReviewSubjectRatingList.java" afterPath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/GVReviewSubjectRatingList.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/HelperReviewImage.java" afterPath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/HelperReviewImage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/InputHandlerReviewData.java" afterPath="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/InputHandlerReviewData.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -87,97 +72,61 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ConfigAddEditActivity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="FragmentReviewGridAddEdit.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewGridAddEdit.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="616" max-vertical-offset="3094">
+              <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+              <folding>
+                <element signature="e#2325#2326#0" expanded="true" />
+                <element signature="e#2391#2392#0" expanded="true" />
+                <element signature="e#2430#2431#0" expanded="true" />
+                <element signature="e#2496#2497#0" expanded="true" />
+                <element signature="e#2531#2532#0" expanded="true" />
+                <element signature="e#2595#2596#0" expanded="true" />
+                <element signature="e#2628#2629#0" expanded="true" />
+                <element signature="e#5303#5333#1" expanded="true" />
+                <element signature="e#5528#5566#0" expanded="true" />
+                <element signature="e#6128#6158#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FragmentReviewImages.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewImages.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="2329">
+              <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="43" />
+              <folding>
+                <element signature="e#2280#2835#0" expanded="true" />
+                <element signature="e#2816#2817#0" expanded="true" />
+                <element signature="e#4782#4783#0" expanded="true" />
+                <element signature="e#4818#4819#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConfigAddEditActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/ConfigAddEditActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1326" max-vertical-offset="3043">
-              <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.9456869" vertical-offset="1618" max-vertical-offset="2669">
+              <caret line="148" column="0" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
               <folding>
-                <element signature="e#0#5485#0" expanded="true" />
+                <element signature="e#0#5587#0" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="e#2376#2377#0" expanded="true" />
-                <element signature="e#2445#2446#0" expanded="true" />
-                <element signature="e#2563#2564#0" expanded="true" />
-                <element signature="e#2633#2634#0" expanded="true" />
-                <element signature="e#2920#2921#0" expanded="true" />
-                <element signature="e#2962#2963#0" expanded="true" />
-                <element signature="e#3141#3142#0" expanded="true" />
-                <element signature="e#3187#3188#0" expanded="true" />
-                <element signature="e#3336#3337#0" expanded="true" />
-                <element signature="e#3382#3383#0" expanded="true" />
-                <element signature="e#3516#3517#0" expanded="true" />
-                <element signature="e#3559#3560#0" expanded="true" />
-                <element signature="e#3708#3709#0" expanded="true" />
-                <element signature="e#3750#3751#0" expanded="true" />
-                <element signature="e#3933#3934#0" expanded="true" />
-                <element signature="e#3979#3980#0" expanded="true" />
-                <element signature="e#4131#4132#0" expanded="true" />
-                <element signature="e#4177#4178#0" expanded="true" />
-                <element signature="e#4319#4320#0" expanded="true" />
-                <element signature="e#4363#4364#0" expanded="true" />
-                <element signature="e#4500#4501#0" expanded="true" />
-                <element signature="e#4543#4544#0" expanded="true" />
-                <element signature="e#5243#5244#0" expanded="true" />
-                <element signature="e#5278#5279#0" expanded="true" />
-                <element signature="e#5348#5349#0" expanded="true" />
-                <element signature="e#5384#5385#0" expanded="true" />
-                <element signature="e#5435#5436#0" expanded="true" />
-                <element signature="e#5475#5476#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DialogHolderAddEdit.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogHolderAddEdit.java">
+      <file leaf-file-name="Fragment.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-20/android.jar!/android/app/Fragment.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="760" max-vertical-offset="1462">
-              <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="395" max-vertical-offset="2975">
+              <caret line="35" column="38" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FragmentReviewChildren.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewChildren.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="1564">
-              <caret line="41" column="42" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ActivityReviewBuild.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/ActivityReviewBuild.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
-              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DialogReviewDataAddFragment.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogReviewDataAddFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1564">
-              <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="20" />
-              <folding>
-                <element signature="e#2827#2865#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DHImage2.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DHImage2.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8252427" vertical-offset="0" max-vertical-offset="1326">
-              <caret line="41" column="31" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
-              <folding>
-                <element signature="e#2341#2451#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -185,29 +134,72 @@
       <file leaf-file-name="InputHandlerReviewData.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/InputHandlerReviewData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1683">
-              <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1397" max-vertical-offset="2023">
+              <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+              <folding>
+                <element signature="e#3221#3222#0" expanded="true" />
+                <element signature="e#3286#3287#0" expanded="true" />
+                <element signature="e#3468#3469#0" expanded="true" />
+                <element signature="e#3520#3521#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FragmentReviewChildren.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewChildren.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="1819">
+              <caret line="48" column="36" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ActivityReviewChildren.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/ActivityReviewChildren.java">
+      <file leaf-file-name="GVImageList.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/GVImageList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
-              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1771" max-vertical-offset="2856">
+              <caret line="171" column="0" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DialogReviewDataEditFragment.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogReviewDataEditFragment.java">
+      <file leaf-file-name="GVReviewSubjectRatingList.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/GVReviewSubjectRatingList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1156">
-              <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1414" max-vertical-offset="2142">
+              <caret line="127" column="21" selection-start-line="124" selection-start-column="8" selection-end-line="127" selection-end-column="21" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InputHandlerImage.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/InputHandlerImage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="3" max-vertical-offset="629">
+              <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#535#536#0" expanded="true" />
+                <element signature="e#588#589#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InputHandlerChildren.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/InputHandlerChildren.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="3" max-vertical-offset="663">
+              <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#592#593#0" expanded="true" />
+                <element signature="e#647#648#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -2516,30 +2508,13 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/GVReviewDataUI.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogHolderUI.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/GVReviewDataUIDialog.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogHolder.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogHolderBasic.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/UIDialog.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogUI.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogAddReviewDataFragment.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogEditReviewDataFragment.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DHFact.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/GVImageList.java" />
-        <option value="$PROJECT_DIR$/MyGeneralLibrary/src/com/chdryra/android/mygenerallibrary/DialogTwoButtonFragment.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DHimage.java" />
         <option value="$PROJECT_DIR$/MyGeneralLibrary/src/com/chdryra/android/mygenerallibrary/VHDString.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/GVText.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/GVTagList.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DHTag.java" />
         <option value="$PROJECT_DIR$/MyAndroidWidgets/src/com/chdryra/android/myandroidwidgets/ClearableAutoCompleteTextView.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/InputHandlerReviewData.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DHComment.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DHChild.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogReviewDataEditFragment.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewBuild.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewGridAddEdit.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DHFactory.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogImageEditFragment.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogTagEditFragment.java" />
@@ -2557,16 +2532,33 @@
         <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogReviewDataAddEdit.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/ConfigDialogAddEdit.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/ConfigReviewDataAddEditActivity.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewChildren.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewComments.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/GVCommentList.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/GVReviewDataList.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewImages.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/ConfigReviewDataUI.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/ConfigAddEditActivity.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogReviewDataAddFragment.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DHImage.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DHImage2.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DHImageEdit.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewBuild.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewComments.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewFacts.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewLocations.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewTags.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewURLs.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DHChild.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/GVCommentList.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/GVReviewSubjectRatingList.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogHolderBasic.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogHolder.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/ConfigAddEditActivity.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewChildren.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogReviewDataAddFragment.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewGridAddEdit.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogReviewDataEditFragment.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/HelperReviewImage.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/GVImageList.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/InputHandlerImage.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/InputHandlerReviewData.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/InputHandlerChildren.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewImages.java" />
       </list>
     </option>
   </component>
@@ -3094,7 +3086,15 @@
       <created>1413831642461</created>
       <updated>1413831642461</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="More work on refactoring fragments and dialogs to be more abstract and modular.&#10;&#10;Tags, Children, Facts, Comments, use a unified AddEdit framework for dialogs, Images uses the Edit part of the framework. Locations and URLs instigate activities for editing and unique dialogs for adding so don't fit into this set up. Added ConfigAddEditActivity to define appropriate classes for aforementioned data that use this framework. Removed old versions of DialogTagAddFragment, DialogTagEditFragment etc. as now defined using one line in ConfigAddEditActivity.">
+      <created>1413918077653</created>
+      <updated>1413918077653</updated>
+    </task>
+    <task id="LOCAL-00048" summary="More work on refactoring fragments and dialogs to be more abstract and modular.&#10;&#10;Tags, Children, Facts, Comments, use a unified AddEdit framework for dialogs, Images uses the Edit part of the framework. Locations and URLs instigate activities for editing and unique dialogs for adding so don't fit into this set up. Added ConfigAddEditActivity to define appropriate classes for aforementioned data that use this framework. Removed old versions of DialogTagAddFragment, DialogTagEditFragment etc. as now defined using one line in ConfigAddEditActivity.">
+      <created>1413918206646</created>
+      <updated>1413918206646</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -3113,15 +3113,15 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952183" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3991684" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18385416" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32848233" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32016632" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32848233" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32016632" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18697916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18697916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952183" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -3224,124 +3224,10 @@
           <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="40" />
+      <option name="time" value="43" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MyGeneralLibrary/src/com/chdryra/android/mygenerallibrary/ViewHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
-          <caret line="27" column="26" selection-start-line="23" selection-start-column="4" selection-end-line="27" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/GVReviewDataUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyGeneralLibrary/src/com/chdryra/android/mygenerallibrary/ViewHolderBasic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="190" max-vertical-offset="884">
-          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/GVImageList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="2737">
-          <caret line="48" column="27" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogSetImageAsBackgroundFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyGeneralLibrary/src/com/chdryra/android/mygenerallibrary/VHDString.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1054">
-          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-          <folding>
-            <element signature="e#449#450#0" expanded="false" />
-            <element signature="e#479#480#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/GVText.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding>
-            <element signature="e#869#870#0" expanded="false" />
-            <element signature="e#892#893#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyAndroidWidgets/src/com/chdryra/android/myandroidwidgets/ClearableAutoCompleteTextView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27552673" vertical-offset="0" max-vertical-offset="3094">
-          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-          <folding>
-            <element signature="e#2268#3102#0" expanded="false" />
-            <element signature="e#3091#3092#0" expanded="false" />
-            <element signature="e#3140#3776#0" expanded="false" />
-            <element signature="e#3765#3766#0" expanded="false" />
-            <element signature="e#3807#4149#0" expanded="false" />
-            <element signature="e#4138#4139#0" expanded="false" />
-            <element signature="e#4184#4454#0" expanded="false" />
-            <element signature="e#4443#4444#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyAndroidWidgets/src/com/chdryra/android/myandroidwidgets/ClearableAutoCompleteTextView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="3315">
-          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-          <folding>
-            <element signature="e#2268#3102#0" expanded="false" />
-            <element signature="e#3091#3092#0" expanded="false" />
-            <element signature="e#3140#3776#0" expanded="false" />
-            <element signature="e#3765#3766#0" expanded="false" />
-            <element signature="e#3807#4149#0" expanded="false" />
-            <element signature="e#4138#4139#0" expanded="false" />
-            <element signature="e#4184#4454#0" expanded="false" />
-            <element signature="e#4443#4444#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="98" max-vertical-offset="799">
-          <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DHComment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="84" max-vertical-offset="884">
-          <caret line="43" column="50" selection-start-line="43" selection-start-column="50" selection-end-line="43" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DHFact.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
@@ -3349,22 +3235,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyGeneralLibrary/src/com/chdryra/android/mygenerallibrary/DialogTwoButtonFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3464" max-vertical-offset="4131">
-          <caret line="263" column="0" selection-start-line="263" selection-start-column="0" selection-end-line="263" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogHolderBasic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="986">
-          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3388,34 +3258,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewFacts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewShare.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="319" max-vertical-offset="1785">
           <caret line="49" column="13" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewTags.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
-          <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewURLs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1496">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -3425,9 +3271,9 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1207">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2049#2094#0" expanded="true" />
-            <element signature="e#2159#2210#0" expanded="true" />
-            <element signature="e#2720#2768#0" expanded="true" />
+            <element signature="e#2049#2094#0" expanded="false" />
+            <element signature="e#2159#2210#0" expanded="false" />
+            <element signature="e#2720#2768#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3458,14 +3304,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewComments.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="237" max-vertical-offset="1513">
-          <caret line="41" column="70" selection-start-line="41" selection-start-column="70" selection-end-line="41" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/GVFactList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1224">
@@ -3490,115 +3328,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/GVCommentList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2278">
-          <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/GVReviewDataList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="709" max-vertical-offset="1394">
           <caret line="87" column="4" selection-start-line="87" selection-start-column="4" selection-end-line="87" selection-end-column="4" />
           <folding>
-            <element signature="e#2630#2631#0" expanded="true" />
-            <element signature="e#2662#2663#0" expanded="true" />
+            <element signature="e#2630#2631#0" expanded="false" />
+            <element signature="e#2662#2663#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewImages.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="913" max-vertical-offset="1989">
-          <caret line="100" column="56" selection-start-line="100" selection-start-column="56" selection-end-line="100" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/HelperReviewImage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1525" max-vertical-offset="2958">
-          <caret line="149" column="11" selection-start-line="149" selection-start-column="11" selection-end-line="149" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewLocations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="901">
-          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewBuild.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5129" max-vertical-offset="5746">
-          <caret line="373" column="17" selection-start-line="373" selection-start-column="17" selection-end-line="373" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewGridAddEdit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1695" max-vertical-offset="2499">
-          <caret line="155" column="0" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogLocationFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2312">
-          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/ConfigReviewDataUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4063">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#7742#7743#0" expanded="true" />
-            <element signature="e#7794#7795#0" expanded="true" />
-            <element signature="e#10762#10763#0" expanded="true" />
-            <element signature="e#10811#10812#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DHChild.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1071">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
-          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogHolderAddEdit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="760" max-vertical-offset="1377">
-          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewChildren.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="1564">
-          <caret line="41" column="42" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3618,77 +3355,370 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogReviewDataEditFragment.java">
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DHImageEdit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1156">
-          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/ConfigAddEditActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1326" max-vertical-offset="3043">
-          <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1326">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
           <folding>
-            <element signature="e#0#5485#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#2376#2377#0" expanded="true" />
-            <element signature="e#2445#2446#0" expanded="true" />
-            <element signature="e#2563#2564#0" expanded="true" />
-            <element signature="e#2633#2634#0" expanded="true" />
-            <element signature="e#2920#2921#0" expanded="true" />
-            <element signature="e#2962#2963#0" expanded="true" />
-            <element signature="e#3141#3142#0" expanded="true" />
-            <element signature="e#3187#3188#0" expanded="true" />
-            <element signature="e#3336#3337#0" expanded="true" />
-            <element signature="e#3382#3383#0" expanded="true" />
-            <element signature="e#3516#3517#0" expanded="true" />
-            <element signature="e#3559#3560#0" expanded="true" />
-            <element signature="e#3708#3709#0" expanded="true" />
-            <element signature="e#3750#3751#0" expanded="true" />
-            <element signature="e#3933#3934#0" expanded="true" />
-            <element signature="e#3979#3980#0" expanded="true" />
-            <element signature="e#4131#4132#0" expanded="true" />
-            <element signature="e#4177#4178#0" expanded="true" />
-            <element signature="e#4319#4320#0" expanded="true" />
-            <element signature="e#4363#4364#0" expanded="true" />
-            <element signature="e#4500#4501#0" expanded="true" />
-            <element signature="e#4543#4544#0" expanded="true" />
-            <element signature="e#5243#5244#0" expanded="true" />
-            <element signature="e#5278#5279#0" expanded="true" />
-            <element signature="e#5348#5349#0" expanded="true" />
-            <element signature="e#5384#5385#0" expanded="true" />
-            <element signature="e#5435#5436#0" expanded="true" />
-            <element signature="e#5475#5476#0" expanded="true" />
+            <element signature="e#2347#2457#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/InputHandlerReviewData.java">
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogLocationFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1683">
-          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1134" max-vertical-offset="2312">
+          <caret line="126" column="5" selection-start-line="126" selection-start-column="5" selection-end-line="126" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyGeneralLibrary/src/com/chdryra/android/mygenerallibrary/SortableList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="883" max-vertical-offset="1734">
+          <caret line="78" column="11" selection-start-line="78" selection-start-column="11" selection-end-line="78" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewGrid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1067" max-vertical-offset="6001">
+          <caret line="110" column="16" selection-start-line="110" selection-start-column="16" selection-end-line="110" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/CommentFormatter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="16" max-vertical-offset="799">
+          <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/ConfigReviewDataUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1763" max-vertical-offset="4114">
+          <caret line="132" column="0" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewLocationMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1921" max-vertical-offset="7140">
+          <caret line="162" column="13" selection-start-line="162" selection-start-column="13" selection-end-line="162" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewLocations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="935">
+          <caret line="56" column="8" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
+          <folding>
+            <element signature="e#1492#1493#0" expanded="false" />
+            <element signature="e#1551#1552#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewURLs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
+          <caret line="59" column="42" selection-start-line="59" selection-start-column="42" selection-end-line="59" selection-end-column="42" />
+          <folding>
+            <element signature="e#1474#1475#0" expanded="false" />
+            <element signature="e#1537#1538#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewTags.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
+          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+          <folding>
+            <element signature="e#508#509#0" expanded="false" />
+            <element signature="e#542#543#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewComments.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1547">
+          <caret line="45" column="30" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
+          <folding>
+            <element signature="e#1586#1587#0" expanded="false" />
+            <element signature="e#1624#1625#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DHChild.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1071">
+          <caret line="48" column="15" selection-start-line="48" selection-start-column="15" selection-end-line="48" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-20/android.jar!/java/lang/Object.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewFacts.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
+          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+          <folding>
+            <element signature="e#574#575#0" expanded="false" />
+            <element signature="e#609#610#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/GVCommentList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1516" max-vertical-offset="2244">
+          <caret line="148" column="38" selection-start-line="148" selection-start-column="38" selection-end-line="148" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogHolderAddEdit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1394">
+          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogHolderBasic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1054">
+          <caret line="21" column="85" selection-start-line="21" selection-start-column="85" selection-end-line="21" selection-end-column="85" />
+          <folding>
+            <element signature="e#1284#1285#0" expanded="true" />
+            <element signature="e#1320#1321#0" expanded="true" />
+            <element signature="e#1959#1960#0" expanded="true" />
+            <element signature="e#2003#2004#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogHolder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyGeneralLibrary/src/com/chdryra/android/mygenerallibrary/DialogCancelAddDoneFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
+          <caret line="19" column="70" selection-start-line="19" selection-start-column="70" selection-end-line="19" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyGeneralLibrary/src/com/chdryra/android/mygenerallibrary/DialogCancelActionDoneFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1802">
+          <caret line="26" column="70" selection-start-line="26" selection-start-column="70" selection-end-line="26" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyGeneralLibrary/src/com/chdryra/android/mygenerallibrary/DialogThreeButtonFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="1496">
+          <caret line="30" column="71" selection-start-line="30" selection-start-column="71" selection-end-line="30" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyGeneralLibrary/src/com/chdryra/android/mygenerallibrary/DialogTwoButtonFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2400" max-vertical-offset="4131">
+          <caret line="211" column="9" selection-start-line="211" selection-start-column="9" selection-end-line="211" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogReviewDataEditFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="717" max-vertical-offset="1513">
+          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+          <folding>
+            <element signature="e#1647#1686#0" expanded="true" />
+            <element signature="e#2799#2800#0" expanded="true" />
+            <element signature="e#2826#2827#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewBuild.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4130" max-vertical-offset="5678">
+          <caret line="308" column="33" selection-start-line="308" selection-start-column="33" selection-end-line="308" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/HelperReviewImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1104" max-vertical-offset="2924">
+          <caret line="107" column="9" selection-start-line="107" selection-start-column="9" selection-end-line="107" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyGeneralLibrary/src/com/chdryra/android/mygenerallibrary/ImageHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3090" max-vertical-offset="4386">
+          <caret line="217" column="21" selection-start-line="217" selection-start-column="21" selection-end-line="217" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DialogReviewDataAddFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1564">
-          <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1071" max-vertical-offset="2006">
+          <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
           <folding>
-            <element signature="e#2827#2865#0" expanded="true" />
+            <element signature="e#1970#1971#0" expanded="true" />
+            <element signature="e#2013#2014#0" expanded="true" />
+            <element signature="e#2732#2770#0" expanded="true" />
+            <element signature="e#3711#3712#0" expanded="true" />
+            <element signature="e#3771#3772#0" expanded="true" />
+            <element signature="e#3825#3826#0" expanded="true" />
+            <element signature="e#3852#3853#0" expanded="true" />
+            <element signature="e#3880#3881#0" expanded="true" />
+            <element signature="e#3935#3936#0" expanded="true" />
+            <element signature="e#4079#4080#0" expanded="true" />
+            <element signature="e#4129#4130#0" expanded="true" />
+            <element signature="e#4166#4167#0" expanded="true" />
+            <element signature="e#4194#4195#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/DHImage2.java">
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewGridAddEdit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8252427" vertical-offset="0" max-vertical-offset="1326">
-          <caret line="41" column="31" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="616" max-vertical-offset="3094">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
           <folding>
-            <element signature="e#2341#2451#0" expanded="true" />
+            <element signature="e#2325#2326#0" expanded="true" />
+            <element signature="e#2391#2392#0" expanded="true" />
+            <element signature="e#2430#2431#0" expanded="true" />
+            <element signature="e#2496#2497#0" expanded="true" />
+            <element signature="e#2531#2532#0" expanded="true" />
+            <element signature="e#2595#2596#0" expanded="true" />
+            <element signature="e#2628#2629#0" expanded="true" />
+            <element signature="e#5303#5333#1" expanded="true" />
+            <element signature="e#5528#5566#0" expanded="true" />
+            <element signature="e#6128#6158#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-20/android.jar!/android/app/Fragment.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="395" max-vertical-offset="2975">
+          <caret line="35" column="38" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/GVReviewSubjectRatingList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1414" max-vertical-offset="2142">
+          <caret line="127" column="21" selection-start-line="124" selection-start-column="8" selection-end-line="127" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/GVImageList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1771" max-vertical-offset="2856">
+          <caret line="171" column="0" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewChildren.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="1819">
+          <caret line="48" column="36" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/InputHandlerChildren.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3" max-vertical-offset="663">
+          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#592#593#0" expanded="true" />
+            <element signature="e#647#648#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/InputHandlerReviewData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1397" max-vertical-offset="2023">
+          <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+          <folding>
+            <element signature="e#3221#3222#0" expanded="true" />
+            <element signature="e#3286#3287#0" expanded="true" />
+            <element signature="e#3468#3469#0" expanded="true" />
+            <element signature="e#3520#3521#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/InputHandlerImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3" max-vertical-offset="629">
+          <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#535#536#0" expanded="true" />
+            <element signature="e#588#589#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewImages.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="2329">
+          <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="43" />
+          <folding>
+            <element signature="e#2280#2835#0" expanded="true" />
+            <element signature="e#2816#2817#0" expanded="true" />
+            <element signature="e#4782#4783#0" expanded="true" />
+            <element signature="e#4818#4819#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/ConfigAddEditActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9456869" vertical-offset="1618" max-vertical-offset="2669">
+          <caret line="148" column="0" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#5587#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
