@@ -6,6 +6,7 @@
  * Date: 30 October, 2014
  */
 
-include ':MyAndroidWidgets', ':app'
-project(':MyAndroidWidgets').projectDir = new File(settingsDir,
-        '../../MyAndroidWidgets')
+include ':RemoteAPIFetchers', ':app'
+project(':RemoteAPIFetchers').projectDir = new File(settingsDir,
+        '../../RemoteAPIFetchers')
+

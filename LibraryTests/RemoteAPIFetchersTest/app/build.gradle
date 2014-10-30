@@ -13,8 +13,7 @@ android {
     buildToolsVersion "21.0.0"
 
     defaultConfig {
-        applicationId "com.chdryra.android.myandroidwidgetstest"
-        testApplicationId "com.chdryra.android.myandroidwidgets.tests"
+        applicationId "com.chdryra.android.remoteapifetcherstest"
         minSdkVersion 15
         targetSdkVersion 21
         versionCode 1
@@ -26,9 +25,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets { main { java.srcDirs = ['src/main/java', 'src/main/java/'] } }
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile project(path: ':MyAndroidWidgets')
+    compile project(path: ':RemoteAPIFetchers')
 }
