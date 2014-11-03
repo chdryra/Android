@@ -1,0 +1,28 @@
+<!--
+  ~ Copyright (c) 2014, Rizwan Choudrey - All Rights Reserved
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited
+  ~ Proprietary and confidential
+  ~ Author: Rizwan Choudrey
+  ~ Date: 3 November, 2014
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <com.chdryra.android.myandroidwidgets.ClearableEditText
+        android:id="@+id/edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_text_hint"
+        android:text="@string/edit_text_text"/>
+
+    <com.chdryra.android.myandroidwidgets.ClearableAutoCompleteTextView
+        android:id="@+id/auto_complete_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/ac_hint"
+        android:text="@string/ac_text"/>
+
+</LinearLayout>
