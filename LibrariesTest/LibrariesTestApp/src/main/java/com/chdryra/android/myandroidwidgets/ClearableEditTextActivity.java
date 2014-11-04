@@ -18,6 +18,6 @@ public class ClearableEditTextActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_clearable_edit_text);
+        setContentView(R.layout.myandroidwidgets_clearable_edit_text);
     }
 }

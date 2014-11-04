@@ -8,6 +8,8 @@
 
 package com.chdryra.android.mygenerallibrary.test;
 
+import android.test.suitebuilder.annotation.SmallTest;
+
 import com.chdryra.android.mygenerallibrary.ActivityResultCode;
 
 import junit.framework.TestCase;
@@ -18,10 +20,18 @@ import junit.framework.TestCase;
  * Email: rizwan.choudrey@gmail.com
  */
 public class ActivityResultCodeTest extends TestCase {
+    @SmallTest
     public void testActivityResultCodeEquals() {
         for (ActivityResultCode code : ActivityResultCode.values()) {
             assertTrue(code.equals(code));
             assertTrue(code.equals(code.get()));
+        }
+    }
+
+    @SmallTest
+    public void testActivityResultCodeGet() {
+        for (ActivityResultCode code : ActivityResultCode.values()) {
+            assertEquals(code, ActivityResultCode.get(code.get()));
         }
     }
 }

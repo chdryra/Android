@@ -22,6 +22,6 @@ public class ClearableAutoCompleteTextViewActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_clearable_auto_complete_text_view);
+        setContentView(R.layout.myandroidwidgets_clearable_auto_complete_text_view);
     }
 }

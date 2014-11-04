@@ -47,6 +47,23 @@ public class ClearableEditTextTest extends
 
     @SmallTest
     @UiThreadTest
+    public void testKeboardEntry() {
+        try {
+            this.runTestOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    TouchUtils.tapView(ClearableEditTextTest.this, mEditText);
+                    sendKeys(TEST_TEXT);
+                    assertEquals(TEST_TEXT, mEditText.getText().toString());
+                }
+            });
+        } catch (Throwable e) {
+            e.printStackTrace();
+        }
+    }
+
+    @SmallTest
+    @UiThreadTest
     public void testClearTextOnXPressedWhenClearable() {
         testXPressed(true);
     }
