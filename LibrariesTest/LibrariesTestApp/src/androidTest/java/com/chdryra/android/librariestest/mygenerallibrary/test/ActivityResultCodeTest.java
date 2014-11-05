@@ -6,7 +6,7 @@
  * Date: 30 October, 2014
  */
 
-package com.chdryra.android.mygenerallibrary.test;
+package com.chdryra.android.librariestest.mygenerallibrary.test;
 
 import android.test.suitebuilder.annotation.SmallTest;
 

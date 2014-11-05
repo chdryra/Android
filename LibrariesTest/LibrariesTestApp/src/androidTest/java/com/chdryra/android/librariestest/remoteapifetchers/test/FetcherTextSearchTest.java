@@ -6,7 +6,7 @@
  * Date: 30 October, 2014
  */
 
-package com.chdryra.android.remoteapifetchers.test;
+package com.chdryra.android.librariestest.remoteapifetchers.test;
 
 import android.test.AndroidTestCase;
 
@@ -17,7 +17,7 @@ import com.chdryra.android.remoteapifetchers.FetcherTextSearch;
  * On: 30/10/2014
  * Email: rizwan.choudrey@gmail.com
  */
-public class FetcherTextSearchTest extends AndroidTestCase{
+public class FetcherTextSearchTest extends AndroidTestCase {
     private static final String QUERY = "Tower Bridge";
     private FetcherTextSearch mSearch;
 

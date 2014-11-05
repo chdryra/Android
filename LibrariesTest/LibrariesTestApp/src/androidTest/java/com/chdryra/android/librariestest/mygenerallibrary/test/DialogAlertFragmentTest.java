@@ -6,14 +6,13 @@
  * Date: 4 November, 2014
  */
 
-package com.chdryra.android.mygenerallibrary.test;
+package com.chdryra.android.librariestest.mygenerallibrary.test;
 
 import android.app.FragmentManager;
 import android.test.ActivityInstrumentationTestCase2;
-import android.test.UiThreadTest;
 
+import com.chdryra.android.librariestest.mygenerallibrary.ActivitySingleFragmentActivity;
 import com.chdryra.android.mygenerallibrary.DialogAlertFragment;
-import com.chdryra.android.mygenrallibrary.ActivitySingleFragmentActivity;
 
 /**
  * Created by: Rizwan Choudrey
@@ -22,6 +21,7 @@ import com.chdryra.android.mygenrallibrary.ActivitySingleFragmentActivity;
  */
 public class DialogAlertFragmentTest extends
         ActivityInstrumentationTestCase2<ActivitySingleFragmentActivity> {
+    private static final String ALERT = "Alert String";
     private FragmentManager     mManager;
     private DialogAlertFragment mDialog;
 
@@ -36,19 +36,8 @@ public class DialogAlertFragmentTest extends
         mDialog = new DialogAlertFragment() {
             @Override
             protected String getAlertString() {
-                return "DialogAlertFragment";
+                return ALERT;
             }
         };
-    }
-
-    @UiThreadTest
-    public void testDialogShows() {
-        showDialog();
-        assertTrue(mDialog.getDialog().isShowing());
-    }
-
-    private void showDialog() {
-        mDialog.show(mManager, "Tag");
-        mManager.executePendingTransactions();
     }
 }

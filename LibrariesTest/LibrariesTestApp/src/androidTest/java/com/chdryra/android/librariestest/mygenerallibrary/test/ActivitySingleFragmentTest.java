@@ -6,14 +6,14 @@
  * Date: 4 November, 2014
  */
 
-package com.chdryra.android.mygenerallibrary.test;
+package com.chdryra.android.librariestest.mygenerallibrary.test;
 
 import android.app.FragmentManager;
-import android.test.ActivityInstrumentationTestCase2;
+import android.test.SingleLaunchActivityTestCase;
 import android.test.UiThreadTest;
 
+import com.chdryra.android.librariestest.mygenerallibrary.ActivitySingleFragmentActivity;
 import com.chdryra.android.mygenerallibrary.ActivitySingleFragment;
-import com.chdryra.android.mygenrallibrary.ActivitySingleFragmentActivity;
 
 
 /**
@@ -22,10 +22,11 @@ import com.chdryra.android.mygenrallibrary.ActivitySingleFragmentActivity;
  * Email: rizwan.choudrey@gmail.com
  */
 public class ActivitySingleFragmentTest extends
-        ActivityInstrumentationTestCase2<ActivitySingleFragmentActivity> {
+        SingleLaunchActivityTestCase<ActivitySingleFragmentActivity> {
 
     public ActivitySingleFragmentTest() {
-        super(ActivitySingleFragmentActivity.class);
+        //Note package is that specified in manifest for "app", not java package of class.
+        super("com.chdryra.android.librariestest", ActivitySingleFragmentActivity.class);
     }
 
     @UiThreadTest

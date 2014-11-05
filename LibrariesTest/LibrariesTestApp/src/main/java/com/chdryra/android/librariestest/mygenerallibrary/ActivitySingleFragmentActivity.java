@@ -6,7 +6,7 @@
  * Date: 4 November, 2014
  */
 
-package com.chdryra.android.mygenrallibrary;
+package com.chdryra.android.librariestest.mygenerallibrary;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -15,10 +15,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.chdryra.android.libraries.R;
+import com.chdryra.android.librariestest.R;
 import com.chdryra.android.mygenerallibrary.ActivitySingleFragment;
 
 public class ActivitySingleFragmentActivity extends ActivitySingleFragment {
+
     public static class ActivitySingleFragmentFragment extends Fragment {
         @Nullable
         @Override

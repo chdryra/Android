@@ -6,12 +6,12 @@
  * Date: 3 November, 2014
  */
 
-package com.chdryra.android.myandroidwidgets;
+package com.chdryra.android.librariestest.myandroidwidgets;
 
 import android.app.Activity;
 import android.os.Bundle;
 
-import com.chdryra.android.libraries.R;
+import com.chdryra.android.librariestest.R;
 
 /**
  * Created by: Rizwan Choudrey
