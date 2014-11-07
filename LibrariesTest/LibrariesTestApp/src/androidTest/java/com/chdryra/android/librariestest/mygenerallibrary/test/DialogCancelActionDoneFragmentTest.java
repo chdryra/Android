@@ -27,6 +27,13 @@ import com.chdryra.android.mygenerallibrary.DialogTwoButtonFragment;
  */
 public class DialogCancelActionDoneFragmentTest
     extends ActivityInstrumentationTestCase2<ActivitySingleFragmentActivity> {
+    private static final DialogTwoButtonFragment.ActionType CANCEL =
+            DialogCancelActionDoneFragment.CANCEL_ACTION;
+    private static final DialogTwoButtonFragment.ActionType ACTION =
+            DialogCancelActionDoneFragment.ACTION_ACTION;
+    private static final DialogTwoButtonFragment.ActionType DONE   =
+            DialogCancelActionDoneFragment.DONE_ACTION;
+
     private Activity     mActivity;
     private DialogTester mTester;
     private DialogCancelActionDoneFragment mDefaultDialog;
@@ -58,13 +65,41 @@ public class DialogCancelActionDoneFragmentTest
 
     @SmallTest
     @UiThreadTest
-    public void testButtonDefaultActions() {
-        mTester.testButtonAction(DialogCancelActionDoneFragment.CANCEL_ACTION,
-                DialogTester.ButtonLMR.LEFT);
-        mTester.testButtonAction(DialogCancelActionDoneFragment.DONE_ACTION, DialogTester
-                .ButtonLMR.RIGHT);
-        mTester.testButtonAction(DialogCancelActionDoneFragment.DEFAULT_ACTION, DialogTester
-                .ButtonLMR.MIDDLE);
+    public void testButtonActions() {
+        mTester.testButtonAction(CANCEL, DialogTester.ButtonLMR.LEFT);
+        mTester.testButtonAction(ACTION, DialogTester.ButtonLMR.MIDDLE);
+        mTester.testButtonAction(DONE, DialogTester.ButtonLMR.RIGHT);
+    }
+
+    @SmallTest
+    @UiThreadTest
+    public void testClickButtons() {
+        DialogTester.ButtonClick<DialogCancelActionDoneFragment> cancelClick = new DialogTester
+                .ButtonClick<DialogCancelActionDoneFragment>() {
+            @Override
+            public void doClick(DialogCancelActionDoneFragment dialog) {
+                dialog.clickCancelButton();
+            }
+        };
+
+        DialogTester.ButtonClick<DialogCancelActionDoneFragment> actionClick = new DialogTester
+                .ButtonClick<DialogCancelActionDoneFragment>() {
+            @Override
+            public void doClick(DialogCancelActionDoneFragment dialog) {
+                dialog.clickActionButton();
+            }
+        };
+
+        DialogTester.ButtonClick<DialogCancelActionDoneFragment> doneClick = new DialogTester
+                .ButtonClick<DialogCancelActionDoneFragment>() {
+            @Override
+            public void doClick(DialogCancelActionDoneFragment dialog) {
+                dialog.clickDoneButton();
+            }
+        };
+        mTester.testClickButton(CANCEL, cancelClick);
+        mTester.testClickButton(ACTION, actionClick);
+        mTester.testClickButton(DONE, doneClick);
     }
 
     @SmallTest
@@ -127,20 +162,19 @@ public class DialogCancelActionDoneFragmentTest
     @SmallTest
     @UiThreadTest
     public void testSetKeyboardDoActionOnEditText() {
-        DialogTester cleanTester = new DialogTester(mDefaultDialog, mActivity);
-        cleanTester.showDialogAndTestIsShowing();
-        DialogTester.DialogResultListener listener = cleanTester.getListener();
+        DialogTester tester = new DialogTester(mDefaultDialog, mActivity);
+        tester.showDialogAndTestIsShowing();
+        DialogTester.DialogResultListener listener = tester.getListener();
 
         EditText et = new EditText(mActivity);
         mDefaultDialog.setKeyboardDoActionOnEditText(et);
         et.onEditorAction(DialogCancelActionDoneFragment.KEYBOARD_DO_ACTION);
 
-        assertEquals(DialogCancelActionDoneFragment.DEFAULT_ACTION.getResultCode(),
-                listener.getResultCode());
+        assertEquals(ACTION.getResultCode(), listener.getResultCode());
 
         listener.reset();
         et.onEditorAction(DialogCancelActionDoneFragment.KEYBOARD_DO_DONE);
-        assertNull(listener.getResultCode());
+        assertFalse(listener.called());
     }
 
     @SmallTest
@@ -154,61 +188,53 @@ public class DialogCancelActionDoneFragmentTest
         mDefaultDialog.setKeyboardDoDoneOnEditText(et);
         et.onEditorAction(DialogCancelActionDoneFragment.KEYBOARD_DO_DONE);
 
-        assertEquals(DialogCancelActionDoneFragment.DONE_ACTION.getResultCode(),
-                listener.getResultCode());
+        assertEquals(DONE.getResultCode(), listener.getResultCode());
 
         listener.reset();
         et.onEditorAction(DialogCancelActionDoneFragment.KEYBOARD_DO_ACTION);
-        assertNull(listener.getResultCode());
+        assertFalse(listener.called());
     }
 
     @SmallTest
     @UiThreadTest
-    public void testNoPerformActionOnDone() {
-        DialogTester.DialogResultListener actionListener = DialogTester.createListener
-                (DialogCancelActionDoneFragment.DEFAULT_ACTION);
+    public void testDefaultNoPerformActionOnDone() {
         DialogTester tester = new DialogTester(mDefaultDialog, mActivity);
-        tester.setListener(actionListener);
+        tester.newFilteredListener(ACTION);
 
         tester.showDialogAndTestIsShowing();
         mDefaultDialog.clickDoneButton();
 
-        assertNull(actionListener.getResultCode());
+        assertNull(tester.getListener().getResultCode());
     }
 
-//    @SmallTest
-//    @UiThreadTest
-//    public void testPerformActionOnDone() {
-//        DialogTester.DialogResultListener actionListener = DialogTester.createListener
-//                (DialogCancelActionDoneFragment.DEFAULT_ACTION);
-//
-//        DialogCancelActionDoneFragment dialog = getDialogWithPerformActionOnDone();
-//        DialogTester tester = new DialogTester(getDialogWithPerformActionOnDone(), mActivity);
-//        tester.setListener(actionListener);
-//
-//        tester.showDialogAndTestIsShowing();
-//        dialog.clickDoneButton();
-//
-//        assertNotNull(actionListener.getResultCode());
-//        assertEquals(DialogCancelActionDoneFragment.DEFAULT_ACTION.getResultCode(),
-//                actionListener.getResultCode());
-//    }
-//
-//    private DialogCancelActionDoneFragment getDialogWithPerformActionOnDone() {
-//        return new DialogCancelActionDoneFragment() {
-//
-//            @Override
-//            public void onCreate(Bundle savedInstanceState) {
-//                super.onCreate(savedInstanceState);
-//                performActionOnDone();
-//            }
-//
-//            @Override
-//            protected View createDialogUI() {
-//                return null;
-//            }
-//        };
-//    }
+    @SmallTest
+    @UiThreadTest
+    public void testPerformActionOnDone() {
+        DialogCancelActionDoneFragment dialog = getDialogWithPerformActionOnDone();
+        DialogTester tester = new DialogTester(dialog, mActivity);
+        tester.newFilteredListener(ACTION);
+
+        tester.showDialogAndTestIsShowing();
+        dialog.clickDoneButton();
+
+        assertEquals(ACTION.getResultCode(), tester.getListener().getResultCode());
+    }
+
+    private DialogCancelActionDoneFragment getDialogWithPerformActionOnDone() {
+        return new DialogCancelActionDoneFragment() {
+
+            @Override
+            public void onCreate(Bundle savedInstanceState) {
+                super.onCreate(savedInstanceState);
+                performActionOnDone();
+            }
+
+            @Override
+            protected View createDialogUI() {
+                return null;
+            }
+        };
+    }
 
     private DialogCancelActionDoneFragment getDialogWithDismissOnClick() {
         return new DialogCancelActionDoneFragment() {

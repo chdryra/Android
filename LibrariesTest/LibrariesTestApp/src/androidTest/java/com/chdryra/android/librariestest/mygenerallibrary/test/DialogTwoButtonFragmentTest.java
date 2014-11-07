@@ -25,7 +25,6 @@ import com.chdryra.android.mygenerallibrary.DialogTwoButtonFragment;
  * On: 05/11/2014
  * Email: rizwan.choudrey@gmail.com
  */
-//terst
 public class DialogTwoButtonFragmentTest extends
         ActivityInstrumentationTestCase2<ActivitySingleFragmentActivity> {
     private Activity     mActivity;
@@ -57,7 +56,8 @@ public class DialogTwoButtonFragmentTest extends
     @SmallTest
     @UiThreadTest
     public void testButtonDefaultActions() {
-        mTester.testButtonAction(DialogTwoButtonFragment.LEFT_BUTTON_DEFAULT_ACTION, ButtonLMR.LEFT);
+        mTester.testButtonAction(DialogTwoButtonFragment.LEFT_BUTTON_DEFAULT_ACTION,
+                ButtonLMR.LEFT);
         mTester.testButtonAction(DialogTwoButtonFragment.RIGHT_BUTTON_DEFAULT_ACTION,
                 ButtonLMR.RIGHT);
     }
@@ -83,9 +83,11 @@ public class DialogTwoButtonFragmentTest extends
     public void testSetButtonActions() {
         for (final DialogTwoButtonFragment.ActionType actionType : DialogTwoButtonFragment
                 .ActionType.values()) {
-            DialogTester.testButtonAction(getDialogWithAction(ButtonLMR.LEFT, actionType), mActivity,
+            DialogTester.testButtonAction(getDialogWithAction(ButtonLMR.LEFT, actionType),
+                    mActivity,
                     actionType, ButtonLMR.LEFT);
-            DialogTester.testButtonAction(getDialogWithAction(ButtonLMR.RIGHT, actionType), mActivity,
+            DialogTester.testButtonAction(getDialogWithAction(ButtonLMR.RIGHT, actionType),
+                    mActivity,
                     actionType, ButtonLMR.RIGHT);
         }
     }
@@ -101,7 +103,7 @@ public class DialogTwoButtonFragmentTest extends
 
     private DialogTwoButtonFragment getDialogWithDataOnButtonClick(ButtonLMR button) {
         DialogTwoButtonFragment dialog;
-        if(button == ButtonLMR.LEFT) {
+        if (button == ButtonLMR.LEFT) {
             return new DialogTwoButtonFragment() {
                 @Override
                 protected View createDialogUI() {
@@ -111,11 +113,11 @@ public class DialogTwoButtonFragmentTest extends
                 @Override
                 protected void onLeftButtonClick() {
                     Intent data = getReturnData();
-                    data.putExtra(DialogTester.DATA_KEY, DialogTester.DATA_STRING);
+                    DialogTester.putData(data);
                     super.onLeftButtonClick();
                 }
             };
-        } else if(button == ButtonLMR.RIGHT) {
+        } else if (button == ButtonLMR.RIGHT) {
             return new DialogTwoButtonFragment() {
                 @Override
                 protected View createDialogUI() {
@@ -125,7 +127,7 @@ public class DialogTwoButtonFragmentTest extends
                 @Override
                 protected void onRightButtonClick() {
                     Intent data = getReturnData();
-                    data.putExtra(DialogTester.DATA_KEY, DialogTester.DATA_STRING);
+                    DialogTester.putData(data);
                     super.onRightButtonClick();
                 }
             };

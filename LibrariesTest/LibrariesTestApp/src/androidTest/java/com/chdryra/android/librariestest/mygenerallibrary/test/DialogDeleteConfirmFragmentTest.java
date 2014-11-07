@@ -13,8 +13,8 @@ import android.test.UiThreadTest;
 import android.test.suitebuilder.annotation.SmallTest;
 
 import com.chdryra.android.librariestest.mygenerallibrary.ActivitySingleFragmentActivity;
-import com.chdryra.android.mygenerallibrary.DialogAlertFragment;
 import com.chdryra.android.mygenerallibrary.DialogDeleteConfirmFragment;
+import com.chdryra.android.mygenerallibrary.DialogTwoButtonFragment;
 
 /**
  * Created by: Rizwan Choudrey
@@ -24,6 +24,11 @@ import com.chdryra.android.mygenerallibrary.DialogDeleteConfirmFragment;
 
 //Don't know how to test the static method....
 public class DialogDeleteConfirmFragmentTest extends ActivityInstrumentationTestCase2<ActivitySingleFragmentActivity> {
+    private static final DialogTwoButtonFragment.ActionType CONFIRM = DialogDeleteConfirmFragment
+            .DELETE_CONFIRM;
+    private static final DialogTwoButtonFragment.ActionType CANCEL  = DialogDeleteConfirmFragment
+            .DELETE_CANCEL;
+
     private DialogTester mTester;
 
     public DialogDeleteConfirmFragmentTest() {
@@ -44,16 +49,32 @@ public class DialogDeleteConfirmFragmentTest extends ActivityInstrumentationTest
 
     @SmallTest
     @UiThreadTest
-    public void testConfirmButtonAction() {
-        mTester.testButtonAction(DialogDeleteConfirmFragment.DELETE_CONFIRM, DialogTester
-                .ButtonLMR.RIGHT);
+    public void testButtonActions() {
+        mTester.testButtonAction(CONFIRM, DialogTester.ButtonLMR.RIGHT);
+        mTester.testButtonAction(CANCEL, DialogTester.ButtonLMR.LEFT);
     }
 
     @SmallTest
     @UiThreadTest
-    public void testCancelButtonAction() {
-        mTester.testButtonAction(DialogDeleteConfirmFragment.DELETE_CANCEL, DialogTester
-                .ButtonLMR.LEFT);
+    public void testClickButtons() {
+        DialogTester.ButtonClick<DialogDeleteConfirmFragment> confirmClick = new DialogTester
+                .ButtonClick<DialogDeleteConfirmFragment>() {
+            @Override
+            public void doClick(DialogDeleteConfirmFragment dialog) {
+                dialog.clickConfirmButton();
+            }
+        };
+
+        DialogTester.ButtonClick<DialogDeleteConfirmFragment> cancelClick = new DialogTester
+                .ButtonClick<DialogDeleteConfirmFragment>() {
+            @Override
+            public void doClick(DialogDeleteConfirmFragment dialog) {
+                dialog.clickCancelButton();
+            }
+        };
+
+        mTester.testClickButton(CONFIRM, confirmClick);
+        mTester.testClickButton(CANCEL, cancelClick);
     }
 
     @SmallTest

@@ -62,8 +62,9 @@ public class DialogThreeButtonFragmentTest extends
                 DialogTester.ButtonLMR.LEFT);
         mTester.testButtonAction(DialogThreeButtonFragment.RIGHT_BUTTON_DEFAULT_ACTION, DialogTester
                 .ButtonLMR.RIGHT);
-        mTester.testButtonAction(DialogThreeButtonFragment.MIDDLE_BUTTON_DEFAULT_ACTION, DialogTester
-                .ButtonLMR.MIDDLE);
+        mTester.testButtonAction(DialogThreeButtonFragment.MIDDLE_BUTTON_DEFAULT_ACTION,
+                DialogTester
+                        .ButtonLMR.MIDDLE);
     }
 
     @SmallTest
@@ -77,10 +78,11 @@ public class DialogThreeButtonFragmentTest extends
     @SmallTest
     @UiThreadTest
     public void testSetDismissOnButtonClicks() {
-        DialogTester.testDismissOrNotOnClick(getDialogWithDismissOnClick(DialogTester.ButtonLMR.LEFT),
+        DialogTester.testDismissOrNotOnClick(getDialogWithDismissOnClick(DialogTester.ButtonLMR
+                        .LEFT),
                 mActivity, DialogTester.ButtonLMR.LEFT, true);
         DialogTester.testDismissOrNotOnClick(getDialogWithDismissOnClick(DialogTester.ButtonLMR
-                        .RIGHT), mActivity, DialogTester.ButtonLMR.RIGHT, true);
+                .RIGHT), mActivity, DialogTester.ButtonLMR.RIGHT, true);
         DialogTester.testDismissOrNotOnClick(getDialogWithDismissOnClick(DialogTester.ButtonLMR
                 .MIDDLE), mActivity, DialogTester.ButtonLMR.MIDDLE, true);
     }
@@ -90,9 +92,11 @@ public class DialogThreeButtonFragmentTest extends
     public void testSetButtonActions() {
         for (final DialogTwoButtonFragment.ActionType actionType : DialogTwoButtonFragment
                 .ActionType.values()) {
-            DialogTester.testButtonAction(getDialogWithAction(DialogTester.ButtonLMR.LEFT, actionType), mActivity,
+            DialogTester.testButtonAction(getDialogWithAction(DialogTester.ButtonLMR.LEFT,
+                            actionType), mActivity,
                     actionType, DialogTester.ButtonLMR.LEFT);
-            DialogTester.testButtonAction(getDialogWithAction(DialogTester.ButtonLMR.RIGHT, actionType), mActivity,
+            DialogTester.testButtonAction(getDialogWithAction(DialogTester.ButtonLMR.RIGHT,
+                            actionType), mActivity,
                     actionType, DialogTester.ButtonLMR.RIGHT);
             DialogTester.testButtonAction(getDialogWithAction(DialogTester.ButtonLMR.MIDDLE,
                             actionType), mActivity,
@@ -103,7 +107,8 @@ public class DialogThreeButtonFragmentTest extends
     @SmallTest
     @UiThreadTest
     public void testDataReturnOnButtonClicks() {
-        DialogTester.testIntentDataPassBack(getDialogWithDataOnLeftClick(), mActivity, DialogTester.ButtonLMR.LEFT);
+        DialogTester.testIntentDataPassBack(getDialogWithDataOnLeftClick(), mActivity,
+                DialogTester.ButtonLMR.LEFT);
         DialogTester.testIntentDataPassBack(getDialogWithDataOnRightClick(), mActivity,
                 DialogTester.ButtonLMR.RIGHT);
         DialogTester.testIntentDataPassBack(getDialogWithDataOnMiddleClick(), mActivity,
@@ -121,7 +126,7 @@ public class DialogThreeButtonFragmentTest extends
             @Override
             protected void onRightButtonClick() {
                 Intent data = getReturnData();
-                data.putExtra(DialogTester.DATA_KEY, DialogTester.DATA_STRING);
+                DialogTester.putData(data);
                 super.onRightButtonClick();
             }
         };
@@ -138,7 +143,7 @@ public class DialogThreeButtonFragmentTest extends
             @Override
             protected void onLeftButtonClick() {
                 Intent data = getReturnData();
-                data.putExtra(DialogTester.DATA_KEY, DialogTester.DATA_STRING);
+                DialogTester.putData(data);
                 super.onLeftButtonClick();
             }
         };
@@ -155,12 +160,12 @@ public class DialogThreeButtonFragmentTest extends
             @Override
             protected void onMiddleButtonClick() {
                 Intent data = getReturnData();
-                data.putExtra(DialogTester.DATA_KEY, DialogTester.DATA_STRING);
+                DialogTester.putData(data);
                 super.onMiddleButtonClick();
             }
         };
     }
-    
+
     private DialogThreeButtonFragment getDialogWithDismissOnClick(final DialogTester.ButtonLMR
             button) {
         return new DialogThreeButtonFragment() {
@@ -170,7 +175,7 @@ public class DialogThreeButtonFragmentTest extends
                 super.onCreate(savedInstanceState);
                 if (button == DialogTester.ButtonLMR.LEFT) {
                     dismissDialogOnLeftClick();
-                } else if(button == DialogTester.ButtonLMR.RIGHT) {
+                } else if (button == DialogTester.ButtonLMR.RIGHT) {
                     dismissDialogOnRightClick();
                 } else {
                     dismissDialogOnMiddleClick();
@@ -192,7 +197,7 @@ public class DialogThreeButtonFragmentTest extends
                 super.onCreate(savedInstanceState);
                 if (button == DialogTester.ButtonLMR.LEFT) {
                     setLeftButtonAction(actionType);
-                } else if (button == DialogTester.ButtonLMR.RIGHT){
+                } else if (button == DialogTester.ButtonLMR.RIGHT) {
                     setRightButtonAction(actionType);
                 } else {
                     setMiddleButtonAction(actionType);

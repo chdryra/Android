@@ -14,6 +14,7 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.chdryra.android.mygenerallibrary.ActivityResultCode;
 import com.chdryra.android.mygenerallibrary.DialogThreeButtonFragment;
@@ -27,18 +28,18 @@ import junit.framework.Assert;
  * Email: rizwan.choudrey@gmail.com
  */
 public class DialogTester {
-    enum ButtonLMR {LEFT, MIDDLE, RIGHT}
-
     public static final int REQUEST_CODE = 314;
-    public static final String DATA_KEY = "com.chdryra.android.librariestest.mygenerallibrary" +
+    private static final String TAG         = "DialogTester";
+    private static final String DATA_KEY    = "com.chdryra.android.librariestest.mygenerallibrary" +
             ".test.dialog_tester";
-    public static final String DATA_STRING = "Data";
-
+    private static final String DATA_STRING = "Data";
     private DialogTwoButtonFragment mDialog;
     private DialogResultListener    mListener;
     private Activity                mActivity;
     private FragmentManager mFragmentManager;
     private ButtonManager mButtonManager;
+
+    enum ButtonLMR {LEFT, MIDDLE, RIGHT}
 
     DialogTester(DialogTwoButtonFragment dialog, Activity activity) {
         init(dialog, activity);
@@ -48,25 +49,6 @@ public class DialogTester {
     DialogTester(DialogThreeButtonFragment dialog, Activity activity) {
         init(dialog, activity);
         mButtonManager = new Button3Manager(dialog);
-    }
-
-    private void init(DialogTwoButtonFragment dialog, Activity activity) {
-        mDialog = dialog;
-        mActivity = activity;
-        mFragmentManager = mActivity.getFragmentManager();
-        mListener = DialogResultListener.newInstance();
-    }
-
-    void setListener(DialogResultListener listener) {
-        mListener = listener;
-    }
-
-    DialogResultListener getListener() {
-        return mListener;
-    }
-
-    static DialogResultListener createListener() {
-        return DialogResultListener.newInstance();
     }
 
     static DialogResultListener createListener(DialogTwoButtonFragment.ActionType filter) {
@@ -99,9 +81,10 @@ public class DialogTester {
 
     /**
      * Use DATA_KEY as key for putting DATA_STRING in intent.
-     * @param dialog: dialog to test that overrides some OnClick method to put data in intent.
+     *
+     * @param dialog:   dialog to test that overrides some OnClick method to put data in intent.
      * @param activity: activity from {@link android.test.ActivityInstrumentationTestCase2} test.
-     * @param button: button to click.
+     * @param button:   button to click.
      */
     static void testIntentDataPassBack(DialogTwoButtonFragment dialog, Activity activity,
             ButtonLMR button) {
@@ -113,6 +96,169 @@ public class DialogTester {
             ButtonLMR button) {
         DialogTester tester = new DialogTester(dialog, activity);
         tester.testReturnDataOnClick(button);
+    }
+
+    static void putData(Intent data) {
+        data.putExtra(DialogTester.DATA_KEY, DialogTester.DATA_STRING);
+    }
+
+    static void showDialogAndTestIsShowing(DialogFragment dialog, Activity activity) {
+        dialog.show(activity.getFragmentManager(), "Tag");
+        activity.getFragmentManager().executePendingTransactions();
+        Assert.assertTrue(dialog.getDialog().isShowing());
+    }
+
+    public static class DialogResultListener extends Fragment {
+        private static final String  FILTER_KEY        = "com.chdryra.android.librariestest" +
+                ".mygenerallibrary.test.dialog_result_listener";
+        private static final int     INIT_REQUEST_CODE = 161019;
+        private static final int     INIT_RESULT_CODE  = 910161;
+        protected            int     mRequestCode      = INIT_REQUEST_CODE;
+        protected            int     mResultCode       = INIT_RESULT_CODE;
+        protected            Intent  mData             = null;
+        protected            boolean mCallback         = false;
+        private DialogTwoButtonFragment.ActionType mResultFilter;
+
+        public DialogResultListener() {
+        }
+
+        public static DialogResultListener newInstance() {
+            return new DialogResultListener();
+        }
+
+        public static DialogResultListener newInstance(DialogTwoButtonFragment.ActionType filter) {
+            DialogResultListener listener = new DialogResultListener();
+            Bundle args = new Bundle();
+            args.putSerializable(FILTER_KEY, filter);
+            listener.setArguments(args);
+
+            return listener;
+        }
+
+        public int getRequestCode() {
+            return mRequestCode;
+        }
+
+        public ActivityResultCode getResultCode() {
+            return ActivityResultCode.get(mResultCode);
+        }
+
+        public Intent getData() {
+            return mData;
+        }
+
+        public boolean called() {
+            return mCallback;
+        }
+
+        public void reset() {
+            mRequestCode = INIT_REQUEST_CODE;
+            mResultCode = INIT_RESULT_CODE;
+            mData = null;
+            mCallback = false;
+        }
+
+        private DialogTwoButtonFragment.ActionType getResultFilter() {
+            if (getArguments() != null && mResultFilter == null) {
+                mResultFilter = (DialogTwoButtonFragment.ActionType) getArguments().getSerializable
+                        (FILTER_KEY);
+            }
+
+            return mResultFilter;
+        }
+
+        @Override
+        public void onActivityResult(int requestCode, int resultCode, Intent data) {
+            if (getResultFilter() == null || getResultFilter().getResultCode().equals(resultCode)) {
+                mCallback = true;
+                mRequestCode = requestCode;
+                mResultCode = resultCode;
+                mData = data;
+            }
+        }
+    }
+
+    public static abstract class ButtonClick<T extends DialogTwoButtonFragment> {
+        public abstract void doClick(T dialog);
+    }
+
+    private class ButtonManager {
+        private final ButtonLMR[] BUTTONS2 = {ButtonLMR.LEFT, ButtonLMR.RIGHT};
+        private DialogTwoButtonFragment mDialog;
+
+        private ButtonManager(DialogTwoButtonFragment dialog) {
+            mDialog = dialog;
+        }
+
+        ButtonLMR[] getButtons() {
+            return BUTTONS2;
+        }
+
+        void click(ButtonLMR button) {
+            if (button == ButtonLMR.LEFT) {
+                mDialog.clickLeftButton();
+            } else if (button == ButtonLMR.RIGHT) {
+                mDialog.clickRightButton();
+            }
+        }
+
+        String getButtonText(ButtonLMR button) {
+            if (button == ButtonLMR.LEFT) {
+                return mDialog.getLeftButtonText();
+            } else if (button == ButtonLMR.RIGHT) {
+                return mDialog.getRightButtonText();
+            }
+
+            return null;
+        }
+    }
+
+    private class Button3Manager extends ButtonManager {
+        private final ButtonLMR[] BUTTONS3 = {ButtonLMR.LEFT, ButtonLMR.RIGHT, ButtonLMR.MIDDLE};
+        private DialogThreeButtonFragment mDialog;
+
+        private Button3Manager(DialogThreeButtonFragment dialog) {
+            super(dialog);
+            mDialog = dialog;
+        }
+
+        ButtonLMR[] getButtons() {
+            return BUTTONS3;
+        }
+
+        @Override
+        void click(ButtonLMR button) {
+            if (button == ButtonLMR.MIDDLE) {
+                mDialog.clickMiddleButton();
+            } else {
+                super.click(button);
+            }
+        }
+
+        @Override
+        String getButtonText(ButtonLMR button) {
+            return button == ButtonLMR.MIDDLE ? mDialog.getMiddleButtonText() : super
+                    .getButtonText(button);
+        }
+    }
+
+    private void init(DialogTwoButtonFragment dialog, Activity activity) {
+        mDialog = dialog;
+        mActivity = activity;
+        mFragmentManager = mActivity.getFragmentManager();
+        newListener();
+    }
+
+    DialogResultListener getListener() {
+        return mListener;
+    }
+
+    void newListener() {
+        mListener = DialogResultListener.newInstance();
+    }
+
+    void newFilteredListener(DialogTwoButtonFragment.ActionType filter) {
+        mListener = DialogResultListener.newInstance(filter);
     }
 
     private void testReturnDataOnClick(ButtonLMR button) {
@@ -179,6 +325,25 @@ public class DialogTester {
         mListener.reset();
     }
 
+    <T extends DialogTwoButtonFragment> void testClickButton(DialogTwoButtonFragment.ActionType
+            expectedAction, ButtonClick<T> click) {
+        showDialogAndTestIsShowing();
+
+        try {
+            //TODO make type safe
+            //Not ideal but not sure what else to do. No point making the whole tester
+            // parameterised for the sake of one method.
+            click.doClick((T) mDialog);
+            Assert.assertEquals(REQUEST_CODE, mListener.getRequestCode());
+            Assert.assertEquals(expectedAction.getResultCode(), mListener.getResultCode());
+        } catch (ClassCastException e) {
+            Log.e(TAG, "Incorrect cast of Dialog: trying to cast " + mDialog.getClass().getName()
+                    , e);
+        }
+
+        mListener.reset();
+    }
+
     void testDismissOrNotOnClick(ButtonLMR button, boolean testDismiss) {
         showDialogAndTestIsShowing();
         mButtonManager.click(button);
@@ -192,149 +357,11 @@ public class DialogTester {
         mListener.reset();
     }
 
-    static void showDialogAndTestIsShowing(DialogFragment dialog, Activity activity) {
-        dialog.show(activity.getFragmentManager(), "Tag");
-        activity.getFragmentManager().executePendingTransactions();
-        Assert.assertTrue(dialog.getDialog().isShowing());
-    }
-
     void showDialogAndTestIsShowing() {
         mListener.reset();
         mDialog.setTargetFragment(mListener, REQUEST_CODE);
         mDialog.show(mFragmentManager, "Tag");
         mFragmentManager.executePendingTransactions();
         Assert.assertTrue(mDialog.getDialog().isShowing());
-    }
-
-    private class ButtonManager {
-        private final ButtonLMR[] BUTTONS2 = {ButtonLMR.LEFT, ButtonLMR.RIGHT};
-        private DialogTwoButtonFragment mDialog;
-
-        private ButtonManager(DialogTwoButtonFragment dialog) {
-            mDialog = dialog;
-        }
-
-        ButtonLMR[] getButtons() {
-            return BUTTONS2;
-        }
-
-        void click(ButtonLMR button) {
-            if (button == ButtonLMR.LEFT) {
-                mDialog.clickLeftButton();
-            } else if (button == ButtonLMR.RIGHT) {
-                mDialog.clickRightButton();
-            }
-        }
-
-        String getButtonText(ButtonLMR button) {
-            if (button == ButtonLMR.LEFT) {
-                return mDialog.getLeftButtonText();
-            } else if (button == ButtonLMR.RIGHT) {
-                return mDialog.getRightButtonText();
-            }
-
-            return null;
-        }
-    }
-
-    private class Button3Manager extends ButtonManager{
-        private final ButtonLMR[] BUTTONS3 = {ButtonLMR.LEFT, ButtonLMR.RIGHT, ButtonLMR.MIDDLE};
-        private DialogThreeButtonFragment mDialog;
-
-        private Button3Manager(DialogThreeButtonFragment dialog) {
-            super(dialog);
-            mDialog = dialog;
-        }
-
-        ButtonLMR[] getButtons() {
-            return BUTTONS3;
-        }
-
-        @Override
-        void click(ButtonLMR button) {
-            if (button == ButtonLMR.MIDDLE) {
-                mDialog.clickMiddleButton();
-            } else {
-                super.click(button);
-            }
-        }
-
-        @Override
-        String getButtonText(ButtonLMR button) {
-            return button == ButtonLMR.MIDDLE ? mDialog.getMiddleButtonText() : super
-                    .getButtonText(button);
-        }
-    }
-
-    public static class DialogResultListener extends Fragment {
-        private static final String    FILTER_KEY = "com.chdryra.android.librariestest" +
-                ".mygenerallibrary.test.dialog_result_listener";
-        private static final int       INIT_REQUEST_CODE = 161019;
-        private static final int       INIT_RESULT_CODE  = 910161;
-
-        private DialogTwoButtonFragment.ActionType mResultFilter;
-        protected int     mRequestCode = INIT_REQUEST_CODE;
-        protected int     mResultCode  = INIT_RESULT_CODE;
-        protected Intent  mData        = null;
-        protected boolean mCallback    = false;
-
-        public DialogResultListener() {
-        }
-
-        public static DialogResultListener newInstance() {
-            return new DialogResultListener();
-        }
-
-        public static DialogResultListener newInstance(DialogTwoButtonFragment.ActionType filter) {
-            DialogResultListener listener = new DialogResultListener();
-            Bundle args = new Bundle();
-            args.putSerializable(FILTER_KEY, filter);
-            listener.setArguments(args);
-
-            return listener;
-        }
-
-        public int getRequestCode() {
-            return mRequestCode;
-        }
-
-        public ActivityResultCode getResultCode() {
-            return ActivityResultCode.get(mResultCode);
-        }
-
-        public Intent getData() {
-            return mData;
-        }
-
-        public boolean called() {
-            return mCallback;
-        }
-
-        public void reset() {
-            mRequestCode = INIT_REQUEST_CODE;
-            mResultCode = INIT_RESULT_CODE;
-            mData = null;
-            mCallback = false;
-        }
-
-        private DialogTwoButtonFragment.ActionType getResultFilter() {
-            if(getArguments() != null && mResultFilter == null) {
-                mResultFilter = (DialogTwoButtonFragment.ActionType) getArguments().getSerializable
-                        (FILTER_KEY);
-            }
-
-            return mResultFilter;
-        }
-
-        @Override
-        public void onActivityResult(int requestCode, int resultCode, Intent data) {
-            reset();
-            if(getResultFilter() == null || getResultFilter().getResultCode().equals(resultCode)) {
-                mCallback = true;
-                mRequestCode = requestCode;
-                mResultCode = resultCode;
-                mData = data;
-            }
-        }
     }
 }

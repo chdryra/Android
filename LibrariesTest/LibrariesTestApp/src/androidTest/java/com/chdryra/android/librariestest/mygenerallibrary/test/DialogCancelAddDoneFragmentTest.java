@@ -8,11 +8,16 @@
 
 package com.chdryra.android.librariestest.mygenerallibrary.test;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.test.ActivityInstrumentationTestCase2;
+import android.test.UiThreadTest;
+import android.test.suitebuilder.annotation.SmallTest;
 import android.view.View;
 
 import com.chdryra.android.librariestest.mygenerallibrary.ActivitySingleFragmentActivity;
 import com.chdryra.android.mygenerallibrary.DialogCancelAddDoneFragment;
+import com.chdryra.android.mygenerallibrary.DialogTwoButtonFragment;
 
 /**
  * Created by: Rizwan Choudrey
@@ -20,7 +25,16 @@ import com.chdryra.android.mygenerallibrary.DialogCancelAddDoneFragment;
  * Email: rizwan.choudrey@gmail.com
  */
 public class DialogCancelAddDoneFragmentTest extends ActivityInstrumentationTestCase2<ActivitySingleFragmentActivity> {
-    private DialogTester mTester;
+    private static final DialogTwoButtonFragment.ActionType CANCEL =
+            DialogCancelAddDoneFragment.CANCEL_ACTION;
+    private static final DialogTwoButtonFragment.ActionType ADD    =
+            DialogCancelAddDoneFragment.ADD_ACTION;
+    private static final DialogTwoButtonFragment.ActionType DONE   =
+            DialogCancelAddDoneFragment.DONE_ACTION;
+
+    private DialogCancelAddDoneFragment mDefaultDialog;
+    private DialogTester                mTester;
+    private Activity                    mActivity;
 
     public DialogCancelAddDoneFragmentTest() {
         super(ActivitySingleFragmentActivity.class);
@@ -29,13 +43,78 @@ public class DialogCancelAddDoneFragmentTest extends ActivityInstrumentationTest
     @Override
     protected void setUp() throws Exception {
         super.setUp();
-        DialogCancelAddDoneFragment dialog = new DialogCancelAddDoneFragment() {
+        mActivity = getActivity();
+
+        mDefaultDialog = new DialogCancelAddDoneFragment() {
             @Override
             protected View createDialogUI() {
                 return null;
             }
         };
 
-        mTester = new DialogTester(dialog, getActivity());
+        mTester = new DialogTester(mDefaultDialog, mActivity);
+    }
+
+    @SmallTest
+    @UiThreadTest
+    public void testDialogBasics() {
+        mTester.testDialogBasics();
+    }
+
+    @SmallTest
+    @UiThreadTest
+    public void testButtonActions() {
+        mTester.testButtonAction(CANCEL, DialogTester.ButtonLMR.LEFT);
+        mTester.testButtonAction(ADD, DialogTester.ButtonLMR.MIDDLE);
+        mTester.testButtonAction(DONE, DialogTester.ButtonLMR.RIGHT);
+    }
+
+    @SmallTest
+    @UiThreadTest
+    public void testClickAddButton() {
+        DialogTester.ButtonClick<DialogCancelAddDoneFragment> actionClick = new DialogTester
+                .ButtonClick<DialogCancelAddDoneFragment>() {
+            @Override
+            public void doClick(DialogCancelAddDoneFragment dialog) {
+                dialog.clickAddButton();
+            }
+        };
+
+        mTester.testClickButton(ADD, actionClick);
+    }
+
+    @SmallTest
+    @UiThreadTest
+    public void testDefaultPerformAddOnDone() {
+        DialogTester tester = new DialogTester(mDefaultDialog, mActivity);
+        tester.newFilteredListener(ADD);
+
+        tester.showDialogAndTestIsShowing();
+        mDefaultDialog.clickDoneButton();
+
+        assertEquals(ADD.getResultCode(), tester.getListener().getResultCode());
+    }
+
+    @SmallTest
+    @UiThreadTest
+    public void testDataReturnOnAddClick() {
+        DialogTester.testIntentDataPassBack(getDialogWithDataOnAddClick(), mActivity,
+                DialogTester.ButtonLMR.MIDDLE);
+    }
+
+    private DialogCancelAddDoneFragment getDialogWithDataOnAddClick() {
+
+        return new DialogCancelAddDoneFragment() {
+            @Override
+            protected View createDialogUI() {
+                return null;
+            }
+
+            @Override
+            protected void onAddButtonClick() {
+                Intent data = getReturnData();
+                DialogTester.putData(data);
+            }
+        };
     }
 }
