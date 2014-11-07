@@ -3,44 +3,37 @@
  * Unauthorized copying of this file, via any medium is strictly prohibited
  * Proprietary and confidential
  * Author: Rizwan Choudrey
- * Date: 4 November, 2014
+ * Date: 6 November, 2014
  */
 
 package com.chdryra.android.librariestest.mygenerallibrary.test;
 
-import android.app.Activity;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.UiThreadTest;
 import android.test.suitebuilder.annotation.SmallTest;
 
 import com.chdryra.android.librariestest.mygenerallibrary.ActivitySingleFragmentActivity;
 import com.chdryra.android.mygenerallibrary.DialogAlertFragment;
+import com.chdryra.android.mygenerallibrary.DialogDeleteConfirmFragment;
 
 /**
  * Created by: Rizwan Choudrey
- * On: 04/11/2014
+ * On: 06/11/2014
  * Email: rizwan.choudrey@gmail.com
  */
-public class DialogAlertFragmentTest extends
-        ActivityInstrumentationTestCase2<ActivitySingleFragmentActivity> {
+
+//Don't know how to test the static method....
+public class DialogDeleteConfirmFragmentTest extends ActivityInstrumentationTestCase2<ActivitySingleFragmentActivity> {
     private DialogTester mTester;
 
-    public DialogAlertFragmentTest() {
+    public DialogDeleteConfirmFragmentTest() {
         super(ActivitySingleFragmentActivity.class);
     }
 
     @Override
     protected void setUp() throws Exception {
         super.setUp();
-
-        DialogAlertFragment dialog = new DialogAlertFragment() {
-            @Override
-            protected String getAlertString() {
-                return "Alert String";
-            }
-        };
-
-        mTester = new DialogTester(dialog, getActivity());
+        mTester = new DialogTester(new DialogDeleteConfirmFragment(), getActivity());
     }
 
     @SmallTest
@@ -51,15 +44,15 @@ public class DialogAlertFragmentTest extends
 
     @SmallTest
     @UiThreadTest
-    public void testPositiveButtonAction() {
-        mTester.testButtonAction(DialogAlertFragment.POSITVE_ACTION, DialogTester
+    public void testConfirmButtonAction() {
+        mTester.testButtonAction(DialogDeleteConfirmFragment.DELETE_CONFIRM, DialogTester
                 .ButtonLMR.RIGHT);
     }
 
     @SmallTest
     @UiThreadTest
-    public void testNegativeButtonAction() {
-        mTester.testButtonAction(DialogAlertFragment.NEGATIVE_ACTION, DialogTester
+    public void testCancelButtonAction() {
+        mTester.testButtonAction(DialogDeleteConfirmFragment.DELETE_CANCEL, DialogTester
                 .ButtonLMR.LEFT);
     }
 

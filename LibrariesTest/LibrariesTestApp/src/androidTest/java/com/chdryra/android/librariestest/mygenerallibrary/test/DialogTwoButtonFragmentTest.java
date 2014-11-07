@@ -9,7 +9,7 @@
 package com.chdryra.android.librariestest.mygenerallibrary.test;
 
 import android.app.Activity;
-import android.app.FragmentManager;
+import android.content.Intent;
 import android.os.Bundle;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.UiThreadTest;
@@ -17,7 +17,7 @@ import android.test.suitebuilder.annotation.SmallTest;
 import android.view.View;
 
 import com.chdryra.android.librariestest.mygenerallibrary.ActivitySingleFragmentActivity;
-import com.chdryra.android.librariestest.mygenerallibrary.DialogResultListener;
+import com.chdryra.android.librariestest.mygenerallibrary.test.DialogTester.ButtonLMR;
 import com.chdryra.android.mygenerallibrary.DialogTwoButtonFragment;
 
 /**
@@ -27,13 +27,8 @@ import com.chdryra.android.mygenerallibrary.DialogTwoButtonFragment;
  */
 public class DialogTwoButtonFragmentTest extends
         ActivityInstrumentationTestCase2<ActivitySingleFragmentActivity> {
-    private static final int REQUEST_CODE = 314;
-    private Activity                mActivity;
-    private FragmentManager         mManager;
-    private DialogResultListener    mListener;
-    private DialogTwoButtonFragment mDefaultDialog;
-
-    private enum ButtonLR {LEFT, RIGHT}
+    private Activity     mActivity;
+    private DialogTester mTester;
 
     public DialogTwoButtonFragmentTest() {
         super(ActivitySingleFragmentActivity.class);
@@ -43,186 +38,107 @@ public class DialogTwoButtonFragmentTest extends
     protected void setUp() throws Exception {
         super.setUp();
         mActivity = getActivity();
-        mManager = mActivity.getFragmentManager();
-        mDefaultDialog = new DialogTwoButtonFragment() {
+        DialogTwoButtonFragment defaultDialog = new DialogTwoButtonFragment() {
             @Override
             protected View createDialogUI() {
                 return null;
             }
         };
-        mListener = new DialogResultListener();
+        mTester = new DialogTester(defaultDialog, mActivity);
     }
 
     @SmallTest
     @UiThreadTest
-    public void testDialogShows() {
-        showDefaultDialogAndTestIsShowing();
+    public void testDialogBasics() {
+        mTester.testDialogBasics();
     }
 
     @SmallTest
     @UiThreadTest
-    public void testNoCallBackOnNoButtonPress() {
-        showDefaultDialogAndTestIsShowing();
-        assertFalse(mListener.called());
+    public void testButtonDefaultActions() {
+        mTester.testButtonAction(DialogTwoButtonFragment.LEFT_BUTTON_DEFAULT_ACTION, ButtonLMR.LEFT);
+        mTester.testButtonAction(DialogTwoButtonFragment.RIGHT_BUTTON_DEFAULT_ACTION, ButtonLMR.RIGHT);
     }
 
     @SmallTest
     @UiThreadTest
-    public void testCallBackFromLeftButton() {
-        testCallBackFromButtonClick(ButtonLR.LEFT);
+    public void testNoDismissOnButtonClicks() {
+        mTester.testDismissOrNotOnClick(ButtonLMR.LEFT, false);
+        mTester.testDismissOrNotOnClick(ButtonLMR.RIGHT, false);
     }
 
     @SmallTest
     @UiThreadTest
-    public void testCallBackFromRightButton() {
-        testCallBackFromButtonClick(ButtonLR.RIGHT);
+    public void testSetDismissOnButtonClicks() {
+        DialogTester.testDismissOrNotOnClick(getDialogWithDismissOnClick(ButtonLMR.LEFT),
+                mActivity, ButtonLMR.LEFT, true);
+        DialogTester.testDismissOrNotOnClick(getDialogWithDismissOnClick(ButtonLMR.RIGHT),
+                mActivity, ButtonLMR.RIGHT, true);
     }
 
     @SmallTest
     @UiThreadTest
-    public void testRequestCodePassThroughFromLeftButton() {
-        testRequestCodePassThrough(ButtonLR.LEFT);
-    }
-
-    @SmallTest
-    @UiThreadTest
-    public void testRequestCodePassThroughFromRightButton() {
-        testRequestCodePassThrough(ButtonLR.RIGHT);
-    }
-
-    @SmallTest
-    @UiThreadTest
-    public void testLeftButtonDefaultAction() {
-        testButtonAction(mDefaultDialog, DialogTwoButtonFragment.LEFT_BUTTON_DEFAULT,
-                ButtonLR.LEFT);
-    }
-
-    @SmallTest
-    @UiThreadTest
-    public void testResultCodeFromRightButtonDefault() {
-        testButtonAction(mDefaultDialog, DialogTwoButtonFragment.RIGHT_BUTTON_DEFAULT,
-                ButtonLR.RIGHT);
-    }
-
-    @SmallTest
-    @UiThreadTest
-    public void testSetLeftButtonAction() {
-        testSetButtonAction(ButtonLR.LEFT);
-    }
-
-    @SmallTest
-    @UiThreadTest
-    public void testSetRightButtonAction() {
-        testSetButtonAction(ButtonLR.RIGHT);
-    }
-
-    @SmallTest
-    @UiThreadTest
-    public void testNoDismissOnLeftClick() {
-        testDismissOrNotOnClick(mDefaultDialog, ButtonLR.LEFT, false);
-    }
-
-    @SmallTest
-    @UiThreadTest
-    public void testNoDismissOnRightClick() {
-        testDismissOrNotOnClick(mDefaultDialog, ButtonLR.RIGHT, false);
-    }
-
-    @SmallTest
-    @UiThreadTest
-    public void testDismissOnLeftClick() {
-        testDismissOrNotOnClick(getDismissOnClickDialog(ButtonLR.LEFT), ButtonLR.LEFT, true);
-    }
-
-    @SmallTest
-    @UiThreadTest
-    public void testDismissOnRightClick() {
-        testDismissOrNotOnClick(getDismissOnClickDialog(ButtonLR.RIGHT), ButtonLR.RIGHT, true);
-    }
-
-    private void showDialogAndTestIsShowing(DialogTwoButtonFragment dialog) {
-        mListener.reset();
-        dialog.setTargetFragment(mListener, REQUEST_CODE);
-        dialog.show(mManager, "Tag");
-        mManager.executePendingTransactions();
-        assertTrue(dialog.getDialog().isShowing());
-    }
-
-    private void showDefaultDialogAndTestIsShowing() {
-        showDialogAndTestIsShowing(mDefaultDialog);
-    }
-
-    private void testCallBackFromButtonClick(ButtonLR button) {
-        showDefaultDialogAndTestIsShowing();
-        click(mDefaultDialog, button);
-        assertTrue(mListener.called());
-    }
-
-    private void testRequestCodePassThrough(ButtonLR button) {
-        showDefaultDialogAndTestIsShowing();
-        click(mDefaultDialog, button);
-        assertEquals(REQUEST_CODE, mListener.getRequestCode());
-    }
-
-    private void testButtonAction(DialogTwoButtonFragment dialog,
-            DialogTwoButtonFragment.ActionType expectedAction, ButtonLR button) {
-        showDialogAndTestIsShowing(dialog);
-
-        String buttonText = button == ButtonLR.LEFT ? dialog.getLeftButtonText() : dialog
-                .getRightButtonText();
-
-        click(dialog, button);
-
-        assertEquals(REQUEST_CODE, mListener.getRequestCode());
-        assertEquals(expectedAction.getResultCode(), mListener.getActivityResultCode());
-        assertEquals(expectedAction.getLabel(mActivity), buttonText);
-    }
-
-    private void testSetButtonAction(final ButtonLR button) {
+    public void testSetButtonActions() {
         for (final DialogTwoButtonFragment.ActionType actionType : DialogTwoButtonFragment
-                .ActionType
-                .values()) {
+                .ActionType.values()) {
+            DialogTester.testButtonAction(getDialogWithAction(ButtonLMR.LEFT, actionType), mActivity,
+                    actionType, ButtonLMR.LEFT);
+            DialogTester.testButtonAction(getDialogWithAction(ButtonLMR.RIGHT, actionType), mActivity,
+                    actionType, ButtonLMR.RIGHT);
+        }
+    }
 
-            DialogTwoButtonFragment dialog = new DialogTwoButtonFragment() {
-                @Override
-                public void onCreate(Bundle savedInstanceState) {
-                    super.onCreate(savedInstanceState);
-                    if (button == ButtonLR.LEFT) {
-                        setLeftButtonAction(actionType);
-                    } else {
-                        setRightButtonAction(actionType);
-                    }
-                }
+    @SmallTest
+    @UiThreadTest
+    public void testDataReturnOnButtonClicks() {
+        DialogTester.testIntentDataPassBack(getDialogWithDataOnButtonClick(ButtonLMR.LEFT),
+                mActivity, ButtonLMR.LEFT);
+        DialogTester.testIntentDataPassBack(getDialogWithDataOnButtonClick(ButtonLMR.RIGHT),
+                mActivity, ButtonLMR.RIGHT);
+    }
 
+    private DialogTwoButtonFragment getDialogWithDataOnButtonClick(ButtonLMR button) {
+        DialogTwoButtonFragment dialog;
+        if(button == ButtonLMR.LEFT) {
+            return new DialogTwoButtonFragment() {
                 @Override
                 protected View createDialogUI() {
                     return null;
                 }
+
+                @Override
+                protected void onLeftButtonClick() {
+                    Intent data = getReturnData();
+                    data.putExtra(DialogTester.DATA_KEY, DialogTester.DATA_STRING);
+                    super.onLeftButtonClick();
+                }
             };
+        } else if(button == ButtonLMR.RIGHT) {
+            return new DialogTwoButtonFragment() {
+                @Override
+                protected View createDialogUI() {
+                    return null;
+                }
 
-            testButtonAction(dialog, actionType, button);
+                @Override
+                protected void onRightButtonClick() {
+                    Intent data = getReturnData();
+                    data.putExtra(DialogTester.DATA_KEY, DialogTester.DATA_STRING);
+                    super.onRightButtonClick();
+                }
+            };
         }
+
+        return null;
     }
 
-    private void testDismissOrNotOnClick(DialogTwoButtonFragment dialog, ButtonLR button,
-            boolean testDismiss) {
-        showDialogAndTestIsShowing(dialog);
-        click(dialog, button);
-        if (testDismiss) {
-            assertNull(dialog.getDialog());
-        } else {
-            assertNotNull(dialog.getDialog());
-            assertTrue(dialog.getDialog().isShowing());
-        }
-    }
-
-    private DialogTwoButtonFragment getDismissOnClickDialog(final ButtonLR button) {
-        DialogTwoButtonFragment dialog = new DialogTwoButtonFragment() {
+    private DialogTwoButtonFragment getDialogWithDismissOnClick(final ButtonLMR button) {
+        return new DialogTwoButtonFragment() {
 
             @Override
             public void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
-                if (button == ButtonLR.LEFT) {
+                if (button == ButtonLMR.LEFT) {
                     dismissDialogOnLeftClick();
                 } else {
                     dismissDialogOnRightClick();
@@ -234,15 +150,25 @@ public class DialogTwoButtonFragmentTest extends
                 return null;
             }
         };
-
-        return dialog;
     }
 
-    private void click(DialogTwoButtonFragment dialog, ButtonLR button) {
-        if (button == ButtonLR.LEFT) {
-            dialog.clickLeftButton();
-        } else {
-            dialog.clickRightButton();
-        }
+    private DialogTwoButtonFragment getDialogWithAction(final ButtonLMR button,
+            final DialogTwoButtonFragment.ActionType actionType) {
+        return new DialogTwoButtonFragment() {
+            @Override
+            public void onCreate(Bundle savedInstanceState) {
+                super.onCreate(savedInstanceState);
+                if (button == ButtonLMR.LEFT) {
+                    setLeftButtonAction(actionType);
+                } else {
+                    setRightButtonAction(actionType);
+                }
+            }
+
+            @Override
+            protected View createDialogUI() {
+                return null;
+            }
+        };
     }
 }

@@ -9,7 +9,7 @@
 package com.chdryra.android.librariestest.mygenerallibrary.test;
 
 import android.app.Activity;
-import android.app.FragmentManager;
+import android.content.Intent;
 import android.os.Bundle;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.UiThreadTest;
@@ -17,7 +17,6 @@ import android.test.suitebuilder.annotation.SmallTest;
 import android.view.View;
 
 import com.chdryra.android.librariestest.mygenerallibrary.ActivitySingleFragmentActivity;
-import com.chdryra.android.librariestest.mygenerallibrary.DialogResultListener;
 import com.chdryra.android.mygenerallibrary.DialogThreeButtonFragment;
 import com.chdryra.android.mygenerallibrary.DialogTwoButtonFragment;
 
@@ -28,11 +27,8 @@ import com.chdryra.android.mygenerallibrary.DialogTwoButtonFragment;
  */
 public class DialogThreeButtonFragmentTest extends
         ActivityInstrumentationTestCase2<ActivitySingleFragmentActivity> {
-    private static final int REQUEST_CODE = 314;
-    private Activity                  mActivity;
-    private FragmentManager           mManager;
-    private DialogResultListener      mListener;
-    private DialogThreeButtonFragment mDefaultDialog;
+    private Activity     mActivity;
+    private DialogTester mTester;
 
     public DialogThreeButtonFragmentTest() {
         super(ActivitySingleFragmentActivity.class);
@@ -42,94 +38,143 @@ public class DialogThreeButtonFragmentTest extends
     protected void setUp() throws Exception {
         super.setUp();
         mActivity = getActivity();
-        mManager = mActivity.getFragmentManager();
-        mDefaultDialog = new DialogThreeButtonFragment() {
+
+        DialogThreeButtonFragment defaultDialog = new DialogThreeButtonFragment() {
             @Override
             protected View createDialogUI() {
                 return null;
             }
         };
 
-        mListener = new DialogResultListener();
+        mTester = new DialogTester(defaultDialog, mActivity);
     }
 
     @SmallTest
     @UiThreadTest
-    public void testDialogShows() {
-        showDefaultDialogAndTestIsShowing();
+    public void testDialogBasics() {
+        mTester.testDialogBasics();
     }
 
     @SmallTest
     @UiThreadTest
-    public void testNoCallBackOnNoButtonPress() {
-        showDefaultDialogAndTestIsShowing();
-        assertTrue(!mListener.called());
+    public void testButtonDefaultActions() {
+        mTester.testButtonAction(DialogThreeButtonFragment.LEFT_BUTTON_DEFAULT_ACTION,
+                DialogTester.ButtonLMR.LEFT);
+        mTester.testButtonAction(DialogThreeButtonFragment.RIGHT_BUTTON_DEFAULT_ACTION, DialogTester
+                .ButtonLMR.RIGHT);
+        mTester.testButtonAction(DialogThreeButtonFragment.MIDDLE_BUTTON_DEFAULT_ACTION, DialogTester
+                .ButtonLMR.MIDDLE);
     }
 
     @SmallTest
     @UiThreadTest
-    public void testCallBackFromMiddleButton() {
-        showDefaultDialogAndTestIsShowing();
-        mDefaultDialog.clickMiddleButton();
-        assertTrue(mListener.called());
+    public void testNoDismissOnButtonClicks() {
+        mTester.testDismissOrNotOnClick(DialogTester.ButtonLMR.LEFT, false);
+        mTester.testDismissOrNotOnClick(DialogTester.ButtonLMR.RIGHT, false);
+        mTester.testDismissOrNotOnClick(DialogTester.ButtonLMR.MIDDLE, false);
     }
 
     @SmallTest
     @UiThreadTest
-    public void testRequestCodePassThroughFromMiddleButton() {
-        showDefaultDialogAndTestIsShowing();
-        mDefaultDialog.clickMiddleButton();
-        assertEquals(REQUEST_CODE, mListener.getRequestCode());
+    public void testSetDismissOnButtonClicks() {
+        DialogTester.testDismissOrNotOnClick(getDialogWithDismissOnClick(DialogTester.ButtonLMR.LEFT),
+                mActivity, DialogTester.ButtonLMR.LEFT, true);
+        DialogTester.testDismissOrNotOnClick(getDialogWithDismissOnClick(DialogTester.ButtonLMR
+                        .RIGHT), mActivity, DialogTester.ButtonLMR.RIGHT, true);
+        DialogTester.testDismissOrNotOnClick(getDialogWithDismissOnClick(DialogTester.ButtonLMR
+                .MIDDLE), mActivity, DialogTester.ButtonLMR.MIDDLE, true);
     }
 
     @SmallTest
     @UiThreadTest
-    public void testResultCodeFromMiddleButtonDefault() {
-        testButtonAction(mDefaultDialog, DialogThreeButtonFragment.MIDDLE_BUTTON_DEFAULT);
-    }
-
-    @SmallTest
-    @UiThreadTest
-    public void testSetMiddleButtonAction() {
+    public void testSetButtonActions() {
         for (final DialogTwoButtonFragment.ActionType actionType : DialogTwoButtonFragment
-                .ActionType
-                .values()) {
-
-            DialogThreeButtonFragment dialog = new DialogThreeButtonFragment() {
-                @Override
-                public void onCreate(Bundle savedInstanceState) {
-                    super.onCreate(savedInstanceState);
-                    setMiddleButtonAction(actionType);
-                }
-
-                @Override
-                protected View createDialogUI() {
-                    return null;
-                }
-            };
-
-            testButtonAction(dialog, actionType);
+                .ActionType.values()) {
+            DialogTester.testButtonAction(getDialogWithAction(DialogTester.ButtonLMR.LEFT, actionType), mActivity,
+                    actionType, DialogTester.ButtonLMR.LEFT);
+            DialogTester.testButtonAction(getDialogWithAction(DialogTester.ButtonLMR.RIGHT, actionType), mActivity,
+                    actionType, DialogTester.ButtonLMR.RIGHT);
+            DialogTester.testButtonAction(getDialogWithAction(DialogTester.ButtonLMR.MIDDLE,
+                            actionType), mActivity,
+                    actionType, DialogTester.ButtonLMR.MIDDLE);
         }
     }
 
     @SmallTest
     @UiThreadTest
-    public void testNoDismissOnMiddleClick() {
-        showDialogAndTestIsShowing(mDefaultDialog);
-        mDefaultDialog.clickMiddleButton();
-
-        assertNotNull(mDefaultDialog.getDialog());
-        assertTrue(mDefaultDialog.getDialog().isShowing());
+    public void testDataReturnOnButtonClicks() {
+        DialogTester.testIntentDataPassBack(getDialogWithDataOnLeftClick(), mActivity, DialogTester.ButtonLMR.LEFT);
+        DialogTester.testIntentDataPassBack(getDialogWithDataOnRightClick(), mActivity,
+                DialogTester.ButtonLMR.RIGHT);
+        DialogTester.testIntentDataPassBack(getDialogWithDataOnMiddleClick(), mActivity,
+                DialogTester.ButtonLMR.MIDDLE);
     }
 
-    @SmallTest
-    @UiThreadTest
-    public void testDismissOnMiddleClick() {
-        DialogThreeButtonFragment dialog = new DialogThreeButtonFragment() {
+    private DialogThreeButtonFragment getDialogWithDataOnRightClick() {
+
+        return new DialogThreeButtonFragment() {
+            @Override
+            protected View createDialogUI() {
+                return null;
+            }
+
+            @Override
+            protected void onRightButtonClick() {
+                Intent data = getReturnData();
+                data.putExtra(DialogTester.DATA_KEY, DialogTester.DATA_STRING);
+                super.onRightButtonClick();
+            }
+        };
+    }
+
+    private DialogThreeButtonFragment getDialogWithDataOnLeftClick() {
+
+        return new DialogThreeButtonFragment() {
+            @Override
+            protected View createDialogUI() {
+                return null;
+            }
+
+            @Override
+            protected void onLeftButtonClick() {
+                Intent data = getReturnData();
+                data.putExtra(DialogTester.DATA_KEY, DialogTester.DATA_STRING);
+                super.onLeftButtonClick();
+            }
+        };
+    }
+
+    private DialogThreeButtonFragment getDialogWithDataOnMiddleClick() {
+
+        return new DialogThreeButtonFragment() {
+            @Override
+            protected View createDialogUI() {
+                return null;
+            }
+
+            @Override
+            protected void onMiddleButtonClick() {
+                Intent data = getReturnData();
+                data.putExtra(DialogTester.DATA_KEY, DialogTester.DATA_STRING);
+                super.onMiddleButtonClick();
+            }
+        };
+    }
+    
+    private DialogThreeButtonFragment getDialogWithDismissOnClick(final DialogTester.ButtonLMR
+            button) {
+        return new DialogThreeButtonFragment() {
+
             @Override
             public void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
-                dismissDialogOnMiddleClick();
+                if (button == DialogTester.ButtonLMR.LEFT) {
+                    dismissDialogOnLeftClick();
+                } else if(button == DialogTester.ButtonLMR.RIGHT) {
+                    dismissDialogOnRightClick();
+                } else {
+                    dismissDialogOnMiddleClick();
+                }
             }
 
             @Override
@@ -137,33 +182,27 @@ public class DialogThreeButtonFragmentTest extends
                 return null;
             }
         };
-
-        showDialogAndTestIsShowing(dialog);
-        dialog.clickMiddleButton();
-
-        assertNull(dialog.getDialog());
     }
 
-    private void showDialogAndTestIsShowing(DialogThreeButtonFragment dialog) {
-        mListener.reset();
-        dialog.setTargetFragment(mListener, REQUEST_CODE);
-        dialog.show(mManager, "Tag");
-        mManager.executePendingTransactions();
-        assertTrue(dialog.getDialog().isShowing());
-    }
+    private DialogThreeButtonFragment getDialogWithAction(final DialogTester.ButtonLMR button,
+            final DialogTwoButtonFragment.ActionType actionType) {
+        return new DialogThreeButtonFragment() {
+            @Override
+            public void onCreate(Bundle savedInstanceState) {
+                super.onCreate(savedInstanceState);
+                if (button == DialogTester.ButtonLMR.LEFT) {
+                    setLeftButtonAction(actionType);
+                } else if (button == DialogTester.ButtonLMR.RIGHT){
+                    setRightButtonAction(actionType);
+                } else {
+                    setMiddleButtonAction(actionType);
+                }
+            }
 
-    private void showDefaultDialogAndTestIsShowing() {
-        showDialogAndTestIsShowing(mDefaultDialog);
-    }
-
-    private void testButtonAction(DialogThreeButtonFragment dialog,
-            DialogTwoButtonFragment.ActionType expectedAction) {
-        showDialogAndTestIsShowing(dialog);
-        String buttonText = dialog.getMiddleButtonText();
-        dialog.clickMiddleButton();
-
-        assertEquals(REQUEST_CODE, mListener.getRequestCode());
-        assertEquals(expectedAction.getResultCode(), mListener.getActivityResultCode());
-        assertEquals(expectedAction.getLabel(mActivity), buttonText);
+            @Override
+            protected View createDialogUI() {
+                return null;
+            }
+        };
     }
 }
