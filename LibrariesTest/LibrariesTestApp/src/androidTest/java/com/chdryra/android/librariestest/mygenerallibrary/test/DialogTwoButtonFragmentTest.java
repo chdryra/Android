@@ -25,6 +25,7 @@ import com.chdryra.android.mygenerallibrary.DialogTwoButtonFragment;
  * On: 05/11/2014
  * Email: rizwan.choudrey@gmail.com
  */
+//terst
 public class DialogTwoButtonFragmentTest extends
         ActivityInstrumentationTestCase2<ActivitySingleFragmentActivity> {
     private Activity     mActivity;
@@ -57,7 +58,8 @@ public class DialogTwoButtonFragmentTest extends
     @UiThreadTest
     public void testButtonDefaultActions() {
         mTester.testButtonAction(DialogTwoButtonFragment.LEFT_BUTTON_DEFAULT_ACTION, ButtonLMR.LEFT);
-        mTester.testButtonAction(DialogTwoButtonFragment.RIGHT_BUTTON_DEFAULT_ACTION, ButtonLMR.RIGHT);
+        mTester.testButtonAction(DialogTwoButtonFragment.RIGHT_BUTTON_DEFAULT_ACTION,
+                ButtonLMR.RIGHT);
     }
 
     @SmallTest
