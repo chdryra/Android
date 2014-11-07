@@ -26,6 +26,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cbecc251-2e59-4e4e-b243-801cf0d21d57" name="Default" comment="Split out dialog tests into a DialogTester. Adjusted dialog tests accordingly. A few bits here and there in libraries to aid writing tests.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibrariesTest/LibrariesTestApp/src/androidTest/java/com/chdryra/android/librariestest/mygenerallibrary/test/DialogCancelAddDoneFragmentTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyAndroidWidgets" afterPath="$PROJECT_DIR$/MyAndroidWidgets" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyAndroidWidgets/src/main/java/com/chdryra/android/myandroidwidgets/ClearableAutoCompleteTextView.java" afterPath="$PROJECT_DIR$/MyAndroidWidgets/src/main/java/com/chdryra/android/myandroidwidgets/ClearableAutoCompleteTextView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyAndroidWidgets/src/main/java/com/chdryra/android/myandroidwidgets/ClearableEditText.java" afterPath="$PROJECT_DIR$/MyAndroidWidgets/src/main/java/com/chdryra/android/myandroidwidgets/ClearableEditText.java" />
@@ -89,14 +90,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClearableAutoCompleteTextViewTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ClearableAutoCompleteTextViewTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LibrariesTest/LibrariesTestApp/src/androidTest/java/com/chdryra/android/librariestest/myandroidwidgets/test/ClearableAutoCompleteTextViewTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40134907" vertical-offset="0" max-vertical-offset="2363">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2363">
               <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
               <folding>
-                <element signature="e#0#4665#0" expanded="true" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#1565#1566#0" expanded="false" />
+                <element signature="e#1605#1606#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ActivityFeed.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/ActivityFeed.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.3153457" vertical-offset="0" max-vertical-offset="593">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -151,16 +164,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LauncherUI.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/LauncherUI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="697" max-vertical-offset="1122">
-              <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -169,8 +172,9 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="SYNC_SETTING" value="SYNC" />
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Reviewer" />
   </component>
   <component name="GradleLocalSettings">
     <option name="tasksExpandState">
@@ -2522,7 +2526,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/GVReviewDataList.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/InputHandlerImage.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/RCollection.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/com/chdryra/android/reviewer/FragmentReviewGridAddEdit.java" />
@@ -2573,6 +2576,7 @@
         <option value="$PROJECT_DIR$/MyGeneralLibrary/src/main/java/com/chdryra/android/mygenerallibrary/DialogTwoButtonFragment.java" />
         <option value="$PROJECT_DIR$/MyGeneralLibrary/src/main/java/com/chdryra/android/mygenerallibrary/DialogDeleteConfirmFragment.java" />
         <option value="$PROJECT_DIR$/LibrariesTest/LibrariesTestApp/src/androidTest/java/com/chdryra/android/librariestest/myandroidwidgets/test/ClearableAutoCompleteTextViewTest.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/ActivityFeed.java" />
       </list>
     </option>
   </component>
@@ -2670,20 +2674,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LibrariesTest" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -3288,7 +3278,11 @@
       <created>1415207152792</created>
       <updated>1415207152792</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="test because problems pushing to github">
+      <created>1415364883697</created>
+      <updated>1415364883697</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -3299,11 +3293,11 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952183" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32867885" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32867885" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3991684" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39742213" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32867885" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32867885" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3991684" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23319103" sideWeight="0.5008" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32760474" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -3314,7 +3308,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23319103" sideWeight="0.4992" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23319103" sideWeight="0.4992" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32867885" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -3372,7 +3366,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Changed OptionsReviewData to also represent general UI interaction when adding and editing data e.g. knows about ad and editing dialogs.&#10;&#10;Name changed to ConfigReviewDataUI.&#10;&#10;Made FragmentReviewGridAddEdit more generic off of the back of it. Similarly DialogAddReviewdataFragment.&#10;&#10;Knock on effects to Dialogs and Fragments." />
     <MESSAGE value="Refactoring FragmentReviewAddEdit and Add and Edit dialogs to become more flexible through the use of an Input Handler object.&#10;&#10;At the moment there is a separate FragmentReview and DialogAddReviewData for each GVType. Trying to change this by splitting out the specific GVType handling logic into InputHandlerReviewData objects that know how to deal with their own GVType so that FragmentReview and Add/Edit dialogs can be abstracted into just one class. Aim is that each of these then just fowards user input to the appropriate handler.&#10;&#10;Working for GVTag." />
     <MESSAGE value="More work on refactoring fragments and dialogs to be more abstract and modular. Adjusted GVData to help with this. Worked on Children stuff." />
     <MESSAGE value="More work on refactoring fragments and dialogs to be more abstract and modular.&#10;&#10;Gone through all dialogs and fragments. Much more abstract and general now. More work still to be done though." />
@@ -3397,7 +3390,8 @@
     <MESSAGE value="Added isClearButtonVisible to android widgets" />
     <MESSAGE value="A few bits here and there to aid writing tests" />
     <MESSAGE value="Split out dialog tests into a DialogTester. Adjusted dialog tests accordingly. A few bits here and there in libraries to aid writing tests." />
-    <option name="LAST_COMMIT_MESSAGE" value="Split out dialog tests into a DialogTester. Adjusted dialog tests accordingly. A few bits here and there in libraries to aid writing tests." />
+    <MESSAGE value="test because problems pushing to github" />
+    <option name="LAST_COMMIT_MESSAGE" value="test because problems pushing to github" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -3408,13 +3402,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Reviewer/build/generated/source/r/debug/com/chdryra/android/reviewer/Manifest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.72" vertical-offset="0" max-vertical-offset="255">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Reviewer/build/generated/source/r/debug/com/chdryra/android/reviewer/R.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.72" vertical-offset="0" max-vertical-offset="26894">
@@ -3782,11 +3769,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/LibrariesTest/LibrariesTestApp/src/androidTest/java/com/chdryra/android/librariestest/myandroidwidgets/test/ClearableAutoCompleteTextViewTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40134907" vertical-offset="0" max-vertical-offset="2363">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2363">
           <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
           <folding>
-            <element signature="e#0#4665#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1565#1566#0" expanded="false" />
+            <element signature="e#1605#1606#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/ActivityFeed.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3153457" vertical-offset="0" max-vertical-offset="593">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
