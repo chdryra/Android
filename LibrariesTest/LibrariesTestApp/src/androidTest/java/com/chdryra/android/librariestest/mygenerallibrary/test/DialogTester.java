@@ -28,16 +28,17 @@ import junit.framework.Assert;
  * Email: rizwan.choudrey@gmail.com
  */
 public class DialogTester {
-    public static final int REQUEST_CODE = 314;
-    private static final String TAG         = "DialogTester";
-    private static final String DATA_KEY    = "com.chdryra.android.librariestest.mygenerallibrary" +
+    public static final  int    REQUEST_CODE = 314;
+    private static final String TAG          = "DialogTester";
+    private static final String DATA_KEY     = "com.chdryra.android.librariestest" +
+            ".mygenerallibrary" +
             ".test.dialog_tester";
-    private static final String DATA_STRING = "Data";
+    private static final String DATA_STRING  = "Data";
     private DialogTwoButtonFragment mDialog;
     private DialogResultListener    mListener;
     private Activity                mActivity;
-    private FragmentManager mFragmentManager;
-    private ButtonManager mButtonManager;
+    private FragmentManager         mFragmentManager;
+    private ButtonManager           mButtonManager;
 
     enum ButtonLMR {LEFT, MIDDLE, RIGHT}
 
@@ -49,10 +50,6 @@ public class DialogTester {
     DialogTester(DialogThreeButtonFragment dialog, Activity activity) {
         init(dialog, activity);
         mButtonManager = new Button3Manager(dialog);
-    }
-
-    static DialogResultListener createListener(DialogTwoButtonFragment.ActionType filter) {
-        return DialogResultListener.newInstance(filter);
     }
 
     static void testButtonAction(DialogTwoButtonFragment dialog, Activity activity,
@@ -79,13 +76,6 @@ public class DialogTester {
         tester.testDismissOrNotOnClick(button, testDismiss);
     }
 
-    /**
-     * Use DATA_KEY as key for putting DATA_STRING in intent.
-     *
-     * @param dialog:   dialog to test that overrides some OnClick method to put data in intent.
-     * @param activity: activity from {@link android.test.ActivityInstrumentationTestCase2} test.
-     * @param button:   button to click.
-     */
     static void testIntentDataPassBack(DialogTwoButtonFragment dialog, Activity activity,
             ButtonLMR button) {
         DialogTester tester = new DialogTester(dialog, activity);
@@ -113,10 +103,10 @@ public class DialogTester {
                 ".mygenerallibrary.test.dialog_result_listener";
         private static final int     INIT_REQUEST_CODE = 161019;
         private static final int     INIT_RESULT_CODE  = 910161;
-        protected            int     mRequestCode      = INIT_REQUEST_CODE;
-        protected            int     mResultCode       = INIT_RESULT_CODE;
-        protected            Intent  mData             = null;
-        protected            boolean mCallback         = false;
+        private              int     mRequestCode      = INIT_REQUEST_CODE;
+        private              int     mResultCode       = INIT_RESULT_CODE;
+        private              Intent  mData             = null;
+        private              boolean mCallback         = false;
         private DialogTwoButtonFragment.ActionType mResultFilter;
 
         public DialogResultListener() {
@@ -276,42 +266,6 @@ public class DialogTester {
         testRequestCodePassThroughFromButtonClicks();
     }
 
-    private void testDialogShows() {
-        showDialogAndTestIsShowing();
-    }
-
-    private void testNoCallBackOnNoButtonClick() {
-        showDialogAndTestIsShowing();
-        Assert.assertFalse(mListener.called());
-        mListener.reset();
-    }
-
-    private void testCallBackFromButtonClicks() {
-        showDialogAndTestIsShowing();
-        for (ButtonLMR button : mButtonManager.getButtons()) {
-            testCallBackFromButtonClick(button);
-        }
-    }
-
-    private void testRequestCodePassThroughFromButtonClicks() {
-        showDialogAndTestIsShowing();
-        for (ButtonLMR button : mButtonManager.getButtons()) {
-            testRequestCodePassThrough(button);
-        }
-    }
-
-    private void testCallBackFromButtonClick(ButtonLMR button) {
-        mButtonManager.click(button);
-        Assert.assertTrue(mListener.called());
-        mListener.reset();
-    }
-
-    private void testRequestCodePassThrough(ButtonLMR button) {
-        mButtonManager.click(button);
-        Assert.assertEquals(REQUEST_CODE, mListener.getRequestCode());
-        mListener.reset();
-    }
-
     void testButtonAction(DialogTwoButtonFragment.ActionType expectedAction, ButtonLMR button) {
         showDialogAndTestIsShowing();
 
@@ -363,5 +317,41 @@ public class DialogTester {
         mDialog.show(mFragmentManager, "Tag");
         mFragmentManager.executePendingTransactions();
         Assert.assertTrue(mDialog.getDialog().isShowing());
+    }
+
+    private void testDialogShows() {
+        showDialogAndTestIsShowing();
+    }
+
+    private void testNoCallBackOnNoButtonClick() {
+        showDialogAndTestIsShowing();
+        Assert.assertFalse(mListener.called());
+        mListener.reset();
+    }
+
+    private void testCallBackFromButtonClicks() {
+        showDialogAndTestIsShowing();
+        for (ButtonLMR button : mButtonManager.getButtons()) {
+            testCallBackFromButtonClick(button);
+        }
+    }
+
+    private void testRequestCodePassThroughFromButtonClicks() {
+        showDialogAndTestIsShowing();
+        for (ButtonLMR button : mButtonManager.getButtons()) {
+            testRequestCodePassThrough(button);
+        }
+    }
+
+    private void testCallBackFromButtonClick(ButtonLMR button) {
+        mButtonManager.click(button);
+        Assert.assertTrue(mListener.called());
+        mListener.reset();
+    }
+
+    private void testRequestCodePassThrough(ButtonLMR button) {
+        mButtonManager.click(button);
+        Assert.assertEquals(REQUEST_CODE, mListener.getRequestCode());
+        mListener.reset();
     }
 }

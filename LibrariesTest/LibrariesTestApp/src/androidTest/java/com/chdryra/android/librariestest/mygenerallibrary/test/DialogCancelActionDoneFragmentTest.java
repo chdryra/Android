@@ -16,7 +16,7 @@ import android.test.suitebuilder.annotation.SmallTest;
 import android.view.View;
 import android.widget.EditText;
 
-import com.chdryra.android.librariestest.mygenerallibrary.ActivitySingleFragmentActivity;
+import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.mygenerallibrary.DialogCancelActionDoneFragment;
 import com.chdryra.android.mygenerallibrary.DialogTwoButtonFragment;
 
@@ -26,7 +26,7 @@ import com.chdryra.android.mygenerallibrary.DialogTwoButtonFragment;
  * Email: rizwan.choudrey@gmail.com
  */
 public class DialogCancelActionDoneFragmentTest
-    extends ActivityInstrumentationTestCase2<ActivitySingleFragmentActivity> {
+        extends ActivityInstrumentationTestCase2<TestingActivity> {
     private static final DialogTwoButtonFragment.ActionType CANCEL =
             DialogCancelActionDoneFragment.CANCEL_ACTION;
     private static final DialogTwoButtonFragment.ActionType ACTION =
@@ -34,18 +34,18 @@ public class DialogCancelActionDoneFragmentTest
     private static final DialogTwoButtonFragment.ActionType DONE   =
             DialogCancelActionDoneFragment.DONE_ACTION;
 
-    private Activity     mActivity;
-    private DialogTester mTester;
+    private Activity                       mActivity;
+    private DialogTester                   mTester;
     private DialogCancelActionDoneFragment mDefaultDialog;
 
     public DialogCancelActionDoneFragmentTest() {
-        super(ActivitySingleFragmentActivity.class);
+        super(TestingActivity.class);
     }
 
     @Override
     protected void setUp() throws Exception {
         super.setUp();
-        mActivity=getActivity();
+        mActivity = getActivity();
 
         mDefaultDialog = new DialogCancelActionDoneFragment() {
             @Override
@@ -252,7 +252,8 @@ public class DialogCancelActionDoneFragmentTest
         };
     }
 
-    private DialogCancelActionDoneFragment getDialogWithAction(final DialogTwoButtonFragment.ActionType actionType) {
+    private DialogCancelActionDoneFragment getDialogWithAction(final DialogTwoButtonFragment
+            .ActionType actionType) {
         return new DialogCancelActionDoneFragment() {
             @Override
             public void onCreate(Bundle savedInstanceState) {

@@ -14,7 +14,7 @@ import android.test.UiThreadTest;
 import android.test.suitebuilder.annotation.SmallTest;
 import android.view.View;
 
-import com.chdryra.android.librariestest.mygenerallibrary.ActivitySingleFragmentActivity;
+import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.mygenerallibrary.DialogCancelDeleteDoneFragment;
 import com.chdryra.android.mygenerallibrary.DialogDeleteConfirmFragment;
 import com.chdryra.android.mygenerallibrary.DialogTwoButtonFragment;
@@ -25,7 +25,7 @@ import com.chdryra.android.mygenerallibrary.DialogTwoButtonFragment;
  * Email: rizwan.choudrey@gmail.com
  */
 public class DialogCancelDeleteDoneFragmentTest extends
-        ActivityInstrumentationTestCase2<ActivitySingleFragmentActivity> {
+        ActivityInstrumentationTestCase2<TestingActivity> {
     private static final DialogTwoButtonFragment.ActionType CANCEL =
             DialogCancelDeleteDoneFragment.CANCEL_ACTION;
     private static final DialogTwoButtonFragment.ActionType DELETE =
@@ -40,7 +40,7 @@ public class DialogCancelDeleteDoneFragmentTest extends
     private boolean mData = true;
 
     public DialogCancelDeleteDoneFragmentTest() {
-        super(ActivitySingleFragmentActivity.class);
+        super(TestingActivity.class);
     }
 
     @Override

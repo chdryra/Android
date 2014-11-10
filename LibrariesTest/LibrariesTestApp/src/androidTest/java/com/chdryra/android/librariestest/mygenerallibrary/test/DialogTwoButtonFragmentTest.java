@@ -16,7 +16,7 @@ import android.test.UiThreadTest;
 import android.test.suitebuilder.annotation.SmallTest;
 import android.view.View;
 
-import com.chdryra.android.librariestest.mygenerallibrary.ActivitySingleFragmentActivity;
+import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.librariestest.mygenerallibrary.test.DialogTester.ButtonLMR;
 import com.chdryra.android.mygenerallibrary.DialogTwoButtonFragment;
 
@@ -26,12 +26,12 @@ import com.chdryra.android.mygenerallibrary.DialogTwoButtonFragment;
  * Email: rizwan.choudrey@gmail.com
  */
 public class DialogTwoButtonFragmentTest extends
-        ActivityInstrumentationTestCase2<ActivitySingleFragmentActivity> {
+        ActivityInstrumentationTestCase2<TestingActivity> {
     private Activity     mActivity;
     private DialogTester mTester;
 
     public DialogTwoButtonFragmentTest() {
-        super(ActivitySingleFragmentActivity.class);
+        super(TestingActivity.class);
     }
 
     @Override

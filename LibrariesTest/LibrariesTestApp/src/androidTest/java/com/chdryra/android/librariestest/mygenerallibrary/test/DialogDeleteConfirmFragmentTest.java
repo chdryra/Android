@@ -12,7 +12,7 @@ import android.test.ActivityInstrumentationTestCase2;
 import android.test.UiThreadTest;
 import android.test.suitebuilder.annotation.SmallTest;
 
-import com.chdryra.android.librariestest.mygenerallibrary.ActivitySingleFragmentActivity;
+import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.mygenerallibrary.DialogDeleteConfirmFragment;
 import com.chdryra.android.mygenerallibrary.DialogTwoButtonFragment;
 
@@ -23,7 +23,8 @@ import com.chdryra.android.mygenerallibrary.DialogTwoButtonFragment;
  */
 
 //Don't know how to test the static method....
-public class DialogDeleteConfirmFragmentTest extends ActivityInstrumentationTestCase2<ActivitySingleFragmentActivity> {
+public class DialogDeleteConfirmFragmentTest extends
+        ActivityInstrumentationTestCase2<TestingActivity> {
     private static final DialogTwoButtonFragment.ActionType CONFIRM = DialogDeleteConfirmFragment
             .DELETE_CONFIRM;
     private static final DialogTwoButtonFragment.ActionType CANCEL  = DialogDeleteConfirmFragment
@@ -32,7 +33,7 @@ public class DialogDeleteConfirmFragmentTest extends ActivityInstrumentationTest
     private DialogTester mTester;
 
     public DialogDeleteConfirmFragmentTest() {
-        super(ActivitySingleFragmentActivity.class);
+        super(TestingActivity.class);
     }
 
     @Override

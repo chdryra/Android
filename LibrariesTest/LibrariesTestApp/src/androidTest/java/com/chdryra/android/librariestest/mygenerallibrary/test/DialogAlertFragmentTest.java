@@ -8,12 +8,11 @@
 
 package com.chdryra.android.librariestest.mygenerallibrary.test;
 
-import android.app.Activity;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.UiThreadTest;
 import android.test.suitebuilder.annotation.SmallTest;
 
-import com.chdryra.android.librariestest.mygenerallibrary.ActivitySingleFragmentActivity;
+import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.mygenerallibrary.DialogAlertFragment;
 
 /**
@@ -22,11 +21,11 @@ import com.chdryra.android.mygenerallibrary.DialogAlertFragment;
  * Email: rizwan.choudrey@gmail.com
  */
 public class DialogAlertFragmentTest extends
-        ActivityInstrumentationTestCase2<ActivitySingleFragmentActivity> {
+        ActivityInstrumentationTestCase2<TestingActivity> {
     private DialogTester mTester;
 
     public DialogAlertFragmentTest() {
-        super(ActivitySingleFragmentActivity.class);
+        super(TestingActivity.class);
     }
 
     @Override
