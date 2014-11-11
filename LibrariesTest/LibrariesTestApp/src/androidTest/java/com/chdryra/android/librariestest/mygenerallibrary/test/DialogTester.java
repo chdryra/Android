@@ -31,24 +31,27 @@ public class DialogTester {
     public static final  int    REQUEST_CODE = 314;
     private static final String TAG          = "DialogTester";
     private static final String DATA_KEY     = "com.chdryra.android.librariestest" +
-            ".mygenerallibrary" +
-            ".test.dialog_tester";
+            ".mygenerallibrary.test.dialog_tester";
     private static final String DATA_STRING  = "Data";
+
     private DialogTwoButtonFragment mDialog;
-    private DialogResultListener    mListener;
     private Activity                mActivity;
-    private FragmentManager         mFragmentManager;
+    private DialogResultListener    mListener;
     private ButtonManager           mButtonManager;
 
     enum ButtonLMR {LEFT, MIDDLE, RIGHT}
 
     DialogTester(DialogTwoButtonFragment dialog, Activity activity) {
-        init(dialog, activity);
+        mDialog = dialog;
+        mActivity = activity;
+        InitNewListener();
         mButtonManager = new ButtonManager(dialog);
     }
 
     DialogTester(DialogThreeButtonFragment dialog, Activity activity) {
-        init(dialog, activity);
+        mDialog = dialog;
+        mActivity = activity;
+        InitNewListener();
         mButtonManager = new Button3Manager(dialog);
     }
 
@@ -99,24 +102,22 @@ public class DialogTester {
     }
 
     public static class DialogResultListener extends Fragment {
-        private static final String  FILTER_KEY        = "com.chdryra.android.librariestest" +
+        private static final String FILTER_KEY        = "com.chdryra.android.librariestest" +
                 ".mygenerallibrary.test.dialog_result_listener";
-        private static final int     INIT_REQUEST_CODE = 161019;
-        private static final int     INIT_RESULT_CODE  = 910161;
-        private              int     mRequestCode      = INIT_REQUEST_CODE;
-        private              int     mResultCode       = INIT_RESULT_CODE;
-        private              Intent  mData             = null;
-        private              boolean mCallback         = false;
+        private static final int    INIT_REQUEST_CODE = 161019;
+        private static final int    INIT_RESULT_CODE  = 910161;
+
+        private int     mRequestCode = INIT_REQUEST_CODE;
+        private int     mResultCode  = INIT_RESULT_CODE;
+        private Intent  mData        = null;
+        private boolean mCallback    = false;
         private DialogTwoButtonFragment.ActionType mResultFilter;
 
-        public DialogResultListener() {
-        }
-
-        public static DialogResultListener newInstance() {
+        private static DialogResultListener newInstance() {
             return new DialogResultListener();
         }
 
-        public static DialogResultListener newInstance(DialogTwoButtonFragment.ActionType filter) {
+        private static DialogResultListener newInstance(DialogTwoButtonFragment.ActionType filter) {
             DialogResultListener listener = new DialogResultListener();
             Bundle args = new Bundle();
             args.putSerializable(FILTER_KEY, filter);
@@ -168,7 +169,7 @@ public class DialogTester {
         }
     }
 
-    public static abstract class ButtonClick<T extends DialogTwoButtonFragment> {
+    static abstract class ButtonClick<T extends DialogTwoButtonFragment> {
         public abstract void doClick(T dialog);
     }
 
@@ -232,22 +233,15 @@ public class DialogTester {
         }
     }
 
-    private void init(DialogTwoButtonFragment dialog, Activity activity) {
-        mDialog = dialog;
-        mActivity = activity;
-        mFragmentManager = mActivity.getFragmentManager();
-        newListener();
-    }
-
     DialogResultListener getListener() {
         return mListener;
     }
 
-    void newListener() {
+    void InitNewListener() {
         mListener = DialogResultListener.newInstance();
     }
 
-    void newFilteredListener(DialogTwoButtonFragment.ActionType filter) {
+    void InitNewFilteredListener(DialogTwoButtonFragment.ActionType filter) {
         mListener = DialogResultListener.newInstance(filter);
     }
 
@@ -314,8 +308,9 @@ public class DialogTester {
     void showDialogAndTestIsShowing() {
         mListener.reset();
         mDialog.setTargetFragment(mListener, REQUEST_CODE);
-        mDialog.show(mFragmentManager, "Tag");
-        mFragmentManager.executePendingTransactions();
+        FragmentManager manager = mActivity.getFragmentManager();
+        mDialog.show(manager, "Tag");
+        manager.executePendingTransactions();
         Assert.assertTrue(mDialog.getDialog().isShowing());
     }
 

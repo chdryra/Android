@@ -199,7 +199,7 @@ public class DialogCancelActionDoneFragmentTest
     @UiThreadTest
     public void testDefaultNoPerformActionOnDone() {
         DialogTester tester = new DialogTester(mDefaultDialog, mActivity);
-        tester.newFilteredListener(ACTION);
+        tester.InitNewFilteredListener(ACTION);
 
         tester.showDialogAndTestIsShowing();
         mDefaultDialog.clickDoneButton();
@@ -212,7 +212,7 @@ public class DialogCancelActionDoneFragmentTest
     public void testPerformActionOnDone() {
         DialogCancelActionDoneFragment dialog = getDialogWithPerformActionOnDone();
         DialogTester tester = new DialogTester(dialog, mActivity);
-        tester.newFilteredListener(ACTION);
+        tester.InitNewFilteredListener(ACTION);
 
         tester.showDialogAndTestIsShowing();
         dialog.clickDoneButton();

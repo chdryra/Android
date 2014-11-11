@@ -28,17 +28,22 @@ import com.chdryra.android.mygenerallibrary.FragmentDeleteDone;
  * On: 10/11/2014
  * Email: rizwan.choudrey@gmail.com
  */
+
+// Mainly testing as a fragment that returns results to a commissioning fragment. Not much other
+// functionality built in. Thus the "TestingActivity" paramter for Instrumentation rather than
+// "FragmentDeleteDoneActivity".
+// Can't test "Up" because doesn't appear to be a way of touching "up" programatically!
 public class FragmentDeleteDoneTest extends ActivityInstrumentationTestCase2<TestingActivity> {
+    private static final int                REQUEST_CODE  = 314;
     private static final int                UP            = FragmentDeleteDone.MENU_UP_ID;
     private static final int                DELETE        = FragmentDeleteDone.MENU_DELETE_ID;
     private static final int                DONE          = FragmentDeleteDone.MENU_DONE_ID;
     private static final ActivityResultCode RESULT_UP     = FragmentDeleteDone.RESULT_UP;
     private static final ActivityResultCode RESULT_DELETE = FragmentDeleteDone.RESULT_DELETE;
     private static final ActivityResultCode RESULT_DONE   = FragmentDeleteDone.RESULT_DONE;
+    private static final String             FRAG_TAG      = "Tag";
 
-    private static final int REQUEST_CODE = 314;
-
-    private TestingActivity    mActivity;
+    private TestingActivity    mCommissioner;
     private FragmentDeleteDone mDefaultFragment;
     private boolean mData = true;
 
@@ -49,7 +54,7 @@ public class FragmentDeleteDoneTest extends ActivityInstrumentationTestCase2<Tes
     @Override
     protected void setUp() throws Exception {
         super.setUp();
-        mActivity = getActivity();
+        mCommissioner = getActivity();
         mDefaultFragment = new FragmentDeleteDone();
     }
 
@@ -72,21 +77,21 @@ public class FragmentDeleteDoneTest extends ActivityInstrumentationTestCase2<Tes
 
     @SmallTest
     public void testDataDeleteIfConfirmed() {
-        assertTrue(mData);
         final FragmentDeleteDoneActivity activity = startFragmentForResult(getFragmentWithData());
         FragmentDeleteDone frag = (FragmentDeleteDone) activity.getFragmentManager()
-                .findFragmentByTag("Tag");
+                .findFragmentByTag(FRAG_TAG);
 
         assertNotNull(frag);
 
-        assertFalse(mActivity.called());
+        assertTrue(mData);
+        assertFalse(mCommissioner.called());
 
         frag.onOptionsItemSelected(activity.getMenu().findItem(DELETE));
         getInstrumentation().waitForIdleSync();
 
         //No message sent from dialog or data delete until confirmation
-        assertFalse(mActivity.called());
         assertTrue(mData);
+        assertFalse(mCommissioner.called());
 
         final DialogDeleteConfirmFragment confirmDialog = (DialogDeleteConfirmFragment) activity
                 .getFragmentManager()
@@ -105,8 +110,9 @@ public class FragmentDeleteDoneTest extends ActivityInstrumentationTestCase2<Tes
         getInstrumentation().waitForIdleSync();
 
         //Fragment sent delete message
-        assertTrue(mActivity.called());
-        assertEquals(RESULT_DELETE, mActivity.getResultCode());
+        assertTrue(mCommissioner.called());
+        assertEquals(REQUEST_CODE, mCommissioner.getRequestCode());
+        assertEquals(RESULT_DELETE, mCommissioner.getResultCode());
 
         //onDeleteSelected() called
         assertFalse(mData);
@@ -115,32 +121,32 @@ public class FragmentDeleteDoneTest extends ActivityInstrumentationTestCase2<Tes
     private void testMenuItemSelect(int menuItemId, ActivityResultCode expectedResult) {
         final FragmentDeleteDoneActivity activity = startFragmentForResult(mDefaultFragment);
         FragmentDeleteDone frag = (FragmentDeleteDone) activity.getFragmentManager()
-                .findFragmentByTag("Tag");
+                .findFragmentByTag(FRAG_TAG);
 
         assertNotNull(frag);
 
-        assertFalse(mActivity.called());
+        assertFalse(mCommissioner.called());
 
         frag.onOptionsItemSelected(activity.getMenu().findItem(menuItemId));
 
         getInstrumentation().waitForIdleSync();
 
-        assertTrue(mActivity.called());
-        assertEquals(REQUEST_CODE, mActivity.getRequestCode());
-        assertEquals(expectedResult, mActivity.getResultCode());
+        assertTrue(mCommissioner.called());
+        assertEquals(REQUEST_CODE, mCommissioner.getRequestCode());
+        assertEquals(expectedResult, mCommissioner.getResultCode());
     }
 
     private FragmentDeleteDoneActivity startFragmentForResult(Fragment fragment) {
         FragmentDeleteDoneActivity activity = startFragmentActivityForResult();
 
         FragmentTransaction transaction = activity.getFragmentManager().beginTransaction();
-        transaction.add(R.id.activity_test_fragment_linearlayout, fragment, "Tag");
+        transaction.add(R.id.activity_test_fragment_linearlayout, fragment, FRAG_TAG);
         transaction.commit();
 
         getInstrumentation().waitForIdleSync();
 
         FragmentDeleteDone frag = (FragmentDeleteDone) activity.getFragmentManager()
-                .findFragmentByTag("Tag");
+                .findFragmentByTag(FRAG_TAG);
         assertNotNull(frag);
 
         return activity;
@@ -148,11 +154,13 @@ public class FragmentDeleteDoneTest extends ActivityInstrumentationTestCase2<Tes
 
     private FragmentDeleteDoneActivity startFragmentActivityForResult() {
         Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor
-                (FragmentDeleteDoneActivity.class
-                .getName(), null, false);
-        mActivity.resetResults();
-        mActivity.startActivityForResult(FragmentDeleteDoneActivity.class, REQUEST_CODE);
+                (FragmentDeleteDoneActivity.class.getName(), null, false);
+
+        mCommissioner.resetResults();
+        mCommissioner.startActivityForResult(FragmentDeleteDoneActivity.class, REQUEST_CODE);
+
         getInstrumentation().waitForIdleSync();
+
         FragmentDeleteDoneActivity fragmentActivity = (FragmentDeleteDoneActivity)
                 getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5);
         assertNotNull(fragmentActivity);
@@ -167,7 +175,7 @@ public class FragmentDeleteDoneTest extends ActivityInstrumentationTestCase2<Tes
             @Override
             public void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
-                dismissOnDelete();
+                dismissOnDelete(); //otherwise won't send data
             }
 
             @Override

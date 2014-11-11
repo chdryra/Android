@@ -88,7 +88,7 @@ public class DialogCancelAddDoneFragmentTest extends
     @UiThreadTest
     public void testDefaultPerformAddOnDone() {
         DialogTester tester = new DialogTester(mDefaultDialog, mActivity);
-        tester.newFilteredListener(ADD);
+        tester.InitNewFilteredListener(ADD);
 
         tester.showDialogAndTestIsShowing();
         mDefaultDialog.clickDoneButton();
