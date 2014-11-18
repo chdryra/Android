@@ -9,7 +9,7 @@
 package com.chdryra.android.librariestest.mygenerallibrary.test;
 
 import android.test.ActivityInstrumentationTestCase2;
-import android.test.suitebuilder.annotation.MediumTest;
+import android.test.suitebuilder.annotation.SmallTest;
 
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.mygenerallibrary.FileIncrementor;
@@ -48,7 +48,7 @@ public class FileIncrementorTest extends ActivityInstrumentationTestCase2<Testin
         super.tearDown();
     }
 
-    @MediumTest
+    @SmallTest
     public void testCreateFile() {
         File file = getFile();
         assertFalse(file.exists());
@@ -60,7 +60,7 @@ public class FileIncrementorTest extends ActivityInstrumentationTestCase2<Testin
         assertEquals(file, created);
     }
 
-    @MediumTest
+    @SmallTest
     public void testCreateFileMultiple() {
         File dir = getDir();
         assertNull(dir.list());
@@ -71,7 +71,7 @@ public class FileIncrementorTest extends ActivityInstrumentationTestCase2<Testin
         }
     }
 
-    @MediumTest
+    @SmallTest
     public void testLastFile() {
         File file = getFile();
         assertFalse(file.exists());
@@ -111,7 +111,7 @@ public class FileIncrementorTest extends ActivityInstrumentationTestCase2<Testin
         assertEquals(file1, created1_2);
     }
 
-    @MediumTest
+    @SmallTest
     public void testDeleteCreatedFiles() {
         File dir = getDir();
         assertNull(dir.list());
@@ -124,7 +124,7 @@ public class FileIncrementorTest extends ActivityInstrumentationTestCase2<Testin
         assertEquals(0, dir.list().length);
     }
 
-    @MediumTest
+    @SmallTest
     public void testDeleteCreatedDirectory() {
         File dir = getDir();
         assertFalse(dir.exists());
