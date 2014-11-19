@@ -13,6 +13,7 @@ import android.test.UiThreadTest;
 import android.test.suitebuilder.annotation.SmallTest;
 
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
+import com.chdryra.android.librariestest.mygenerallibrary.test.TestUtils.DialogTester;
 import com.chdryra.android.mygenerallibrary.DialogAlertFragment;
 
 /**
@@ -26,20 +27,6 @@ public class DialogAlertFragmentTest extends
 
     public DialogAlertFragmentTest() {
         super(TestingActivity.class);
-    }
-
-    @Override
-    protected void setUp() throws Exception {
-        super.setUp();
-
-        DialogAlertFragment dialog = new DialogAlertFragment() {
-            @Override
-            protected String getAlertString() {
-                return "Alert String";
-            }
-        };
-
-        mTester = new DialogTester(dialog, getActivity());
     }
 
     @SmallTest
@@ -67,5 +54,19 @@ public class DialogAlertFragmentTest extends
     public void testDismissOnButtonClicks() {
         mTester.testDismissOrNotOnClick(DialogTester.ButtonLMR.LEFT, true);
         mTester.testDismissOrNotOnClick(DialogTester.ButtonLMR.RIGHT, true);
+    }
+
+    @Override
+    protected void setUp() throws Exception {
+        super.setUp();
+
+        DialogAlertFragment dialog = new DialogAlertFragment() {
+            @Override
+            protected String getAlertString() {
+                return "Alert String";
+            }
+        };
+
+        mTester = new DialogTester(dialog, getActivity());
     }
 }

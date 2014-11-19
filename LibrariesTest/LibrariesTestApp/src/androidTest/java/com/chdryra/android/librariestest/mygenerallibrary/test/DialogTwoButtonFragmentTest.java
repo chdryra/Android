@@ -17,7 +17,8 @@ import android.test.suitebuilder.annotation.SmallTest;
 import android.view.View;
 
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
-import com.chdryra.android.librariestest.mygenerallibrary.test.DialogTester.ButtonLMR;
+import com.chdryra.android.librariestest.mygenerallibrary.test.TestUtils.DialogTester;
+import com.chdryra.android.librariestest.mygenerallibrary.test.TestUtils.DialogTester.ButtonLMR;
 import com.chdryra.android.mygenerallibrary.DialogTwoButtonFragment;
 
 /**
@@ -32,19 +33,6 @@ public class DialogTwoButtonFragmentTest extends
 
     public DialogTwoButtonFragmentTest() {
         super(TestingActivity.class);
-    }
-
-    @Override
-    protected void setUp() throws Exception {
-        super.setUp();
-        mActivity = getActivity();
-        DialogTwoButtonFragment defaultDialog = new DialogTwoButtonFragment() {
-            @Override
-            protected View createDialogUI() {
-                return null;
-            }
-        };
-        mTester = new DialogTester(defaultDialog, mActivity);
     }
 
     @SmallTest
@@ -99,6 +87,19 @@ public class DialogTwoButtonFragmentTest extends
                 mActivity, ButtonLMR.LEFT);
         DialogTester.testIntentDataPassBack(getDialogWithDataOnButtonClick(ButtonLMR.RIGHT),
                 mActivity, ButtonLMR.RIGHT);
+    }
+
+    @Override
+    protected void setUp() throws Exception {
+        super.setUp();
+        mActivity = getActivity();
+        DialogTwoButtonFragment defaultDialog = new DialogTwoButtonFragment() {
+            @Override
+            protected View createDialogUI() {
+                return null;
+            }
+        };
+        mTester = new DialogTester(defaultDialog, mActivity);
     }
 
     private DialogTwoButtonFragment getDialogWithDataOnButtonClick(ButtonLMR button) {

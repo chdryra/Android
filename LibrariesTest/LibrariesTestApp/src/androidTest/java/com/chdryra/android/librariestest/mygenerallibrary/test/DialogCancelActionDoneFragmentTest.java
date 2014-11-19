@@ -17,6 +17,7 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
+import com.chdryra.android.librariestest.mygenerallibrary.test.TestUtils.DialogTester;
 import com.chdryra.android.mygenerallibrary.DialogCancelActionDoneFragment;
 import com.chdryra.android.mygenerallibrary.DialogTwoButtonFragment;
 
@@ -40,21 +41,6 @@ public class DialogCancelActionDoneFragmentTest
 
     public DialogCancelActionDoneFragmentTest() {
         super(TestingActivity.class);
-    }
-
-    @Override
-    protected void setUp() throws Exception {
-        super.setUp();
-        mActivity = getActivity();
-
-        mDefaultDialog = new DialogCancelActionDoneFragment() {
-            @Override
-            protected View createDialogUI() {
-                return null;
-            }
-        };
-
-        mTester = new DialogTester(mDefaultDialog, mActivity);
     }
 
     @SmallTest
@@ -218,6 +204,21 @@ public class DialogCancelActionDoneFragmentTest
         dialog.clickDoneButton();
 
         assertEquals(ACTION.getResultCode(), tester.getListener().getResultCode());
+    }
+
+    @Override
+    protected void setUp() throws Exception {
+        super.setUp();
+        mActivity = getActivity();
+
+        mDefaultDialog = new DialogCancelActionDoneFragment() {
+            @Override
+            protected View createDialogUI() {
+                return null;
+            }
+        };
+
+        mTester = new DialogTester(mDefaultDialog, mActivity);
     }
 
     private DialogCancelActionDoneFragment getDialogWithPerformActionOnDone() {

@@ -17,6 +17,7 @@ import android.test.suitebuilder.annotation.SmallTest;
 import android.view.View;
 
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
+import com.chdryra.android.librariestest.mygenerallibrary.test.TestUtils.DialogTester;
 import com.chdryra.android.mygenerallibrary.DialogThreeButtonFragment;
 import com.chdryra.android.mygenerallibrary.DialogTwoButtonFragment;
 
@@ -32,21 +33,6 @@ public class DialogThreeButtonFragmentTest extends
 
     public DialogThreeButtonFragmentTest() {
         super(TestingActivity.class);
-    }
-
-    @Override
-    protected void setUp() throws Exception {
-        super.setUp();
-        mActivity = getActivity();
-
-        DialogThreeButtonFragment defaultDialog = new DialogThreeButtonFragment() {
-            @Override
-            protected View createDialogUI() {
-                return null;
-            }
-        };
-
-        mTester = new DialogTester(defaultDialog, mActivity);
     }
 
     @SmallTest
@@ -113,6 +99,21 @@ public class DialogThreeButtonFragmentTest extends
                 DialogTester.ButtonLMR.RIGHT);
         DialogTester.testIntentDataPassBack(getDialogWithDataOnMiddleClick(), mActivity,
                 DialogTester.ButtonLMR.MIDDLE);
+    }
+
+    @Override
+    protected void setUp() throws Exception {
+        super.setUp();
+        mActivity = getActivity();
+
+        DialogThreeButtonFragment defaultDialog = new DialogThreeButtonFragment() {
+            @Override
+            protected View createDialogUI() {
+                return null;
+            }
+        };
+
+        mTester = new DialogTester(defaultDialog, mActivity);
     }
 
     private DialogThreeButtonFragment getDialogWithDataOnRightClick() {

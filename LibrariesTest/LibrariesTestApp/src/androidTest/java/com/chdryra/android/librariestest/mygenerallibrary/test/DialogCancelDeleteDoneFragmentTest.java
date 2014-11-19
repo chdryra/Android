@@ -15,6 +15,7 @@ import android.test.suitebuilder.annotation.SmallTest;
 import android.view.View;
 
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
+import com.chdryra.android.librariestest.mygenerallibrary.test.TestUtils.DialogTester;
 import com.chdryra.android.mygenerallibrary.DialogCancelDeleteDoneFragment;
 import com.chdryra.android.mygenerallibrary.DialogDeleteConfirmFragment;
 import com.chdryra.android.mygenerallibrary.DialogTwoButtonFragment;
@@ -41,21 +42,6 @@ public class DialogCancelDeleteDoneFragmentTest extends
 
     public DialogCancelDeleteDoneFragmentTest() {
         super(TestingActivity.class);
-    }
-
-    @Override
-    protected void setUp() throws Exception {
-        super.setUp();
-        mActivity = getActivity();
-
-        mDefaultDialog = new DialogCancelDeleteDoneFragment() {
-            @Override
-            protected View createDialogUI() {
-                return null;
-            }
-        };
-
-        mTester = new DialogTester(mDefaultDialog, mActivity);
     }
 
     @SmallTest
@@ -159,6 +145,21 @@ public class DialogCancelDeleteDoneFragmentTest extends
         //No message sent from dialog or data deleted
         assertFalse(listener.called());
         assertTrue(mData);
+    }
+
+    @Override
+    protected void setUp() throws Exception {
+        super.setUp();
+        mActivity = getActivity();
+
+        mDefaultDialog = new DialogCancelDeleteDoneFragment() {
+            @Override
+            protected View createDialogUI() {
+                return null;
+            }
+        };
+
+        mTester = new DialogTester(mDefaultDialog, mActivity);
     }
 
     private DialogCancelDeleteDoneFragment getDialogHasData() {

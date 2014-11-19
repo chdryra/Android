@@ -13,6 +13,7 @@ import android.test.UiThreadTest;
 import android.test.suitebuilder.annotation.SmallTest;
 
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
+import com.chdryra.android.librariestest.mygenerallibrary.test.TestUtils.DialogTester;
 import com.chdryra.android.mygenerallibrary.DialogDeleteConfirmFragment;
 import com.chdryra.android.mygenerallibrary.DialogTwoButtonFragment;
 
@@ -34,12 +35,6 @@ public class DialogDeleteConfirmFragmentTest extends
 
     public DialogDeleteConfirmFragmentTest() {
         super(TestingActivity.class);
-    }
-
-    @Override
-    protected void setUp() throws Exception {
-        super.setUp();
-        mTester = new DialogTester(new DialogDeleteConfirmFragment(), getActivity());
     }
 
     @SmallTest
@@ -83,5 +78,11 @@ public class DialogDeleteConfirmFragmentTest extends
     public void testDismissOnButtonClicks() {
         mTester.testDismissOrNotOnClick(DialogTester.ButtonLMR.LEFT, true);
         mTester.testDismissOrNotOnClick(DialogTester.ButtonLMR.RIGHT, true);
+    }
+
+    @Override
+    protected void setUp() throws Exception {
+        super.setUp();
+        mTester = new DialogTester(new DialogDeleteConfirmFragment(), getActivity());
     }
 }
