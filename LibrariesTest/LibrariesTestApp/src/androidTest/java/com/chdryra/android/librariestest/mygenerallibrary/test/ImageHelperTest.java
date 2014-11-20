@@ -14,11 +14,10 @@ import android.test.ActivityInstrumentationTestCase2;
 import android.test.suitebuilder.annotation.SmallTest;
 
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
+import com.chdryra.android.librariestest.mygenerallibrary.test.TestUtils.BitmapMock;
 import com.chdryra.android.mygenerallibrary.ImageHelper;
 import com.google.android.gms.maps.model.LatLng;
 
-import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -32,15 +31,10 @@ import java.util.Random;
  * Email: rizwan.choudrey@gmail.com
  */
 public class ImageHelperTest extends ActivityInstrumentationTestCase2<TestingActivity> {
-    private static final String FILENAME     = "test.png";
-    private static final String FILENAME_JPG = "test.jpg";
-    private static final int    WIDTH        = 300;
-    private static final int    HEIGHT       = 400;
+    private static final int WIDTH  = BitmapMock.WIDTH;
+    private static final int HEIGHT = BitmapMock.HEIGHT;
 
-    private File   mFile;
-    private File   mFileJpg;
-    private Bitmap mBitmap;
-    private Bitmap mLandscape;
+    private BitmapMock mBitmapMock;
 
     public ImageHelperTest() {
         super(TestingActivity.class);
@@ -56,49 +50,40 @@ public class ImageHelperTest extends ActivityInstrumentationTestCase2<TestingAct
         return sOut;
     }
 
-    @Override
-    protected void setUp() throws Exception {
-        super.setUp();
-        createBitmapFile();
-    }
-
-    @Override
-    protected void tearDown() throws Exception {
-        deleteBitmapFile();
-        super.tearDown();
-    }
-
     @SmallTest
     public void testBitmapExists() {
-        assertTrue(ImageHelper.bitmapExists(mFile.getPath()));
-        deleteBitmapFile();
-        assertFalse(ImageHelper.bitmapExists(mFile.getPath()));
+        String path = mBitmapMock.createBitmapFile();
+        assertTrue(ImageHelper.bitmapExists(path));
+        mBitmapMock.deleteBitmapFile();
+        assertFalse(ImageHelper.bitmapExists(path));
     }
 
     @SmallTest
     public void testGetBitmap() {
-        Bitmap bitmap = ImageHelper.getBitmap(mFile.getPath(), WIDTH, HEIGHT);
+        String path = mBitmapMock.createBitmapFile();
+
+        Bitmap bitmap = ImageHelper.getBitmap(path, WIDTH, HEIGHT);
         assertNotNull(bitmap);
-        assertTrue(mBitmap.sameAs(bitmap));
+        assertTrue(mBitmapMock.getBitmap().sameAs(bitmap));
         assertEquals(WIDTH, bitmap.getWidth());
         assertEquals(HEIGHT, bitmap.getHeight());
 
-        bitmap = ImageHelper.getBitmap(mFile.getPath(), WIDTH / 2, HEIGHT / 2);
+        bitmap = ImageHelper.getBitmap(path, WIDTH / 2, HEIGHT / 2);
         assertNotNull(bitmap);
         assertEquals(WIDTH / 2, bitmap.getWidth());
         assertEquals(HEIGHT / 2, bitmap.getHeight());
 
-        bitmap = ImageHelper.getBitmap(mFile.getPath(), WIDTH / 3, HEIGHT / 3);
+        bitmap = ImageHelper.getBitmap(path, WIDTH / 3, HEIGHT / 3);
         assertNotNull(bitmap);
         assertEquals(WIDTH / 2, bitmap.getWidth());
         assertEquals(HEIGHT / 2, bitmap.getHeight());
 
-        bitmap = ImageHelper.getBitmap(mFile.getPath(), WIDTH / 4, HEIGHT / 4);
+        bitmap = ImageHelper.getBitmap(path, WIDTH / 4, HEIGHT / 4);
         assertNotNull(bitmap);
         assertEquals(WIDTH / 4, bitmap.getWidth());
         assertEquals(HEIGHT / 4, bitmap.getHeight());
 
-        bitmap = ImageHelper.getBitmap(mFile.getPath(), WIDTH / 4, HEIGHT / 2);
+        bitmap = ImageHelper.getBitmap(path, WIDTH / 4, HEIGHT / 2);
         assertNotNull(bitmap);
         assertEquals(WIDTH / 2, bitmap.getWidth());
         assertEquals(HEIGHT / 2, bitmap.getHeight());
@@ -106,47 +91,53 @@ public class ImageHelperTest extends ActivityInstrumentationTestCase2<TestingAct
 
     @SmallTest
     public void testRescalePreservingAspectRatio() {
-        int w = mBitmap.getWidth();
-        int h = mBitmap.getHeight();
+        //Portrait
+        mBitmapMock.createBitmapFile();
+        Bitmap bitmap = mBitmapMock.getBitmap();
+        assertNotNull(bitmap);
+        int w = bitmap.getWidth();
+        int h = bitmap.getHeight();
         float r = (float) w / h;
 
         int width = w / 5;
         int height = h / 5;
-        Bitmap rescaled = ImageHelper.rescalePreservingAspectRatio(mBitmap, width, height);
+        Bitmap rescaled = ImageHelper.rescalePreservingAspectRatio(bitmap, width, height);
         assertEquals(width, rescaled.getWidth());
         assertEquals(height, rescaled.getHeight());
         assertEquals(r, (float) rescaled.getWidth() / rescaled.getHeight());
 
-        //mBitmap is portrait so chooses height as definitive requirement
         width = w / 2;
         height = h / 5;
-        rescaled = ImageHelper.rescalePreservingAspectRatio(mBitmap, width, height);
+        rescaled = ImageHelper.rescalePreservingAspectRatio(bitmap, width, height);
         assertEquals(w / 5, rescaled.getWidth());
         assertEquals(height, rescaled.getHeight());
         assertEquals(r, (float) rescaled.getWidth() / rescaled.getHeight());
 
         width = w / 5;
         height = h / 2;
-        rescaled = ImageHelper.rescalePreservingAspectRatio(mBitmap, width, height);
+        rescaled = ImageHelper.rescalePreservingAspectRatio(bitmap, width, height);
         assertEquals(w / 2, rescaled.getWidth());
         assertEquals(height, rescaled.getHeight());
         assertEquals(r, (float) rescaled.getWidth() / rescaled.getHeight());
 
-        //mLandscape is landscape version
-        w = mLandscape.getWidth();
-        h = mLandscape.getHeight();
+        //Landscape
+        mBitmapMock.createBitmapFile(true);
+        bitmap = mBitmapMock.getBitmap();
+        assertNotNull(bitmap);
+        w = bitmap.getWidth();
+        h = bitmap.getHeight();
         r = (float) w / h;
 
         width = w / 2;
         height = h / 5;
-        rescaled = ImageHelper.rescalePreservingAspectRatio(mLandscape, width, height);
+        rescaled = ImageHelper.rescalePreservingAspectRatio(bitmap, width, height);
         assertEquals(width, rescaled.getWidth());
         assertEquals(h / 2, rescaled.getHeight());
         assertEquals(r, (float) rescaled.getWidth() / rescaled.getHeight());
 
         width = w / 5;
         height = h / 2;
-        rescaled = ImageHelper.rescalePreservingAspectRatio(mLandscape, width, height);
+        rescaled = ImageHelper.rescalePreservingAspectRatio(bitmap, width, height);
         assertEquals(width, rescaled.getWidth());
         assertEquals(h / 5, rescaled.getHeight());
         assertEquals(r, (float) rescaled.getWidth() / rescaled.getHeight());
@@ -154,68 +145,71 @@ public class ImageHelperTest extends ActivityInstrumentationTestCase2<TestingAct
 
     @SmallTest
     public void testRotateBitmapUsingExif() {
+        String path = mBitmapMock.createBitmapFile(Bitmap.CompressFormat.JPEG, false);
+        ExifInterface exif = getExif(path);
+
+        Bitmap original = mBitmapMock.getBitmap();
+        int width = original.getWidth();
+        int height = original.getHeight();
+
         //Basic tests just checking 90 rotations. Not sure how to check for reflections or 180
         // rotations.
-        ExifInterface exif = getExif();
-
-        int width = mBitmap.getWidth();
-        int height = mBitmap.getHeight();
-
         exif.setAttribute(ExifInterface.TAG_ORIENTATION, "1");
-        Bitmap bitmap = ImageHelper.rotateBitmapUsingExif(exif, mBitmap);
-        assertTrue(mBitmap.equals(bitmap));
+        Bitmap bitmap = ImageHelper.rotateBitmapUsingExif(exif, original);
+        assertTrue(original.equals(bitmap));
 
         exif.setAttribute(ExifInterface.TAG_ORIENTATION, "2");
-        bitmap = ImageHelper.rotateBitmapUsingExif(exif, mBitmap);
-        assertFalse(mBitmap.equals(bitmap));
+        bitmap = ImageHelper.rotateBitmapUsingExif(exif, original);
+        assertFalse(original.equals(bitmap));
         assertEquals(width, bitmap.getWidth());
         assertEquals(height, bitmap.getHeight());
 
         exif.setAttribute(ExifInterface.TAG_ORIENTATION, "3");
-        bitmap = ImageHelper.rotateBitmapUsingExif(exif, mBitmap);
-        assertFalse(mBitmap.equals(bitmap));
+        bitmap = ImageHelper.rotateBitmapUsingExif(exif, original);
+        assertFalse(original.equals(bitmap));
         assertEquals(width, bitmap.getWidth());
         assertEquals(height, bitmap.getHeight());
 
         exif.setAttribute(ExifInterface.TAG_ORIENTATION, "4");
-        bitmap = ImageHelper.rotateBitmapUsingExif(exif, mBitmap);
-        assertFalse(mBitmap.equals(bitmap));
+        bitmap = ImageHelper.rotateBitmapUsingExif(exif, original);
+        assertFalse(original.equals(bitmap));
         assertEquals(width, bitmap.getWidth());
         assertEquals(height, bitmap.getHeight());
 
         exif.setAttribute(ExifInterface.TAG_ORIENTATION, "5");
-        bitmap = ImageHelper.rotateBitmapUsingExif(exif, mBitmap);
+        bitmap = ImageHelper.rotateBitmapUsingExif(exif, original);
         assertEquals(width, bitmap.getHeight());
         assertEquals(height, bitmap.getWidth());
 
         exif.setAttribute(ExifInterface.TAG_ORIENTATION, "6");
-        bitmap = ImageHelper.rotateBitmapUsingExif(exif, mBitmap);
+        bitmap = ImageHelper.rotateBitmapUsingExif(exif, original);
         assertEquals(width, bitmap.getHeight());
         assertEquals(height, bitmap.getWidth());
 
         exif.setAttribute(ExifInterface.TAG_ORIENTATION, "7");
-        bitmap = ImageHelper.rotateBitmapUsingExif(exif, mBitmap);
+        bitmap = ImageHelper.rotateBitmapUsingExif(exif, original);
         assertEquals(width, bitmap.getHeight());
         assertEquals(height, bitmap.getWidth());
 
         exif.setAttribute(ExifInterface.TAG_ORIENTATION, "8");
-        bitmap = ImageHelper.rotateBitmapUsingExif(exif, mBitmap);
+        bitmap = ImageHelper.rotateBitmapUsingExif(exif, original);
         assertEquals(width, bitmap.getHeight());
         assertEquals(height, bitmap.getWidth());
 
         exif.setAttribute(ExifInterface.TAG_ORIENTATION, "314");
-        bitmap = ImageHelper.rotateBitmapUsingExif(exif, mBitmap);
-        assertTrue(mBitmap.equals(bitmap));
+        bitmap = ImageHelper.rotateBitmapUsingExif(exif, original);
+        assertTrue(original.equals(bitmap));
     }
 
     @SmallTest
     public void testGetLatLngFromExif() {
+        String path = mBitmapMock.createBitmapFile(Bitmap.CompressFormat.JPEG, false);
         Random rand = new Random();
         double eps = 0.0001;
         for (int i = 0; i < 100; ++i) {
             double lat = (rand.nextDouble() - 0.5) * 180;
             double lng = (rand.nextDouble() - 0.5) * 360;
-            ExifInterface exif = getExif(lat, lng);
+            ExifInterface exif = getExif(path, lat, lng);
             LatLng latLng = ImageHelper.getLatLngFromEXIF(exif);
             float[] ll = new float[2];
             exif.getLatLong(ll);
@@ -226,7 +220,8 @@ public class ImageHelperTest extends ActivityInstrumentationTestCase2<TestingAct
 
     @SmallTest
     public void testGetExif() {
-        ExifInterface exif = getExif();
+        String path = mBitmapMock.createBitmapFile(Bitmap.CompressFormat.JPEG, false);
+        ExifInterface exif = getExif(path);
         DateFormat dateFormat = new SimpleDateFormat("yyyy:MM:dd HH:mm:ss");
         Date date = new Date();
         String dateTime = dateFormat.format(date);
@@ -237,70 +232,27 @@ public class ImageHelperTest extends ActivityInstrumentationTestCase2<TestingAct
             e.printStackTrace();
         }
 
-        ExifInterface exifFromFile = ImageHelper.getEXIF(mFileJpg.getPath());
+        ExifInterface exifFromFile = ImageHelper.getEXIF(path);
         String dateTime2 = exifFromFile.getAttribute(ExifInterface.TAG_DATETIME);
         assertEquals(dateTime, dateTime2);
     }
 
-    private void createBitmapFile() {
-        Bitmap.Config conf = Bitmap.Config.ARGB_8888;
-        mBitmap = Bitmap.createBitmap(WIDTH, HEIGHT, conf);
-        mLandscape = Bitmap.createBitmap(HEIGHT, WIDTH, conf);
-
-        mFile = new File(getInstrumentation().getTargetContext().getFilesDir(), FILENAME);
-        mFileJpg = new File(getInstrumentation().getTargetContext().getFilesDir(), FILENAME_JPG);
-        try {
-            assertTrue(mFile.createNewFile());
-            assertTrue(mFileJpg.createNewFile());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        assertTrue(mFile.exists());
-        assertTrue(mFileJpg.exists());
-
-        FileOutputStream out = null;
-        try {
-            out = new FileOutputStream(mFile);
-            mBitmap.compress(Bitmap.CompressFormat.PNG, 100, out);
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                if (out != null) {
-                    out.close();
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-
-        out = null;
-        try {
-            out = new FileOutputStream(mFileJpg);
-            mBitmap.compress(Bitmap.CompressFormat.JPEG, 100, out);
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                if (out != null) {
-                    out.close();
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
+    @Override
+    protected void setUp() throws Exception {
+        super.setUp();
+        mBitmapMock = new BitmapMock(getInstrumentation().getTargetContext().getFilesDir());
     }
 
-    private void deleteBitmapFile() {
-        if (mFile.exists()) assertTrue(mFile.delete());
-        if (mFileJpg.exists()) assertTrue(mFileJpg.delete());
+    @Override
+    protected void tearDown() throws Exception {
+        mBitmapMock.deleteBitmapFile();
+        super.tearDown();
     }
 
-    private ExifInterface getExif() {
+    private ExifInterface getExif(String path) {
         ExifInterface exif = null;
         try {
-            exif = new ExifInterface(mFileJpg.getPath());
+            exif = new ExifInterface(path);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -308,8 +260,8 @@ public class ImageHelperTest extends ActivityInstrumentationTestCase2<TestingAct
         return exif;
     }
 
-    private ExifInterface getExif(double lat, double lng) {
-        ExifInterface exif = getExif();
+    private ExifInterface getExif(String path, double lat, double lng) {
+        ExifInterface exif = getExif(path);
 
         exif.setAttribute(ExifInterface.TAG_GPS_LATITUDE, getDMSFromDecimalCoordinate(lat));
         exif.setAttribute(ExifInterface.TAG_GPS_LONGITUDE, getDMSFromDecimalCoordinate(lng));

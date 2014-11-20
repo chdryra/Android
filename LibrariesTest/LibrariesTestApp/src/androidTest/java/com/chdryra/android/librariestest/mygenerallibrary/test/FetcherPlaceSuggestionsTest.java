@@ -13,7 +13,7 @@ import android.test.suitebuilder.annotation.LargeTest;
 
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.librariestest.mygenerallibrary.test.TestUtils.CallBackSignaler;
-import com.chdryra.android.mygenerallibrary.AddressSuggestionsFetcher;
+import com.chdryra.android.mygenerallibrary.FetcherPlaceSuggestions;
 import com.google.android.gms.maps.model.LatLng;
 
 import java.util.ArrayList;
@@ -23,14 +23,14 @@ import java.util.ArrayList;
  * On: 19/11/2014
  * Email: rizwan.choudrey@gmail.com
  */
-public class AddressSuggestionsFetcherTest extends
+public class FetcherPlaceSuggestionsTest extends
         ActivityInstrumentationTestCase2<TestingActivity> {
     private final static LatLng LATLNG = new LatLng(51.5072, -0.1275);
-    private AddressSuggestionsFetcher.FetchCompleteListener mListener;
-    private ArrayList<String>                               mAddresses;
-    private CallBackSignaler                                mSignaler;
+    private FetcherPlaceSuggestions.FetchCompleteListener mListener;
+    private ArrayList<String>                             mAddresses;
+    private CallBackSignaler                              mSignaler;
 
-    public AddressSuggestionsFetcherTest() {
+    public FetcherPlaceSuggestionsTest() {
         super(TestingActivity.class);
     }
 
@@ -46,9 +46,9 @@ public class AddressSuggestionsFetcherTest extends
             runTestOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    AddressSuggestionsFetcher fetcher = new AddressSuggestionsFetcher
-                            (getInstrumentation()
-                                    .getTargetContext(), LATLNG, mListener);
+                    FetcherPlaceSuggestions fetcher = new FetcherPlaceSuggestions
+                            (getInstrumentation().getTargetContext(), LATLNG);
+                    fetcher.registerListener(mListener);
                     fetcher.fetch(numberAddresses);
                 }
             });
@@ -66,7 +66,7 @@ public class AddressSuggestionsFetcherTest extends
         super.setUp();
         mAddresses = new ArrayList<String>();
         mSignaler = new CallBackSignaler(600); //because sometimes AsyncTask can take ages
-        mListener = new AddressSuggestionsFetcher.FetchCompleteListener() {
+        mListener = new FetcherPlaceSuggestions.FetchCompleteListener() {
             @Override
             public void onAddressesFound(ArrayList<String> addresses) {
                 mAddresses = addresses;
