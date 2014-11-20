@@ -12,7 +12,7 @@ import android.test.ActivityInstrumentationTestCase2;
 import android.test.suitebuilder.annotation.SmallTest;
 
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
-import com.chdryra.android.mygenerallibrary.FetcherPlacesAutoComplete;
+import com.chdryra.android.mygenerallibrary.PlaceAutoCompleteSuggester;
 import com.google.android.gms.maps.model.LatLng;
 
 import java.util.ArrayList;
@@ -22,18 +22,18 @@ import java.util.ArrayList;
  * On: 20/11/2014
  * Email: rizwan.choudrey@gmail.com
  */
-public class FetcherPlacesAutoCompleteTest extends
+public class PlaceAutoCompleteSuggesterTest extends
         ActivityInstrumentationTestCase2<TestingActivity> {
     private final static LatLng LATLNG = new LatLng(51.5072, -0.1275);
 
-    public FetcherPlacesAutoCompleteTest() {
+    public PlaceAutoCompleteSuggesterTest() {
         super(TestingActivity.class);
     }
 
     @SmallTest
     public void testFetch() {
-        FetcherPlacesAutoComplete fetcher = new FetcherPlacesAutoComplete(LATLNG);
-        ArrayList<String> res = fetcher.fetch("Lo");
+        PlaceAutoCompleteSuggester fetcher = new PlaceAutoCompleteSuggester(LATLNG);
+        ArrayList<String> res = fetcher.getSuggestions("Lo");
         assertNotNull(res);
         assertTrue(res.size() > 0);
     }
