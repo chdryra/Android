@@ -25,21 +25,8 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.chdryra.android.reviewer" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbecc251-2e59-4e4e-b243-801cf0d21d57" name="Default" comment="Changed LocationNameAdapter to AutoCompleteAdapter by making it only care about more generic interfaces. Changed names of FetcherPlaceSuggestions and FetcherPlacesAutoComplete to PlaceSuggester etc. Changed FragmentReviewLocationMap and DialogLocationFragment accordingly.">
-      <change type="MOVED" beforePath="C:\Dev\Android\MyGeneralLibrary\src\main\java\com\chdryra\android\mygenerallibrary\AutoCompleteAdapter.java" afterPath="$PROJECT_DIR$/MyGeneralLibrary/src/main/java/com/chdryra/android/mygenerallibrary/StringFilterAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyAndroidWidgets" afterPath="$PROJECT_DIR$/MyAndroidWidgets" />
+    <list default="true" id="cbecc251-2e59-4e4e-b243-801cf0d21d57" name="Default" comment="Some simplifying of code in light of tests. Changed AutoCOmpleteAdapter to StringFilterAdapter as adapter was more general.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyGeneralLibrary" afterPath="$PROJECT_DIR$/MyGeneralLibrary" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RemoteAPIFetchers" afterPath="$PROJECT_DIR$/RemoteAPIFetchers" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer" afterPath="$PROJECT_DIR$/Reviewer" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogLocationFragment.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogLocationFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/FragmentReviewLocationMap.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/FragmentReviewLocationMap.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyAndroidWidgets/MyAndroidWidgets.iml" afterPath="$PROJECT_DIR$/MyAndroidWidgets/MyAndroidWidgets.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyGeneralLibrary/MyGeneralLibrary.iml" afterPath="$PROJECT_DIR$/MyGeneralLibrary/MyGeneralLibrary.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyGeneralLibrary/src/main/java/com/chdryra/android/mygenerallibrary/ObjectHolder.java" afterPath="$PROJECT_DIR$/MyGeneralLibrary/src/main/java/com/chdryra/android/mygenerallibrary/ObjectHolder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyGeneralLibrary/src/main/java/com/chdryra/android/mygenerallibrary/PlaceAutoCompleteSuggester.java" afterPath="$PROJECT_DIR$/MyGeneralLibrary/src/main/java/com/chdryra/android/mygenerallibrary/PlaceAutoCompleteSuggester.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyGeneralLibrary/src/main/java/com/chdryra/android/mygenerallibrary/PlaceSuggester.java" afterPath="$PROJECT_DIR$/MyGeneralLibrary/src/main/java/com/chdryra/android/mygenerallibrary/PlaceSuggester.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RemoteAPIFetchers/RemoteAPIFetchers.iml" afterPath="$PROJECT_DIR$/RemoteAPIFetchers/RemoteAPIFetchers.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyGeneralLibrary/build.gradle" afterPath="$PROJECT_DIR$/MyGeneralLibrary/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="a35911de-8258-4636-8179-accbdb7cff9f" name="Failed commit: Default" comment="A bunch of code formatting to bring broadly in line with Android practice including:&#10;* Curly braces around all conditional statements.&#10;* Handling of all exceptions with logging.&#10;* Acronyms changed to words eg getURL() now getUrl(0.&#10;* 100 character line limit.&#10;Applied as a profile in the automatic code formatter.&#10;Fixed a &quot;Facts&quot; bug that didn't properly check equality between facts and whether a label already existed." />
@@ -94,7 +81,6 @@
               <caret line="176" column="43" selection-start-line="176" selection-start-column="43" selection-end-line="176" selection-end-column="43" />
               <folding>
                 <element signature="e#0#6580#0" expanded="true" />
-                <element signature="imports" expanded="true" />
                 <element signature="e#4465#4784#0" expanded="true" />
                 <element signature="e#4773#4774#0" expanded="true" />
               </folding>
@@ -154,10 +140,9 @@
             <state vertical-scroll-proportion="0.0" vertical-offset="6715" max-vertical-offset="8058">
               <caret line="426" column="0" selection-start-line="426" selection-start-column="0" selection-end-line="426" selection-end-column="0" />
               <folding>
-                <element signature="e#0#16728#0" expanded="true" />
-                <element signature="imports" expanded="true" />
-                <element signature="e#10149#10150#0" expanded="true" />
-                <element signature="e#10204#10205#0" expanded="true" />
+                <element signature="e#0#16717#0" expanded="true" />
+                <element signature="e#10138#10139#0" expanded="true" />
+                <element signature="e#10193#10194#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -3559,7 +3544,11 @@
       <created>1416512839966</created>
       <updated>1416512839966</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="Some simplifying of code in light of tests. Changed AutoCOmpleteAdapter to StringFilterAdapter as adapter was more general.">
+      <created>1416856653416</created>
+      <updated>1416856653416</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -3643,7 +3632,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Changed to Gradle project structure" />
     <MESSAGE value="Changed all module structures and project structure to conform with Gradle conventions. Simplified build scripts accordingly by removing 'SourceSets' designations." />
     <MESSAGE value="Moved over to using the Gradle wrapper system so checking in gradle/wrapper directory and gradle batch scripts." />
     <MESSAGE value="Reverting back to last nights commit to undo all the screw ups with GitHub I did this morning trying to change module names." />
@@ -3668,7 +3656,8 @@
     <MESSAGE value="Simplified IntentChooser to use BitmapLoader from MyGeneralLibrary for getting the chosen image. FragmentReviewBuild and FragmentReviewImages now implement ImageChooserListener to update themselves once image is loaded and ready." />
     <MESSAGE value="Changed LocationNameAdapter to use dependency injection of FetcherPlaceSuggestions and FetcherPlacesAutoComplete in constructor. Changed FragmentReviewLocationMap and DialogLocationFragment accordingly. Moved LocationClientConnector to onAttach in FragmentReviewLocationMap." />
     <MESSAGE value="Changed LocationNameAdapter to AutoCompleteAdapter by making it only care about more generic interfaces. Changed names of FetcherPlaceSuggestions and FetcherPlacesAutoComplete to PlaceSuggester etc. Changed FragmentReviewLocationMap and DialogLocationFragment accordingly." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed LocationNameAdapter to AutoCompleteAdapter by making it only care about more generic interfaces. Changed names of FetcherPlaceSuggestions and FetcherPlacesAutoComplete to PlaceSuggester etc. Changed FragmentReviewLocationMap and DialogLocationFragment accordingly." />
+    <MESSAGE value="Some simplifying of code in light of tests. Changed AutoCOmpleteAdapter to StringFilterAdapter as adapter was more general." />
+    <option name="LAST_COMMIT_MESSAGE" value="Some simplifying of code in light of tests. Changed AutoCOmpleteAdapter to StringFilterAdapter as adapter was more general." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -4071,10 +4060,9 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="6715" max-vertical-offset="8058">
           <caret line="426" column="0" selection-start-line="426" selection-start-column="0" selection-end-line="426" selection-end-column="0" />
           <folding>
-            <element signature="e#0#16728#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#10149#10150#0" expanded="true" />
-            <element signature="e#10204#10205#0" expanded="true" />
+            <element signature="e#0#16717#0" expanded="true" />
+            <element signature="e#10138#10139#0" expanded="true" />
+            <element signature="e#10193#10194#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -4085,7 +4073,6 @@
           <caret line="176" column="43" selection-start-line="176" selection-start-column="43" selection-end-line="176" selection-end-column="43" />
           <folding>
             <element signature="e#0#6580#0" expanded="true" />
-            <element signature="imports" expanded="true" />
             <element signature="e#4465#4784#0" expanded="true" />
             <element signature="e#4773#4774#0" expanded="true" />
           </folding>
