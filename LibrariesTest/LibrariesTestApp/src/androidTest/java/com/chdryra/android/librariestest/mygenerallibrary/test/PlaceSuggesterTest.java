@@ -9,10 +9,12 @@
 package com.chdryra.android.librariestest.mygenerallibrary.test;
 
 import android.test.ActivityInstrumentationTestCase2;
-import android.test.suitebuilder.annotation.LargeTest;
+import android.test.UiThreadTest;
+import android.test.suitebuilder.annotation.SmallTest;
 
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.librariestest.mygenerallibrary.test.TestUtils.CallBackSignaler;
+import com.chdryra.android.mygenerallibrary.PlaceSuggester;
 import com.google.android.gms.maps.model.LatLng;
 
 import java.util.ArrayList;
@@ -25,7 +27,7 @@ import java.util.ArrayList;
 public class PlaceSuggesterTest extends
         ActivityInstrumentationTestCase2<TestingActivity> {
     private final static LatLng LATLNG = new LatLng(51.5072, -0.1275);
-    private com.chdryra.android.mygenerallibrary.PlaceSuggester.FetchCompleteListener mListener;
+    private PlaceSuggester.SuggestionsListener mListener;
     private ArrayList<String>                                                         mAddresses;
     private CallBackSignaler                                                          mSignaler;
 
@@ -33,31 +35,32 @@ public class PlaceSuggesterTest extends
         super(TestingActivity.class);
     }
 
-    //TODO find out why AsyncTasks sometimes take ages to execute in testing but not in real life.
-    //For some reason running an AsyncTask in testing can take FOREVER to call onPostExecute
-    //Thus the LargeTest decoration
-    @LargeTest
-    public void testFetch() {
+    // For some reason running an AsyncTask on a testing thread doesn't call postExecute unless
+    // both @UIThreadTest and runTestOUiThread(.) are used. The callback loop for threads
+    // seems to go awry.
+    @SmallTest
+    @UiThreadTest
+    public void testGetSuggestions() {
         final int numberAddresses = 2;
         //AsyncTasks need to be created on the UI thread.
-        //@UiThreadTest doesn't seem to work with AsyncTasks...
+        //@UiThreadTest alone doesn't seem to work with multithreaded stuff
         try {
             runTestOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    com.chdryra.android.mygenerallibrary.PlaceSuggester fetcher = new com.chdryra
-                            .android.mygenerallibrary.PlaceSuggester
+                    PlaceSuggester fetcher = new PlaceSuggester
                             (getInstrumentation().getTargetContext(), LATLNG, mListener);
-                    fetcher.fetch(numberAddresses);
+                    fetcher.getSuggestions(numberAddresses);
+
+                    mSignaler.waitForSignal();
+                    assertFalse(mSignaler.timedOut());
+                    assertEquals(numberAddresses, mAddresses.size()); //not a bullet proof assert
+                    // .....
                 }
             });
         } catch (Throwable t) {
             t.printStackTrace();
         }
-
-        mSignaler.waitForSignal();
-        assertFalse(mSignaler.timedOut());
-        assertEquals(numberAddresses, mAddresses.size()); //not a bullet proof assert.....
     }
 
     @Override
@@ -65,10 +68,9 @@ public class PlaceSuggesterTest extends
         super.setUp();
         mAddresses = new ArrayList<String>();
         mSignaler = new CallBackSignaler(600); //because sometimes AsyncTask can take ages
-        mListener = new com.chdryra.android.mygenerallibrary.PlaceSuggester.FetchCompleteListener
-                () {
+        mListener = new PlaceSuggester.SuggestionsListener() {
             @Override
-            public void onAddressesFound(ArrayList<String> addresses) {
+            public void onSuggestionsFound(ArrayList<String> addresses) {
                 mAddresses = addresses;
                 mSignaler.signal();
             }

@@ -9,6 +9,7 @@
 package com.chdryra.android.librariestest.mygenerallibrary.test;
 
 import android.test.ActivityInstrumentationTestCase2;
+import android.test.UiThreadTest;
 import android.test.suitebuilder.annotation.SmallTest;
 
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
@@ -23,7 +24,6 @@ import com.google.android.gms.maps.model.LatLng;
  */
 public class LocationClientConnectorTest extends ActivityInstrumentationTestCase2<TestingActivity> {
     private LocationClientConnector           mConnector;
-    private LocationClientConnector.Locatable mListener;
     private CallBackSignaler                  mSignaler;
     private boolean mConnected = false;
 
@@ -31,22 +31,43 @@ public class LocationClientConnectorTest extends ActivityInstrumentationTestCase
         super(TestingActivity.class);
     }
 
+    // Need to do all this UI bioler plate stuff for testing multithreaded call backs
     @SmallTest
+    @UiThreadTest
     public void testConnect() {
-        connectAndTest();
+        try {
+            runTestOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    connectAndTest();
+                }
+            });
+        } catch (Throwable t) {
+            t.printStackTrace();
+        }
     }
 
     @SmallTest
+    @UiThreadTest
     public void testLocate() {
-        connectAndTest();
-        assertTrue(mConnector.locate());
+        try {
+            runTestOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    connectAndTest();
+                    assertTrue(mConnector.locate());
+                }
+            });
+        } catch (Throwable t) {
+            t.printStackTrace();
+        }
     }
 
     @Override
     protected void setUp() throws Exception {
         super.setUp();
 
-        mListener = new LocationClientConnector.Locatable() {
+        LocationClientConnector.Locatable listener = new LocationClientConnector.Locatable() {
             @Override
             public void onLocated(LatLng latLng) {
                 assertNotNull(latLng);
@@ -60,7 +81,7 @@ public class LocationClientConnectorTest extends ActivityInstrumentationTestCase
             }
         };
 
-        mConnector = new LocationClientConnector(getActivity(), mListener);
+        mConnector = new LocationClientConnector(getActivity(), listener);
         mSignaler = new CallBackSignaler(5);
     }
 
@@ -72,6 +93,7 @@ public class LocationClientConnectorTest extends ActivityInstrumentationTestCase
 
     private void connectAndTest() {
         mConnected = false;
+        mSignaler.reset();
         mConnector.connect();
         mSignaler.waitForSignal();
         assertFalse(mSignaler.timedOut());

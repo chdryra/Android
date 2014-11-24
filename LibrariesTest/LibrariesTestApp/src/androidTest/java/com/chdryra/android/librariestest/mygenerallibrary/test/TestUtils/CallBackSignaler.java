@@ -16,6 +16,10 @@ import java.util.concurrent.TimeUnit;
  * On: 19/11/2014
  * Email: rizwan.choudrey@gmail.com
  */
+
+/**
+ * Use this for tests on stuff that require listeners, callbacks, threads to finish etc.
+ */
 public class CallBackSignaler {
     private CountDownLatch mSignal;
     private long           mTimeOut;

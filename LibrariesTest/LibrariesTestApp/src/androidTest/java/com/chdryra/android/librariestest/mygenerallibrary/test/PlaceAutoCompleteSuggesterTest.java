@@ -31,9 +31,9 @@ public class PlaceAutoCompleteSuggesterTest extends
     }
 
     @SmallTest
-    public void testFetch() {
-        PlaceAutoCompleteSuggester fetcher = new PlaceAutoCompleteSuggester(LATLNG);
-        ArrayList<String> res = fetcher.getSuggestions("Lo");
+    public void testGetSuggestions() {
+        PlaceAutoCompleteSuggester suggester = new PlaceAutoCompleteSuggester(LATLNG);
+        ArrayList<String> res = suggester.filter("Lo");
         assertNotNull(res);
         assertTrue(res.size() > 0);
     }
