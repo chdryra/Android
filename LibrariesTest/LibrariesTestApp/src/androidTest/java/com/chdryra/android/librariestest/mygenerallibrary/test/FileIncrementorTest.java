@@ -35,25 +35,13 @@ public class FileIncrementorTest extends ActivityInstrumentationTestCase2<Testin
         super(TestingActivity.class);
     }
 
-    @Override
-    protected void setUp() throws Exception {
-        super.setUp();
-        mExternalDir = getInstrumentation().getTargetContext().getDir(EXTDIR, 0);
-    }
-
-    @Override
-    protected void tearDown() throws Exception {
-        deleteRecursive(mExternalDir);
-        assertFalse(mExternalDir.exists());
-        super.tearDown();
-    }
-
     @SmallTest
-    public void testCreateFile() {
+    public void testCreateNewFile() {
         File file = getFile();
         assertFalse(file.exists());
 
-        File created = createFile(getFileIncrementor());
+        File created = createNewFile(getFileIncrementor());
+
         assertNotNull(created);
         assertFalse(created.isDirectory());
         assertTrue(file.exists());
@@ -66,7 +54,7 @@ public class FileIncrementorTest extends ActivityInstrumentationTestCase2<Testin
         assertNull(dir.list());
         FileIncrementor incrementor = getFileIncrementor();
         for (int i = 0; i < NUM_FILES; ++i) {
-            assertEquals(getFile(i), createFile(incrementor));
+            assertEquals(getFile(i), createNewFile(incrementor));
             assertEquals(i + 1, dir.list().length);
         }
     }
@@ -78,7 +66,7 @@ public class FileIncrementorTest extends ActivityInstrumentationTestCase2<Testin
 
         //Create first file
         FileIncrementor incrementor = getFileIncrementor();
-        File created = createFile(incrementor);
+        File created = createNewFile(incrementor);
         assertNotNull(created);
         assertFalse(created.isDirectory());
         assertTrue(file.exists());
@@ -87,7 +75,7 @@ public class FileIncrementorTest extends ActivityInstrumentationTestCase2<Testin
         //Create second file
         File file1 = getFile(1);
         assertFalse(file1.exists());
-        File created1 = createFile(incrementor);
+        File created1 = createNewFile(incrementor);
         assertNotNull(created1);
         assertFalse(created1.isDirectory());
         assertTrue(file1.exists());
@@ -104,7 +92,7 @@ public class FileIncrementorTest extends ActivityInstrumentationTestCase2<Testin
         assertEquals(file, created);
 
         //Create second file again
-        File created1_2 = createFile(incrementor);
+        File created1_2 = createNewFile(incrementor);
         assertNotNull(created1_2);
         assertFalse(created1_2.isDirectory());
         assertTrue(file1.exists());
@@ -138,7 +126,20 @@ public class FileIncrementorTest extends ActivityInstrumentationTestCase2<Testin
         assertFalse(dir.exists());
     }
 
-    private File createFile(FileIncrementor incrementor) {
+    @Override
+    protected void setUp() throws Exception {
+        super.setUp();
+        mExternalDir = getInstrumentation().getTargetContext().getDir(EXTDIR, 0);
+    }
+
+    @Override
+    protected void tearDown() throws Exception {
+        deleteRecursive(mExternalDir);
+        assertFalse(mExternalDir.exists());
+        super.tearDown();
+    }
+
+    private File createNewFile(FileIncrementor incrementor) {
         File file = null;
         try {
             file = incrementor.createNewFile();
@@ -151,7 +152,7 @@ public class FileIncrementorTest extends ActivityInstrumentationTestCase2<Testin
 
     private void createAndTestMultipleFiles(FileIncrementor incrementor) {
         for (int i = 0; i < NUM_FILES; ++i) {
-            assertEquals(getFile(i), createFile(incrementor));
+            assertEquals(getFile(i), createNewFile(incrementor));
         }
     }
 
