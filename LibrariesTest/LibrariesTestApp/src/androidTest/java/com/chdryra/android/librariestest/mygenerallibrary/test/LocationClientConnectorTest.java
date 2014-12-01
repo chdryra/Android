@@ -23,8 +23,8 @@ import com.google.android.gms.maps.model.LatLng;
  * Email: rizwan.choudrey@gmail.com
  */
 public class LocationClientConnectorTest extends ActivityInstrumentationTestCase2<TestingActivity> {
-    private LocationClientConnector           mConnector;
-    private CallBackSignaler                  mSignaler;
+    private LocationClientConnector mConnector;
+    private CallBackSignaler        mSignaler;
     private boolean mConnected = false;
 
     public LocationClientConnectorTest() {

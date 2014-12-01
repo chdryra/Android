@@ -26,13 +26,6 @@ public class ClearableEditTextTest extends
         super(ClearableEditTextActivity.class);
     }
 
-    @Override
-    protected void setUp() throws Exception {
-        super.setUp();
-        mActivity = getActivity();
-        mEditText = (ClearableEditText) mActivity.findViewById(R.id.edit_text);
-    }
-
     @SmallTest
     public void testNotNull() {
         assertNotNull(mEditText);
@@ -111,6 +104,13 @@ public class ClearableEditTextTest extends
 
         //no direct way of checking keyboard or cursor visibility so can only check clear button.
         assertTrue(!mEditText.isClearButtonVisible());
+    }
+
+    @Override
+    protected void setUp() throws Exception {
+        super.setUp();
+        mActivity = getActivity();
+        mEditText = (ClearableEditText) mActivity.findViewById(R.id.edit_text);
     }
 
     private void testXPressed(final boolean isClearable) {

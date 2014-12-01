@@ -51,13 +51,6 @@ public class FragmentDeleteDoneTest extends ActivityInstrumentationTestCase2<Tes
         super(TestingActivity.class);
     }
 
-    @Override
-    protected void setUp() throws Exception {
-        super.setUp();
-        mCommissioner = getActivity();
-        mDefaultFragment = new FragmentDeleteDone();
-    }
-
     @SmallTest
     public void testFragmentMenuBasics() {
         FragmentDeleteDoneActivity activity = startFragmentForResult(mDefaultFragment);
@@ -118,6 +111,13 @@ public class FragmentDeleteDoneTest extends ActivityInstrumentationTestCase2<Tes
         assertFalse(mData);
     }
 
+    @Override
+    protected void setUp() throws Exception {
+        super.setUp();
+        mCommissioner = getActivity();
+        mDefaultFragment = new FragmentDeleteDone();
+    }
+
     private void testMenuItemSelect(int menuItemId, ActivityResultCode expectedResult) {
         final FragmentDeleteDoneActivity activity = startFragmentForResult(mDefaultFragment);
         FragmentDeleteDone frag = (FragmentDeleteDone) activity.getFragmentManager()
@@ -162,7 +162,7 @@ public class FragmentDeleteDoneTest extends ActivityInstrumentationTestCase2<Tes
         getInstrumentation().waitForIdleSync();
 
         FragmentDeleteDoneActivity fragmentActivity = (FragmentDeleteDoneActivity)
-                getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5);
+                getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 50);
         assertNotNull(fragmentActivity);
 
         return fragmentActivity;

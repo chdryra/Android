@@ -23,12 +23,6 @@ public class FragmentDeleteDoneActivity extends Activity {
     private Menu mMenu;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.mygenerallibrary_fragment_activity);
-    }
-
-    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         mMenu = menu;
         return super.onCreateOptionsMenu(menu);
@@ -36,6 +30,12 @@ public class FragmentDeleteDoneActivity extends Activity {
 
     public Menu getMenu() {
         return mMenu;
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.mygenerallibrary_fragment_activity);
     }
 }
 

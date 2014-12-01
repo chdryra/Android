@@ -29,33 +29,9 @@ public class TestingActivity extends ActivitySingleFragment {
     private              boolean mCallBack         = false;
     private Intent mData;
 
-    public static class TestingActivityFragment extends Fragment {
-        @Nullable
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle
-                savedInstanceState) {
-            super.onCreateView(inflater, container, savedInstanceState);
-            return inflater.inflate(R.layout.mygenerallibrary_fragment_activity,
-                    container, false);
-        }
-    }
-
-    @Override
-    protected Fragment createFragment() {
-        return new TestingActivityFragment();
-    }
-
     public void startActivityForResult(Class<? extends Activity> classToStart, int requestCode) {
         Intent i = new Intent(this, classToStart);
         startActivityForResult(i, requestCode);
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        mCallBack = true;
-        mRequestCode = requestCode;
-        mResultCode = resultCode;
-        mData = data;
     }
 
     public void resetResults() {
@@ -79,5 +55,29 @@ public class TestingActivity extends ActivitySingleFragment {
 
     public boolean called() {
         return mCallBack;
+    }
+
+    @Override
+    protected Fragment createFragment() {
+        return new TestingActivityFragment();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        mCallBack = true;
+        mRequestCode = requestCode;
+        mResultCode = resultCode;
+        mData = data;
+    }
+
+    public static class TestingActivityFragment extends Fragment {
+        @Nullable
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle
+                savedInstanceState) {
+            super.onCreateView(inflater, container, savedInstanceState);
+            return inflater.inflate(R.layout.mygenerallibrary_fragment_activity,
+                    container, false);
+        }
     }
 }

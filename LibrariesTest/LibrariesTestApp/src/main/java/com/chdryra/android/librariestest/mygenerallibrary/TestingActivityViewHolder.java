@@ -23,6 +23,11 @@ import com.chdryra.android.librariestest.R;
  * Email: rizwan.choudrey@gmail.com
  */
 public class TestingActivityViewHolder extends TestingActivity {
+    @Override
+    protected Fragment createFragment() {
+        return new TestingActivityGCFragment();
+    }
+
     public static class TestingActivityGCFragment extends Fragment {
         @Nullable
         @Override
@@ -32,10 +37,5 @@ public class TestingActivityViewHolder extends TestingActivity {
             return inflater.inflate(R.layout.mygenerallibrary_view_holder_test_layout,
                     container, false);
         }
-    }
-
-    @Override
-    protected Fragment createFragment() {
-        return new TestingActivityGCFragment();
     }
 }

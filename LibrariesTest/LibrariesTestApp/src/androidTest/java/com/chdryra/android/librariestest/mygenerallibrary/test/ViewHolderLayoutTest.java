@@ -39,11 +39,6 @@ public class ViewHolderLayoutTest extends
         super(TestingActivityViewHolder.class);
     }
 
-    @Override
-    protected void setUp() throws Exception {
-        super.setUp();
-    }
-
     @SmallTest
     public void testViewHolderXMLLayoutNotNull() {
         Activity activity = getActivity();
@@ -81,5 +76,10 @@ public class ViewHolderLayoutTest extends
         assertEquals(parent.getLayoutParams().height, FrameLayout.LayoutParams.MATCH_PARENT);
         assertEquals(child.getLayoutParams().width, FrameLayout.LayoutParams.WRAP_CONTENT);
         assertEquals(child.getLayoutParams().height, FrameLayout.LayoutParams.WRAP_CONTENT);
+    }
+
+    @Override
+    protected void setUp() throws Exception {
+        super.setUp();
     }
 }

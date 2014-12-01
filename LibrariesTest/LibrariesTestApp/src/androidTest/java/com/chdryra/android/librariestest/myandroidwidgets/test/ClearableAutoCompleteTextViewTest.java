@@ -34,14 +34,6 @@ public class ClearableAutoCompleteTextViewTest extends
         super(ClearableAutoCompleteTextViewActivity.class);
     }
 
-    @Override
-    protected void setUp() throws Exception {
-        super.setUp();
-        mActivity = getActivity();
-        mEditText = (ClearableAutoCompleteTextView) mActivity.findViewById(R.id
-                .auto_complete_text_view);
-    }
-
     @SmallTest
     public void testNotNull() {
         assertNotNull(mEditText);
@@ -133,6 +125,14 @@ public class ClearableAutoCompleteTextViewTest extends
 
         //no direct way of checking keyboard or cursor visibility so can only check clear button.
         assertTrue(!mEditText.isClearButtonVisible());
+    }
+
+    @Override
+    protected void setUp() throws Exception {
+        super.setUp();
+        mActivity = getActivity();
+        mEditText = (ClearableAutoCompleteTextView) mActivity.findViewById(R.id
+                .auto_complete_text_view);
     }
 
     private void testSetText(String text) {
