@@ -33,7 +33,7 @@ public class PlaceAutoCompleteSuggesterTest extends
     @SmallTest
     public void testGetSuggestions() {
         PlaceAutoCompleteSuggester suggester = new PlaceAutoCompleteSuggester(LATLNG);
-        ArrayList<String> res = suggester.filter("Lo");
+        ArrayList<String> res = suggester.filter("Ch");
         assertNotNull(res);
         assertTrue(res.size() > 0);
     }
