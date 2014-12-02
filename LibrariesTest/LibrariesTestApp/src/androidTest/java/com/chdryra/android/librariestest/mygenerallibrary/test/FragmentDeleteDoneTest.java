@@ -159,11 +159,11 @@ public class FragmentDeleteDoneTest extends ActivityInstrumentationTestCase2<Tes
         mCommissioner.resetResults();
         mCommissioner.startActivityForResult(FragmentDeleteDoneActivity.class, REQUEST_CODE);
 
-        getInstrumentation().waitForIdleSync();
+            getInstrumentation().waitForIdleSync();
 
-        FragmentDeleteDoneActivity fragmentActivity = (FragmentDeleteDoneActivity)
-                getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 50);
-        assertNotNull(fragmentActivity);
+            FragmentDeleteDoneActivity fragmentActivity = (FragmentDeleteDoneActivity)
+                    getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5);
+            assertNotNull(fragmentActivity);
 
         return fragmentActivity;
     }

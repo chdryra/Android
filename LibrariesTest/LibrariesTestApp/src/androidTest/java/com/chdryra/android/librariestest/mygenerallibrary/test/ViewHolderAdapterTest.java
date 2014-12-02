@@ -10,6 +10,7 @@ package com.chdryra.android.librariestest.mygenerallibrary.test;
 
 import android.database.DataSetObserver;
 import android.test.ActivityInstrumentationTestCase2;
+import android.test.suitebuilder.annotation.SmallTest;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -38,6 +39,7 @@ public class ViewHolderAdapterTest extends ActivityInstrumentationTestCase2<Test
         super(TestingActivity.class);
     }
 
+    @SmallTest
     public void testSetData() {
         mAdapter.registerDataSetObserver(getObserver());
         mDataSet = false;
@@ -45,10 +47,12 @@ public class ViewHolderAdapterTest extends ActivityInstrumentationTestCase2<Test
         assertTrue(mDataSet);
     }
 
+    @SmallTest
     public void testGetCount() {
         assertEquals(DATA.length, mAdapter.getCount());
     }
 
+    @SmallTest
     public void testGetItemAndItemId() {
         for (int i = 0; i < DATA.length; ++i) {
             VHDString datum = (VHDString) mAdapter.getItem(i);
@@ -58,6 +62,7 @@ public class ViewHolderAdapterTest extends ActivityInstrumentationTestCase2<Test
         }
     }
 
+    @SmallTest
     public void testGetView() {
         LinearLayout parent = new LinearLayout(getInstrumentation().getContext());
         for (int i = 0; i < DATA.length; ++i) {

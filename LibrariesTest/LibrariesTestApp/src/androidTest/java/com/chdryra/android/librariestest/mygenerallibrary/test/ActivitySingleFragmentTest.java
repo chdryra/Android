@@ -21,8 +21,7 @@ import com.chdryra.android.mygenerallibrary.ActivitySingleFragment;
  * On: 04/11/2014
  * Email: rizwan.choudrey@gmail.com
  */
-public class ActivitySingleFragmentTest extends
-        SingleLaunchActivityTestCase<TestingActivity> {
+public class ActivitySingleFragmentTest extends SingleLaunchActivityTestCase<TestingActivity> {
 
     public ActivitySingleFragmentTest() {
         //Note package is that specified in manifest for "app", not java package of class.

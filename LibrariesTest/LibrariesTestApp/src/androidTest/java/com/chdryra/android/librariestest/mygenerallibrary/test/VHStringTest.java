@@ -9,6 +9,7 @@
 package com.chdryra.android.librariestest.mygenerallibrary.test;
 
 import android.test.ActivityInstrumentationTestCase2;
+import android.test.suitebuilder.annotation.SmallTest;
 import android.view.View;
 import android.widget.TextView;
 
@@ -36,12 +37,14 @@ public class VHStringTest extends ActivityInstrumentationTestCase2<TestingActivi
         super(TestingActivity.class);
     }
 
+    @SmallTest
     public void testConstructorDefaultInflates() {
         mVHString.inflate(getActivity(), null);
         View v = mVHString.getView();
         assertNotNull(v);
     }
 
+    @SmallTest
     public void testConstructorWithVHDataStringGetter() {
         VHStringChild vh = new VHStringChild();
         vh.inflate(getActivity(), null);
@@ -55,6 +58,7 @@ public class VHStringTest extends ActivityInstrumentationTestCase2<TestingActivi
         assertEquals(TEST + INNIT, tv.getText().toString());
     }
 
+    @SmallTest
     public void testUpdateView() {
         mVHString.inflate(getActivity(), null);
         View v = mVHString.getView();

@@ -10,6 +10,7 @@ package com.chdryra.android.librariestest.remoteapifetchers.test;
 
 import android.location.Location;
 import android.test.ActivityInstrumentationTestCase2;
+import android.test.suitebuilder.annotation.SmallTest;
 
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.remoteapifetchers.FetcherPlacesAPI;
@@ -35,12 +36,14 @@ public class FetcherPlacesAPITest extends ActivityInstrumentationTestCase2<Testi
         super(TestingActivity.class);
     }
 
+    @SmallTest
     public void testFetchAutoCompleteSuggestions() {
         ArrayList<String> res = FetcherPlacesAPI.fetchAutoCompleteSuggestions(ACQUERY, LATLNG);
         assertNotNull(res);
         assertTrue(res.size() > 0);
     }
 
+    @SmallTest
     public void testFetchLatLng() {
         try {
             LatLng latLng = FetcherPlacesAPI.fetchLatLng(QUERY);
@@ -55,6 +58,7 @@ public class FetcherPlacesAPITest extends ActivityInstrumentationTestCase2<Testi
         }
     }
 
+    @SmallTest
     public void testFetchNearestNames() {
         ArrayList<String> res = FetcherPlacesAPI.fetchNearestNames(LATLNG, 3);
         assertNotNull(res);

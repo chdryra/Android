@@ -9,6 +9,7 @@
 package com.chdryra.android.librariestest.mygenerallibrary.test;
 
 import android.test.ActivityInstrumentationTestCase2;
+import android.test.suitebuilder.annotation.SmallTest;
 import android.view.View;
 
 import com.chdryra.android.librariestest.R;
@@ -29,6 +30,11 @@ public class ViewHolderBasicTest extends ActivityInstrumentationTestCase2<Testin
 
     public ViewHolderBasicTest() {
         super(TestingActivity.class);
+    }
+
+    @Override
+    protected void setUp() throws Exception {
+        super.setUp();
         mViewHolder = new ViewHolderBasic(LAYOUT, new int[]{UPDATEABLE}) {
             @Override
             public void updateView(ViewHolderData data) {
@@ -37,6 +43,7 @@ public class ViewHolderBasicTest extends ActivityInstrumentationTestCase2<Testin
         };
     }
 
+    @SmallTest
     public void testInflateAndGetView() {
         assertNull(mViewHolder.getView());
         mViewHolder.inflate(getActivity(), null);
@@ -45,6 +52,7 @@ public class ViewHolderBasicTest extends ActivityInstrumentationTestCase2<Testin
         assertNotNull(v.findViewById(UPDATEABLE));
     }
 
+    @SmallTest
     public void testUpdateViewAndGetViewWithID() {
         mViewHolder.inflate(getActivity(), null);
         View v = mViewHolder.getView();

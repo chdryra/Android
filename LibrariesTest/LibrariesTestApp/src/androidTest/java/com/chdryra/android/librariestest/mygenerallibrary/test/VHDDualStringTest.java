@@ -8,6 +8,8 @@
 
 package com.chdryra.android.librariestest.mygenerallibrary.test;
 
+import android.test.suitebuilder.annotation.SmallTest;
+
 import com.chdryra.android.mygenerallibrary.VHDDualString;
 
 import junit.framework.TestCase;
@@ -22,10 +24,12 @@ public class VHDDualStringTest extends TestCase {
     private static final String LOWER = "lower";
     private VHDDualString mDualString;
 
+    @SmallTest
     public void testNewViewHolderNotNull() {
         assertNotNull(mDualString.newViewHolder());
     }
 
+    @SmallTest
     public void testIsValidForDisplay() {
         assertTrue(mDualString.isValidForDisplay());
         VHDDualString ds = new VHDDualString(UPPER, "");
@@ -36,10 +40,12 @@ public class VHDDualStringTest extends TestCase {
         assertFalse(ds.isValidForDisplay());
     }
 
+    @SmallTest
     public void testGetUpper() {
         assertEquals(UPPER, mDualString.getUpper());
     }
 
+    @SmallTest
     public void testGetLower() {
         assertEquals(LOWER, mDualString.getLower());
     }

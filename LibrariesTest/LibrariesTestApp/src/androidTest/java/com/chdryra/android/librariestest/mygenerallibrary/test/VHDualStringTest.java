@@ -9,6 +9,7 @@
 package com.chdryra.android.librariestest.mygenerallibrary.test;
 
 import android.test.ActivityInstrumentationTestCase2;
+import android.test.suitebuilder.annotation.SmallTest;
 import android.view.View;
 import android.widget.TextView;
 
@@ -35,12 +36,14 @@ public class VHDualStringTest extends ActivityInstrumentationTestCase2<TestingAc
         super(TestingActivity.class);
     }
 
+    @SmallTest
     public void testConstructorDefaultInflates() {
         mDual.inflate(getActivity(), null);
         View v = mDual.getView();
         assertNotNull(v);
     }
 
+    @SmallTest
     public void testUpdateView() {
         mDual.inflate(getActivity(), null);
         View v = mDual.getView();

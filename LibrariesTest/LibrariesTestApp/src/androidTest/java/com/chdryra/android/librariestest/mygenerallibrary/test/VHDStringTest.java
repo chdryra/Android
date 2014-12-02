@@ -8,6 +8,8 @@
 
 package com.chdryra.android.librariestest.mygenerallibrary.test;
 
+import android.test.suitebuilder.annotation.SmallTest;
+
 import com.chdryra.android.mygenerallibrary.VHDString;
 
 import junit.framework.TestCase;
@@ -20,12 +22,13 @@ import junit.framework.TestCase;
 public class VHDStringTest extends TestCase {
     private static final String TEST = "test";
 
-
+    @SmallTest
     public void testNewViewHolderNotNull() {
         VHDString vs = new VHDString(TEST);
         assertNotNull(vs.newViewHolder());
     }
 
+    @SmallTest
     public void testIsValidForDisplay() {
         VHDString vs = new VHDString(TEST);
         assertTrue(vs.isValidForDisplay());
@@ -33,6 +36,7 @@ public class VHDStringTest extends TestCase {
         assertFalse(vs.isValidForDisplay());
     }
 
+    @SmallTest
     public void testGet() {
         VHDString vs = new VHDString(TEST);
         assertEquals(TEST, vs.get());
