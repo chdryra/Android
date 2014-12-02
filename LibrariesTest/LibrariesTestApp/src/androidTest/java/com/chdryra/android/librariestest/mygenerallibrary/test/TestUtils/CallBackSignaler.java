@@ -8,6 +8,8 @@
 
 package com.chdryra.android.librariestest.mygenerallibrary.test.TestUtils;
 
+import junit.framework.Assert;
+
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
@@ -38,6 +40,7 @@ public class CallBackSignaler {
         try {
             mTimedOut = !mSignal.await(mTimeOut, TimeUnit.SECONDS);
         } catch (InterruptedException e) {
+            Assert.fail("CountDownLatch signal InterruptedException");
             e.printStackTrace();
         }
     }

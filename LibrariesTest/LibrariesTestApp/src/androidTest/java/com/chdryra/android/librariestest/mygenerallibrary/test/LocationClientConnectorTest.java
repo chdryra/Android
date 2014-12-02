@@ -31,7 +31,7 @@ public class LocationClientConnectorTest extends ActivityInstrumentationTestCase
         super(TestingActivity.class);
     }
 
-    // Need to do all this UI bioler plate stuff for testing multithreaded call backs
+    // Need to do all this UI boiler plate stuff for testing multithreaded call backs
     @SmallTest
     @UiThreadTest
     public void testConnect() {
