@@ -6,7 +6,7 @@
  * Date: 19 November, 2014
  */
 
-package com.chdryra.android.librariestest.mygenerallibrary.test.TestUtils;
+package com.chdryra.android.testutils;
 
 import junit.framework.Assert;
 
