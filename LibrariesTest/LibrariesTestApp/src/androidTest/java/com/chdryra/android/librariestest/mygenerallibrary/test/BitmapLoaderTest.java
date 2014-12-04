@@ -13,8 +13,8 @@ import android.test.ActivityInstrumentationTestCase2;
 import android.test.suitebuilder.annotation.SmallTest;
 
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
-import com.chdryra.android.librariestest.mygenerallibrary.test.TestUtils.BitmapMock;
-import com.chdryra.android.librariestest.mygenerallibrary.test.TestUtils.CallBackSignaler;
+import com.chdryra.android.testutils.BitmapMock;
+import com.chdryra.android.testutils.CallBackSignaler;
 import com.chdryra.android.mygenerallibrary.BitmapLoader;
 
 /**

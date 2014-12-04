@@ -10,7 +10,7 @@ package com.chdryra.android.librariestest.mygenerallibrary.test;
 
 import android.test.suitebuilder.annotation.SmallTest;
 
-import com.chdryra.android.librariestest.mygenerallibrary.test.TestUtils.ExceptionTester;
+import com.chdryra.android.testutils.ExceptionTester;
 import com.chdryra.android.mygenerallibrary.SortableList;
 
 import junit.framework.TestCase;

@@ -6,10 +6,13 @@
  * Date: 30 October, 2014
  */
 
-include ':MyAndroidWidgets', ':MyGeneralLibrary', ':RemoteAPIFetchers', ':LibrariesTestApp'
+include ':MyAndroidWidgets', ':MyGeneralLibrary', ':RemoteAPIFetchers', ':LibrariesTestApp',
+        ':TestUtils'
 project(':MyAndroidWidgets').projectDir = new File
         (settingsDir, '../MyAndroidWidgets')
 project(':MyGeneralLibrary').projectDir = new File(settingsDir,
         '../MyGeneralLibrary')
 project(':RemoteAPIFetchers').projectDir = new File(settingsDir,
         '../RemoteAPIFetchers')
+project(':TestUtils').projectDir = new File(settingsDir,
+        '../TestUtils')
