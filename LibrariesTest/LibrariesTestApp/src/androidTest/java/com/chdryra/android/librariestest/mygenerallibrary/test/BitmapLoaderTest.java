@@ -13,9 +13,9 @@ import android.test.ActivityInstrumentationTestCase2;
 import android.test.suitebuilder.annotation.SmallTest;
 
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
-import com.chdryra.android.testutils.BitmapMock;
-import com.chdryra.android.testutils.CallBackSignaler;
 import com.chdryra.android.mygenerallibrary.BitmapLoader;
+import com.chdryra.android.testutils.BitmapMocker;
+import com.chdryra.android.testutils.CallBackSignaler;
 
 /**
  * Created by: Rizwan Choudrey
@@ -23,12 +23,9 @@ import com.chdryra.android.mygenerallibrary.BitmapLoader;
  * Email: rizwan.choudrey@gmail.com
  */
 public class BitmapLoaderTest extends ActivityInstrumentationTestCase2<TestingActivity> {
-    private static final int WIDTH  = BitmapMock.WIDTH;
-    private static final int HEIGHT = BitmapMock.HEIGHT;
-
     private CallBackSignaler          mSignaler;
     private BitmapLoader.LoadListener mListener;
-    private BitmapMock                mBitmapMock;
+    private BitmapMocker mBitmapMocker;
     private Bitmap                    mBitmap;
     private boolean mLoaded = false;
 
@@ -38,10 +35,10 @@ public class BitmapLoaderTest extends ActivityInstrumentationTestCase2<TestingAc
 
     @SmallTest
     public void testLoad() {
-        int width = BitmapMock.WIDTH;
-        int height = BitmapMock.HEIGHT;
+        int width = BitmapMocker.WIDTH;
+        int height = BitmapMocker.HEIGHT;
 
-        String path = mBitmapMock.createBitmapFile();
+        String path = mBitmapMocker.createBitmapFile();
 
         testLoad(path, width, height);
         mSignaler.waitForSignal();
@@ -61,7 +58,7 @@ public class BitmapLoaderTest extends ActivityInstrumentationTestCase2<TestingAc
     @Override
     protected void setUp() throws Exception {
         super.setUp();
-        mBitmapMock = new BitmapMock(getInstrumentation().getTargetContext().getFilesDir());
+        mBitmapMocker = new BitmapMocker(getInstrumentation().getTargetContext().getFilesDir());
         mSignaler = new CallBackSignaler(600);
         mListener = new BitmapLoader.LoadListener() {
             @Override
