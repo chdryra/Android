@@ -15,7 +15,7 @@ import android.test.suitebuilder.annotation.SmallTest;
 
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.mygenerallibrary.ImageHelper;
-import com.chdryra.android.testutils.BitmapMocker;
+import com.chdryra.android.testutils.BitmapFileMocker;
 import com.chdryra.android.testutils.LatLngMocker;
 import com.google.android.gms.maps.model.LatLng;
 
@@ -23,7 +23,6 @@ import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Random;
 
 
 /**
@@ -32,10 +31,10 @@ import java.util.Random;
  * Email: rizwan.choudrey@gmail.com
  */
 public class ImageHelperTest extends ActivityInstrumentationTestCase2<TestingActivity> {
-    private static final int WIDTH  = BitmapMocker.WIDTH;
-    private static final int HEIGHT = BitmapMocker.HEIGHT;
+    private static final int WIDTH  = BitmapFileMocker.WIDTH;
+    private static final int HEIGHT = BitmapFileMocker.HEIGHT;
 
-    private BitmapMocker mBitmapMocker;
+    private BitmapFileMocker mBitmapMocker;
 
     public ImageHelperTest() {
         super(TestingActivity.class);
@@ -53,7 +52,7 @@ public class ImageHelperTest extends ActivityInstrumentationTestCase2<TestingAct
 
     @SmallTest
     public void testBitmapExists() {
-        String path = mBitmapMocker.createBitmapFile();
+        String path = mBitmapMocker.createBitmapFile(true);
         assertTrue(ImageHelper.bitmapExists(path));
         mBitmapMocker.deleteBitmapFile();
         assertFalse(ImageHelper.bitmapExists(path));
@@ -61,7 +60,7 @@ public class ImageHelperTest extends ActivityInstrumentationTestCase2<TestingAct
 
     @SmallTest
     public void testGetBitmap() {
-        String path = mBitmapMocker.createBitmapFile();
+        String path = mBitmapMocker.createBitmapFile(true);
 
         Bitmap bitmap = ImageHelper.getBitmap(path, WIDTH, HEIGHT);
         assertNotNull(bitmap);
@@ -93,7 +92,7 @@ public class ImageHelperTest extends ActivityInstrumentationTestCase2<TestingAct
     @SmallTest
     public void testRescalePreservingAspectRatio() {
         //Portrait
-        mBitmapMocker.createBitmapFile();
+        mBitmapMocker.createBitmapFile(false);
         Bitmap bitmap = mBitmapMocker.getBitmap();
         assertNotNull(bitmap);
         int w = bitmap.getWidth();
@@ -205,7 +204,6 @@ public class ImageHelperTest extends ActivityInstrumentationTestCase2<TestingAct
     @SmallTest
     public void testGetLatLngFromExif() {
         String path = mBitmapMocker.createBitmapFile(Bitmap.CompressFormat.JPEG, false);
-        Random rand = new Random();
         double eps = 0.0001;
         for (int i = 0; i < 100; ++i) {
             LatLng mock = LatLngMocker.newLatLng();
@@ -242,7 +240,7 @@ public class ImageHelperTest extends ActivityInstrumentationTestCase2<TestingAct
     @Override
     protected void setUp() throws Exception {
         super.setUp();
-        mBitmapMocker = new BitmapMocker(getInstrumentation().getTargetContext().getFilesDir());
+        mBitmapMocker = new BitmapFileMocker(getInstrumentation().getTargetContext().getFilesDir());
     }
 
     @Override

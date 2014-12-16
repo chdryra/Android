@@ -14,7 +14,7 @@ import android.test.suitebuilder.annotation.SmallTest;
 
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.mygenerallibrary.BitmapLoader;
-import com.chdryra.android.testutils.BitmapMocker;
+import com.chdryra.android.testutils.BitmapFileMocker;
 import com.chdryra.android.testutils.CallBackSignaler;
 
 /**
@@ -25,7 +25,7 @@ import com.chdryra.android.testutils.CallBackSignaler;
 public class BitmapLoaderTest extends ActivityInstrumentationTestCase2<TestingActivity> {
     private CallBackSignaler          mSignaler;
     private BitmapLoader.LoadListener mListener;
-    private BitmapMocker mBitmapMocker;
+    private BitmapFileMocker mBitmapMocker;
     private Bitmap                    mBitmap;
     private boolean mLoaded = false;
 
@@ -35,10 +35,10 @@ public class BitmapLoaderTest extends ActivityInstrumentationTestCase2<TestingAc
 
     @SmallTest
     public void testLoad() {
-        int width = BitmapMocker.WIDTH;
-        int height = BitmapMocker.HEIGHT;
+        int width = BitmapFileMocker.WIDTH;
+        int height = BitmapFileMocker.HEIGHT;
 
-        String path = mBitmapMocker.createBitmapFile();
+        String path = mBitmapMocker.createBitmapFile(true);
 
         testLoad(path, width, height);
         mSignaler.waitForSignal();
@@ -58,7 +58,7 @@ public class BitmapLoaderTest extends ActivityInstrumentationTestCase2<TestingAc
     @Override
     protected void setUp() throws Exception {
         super.setUp();
-        mBitmapMocker = new BitmapMocker(getInstrumentation().getTargetContext().getFilesDir());
+        mBitmapMocker = new BitmapFileMocker(getInstrumentation().getTargetContext().getFilesDir());
         mSignaler = new CallBackSignaler(600);
         mListener = new BitmapLoader.LoadListener() {
             @Override
