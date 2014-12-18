@@ -26,27 +26,27 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.chdryra.android.reviewer" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbecc251-2e59-4e4e-b243-801cf0d21d57" name="Default" comment="Commit before some dialog refactoring">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogGvChildReview.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogGvComment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogGvData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogGvDataBasic.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataViewDialogAdapterAdd.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataViewDialogAdapterEdit.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/GvDataViewHolderBasicTest.java" />
-      <change type="MOVED" beforePath="C:\Dev\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\DHChild.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogHolderChild.java" />
-      <change type="MOVED" beforePath="C:\Dev\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\DHComment.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogHolderComment.java" />
-      <change type="MOVED" beforePath="C:\Dev\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\DHFact.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogHolderFact.java" />
-      <change type="MOVED" beforePath="C:\Dev\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\DHImageEdit.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogHolderImage.java" />
-      <change type="MOVED" beforePath="C:\Dev\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\DHTag.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogHolderTag.java" />
-      <change type="MOVED" beforePath="C:\Dev\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\DialogHolder.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataViewHolderBasic.java" />
-      <change type="MOVED" beforePath="C:\Dev\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\DialogHolderUI.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataViewDialog.java" />
-      <change type="MOVED" beforePath="C:\Dev\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\GvDataUi.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataView.java" />
-      <change type="MOVED" beforePath="C:\Dev\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\GvDataUiHolder.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataViewHolder.java" />
+    <list default="true" id="cbecc251-2e59-4e4e-b243-801cf0d21d57" name="Default" comment="Refactoring dialogs">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogFact.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogImage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogTag.java" />
+      <change type="DELETED" beforePath="C:\Dev\Android\Reviewer\src\androidTest\java\com\chdryra\android\reviewer\test\DialogHolderTest.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dev\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\DialogHolderAddEdit.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dev\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\DialogHolderChild.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dev\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\DialogHolderComment.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dev\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\DialogHolderFact.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dev\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\DialogHolderImage.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dev\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\DialogHolderTag.java" afterPath="" />
+      <change type="MOVED" beforePath="C:\Dev\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\DialogGvChildReview.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogChildReview.java" />
+      <change type="MOVED" beforePath="C:\Dev\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\DialogGvComment.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogComment.java" />
+      <change type="MOVED" beforePath="C:\Dev\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\FactoryDialogHolder.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/FactoryGvDataViewHolder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogGvData.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogGvData.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogGvDataAddFragment.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogGvDataAddFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogGvDataEditFragment.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogGvDataEditFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogHolderAddEdit.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogHolderAddEdit.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/FactoryDialogHolder.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/FactoryDialogHolder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataView.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataViewDialog.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataViewDialog.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataViewHolder.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataViewHolder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataViewHolderBasic.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataViewHolderBasic.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AndroidStudio.iws" />
@@ -75,28 +75,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GvDataViewDialogAdapterAdd.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataViewDialogAdapterAdd.java">
+      <file leaf-file-name="GvDataView.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="714">
-              <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
-              <folding>
-                <element signature="e#1199#1200#0" expanded="true" />
-                <element signature="e#1253#1254#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DialogGvChildReview.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogGvChildReview.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6296296" vertical-offset="187" max-vertical-offset="1207">
-              <caret line="33" column="38" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
-              <folding>
-                <element signature="e#0#2528#0" expanded="true" />
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
+              <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -104,54 +88,9 @@
       <file leaf-file-name="GvDataViewHolder.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataViewHolder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="918">
-              <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="222" max-vertical-offset="884">
+              <caret line="47" column="13" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Object.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../sdk/sources/android-21/java/lang/Object.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1791" max-vertical-offset="7395">
-              <caret line="147" column="11" selection-start-line="147" selection-start-column="11" selection-end-line="147" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DialogGvDataBasic.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogGvDataBasic.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="782">
-              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-              <folding>
-                <element signature="e#1486#1487#0" expanded="true" />
-                <element signature="e#1520#1521#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DialogHolderComment.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogHolderComment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="273" max-vertical-offset="935">
-              <caret line="53" column="5" selection-start-line="22" selection-start-column="4" selection-end-line="53" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DialogGvComment.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogGvComment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="86" max-vertical-offset="1020">
-              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#1835#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -159,20 +98,9 @@
       <file leaf-file-name="GvDataViewHolderBasic.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataViewHolderBasic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="1258">
-              <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
-              <folding>
-                <element signature="e#1730#1731#0" expanded="true" />
-                <element signature="e#1762#1763#0" expanded="true" />
-                <element signature="e#1818#1819#0" expanded="true" />
-                <element signature="e#1866#1867#0" expanded="true" />
-                <element signature="e#1918#1919#0" expanded="true" />
-                <element signature="e#1962#1963#0" expanded="true" />
-                <element signature="e#2004#2005#0" expanded="true" />
-                <element signature="e#2050#2051#0" expanded="true" />
-                <element signature="e#2088#2089#0" expanded="true" />
-                <element signature="e#2139#2140#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="188" max-vertical-offset="1105">
+              <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -180,19 +108,73 @@
       <file leaf-file-name="GvDataViewDialog.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataViewDialog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="715" max-vertical-offset="1377">
-              <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="664" max-vertical-offset="1326">
+              <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DialogGvDataAddFragment.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogGvDataAddFragment.java">
+      <file leaf-file-name="GvDataViewDialogAdapterAdd.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataViewDialogAdapterAdd.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="346" max-vertical-offset="2074">
-              <caret line="43" column="35" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="680">
+              <caret line="21" column="59" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GvDataViewDialogAdapterEdit.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataViewDialogAdapterEdit.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="595">
+              <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DialogGvData.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogGvData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="714">
+              <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+              <folding>
+                <element signature="e#0#956#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FactoryGvDataHandler.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/FactoryGvDataHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="69" max-vertical-offset="731">
+              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FactoryGvDataList.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/FactoryGvDataList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FactoryGvDataViewHolder.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/FactoryGvDataViewHolder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.65656567" vertical-offset="188" max-vertical-offset="1564">
+              <caret line="40" column="36" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -3086,16 +3068,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/ControllerReviewCollection.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogGvDataAddFragment.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogGvDataEditFragment.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/FragmentReviewLocationMap.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/FragmentReviewGridAddEdit.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/FactoryGvDataList.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/TestUtils/GvDataListClasses.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataHandler.java" />
-        <option value="$PROJECT_DIR$/MyGeneralLibrary/src/main/java/com/chdryra/android/mygenerallibrary/SortableList.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/TestUtils/RandomStringGenerator.java" />
         <option value="$PROJECT_DIR$/TestUtils/src/main/java/com/chdryra/android/testutils/RandomStringGenerator.java" />
         <option value="$PROJECT_DIR$/Reviewer/build.gradle" />
         <option value="$PROJECT_DIR$/TestUtils/build.gradle" />
@@ -3122,21 +3094,31 @@
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogGvDataUi.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataUiDialog.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataUi.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataView.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataViewHolderImpl.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataViewDialog.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogHolderAddEdit.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogHolderAddEdit2.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataViewDialogAdapterAdd.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataDialogChild.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataDialog.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogGvDataChild.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataViewDialogAdapterEdit.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogGvData.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataViewHolderBasic.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogGvComment.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogGvChildReview.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogGvDataBasic.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogGvChildReview.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogGvComment.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogComment.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogFact.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogImage.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogTag.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogHolderAddEdit.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/FactoryDialogGvData.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/FactoryDialogViewHolder.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogGvDataEditFragment.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogGvDataAddFragment.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataView.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataViewHolder.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataViewHolderBasic.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataViewDialog.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogGvData.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/FactoryGvDataViewHolder.java" />
       </list>
     </option>
   </component>
@@ -4464,7 +4446,11 @@
       <created>1418826670218</created>
       <updated>1418826670218</updated>
     </task>
-    <option name="localTasksCounter" value="149" />
+    <task id="LOCAL-00149" summary="Refactoring dialogs">
+      <created>1418854932329</created>
+      <updated>1418854932329</updated>
+    </task>
+    <option name="localTasksCounter" value="150" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -4570,7 +4556,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Trying to get commit of testUtils to work. Doesn't seem to commit or track to remote." />
     <MESSAGE value="test commit" />
     <MESSAGE value="Test commit of TestUtils" />
     <MESSAGE value="Updated settings and build files for AS 1.0" />
@@ -4595,7 +4580,8 @@
     <MESSAGE value="Writing test for GvDataHandler. Need to rewrit BitmapMocker to provide randomly drawn bitmaps." />
     <MESSAGE value="Added tests for GvDataHandler and GvDataPacker, plus BitmapMocker for creating random bitmaps." />
     <MESSAGE value="Commit before some dialog refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit before some dialog refactoring" />
+    <MESSAGE value="Refactoring dialogs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring dialogs" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -4614,66 +4600,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/ControllerReviewTreeEditable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="1020">
-          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/MdToGvConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1462">
-          <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/FragmentReviewLocationMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1466" max-vertical-offset="7939">
-          <caret line="106" column="42" selection-start-line="106" selection-start-column="42" selection-end-line="106" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#16534#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/FragmentReviewGridAddEdit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="618" max-vertical-offset="2856">
-          <caret line="51" column="20" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#5942#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/FactoryGvDataList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
-          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#972#0" expanded="false" />
-            <element signature="e#523#524#0" expanded="false" />
-            <element signature="e#575#576#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/TestUtils/GvDataListClasses.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
-          <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/RemoteAPIFetchers/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/classes.jar!/com/google/android/gms/plus/model/people/Person.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.04" vertical-offset="1558" max-vertical-offset="5100">
@@ -4687,16 +4613,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="266" max-vertical-offset="2499">
           <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/FactoryGvDataHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="164" max-vertical-offset="833">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#1885#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4907,183 +4823,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogHolderImage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="52" max-vertical-offset="1241">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogGvDataEditFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="261" max-vertical-offset="1785">
-          <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogHolderFact.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="239" max-vertical-offset="1003">
-          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogHolderTag.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="154" max-vertical-offset="816">
-          <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/FactoryDialogHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="1581">
-          <caret line="41" column="66" selection-start-line="41" selection-start-column="66" selection-end-line="41" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogHolderChild.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="1258">
-          <caret line="65" column="5" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#2510#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogHolderAddEdit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="1989">
-          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#3807#0" expanded="true" />
-            <element signature="e#2267#2268#0" expanded="true" />
-            <element signature="e#2327#2328#0" expanded="true" />
-            <element signature="e#2555#2556#0" expanded="true" />
-            <element signature="e#2599#2600#0" expanded="true" />
-            <element signature="e#3072#3073#0" expanded="true" />
-            <element signature="e#3126#3127#0" expanded="true" />
-            <element signature="e#3744#3745#0" expanded="true" />
-            <element signature="e#3798#3799#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataViewDialogAdapterEdit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="40" max-vertical-offset="663">
-          <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
-          <folding>
-            <element signature="e#630#631#0" expanded="true" />
-            <element signature="e#662#663#0" expanded="true" />
-            <element signature="e#1109#1110#0" expanded="true" />
-            <element signature="e#1163#1164#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogGvData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="612">
-          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#741#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataViewHolderBasic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="1258">
-          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
-          <folding>
-            <element signature="e#1730#1731#0" expanded="true" />
-            <element signature="e#1762#1763#0" expanded="true" />
-            <element signature="e#1818#1819#0" expanded="true" />
-            <element signature="e#1866#1867#0" expanded="true" />
-            <element signature="e#1918#1919#0" expanded="true" />
-            <element signature="e#1962#1963#0" expanded="true" />
-            <element signature="e#2004#2005#0" expanded="true" />
-            <element signature="e#2050#2051#0" expanded="true" />
-            <element signature="e#2088#2089#0" expanded="true" />
-            <element signature="e#2139#2140#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataViewDialogAdapterAdd.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="714">
-          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
-          <folding>
-            <element signature="e#1199#1200#0" expanded="true" />
-            <element signature="e#1253#1254#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataViewDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="715" max-vertical-offset="1377">
-          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogHolderComment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="273" max-vertical-offset="935">
-          <caret line="53" column="5" selection-start-line="22" selection-start-column="4" selection-end-line="53" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../sdk/sources/android-21/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1791" max-vertical-offset="7395">
           <caret line="147" column="11" selection-start-line="147" selection-start-column="11" selection-end-line="147" selection-end-column="11" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogGvDataAddFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="346" max-vertical-offset="2074">
-          <caret line="43" column="35" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataViewHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="918">
-          <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogGvComment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="86" max-vertical-offset="1020">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#1835#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -5098,12 +4842,174 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogGvChildReview.java">
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogChildReview.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6296296" vertical-offset="187" max-vertical-offset="1207">
+        <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="1207">
           <caret line="33" column="38" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
           <folding>
-            <element signature="e#0#2528#0" expanded="true" />
+            <element signature="e#0#2549#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogComment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
+          <caret line="17" column="77" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="77" />
+          <folding>
+            <element signature="e#0#1848#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogFact.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="1054">
+          <caret line="17" column="68" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="68" />
+          <folding>
+            <element signature="e#0#2008#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogLocationFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2703">
+          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1343">
+          <caret line="18" column="71" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="71" />
+          <folding>
+            <element signature="e#0#2629#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#2217#2323#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogTag.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="969">
+          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#1548#0" expanded="true" />
+            <element signature="e#1072#1073#0" expanded="true" />
+            <element signature="e#1111#1112#0" expanded="true" />
+            <element signature="e#1196#1197#0" expanded="true" />
+            <element signature="e#1229#1230#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyGeneralLibrary/src/main/java/com/chdryra/android/mygenerallibrary/DialogCancelAddDoneFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+          <caret line="18" column="88" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogGvDataEditFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1717">
+          <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogGvDataAddFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1344" max-vertical-offset="2006">
+          <caret line="129" column="19" selection-start-line="129" selection-start-column="19" selection-end-line="129" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
+          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataViewHolder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="222" max-vertical-offset="884">
+          <caret line="47" column="13" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataViewHolderBasic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="188" max-vertical-offset="1105">
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataViewDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="664" max-vertical-offset="1326">
+          <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataViewDialogAdapterAdd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="680">
+          <caret line="21" column="59" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvDataViewDialogAdapterEdit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="40" max-vertical-offset="663">
+          <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DialogGvData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="714">
+          <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#956#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/FactoryGvDataHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="69" max-vertical-offset="731">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/FactoryGvDataList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/FactoryGvDataViewHolder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.65656567" vertical-offset="188" max-vertical-offset="1564">
+          <caret line="40" column="36" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
+          <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
