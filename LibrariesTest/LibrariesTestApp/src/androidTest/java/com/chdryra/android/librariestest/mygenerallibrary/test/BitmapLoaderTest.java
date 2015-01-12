@@ -25,7 +25,7 @@ import com.chdryra.android.testutils.CallBackSignaler;
 public class BitmapLoaderTest extends ActivityInstrumentationTestCase2<TestingActivity> {
     private CallBackSignaler          mSignaler;
     private BitmapLoader.LoadListener mListener;
-    private BitmapFileMocker mBitmapMocker;
+    private BitmapFileMocker          mBitmapMocker;
     private Bitmap                    mBitmap;
     private boolean mLoaded = false;
 

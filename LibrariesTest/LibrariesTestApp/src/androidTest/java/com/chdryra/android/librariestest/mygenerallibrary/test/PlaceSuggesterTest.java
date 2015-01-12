@@ -13,8 +13,8 @@ import android.test.UiThreadTest;
 import android.test.suitebuilder.annotation.SmallTest;
 
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
-import com.chdryra.android.testutils.CallBackSignaler;
 import com.chdryra.android.mygenerallibrary.PlaceSuggester;
+import com.chdryra.android.testutils.CallBackSignaler;
 import com.google.android.gms.maps.model.LatLng;
 
 import java.util.ArrayList;

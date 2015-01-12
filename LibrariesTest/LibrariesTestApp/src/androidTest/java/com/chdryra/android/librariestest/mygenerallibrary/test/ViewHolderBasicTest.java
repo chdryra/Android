@@ -32,17 +32,6 @@ public class ViewHolderBasicTest extends ActivityInstrumentationTestCase2<Testin
         super(TestingActivity.class);
     }
 
-    @Override
-    protected void setUp() throws Exception {
-        super.setUp();
-        mViewHolder = new ViewHolderBasic(LAYOUT, new int[]{UPDATEABLE}) {
-            @Override
-            public void updateView(ViewHolderData data) {
-                mUpdateable = getView(UPDATEABLE);
-            }
-        };
-    }
-
     @SmallTest
     public void testInflateAndGetView() {
         assertNull(mViewHolder.getView());
@@ -60,5 +49,16 @@ public class ViewHolderBasicTest extends ActivityInstrumentationTestCase2<Testin
         assertNotNull(updateable);
         mViewHolder.updateView(null);
         assertEquals(updateable, mUpdateable);
+    }
+
+    @Override
+    protected void setUp() throws Exception {
+        super.setUp();
+        mViewHolder = new ViewHolderBasic(LAYOUT, new int[]{UPDATEABLE}) {
+            @Override
+            public void updateView(ViewHolderData data) {
+                mUpdateable = getView(UPDATEABLE);
+            }
+        };
     }
 }

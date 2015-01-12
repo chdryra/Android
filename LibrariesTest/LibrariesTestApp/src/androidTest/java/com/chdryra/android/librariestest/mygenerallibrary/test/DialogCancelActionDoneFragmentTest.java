@@ -130,14 +130,14 @@ public class DialogCancelActionDoneFragmentTest
 
         DialogCancelActionDoneFragment dialog = new DialogCancelActionDoneFragment() {
             @Override
-            protected View createDialogUi() {
-                return null;
-            }
-
-            @Override
             public void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
                 setActionButtonText(testString);
+            }
+
+            @Override
+            protected View createDialogUi() {
+                return null;
             }
 
 

@@ -36,8 +36,8 @@ public class DialogCancelDeleteDoneFragmentTest extends
     private static final DialogTwoButtonFragment.ActionType DONE   =
             DialogCancelDeleteDoneFragment.DONE_ACTION;
 
-    private DialogTester                   mTester;
-    private Activity                       mActivity;
+    private DialogTester mTester;
+    private Activity     mActivity;
 
     private boolean mData = true;
 
@@ -124,11 +124,10 @@ public class DialogCancelDeleteDoneFragmentTest extends
         //Confirm dialog is showing
         assertNotNull(confirmDialog);
 
-        if(confirmDelete) {
+        if (confirmDelete) {
             confirmDialog.clickPositiveButton();
             assertFalse(mData);
-        }
-        else {
+        } else {
             confirmDialog.clickNegativeButton();
             assertTrue(mData);
         }
