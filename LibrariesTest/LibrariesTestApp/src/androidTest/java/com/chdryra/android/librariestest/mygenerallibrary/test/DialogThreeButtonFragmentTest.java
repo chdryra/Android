@@ -108,7 +108,7 @@ public class DialogThreeButtonFragmentTest extends
 
         DialogThreeButtonFragment defaultDialog = new DialogThreeButtonFragment() {
             @Override
-            protected View createDialogUI() {
+            protected View createDialogUi() {
                 return null;
             }
         };
@@ -120,7 +120,7 @@ public class DialogThreeButtonFragmentTest extends
 
         return new DialogThreeButtonFragment() {
             @Override
-            protected View createDialogUI() {
+            protected View createDialogUi() {
                 return null;
             }
 
@@ -137,7 +137,7 @@ public class DialogThreeButtonFragmentTest extends
 
         return new DialogThreeButtonFragment() {
             @Override
-            protected View createDialogUI() {
+            protected View createDialogUi() {
                 return null;
             }
 
@@ -154,7 +154,7 @@ public class DialogThreeButtonFragmentTest extends
 
         return new DialogThreeButtonFragment() {
             @Override
-            protected View createDialogUI() {
+            protected View createDialogUi() {
                 return null;
             }
 
@@ -184,7 +184,7 @@ public class DialogThreeButtonFragmentTest extends
             }
 
             @Override
-            protected View createDialogUI() {
+            protected View createDialogUi() {
                 return null;
             }
         };
@@ -206,7 +206,7 @@ public class DialogThreeButtonFragmentTest extends
             }
 
             @Override
-            protected View createDialogUI() {
+            protected View createDialogUi() {
                 return null;
             }
         };

@@ -8,6 +8,7 @@
 
 package com.chdryra.android.librariestest.mygenerallibrary.test;
 
+import android.os.Bundle;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.UiThreadTest;
 import android.test.suitebuilder.annotation.SmallTest;
@@ -15,6 +16,8 @@ import android.test.suitebuilder.annotation.SmallTest;
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.librariestest.mygenerallibrary.test.TestUtils.DialogTester;
 import com.chdryra.android.mygenerallibrary.DialogAlertFragment;
+import com.chdryra.android.mygenerallibrary.DialogTwoButtonFragment;
+import com.chdryra.android.testutils.RandomStringGenerator;
 
 /**
  * Created by: Rizwan Choudrey
@@ -23,6 +26,13 @@ import com.chdryra.android.mygenerallibrary.DialogAlertFragment;
  */
 public class DialogAlertFragmentTest extends
         ActivityInstrumentationTestCase2<TestingActivity> {
+    private static final DialogTwoButtonFragment.ActionType POSITIVE = DialogAlertFragment
+            .POSITVE_ACTION;
+    private static final DialogTwoButtonFragment.ActionType NEGATIVE = DialogAlertFragment
+            .NEGATIVE_ACTION;
+    private static final String                             ARGS_KEY = "com.chdryra.android" +
+            ".mygenerallibrary.test" +
+            ".DialogAlertFragmentTest.args_key";
     private DialogTester mTester;
 
     public DialogAlertFragmentTest() {
@@ -51,22 +61,104 @@ public class DialogAlertFragmentTest extends
 
     @SmallTest
     @UiThreadTest
+    public void testClickButtons() {
+        DialogTester.ButtonClick<DialogAlertFragment> confirmClick = new DialogTester
+                .ButtonClick<DialogAlertFragment>() {
+            @Override
+            public void doClick(DialogAlertFragment dialog) {
+                dialog.clickPositiveButton();
+            }
+        };
+
+        DialogTester.ButtonClick<DialogAlertFragment> cancelClick = new DialogTester
+                .ButtonClick<DialogAlertFragment>() {
+            @Override
+            public void doClick(DialogAlertFragment dialog) {
+                dialog.clickNegativeButton();
+            }
+        };
+
+        mTester.testClickButton(POSITIVE, confirmClick);
+        mTester.testClickButton(NEGATIVE, cancelClick);
+    }
+
+    @SmallTest
+    @UiThreadTest
     public void testDismissOnButtonClicks() {
         mTester.testDismissOrNotOnClick(DialogTester.ButtonLMR.LEFT, true);
         mTester.testDismissOrNotOnClick(DialogTester.ButtonLMR.RIGHT, true);
     }
 
+    @SmallTest
+    @UiThreadTest
+    public void testListenerOnPositive() {
+        testListener(true);
+    }
+
+    @SmallTest
+    @UiThreadTest
+    public void testListenerOnNegative() {
+        testListener(false);
+    }
+
     @Override
     protected void setUp() throws Exception {
         super.setUp();
+        mTester = new DialogTester(DialogAlertFragment.newDialog("Alert String"),
+                new FragmentListener(), getActivity());
+    }
 
-        DialogAlertFragment dialog = new DialogAlertFragment() {
-            @Override
-            protected String getAlertString() {
-                return "Alert String";
-            }
-        };
+    private void testListener(boolean positiveButton) {
+        String argsValue = RandomStringGenerator.nextWord();
+        Bundle args = new Bundle();
+        args.putString(ARGS_KEY, argsValue);
 
-        mTester = new DialogTester(dialog, getActivity());
+        DialogAlertFragment dialog = DialogAlertFragment.newDialog("Alert String", args);
+
+        int requestCode = 314;
+        FragmentListener listener = new FragmentListener();
+        dialog.setTargetFragment(listener, requestCode);
+
+        DialogTester.showDialogAndTestIsShowing(dialog, getActivity());
+
+        if (positiveButton) {
+            dialog.clickPositiveButton();
+        } else {
+            dialog.clickNegativeButton();
+        }
+
+        if (positiveButton) {
+            assertTrue(listener.mPositive);
+            assertFalse(listener.mNegative);
+        } else {
+            assertFalse(listener.mPositive);
+            assertTrue(listener.mNegative);
+        }
+
+        assertEquals(requestCode, listener.mRequestCode);
+        assertNotNull(listener.mArgs);
+        assertEquals(argsValue, listener.mArgs.getString(ARGS_KEY));
+    }
+
+    public static class FragmentListener extends DialogTester.DialogResultListener
+            implements DialogAlertFragment.DialogAlertListener {
+        boolean mNegative = false;
+        boolean mPositive = false;
+        int    mRequestCode;
+        Bundle mArgs;
+
+        @Override
+        public void onAlertNegative(int requestCode, Bundle args) {
+            mNegative = true;
+            mRequestCode = requestCode;
+            mArgs = args;
+        }
+
+        @Override
+        public void onAlertPositive(int requestCode, Bundle args) {
+            mPositive = true;
+            mRequestCode = requestCode;
+            mArgs = args;
+        }
     }
 }

@@ -16,8 +16,10 @@ import android.view.View;
 
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.librariestest.mygenerallibrary.test.TestUtils.DialogTester;
+import com.chdryra.android.mygenerallibrary.DialogAlertFragment;
 import com.chdryra.android.mygenerallibrary.DialogCancelDeleteDoneFragment;
-import com.chdryra.android.mygenerallibrary.DialogDeleteConfirmFragment;
+import com.chdryra.android.mygenerallibrary.DialogDeleteConfirm;
+import com.chdryra.android.mygenerallibrary.DialogThreeButtonFragment;
 import com.chdryra.android.mygenerallibrary.DialogTwoButtonFragment;
 
 /**
@@ -34,7 +36,6 @@ public class DialogCancelDeleteDoneFragmentTest extends
     private static final DialogTwoButtonFragment.ActionType DONE   =
             DialogCancelDeleteDoneFragment.DONE_ACTION;
 
-    private DialogCancelDeleteDoneFragment mDefaultDialog;
     private DialogTester                   mTester;
     private Activity                       mActivity;
 
@@ -81,70 +82,13 @@ public class DialogCancelDeleteDoneFragmentTest extends
     @SmallTest
     @UiThreadTest
     public void testDataDeleteIfConfirmed() {
-        DialogCancelDeleteDoneFragment dialog = getDialogHasData();
-        DialogTester tester = new DialogTester(dialog, mActivity);
-        tester.showDialogAndTestIsShowing();
-        DialogTester.DialogResultListener listener = tester.getListener();
-
-
-        assertTrue(mData);
-        dialog.clickDeleteButton();
-        //No message sent from dialog or data delete until confirmation
-        assertFalse(listener.called());
-        assertTrue(mData);
-
-        //ensures confirm dialog is shown immediately
-        mActivity.getFragmentManager().executePendingTransactions();
-
-        DialogDeleteConfirmFragment confirmDialog = (DialogDeleteConfirmFragment) mActivity
-                .getFragmentManager()
-                .findFragmentByTag(DialogDeleteConfirmFragment.DELETE_CONFIRM_TAG);
-
-        //Confirm dialog is showing
-        assertNotNull(confirmDialog);
-
-        //click confirm
-        confirmDialog.clickConfirmButton();
-
-        //Dialog sent delete message
-        assertTrue(listener.called());
-        assertEquals(DELETE.getResultCode(), listener.getResultCode());
-
-        //onConfirmedDeleteButtonClick() called
-        assertFalse(mData);
+        testDelete(true);
     }
 
     @SmallTest
     @UiThreadTest
     public void testNoDataDeleteIfCanceled() {
-        DialogCancelDeleteDoneFragment dialog = getDialogHasData();
-        DialogTester tester = new DialogTester(dialog, mActivity);
-        tester.showDialogAndTestIsShowing();
-        DialogTester.DialogResultListener listener = tester.getListener();
-
-        assertTrue(mData);
-        dialog.clickDeleteButton();
-
-        //No message sent from dialog or data delete until confirmation
-        assertNull(listener.getResultCode());
-        assertTrue(mData);
-
-        //ensures confirm dialog is shown immediately
-        mActivity.getFragmentManager().executePendingTransactions();
-
-        DialogDeleteConfirmFragment confirmDialog = (DialogDeleteConfirmFragment) mActivity
-                .getFragmentManager()
-                .findFragmentByTag(DialogDeleteConfirmFragment.DELETE_CONFIRM_TAG);
-
-        //Confirm dialog is showing
-        assertNotNull(confirmDialog);
-
-        //click cancel
-        confirmDialog.clickCancelButton();
-
-        //No message sent from dialog or data deleted
-        assertFalse(listener.called());
-        assertTrue(mData);
+        testDelete(false);
     }
 
     @Override
@@ -152,21 +96,49 @@ public class DialogCancelDeleteDoneFragmentTest extends
         super.setUp();
         mActivity = getActivity();
 
-        mDefaultDialog = new DialogCancelDeleteDoneFragment() {
+        DialogThreeButtonFragment dialog = new DialogCancelDeleteDoneFragment() {
             @Override
-            protected View createDialogUI() {
+            protected View createDialogUi() {
                 return null;
             }
         };
 
-        mTester = new DialogTester(mDefaultDialog, mActivity);
+        mTester = new DialogTester(dialog, mActivity);
+    }
+
+    private void testDelete(boolean confirmDelete) {
+        DialogCancelDeleteDoneFragment dialog = getDialogHasData();
+        DialogTester tester = new DialogTester(dialog, mActivity);
+        tester.showDialogAndTestIsShowing();
+
+        assertTrue(mData);
+        dialog.clickDeleteButton();
+        assertTrue(mData);
+
+        //ensures confirm dialog is shown immediately
+        mActivity.getFragmentManager().executePendingTransactions();
+
+        DialogAlertFragment confirmDialog = (DialogAlertFragment) mActivity
+                .getFragmentManager().findFragmentByTag(DialogDeleteConfirm.DELETE_CONFIRM_TAG);
+
+        //Confirm dialog is showing
+        assertNotNull(confirmDialog);
+
+        if(confirmDelete) {
+            confirmDialog.clickPositiveButton();
+            assertFalse(mData);
+        }
+        else {
+            confirmDialog.clickNegativeButton();
+            assertTrue(mData);
+        }
     }
 
     private DialogCancelDeleteDoneFragment getDialogHasData() {
         mData = true;
         return new DialogCancelDeleteDoneFragment() {
             @Override
-            protected View createDialogUI() {
+            protected View createDialogUi() {
                 return null;
             }
 

@@ -96,7 +96,7 @@ public class DialogCancelAddDoneFragmentTest extends
 
         mDefaultDialog = new DialogCancelAddDoneFragment() {
             @Override
-            protected View createDialogUI() {
+            protected View createDialogUi() {
                 return null;
             }
         };
@@ -108,7 +108,7 @@ public class DialogCancelAddDoneFragmentTest extends
 
         return new DialogCancelAddDoneFragment() {
             @Override
-            protected View createDialogUI() {
+            protected View createDialogUi() {
                 return null;
             }
 

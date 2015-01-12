@@ -52,6 +52,14 @@ public class DialogTester {
         mButtonManager = new ButtonManager(dialog);
     }
 
+    public DialogTester(DialogTwoButtonFragment dialog, DialogResultListener listener, Activity
+            activity) {
+        mDialog = dialog;
+        mActivity = activity;
+        mListener = listener;
+        mButtonManager = new ButtonManager(dialog);
+    }
+
     public DialogTester(DialogThreeButtonFragment dialog, Activity activity) {
         mDialog = dialog;
         mActivity = activity;

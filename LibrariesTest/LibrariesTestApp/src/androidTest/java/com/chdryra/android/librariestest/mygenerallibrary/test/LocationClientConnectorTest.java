@@ -13,8 +13,8 @@ import android.test.UiThreadTest;
 import android.test.suitebuilder.annotation.SmallTest;
 
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
-import com.chdryra.android.testutils.CallBackSignaler;
 import com.chdryra.android.mygenerallibrary.LocationClientConnector;
+import com.chdryra.android.testutils.CallBackSignaler;
 import com.google.android.gms.maps.model.LatLng;
 
 /**
@@ -33,7 +33,7 @@ public class LocationClientConnectorTest extends ActivityInstrumentationTestCase
 
     // Need to do all this UI boiler plate stuff for testing multithreaded call backs
     @SmallTest
-    @UiThreadTest
+    //@UiThreadTest
     public void testConnect() {
         try {
             runTestOnUiThread(new Runnable() {

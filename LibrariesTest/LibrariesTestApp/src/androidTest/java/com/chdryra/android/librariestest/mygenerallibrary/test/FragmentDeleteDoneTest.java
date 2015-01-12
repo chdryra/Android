@@ -20,7 +20,8 @@ import com.chdryra.android.librariestest.R;
 import com.chdryra.android.librariestest.mygenerallibrary.FragmentDeleteDoneActivity;
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.mygenerallibrary.ActivityResultCode;
-import com.chdryra.android.mygenerallibrary.DialogDeleteConfirmFragment;
+import com.chdryra.android.mygenerallibrary.DialogAlertFragment;
+import com.chdryra.android.mygenerallibrary.DialogDeleteConfirm;
 import com.chdryra.android.mygenerallibrary.FragmentDeleteDone;
 
 /**
@@ -86,9 +87,8 @@ public class FragmentDeleteDoneTest extends ActivityInstrumentationTestCase2<Tes
         assertTrue(mData);
         assertFalse(mCommissioner.called());
 
-        final DialogDeleteConfirmFragment confirmDialog = (DialogDeleteConfirmFragment) activity
-                .getFragmentManager()
-                .findFragmentByTag(DialogDeleteConfirmFragment.DELETE_CONFIRM_TAG);
+        final DialogAlertFragment confirmDialog = (DialogAlertFragment) activity
+                .getFragmentManager().findFragmentByTag(DialogDeleteConfirm.DELETE_CONFIRM_TAG);
 
         //Confirm dialog is showing
         assertNotNull(confirmDialog);
@@ -97,7 +97,7 @@ public class FragmentDeleteDoneTest extends ActivityInstrumentationTestCase2<Tes
         activity.runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                confirmDialog.clickConfirmButton();
+                confirmDialog.clickPositiveButton();
             }
         });
         getInstrumentation().waitForIdleSync();
@@ -159,11 +159,11 @@ public class FragmentDeleteDoneTest extends ActivityInstrumentationTestCase2<Tes
         mCommissioner.resetResults();
         mCommissioner.startActivityForResult(FragmentDeleteDoneActivity.class, REQUEST_CODE);
 
-            getInstrumentation().waitForIdleSync();
+        getInstrumentation().waitForIdleSync();
 
-            FragmentDeleteDoneActivity fragmentActivity = (FragmentDeleteDoneActivity)
-                    getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5);
-            assertNotNull(fragmentActivity);
+        FragmentDeleteDoneActivity fragmentActivity = (FragmentDeleteDoneActivity)
+                getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5);
+        assertNotNull(fragmentActivity);
 
         return fragmentActivity;
     }

@@ -95,7 +95,7 @@ public class DialogTwoButtonFragmentTest extends
         mActivity = getActivity();
         DialogTwoButtonFragment defaultDialog = new DialogTwoButtonFragment() {
             @Override
-            protected View createDialogUI() {
+            protected View createDialogUi() {
                 return null;
             }
         };
@@ -107,7 +107,7 @@ public class DialogTwoButtonFragmentTest extends
         if (button == ButtonLMR.LEFT) {
             return new DialogTwoButtonFragment() {
                 @Override
-                protected View createDialogUI() {
+                protected View createDialogUi() {
                     return null;
                 }
 
@@ -121,7 +121,7 @@ public class DialogTwoButtonFragmentTest extends
         } else if (button == ButtonLMR.RIGHT) {
             return new DialogTwoButtonFragment() {
                 @Override
-                protected View createDialogUI() {
+                protected View createDialogUi() {
                     return null;
                 }
 
@@ -151,7 +151,7 @@ public class DialogTwoButtonFragmentTest extends
             }
 
             @Override
-            protected View createDialogUI() {
+            protected View createDialogUi() {
                 return null;
             }
         };
@@ -171,7 +171,7 @@ public class DialogTwoButtonFragmentTest extends
             }
 
             @Override
-            protected View createDialogUI() {
+            protected View createDialogUi() {
                 return null;
             }
         };

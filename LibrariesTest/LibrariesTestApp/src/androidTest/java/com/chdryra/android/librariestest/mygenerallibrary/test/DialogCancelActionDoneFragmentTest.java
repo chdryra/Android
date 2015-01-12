@@ -130,15 +130,17 @@ public class DialogCancelActionDoneFragmentTest
 
         DialogCancelActionDoneFragment dialog = new DialogCancelActionDoneFragment() {
             @Override
+            protected View createDialogUi() {
+                return null;
+            }
+
+            @Override
             public void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
                 setActionButtonText(testString);
             }
 
-            @Override
-            protected View createDialogUI() {
-                return null;
-            }
+
         };
 
         DialogTester.showDialogAndTestIsShowing(dialog, mActivity);
@@ -213,7 +215,7 @@ public class DialogCancelActionDoneFragmentTest
 
         mDefaultDialog = new DialogCancelActionDoneFragment() {
             @Override
-            protected View createDialogUI() {
+            protected View createDialogUi() {
                 return null;
             }
         };
@@ -231,7 +233,7 @@ public class DialogCancelActionDoneFragmentTest
             }
 
             @Override
-            protected View createDialogUI() {
+            protected View createDialogUi() {
                 return null;
             }
         };
@@ -247,7 +249,7 @@ public class DialogCancelActionDoneFragmentTest
             }
 
             @Override
-            protected View createDialogUI() {
+            protected View createDialogUi() {
                 return null;
             }
         };
@@ -263,7 +265,7 @@ public class DialogCancelActionDoneFragmentTest
             }
 
             @Override
-            protected View createDialogUI() {
+            protected View createDialogUi() {
                 return null;
             }
         };
