@@ -163,7 +163,7 @@ public class FileIncrementorTest extends ActivityInstrumentationTestCase2<Testin
             }
         }
 
-        fileOrDirectory.delete();
+        assertTrue(fileOrDirectory.delete());
     }
 
     private File getDir() {
