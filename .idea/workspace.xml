@@ -27,6 +27,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cbecc251-2e59-4e4e-b243-801cf0d21d57" name="Default" comment="Refactored FragmentReviewBuild to use new pattern. Removed old code accordingly.">
+      <change type="MOVED" beforePath="C:\Dev\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\GvGridCellManagerList.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvBuildReviewCellList.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/FactoryGridCellAdapter.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/FactoryGridCellAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/FactoryViewReview.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/FactoryViewReview.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GridItemEditReview.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GridItemEditReview.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AndroidStudio.iws" />
@@ -55,14 +59,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GvGridCellManagerList.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvGridCellManagerList.java">
+      <file leaf-file-name="GvBuildReviewCellList.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvBuildReviewCellList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22950819" vertical-offset="560" max-vertical-offset="2460">
-              <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.93442625" vertical-offset="1810" max-vertical-offset="2500">
+              <caret line="135" column="0" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
               <folding>
                 <element signature="e#0#4259#0" expanded="true" />
                 <element signature="imports" expanded="true" />
+                <element signature="e#1705#1706#0" expanded="true" />
+                <element signature="e#1749#1750#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -3055,7 +3061,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/ActionGridItemEdit.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/ActionMenuChildrenEdit.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/ActionMenuDeleteDoneGrid.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/ActionRatingEdit.java" />
@@ -3106,6 +3111,7 @@
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/FragmentFeed.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvGridCellManagerList.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvBuildReviewCellList.java" />
       </list>
     </option>
   </component>
@@ -3270,62 +3276,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Reviewer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Reviewer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -3349,36 +3299,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="androidTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Reviewer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="androidTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -4521,7 +4441,11 @@
       <created>1422467084725</created>
       <updated>1422467084725</updated>
     </task>
-    <option name="localTasksCounter" value="182" />
+    <task id="LOCAL-00182" summary="Refactored FragmentReviewBuild to use new pattern. Removed old code accordingly.">
+      <created>1422467108009</created>
+      <updated>1422467108009</updated>
+    </task>
+    <option name="localTasksCounter" value="183" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -4557,7 +4481,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32867885" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2411953" sideWeight="0.4992" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2411953" sideWeight="0.4992" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33619764" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="true" content_ui="tabs" />
@@ -5118,13 +5042,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvGridCellManagerList.java">
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/GvBuildReviewCellList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22950819" vertical-offset="560" max-vertical-offset="2460">
-          <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.93442625" vertical-offset="1810" max-vertical-offset="2500">
+          <caret line="135" column="0" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
           <folding>
             <element signature="e#0#4259#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#1705#1706#0" expanded="true" />
+            <element signature="e#1749#1750#0" expanded="true" />
           </folding>
         </state>
       </provider>
