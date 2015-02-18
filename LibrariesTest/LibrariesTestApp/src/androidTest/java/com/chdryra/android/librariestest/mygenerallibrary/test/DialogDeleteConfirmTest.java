@@ -16,7 +16,7 @@ import android.test.ActivityInstrumentationTestCase2;
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.mygenerallibrary.DialogAlertFragment;
 import com.chdryra.android.mygenerallibrary.DialogDeleteConfirm;
-import com.chdryra.android.testutils.RandomStringGenerator;
+import com.chdryra.android.testutils.RandomString;
 
 /**
  * Created by: Rizwan Choudrey
@@ -34,7 +34,7 @@ public class DialogDeleteConfirmTest extends
 
     public void testShowDialog() {
         Activity activity = getActivity();
-        String deleteWhat = RandomStringGenerator.nextWord();
+        String deleteWhat = RandomString.nextWord();
         FragmentListener listener = new FragmentListener();
         int requestCode = 314;
         DialogDeleteConfirm.showDialog(deleteWhat, listener, requestCode,

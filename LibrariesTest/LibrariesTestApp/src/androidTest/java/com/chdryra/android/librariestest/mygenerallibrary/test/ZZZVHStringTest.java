@@ -24,7 +24,7 @@ import com.chdryra.android.mygenerallibrary.ViewHolderData;
  * On: 27/11/2014
  * Email: rizwan.choudrey@gmail.com
  */
-public class VHStringTest extends ActivityInstrumentationTestCase2<TestingActivity> {
+public class ZZZVHStringTest extends ActivityInstrumentationTestCase2<TestingActivity> {
     private static final int    UPDATEABLE = com.chdryra.android.mygenerallibrary.R.id.text_view;
     private static final int    LAYOUT     = R.layout.mygenerallibrary_view_holder_test_layout;
     private static final int    TEXTVIEW   = R.id.vh_text_view;
@@ -33,7 +33,7 @@ public class VHStringTest extends ActivityInstrumentationTestCase2<TestingActivi
 
     private VHString mVHString;
 
-    public VHStringTest() {
+    public ZZZVHStringTest() {
         super(TestingActivity.class);
     }
 

@@ -24,14 +24,14 @@ import java.util.ArrayList;
  * On: 24/11/2014
  * Email: rizwan.choudrey@gmail.com
  */
-public class StringFilterAdapterTest extends ActivityInstrumentationTestCase2<TestingActivity> {
+public class ZZZStringFilterAdapterTest extends ActivityInstrumentationTestCase2<TestingActivity> {
     private ArrayList<String>                mDefaultSuggestions;
     private ArrayList<String>                mFilteredResults;
     private StringFilterAdapter.StringFilter mStringFilter;
     private CallBackSignaler                 mSignaler;
     private StringFilterAdapter              mAdapter;
 
-    public StringFilterAdapterTest() {
+    public ZZZStringFilterAdapterTest() {
         super(TestingActivity.class);
     }
 

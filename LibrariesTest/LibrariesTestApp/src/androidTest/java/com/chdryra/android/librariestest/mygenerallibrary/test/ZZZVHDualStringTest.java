@@ -22,7 +22,7 @@ import com.chdryra.android.mygenerallibrary.VHDualString;
  * On: 27/11/2014
  * Email: rizwan.choudrey@gmail.com
  */
-public class VHDualStringTest extends ActivityInstrumentationTestCase2<TestingActivity> {
+public class ZZZVHDualStringTest extends ActivityInstrumentationTestCase2<TestingActivity> {
     private static final int    UPPER        = com.chdryra.android.mygenerallibrary.R.id
             .upper_text_view;
     private static final int    LOWER        = com.chdryra.android.mygenerallibrary.R.id
@@ -32,7 +32,7 @@ public class VHDualStringTest extends ActivityInstrumentationTestCase2<TestingAc
 
     private VHDualString mDual;
 
-    public VHDualStringTest() {
+    public ZZZVHDualStringTest() {
         super(TestingActivity.class);
     }
 

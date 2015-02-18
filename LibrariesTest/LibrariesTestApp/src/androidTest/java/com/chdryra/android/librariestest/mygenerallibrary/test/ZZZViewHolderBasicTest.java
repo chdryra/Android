@@ -22,13 +22,13 @@ import com.chdryra.android.mygenerallibrary.ViewHolderData;
  * On: 27/11/2014
  * Email: rizwan.choudrey@gmail.com
  */
-public class ViewHolderBasicTest extends ActivityInstrumentationTestCase2<TestingActivity> {
+public class ZZZViewHolderBasicTest extends ActivityInstrumentationTestCase2<TestingActivity> {
     private static final int LAYOUT     = R.layout.mygenerallibrary_view_holder_test_layout;
     private static final int UPDATEABLE = R.id.vh_text_view;
     private ViewHolderBasic mViewHolder;
     private View            mUpdateable;
 
-    public ViewHolderBasicTest() {
+    public ZZZViewHolderBasicTest() {
         super(TestingActivity.class);
     }
 

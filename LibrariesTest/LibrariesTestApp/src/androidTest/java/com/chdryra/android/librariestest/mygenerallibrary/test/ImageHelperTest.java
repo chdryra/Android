@@ -16,7 +16,7 @@ import android.test.suitebuilder.annotation.SmallTest;
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.mygenerallibrary.ImageHelper;
 import com.chdryra.android.testutils.BitmapFileMocker;
-import com.chdryra.android.testutils.LatLngMocker;
+import com.chdryra.android.testutils.RandomLatLng;
 import com.google.android.gms.maps.model.LatLng;
 
 import java.io.IOException;
@@ -206,7 +206,7 @@ public class ImageHelperTest extends ActivityInstrumentationTestCase2<TestingAct
         String path = mBitmapMocker.createBitmapFile(Bitmap.CompressFormat.JPEG, false);
         double eps = 0.0001;
         for (int i = 0; i < 100; ++i) {
-            LatLng mock = LatLngMocker.newLatLng();
+            LatLng mock = RandomLatLng.nextLatLng();
             double lat = mock.latitude;
             double lng = mock.longitude;
             ExifInterface exif = getExif(path, lat, lng);

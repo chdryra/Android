@@ -17,7 +17,7 @@ import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.librariestest.mygenerallibrary.test.TestUtils.DialogTester;
 import com.chdryra.android.mygenerallibrary.DialogAlertFragment;
 import com.chdryra.android.mygenerallibrary.DialogTwoButtonFragment;
-import com.chdryra.android.testutils.RandomStringGenerator;
+import com.chdryra.android.testutils.RandomString;
 
 /**
  * Created by: Rizwan Choudrey
@@ -109,7 +109,7 @@ public class DialogAlertFragmentTest extends
     }
 
     private void testListener(boolean positiveButton) {
-        String argsValue = RandomStringGenerator.nextWord();
+        String argsValue = RandomString.nextWord();
         Bundle args = new Bundle();
         args.putString(ARGS_KEY, argsValue);
 

@@ -26,7 +26,7 @@ import com.chdryra.android.mygenerallibrary.ViewHolderDataList;
  * On: 27/11/2014
  * Email: rizwan.choudrey@gmail.com
  */
-public class ViewHolderAdapterTest extends ActivityInstrumentationTestCase2<TestingActivity> {
+public class ZZZViewHolderAdapterTest extends ActivityInstrumentationTestCase2<TestingActivity> {
     private static final String[] DATA       = {"Alpha", "Beta", "Gamma", "Delta"};
     private static final int      UPDATEABLE = com.chdryra.android.mygenerallibrary.R.id.text_view;
     private static final int      WIDTH      = 100;
@@ -35,7 +35,7 @@ public class ViewHolderAdapterTest extends ActivityInstrumentationTestCase2<Test
     private ViewHolderDataList<VHDString> mDataList;
     private ViewHolderAdapter             mAdapter;
 
-    public ViewHolderAdapterTest() {
+    public ZZZViewHolderAdapterTest() {
         super(TestingActivity.class);
     }
 
