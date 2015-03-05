@@ -210,7 +210,7 @@ public class ImageHelperTest extends ActivityInstrumentationTestCase2<TestingAct
             double lat = mock.latitude;
             double lng = mock.longitude;
             ExifInterface exif = getExif(path, lat, lng);
-            LatLng latLng = ImageHelper.getLatLngFromEXIF(exif);
+            LatLng latLng = ImageHelper.getLatLngFromExif(exif);
             float[] ll = new float[2];
             exif.getLatLong(ll);
             assertEquals(lat, latLng.latitude, eps);
@@ -232,7 +232,7 @@ public class ImageHelperTest extends ActivityInstrumentationTestCase2<TestingAct
             e.printStackTrace();
         }
 
-        ExifInterface exifFromFile = ImageHelper.getEXIF(path);
+        ExifInterface exifFromFile = ImageHelper.getExif(path);
         String dateTime2 = exifFromFile.getAttribute(ExifInterface.TAG_DATETIME);
         assertEquals(dateTime, dateTime2);
     }
