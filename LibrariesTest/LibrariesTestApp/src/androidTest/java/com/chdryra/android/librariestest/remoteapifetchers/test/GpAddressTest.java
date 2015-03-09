@@ -10,11 +10,11 @@ package com.chdryra.android.librariestest.remoteapifetchers.test;
 
 import android.test.suitebuilder.annotation.SmallTest;
 
+import com.chdryra.android.librariestest.remoteapifetchers.test.TestUtils.JsonMaker;
 import com.chdryra.android.remoteapifetchers.GpAddress;
 
 import junit.framework.TestCase;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -33,15 +33,11 @@ import java.util.ArrayList;
 public class GpAddressTest extends TestCase {
     @SmallTest
     public void testGpAddress() {
-        JSONObject address = null;
-        try {
-            address = new JSONObject(getTestString());
-        } catch (JSONException e) {
-            e.printStackTrace();
-            fail();
-        }
+        JSONObject result = JsonMaker.getJsonObject(getTestString());
 
-        GpAddress parsed = new GpAddress(address);
+        GpAddress parsed = new GpAddress(result);
+        assertTrue(parsed.isValid());
+
         String formatted = parsed.getFormattedAddress();
         assertEquals("48 Pirrama Road, Pyrmont NSW, Australia", formatted);
 
