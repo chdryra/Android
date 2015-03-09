@@ -10,6 +10,7 @@ package com.chdryra.android.librariestest.remoteapifetchers.test;
 
 import android.test.suitebuilder.annotation.SmallTest;
 
+import com.chdryra.android.librariestest.remoteapifetchers.test.TestUtils.JsonPutter;
 import com.chdryra.android.remoteapifetchers.GpDescription;
 import com.chdryra.android.remoteapifetchers.JsonParser;
 import com.chdryra.android.testutils.RandomString;
@@ -37,21 +38,15 @@ public class JsonParserTest extends TestCase {
         String objName = RandomString.nextWord();
         JSONObject objValue = newJsonObject();
         assertFalse(objValue.equals(JsonParser.getObject(mResult, objName)));
-        put(mResult, objName, objValue);
+        JsonPutter.put(mResult, objName, objValue);
         assertTrue(objValue.equals(JsonParser.getObject(mResult, objName)));
     }
 
     @SmallTest
     public void testGetBoolean() {
         String name = RandomString.nextWord();
-
         assertFalse(JsonParser.getBoolean(mResult, name));
-        try {
-            mResult.put(name, true);
-        } catch (JSONException e) {
-            e.printStackTrace();
-            fail("Couldn't put boolean");
-        }
+        JsonPutter.put(mResult, name, true);
         assertTrue(JsonParser.getBoolean(mResult, name));
     }
 
@@ -61,7 +56,7 @@ public class JsonParserTest extends TestCase {
         String value = RandomString.nextWord();
 
         assertNull(JsonParser.getString(mResult, name));
-        put(mResult, name, value);
+        JsonPutter.put(mResult, name, value);
         assertEquals(value, JsonParser.getString(mResult, name));
     }
 
@@ -71,12 +66,7 @@ public class JsonParserTest extends TestCase {
         double d = 3.141592;
 
         assertEquals(Double.NaN, JsonParser.getDouble(mResult, name));
-        try {
-            mResult.put(name, d);
-        } catch (JSONException e) {
-            e.printStackTrace();
-            fail("Couldn't put double");
-        }
+        JsonPutter.put(mResult, name, d);
         assertEquals(d, JsonParser.getDouble(mResult, name));
     }
 
@@ -86,12 +76,7 @@ public class JsonParserTest extends TestCase {
         long l = RAND.nextLong();
 
         assertEquals(Long.MIN_VALUE, JsonParser.getLong(mResult, name));
-        try {
-            mResult.put(name, l);
-        } catch (JSONException e) {
-            e.printStackTrace();
-            fail("Couldn't put long");
-        }
+        JsonPutter.put(mResult, name, l);
         assertEquals(l, JsonParser.getLong(mResult, name));
     }
 
@@ -101,12 +86,7 @@ public class JsonParserTest extends TestCase {
         int i = RAND.nextInt();
 
         assertEquals(Integer.MIN_VALUE, JsonParser.getInt(mResult, name));
-        try {
-            mResult.put(name, i);
-        } catch (JSONException e) {
-            e.printStackTrace();
-            fail("Couldn't put int");
-        }
+        JsonPutter.put(mResult, name, i);
         assertEquals(i, JsonParser.getInt(mResult, name));
     }
 
@@ -119,7 +99,7 @@ public class JsonParserTest extends TestCase {
 
         String name = RandomString.nextWord();
         assertEquals(0, JsonParser.getStringArray(mResult, name).size());
-        put(mResult, name, new JSONArray(strings));
+        JsonPutter.put(mResult, name, new JSONArray(strings));
         assertEquals(strings, JsonParser.getStringArray(mResult, name));
     }
 
@@ -132,7 +112,7 @@ public class JsonParserTest extends TestCase {
 
         String name = RandomString.nextWord();
         assertEquals(0, JsonParser.getJsonObjectArray(mResult, name).size());
-        put(mResult, name, new JSONArray(array));
+        JsonPutter.put(mResult, name, new JSONArray(array));
         assertEquals(array, JsonParser.getJsonObjectArray(mResult, name));
     }
 
@@ -146,8 +126,8 @@ public class JsonParserTest extends TestCase {
             JSONObject term = new JSONObject();
             int offset_i = RAND.nextInt();
             String value_i = RandomString.nextWord();
-            put(term, offset, offset_i);
-            put(term, value, value_i);
+            JsonPutter.put(term, offset, offset_i);
+            JsonPutter.put(term, value, value_i);
             termArray.add(term);
         }
 
@@ -155,7 +135,7 @@ public class JsonParserTest extends TestCase {
 
         assertEquals(0, JsonParser.getArrayList(mResult, terms,
                 GpDescription.GpTerm.class).size());
-        put(mResult, terms, array);
+        JsonPutter.put(mResult, terms, array);
         ArrayList<GpDescription.GpTerm> parsed = JsonParser.getArrayList(mResult, terms,
                 GpDescription.GpTerm.class);
         assertEquals(termArray.size(), parsed.size());
@@ -184,21 +164,12 @@ public class JsonParserTest extends TestCase {
         String objName2 = RandomString.nextWord();
         String objValue2 = RandomString.nextWord();
 
-        put(objValue, objName1, objValue1);
-        put(objValue, objName2, objValue2);
+        JsonPutter.put(objValue, objName1, objValue1);
+        JsonPutter.put(objValue, objName2, objValue2);
 
         assertEquals(objValue1, JsonParser.getString(objValue, objName1));
         assertEquals(objValue2, JsonParser.getString(objValue, objName2));
 
         return objValue;
-    }
-
-    private void put(JSONObject object, String name, Object value) {
-        try {
-            object.put(name, value);
-        } catch (JSONException e) {
-            e.printStackTrace();
-            fail("Couldn't add" + name + ": " + value.toString());
-        }
     }
 }
