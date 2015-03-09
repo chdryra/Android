@@ -32,11 +32,6 @@ public class JsonParserTest extends TestCase {
     private static final Random RAND = new Random();
     JSONObject mResult;
 
-    @Override
-    protected void setUp() throws Exception {
-        mResult = new JSONObject();
-    }
-
     @SmallTest
     public void testGetObject() {
         String objName = RandomString.nextWord();
@@ -93,7 +88,7 @@ public class JsonParserTest extends TestCase {
         assertEquals(Long.MIN_VALUE, JsonParser.getLong(mResult, name));
         try {
             mResult.put(name, l);
-        } catch (JSONException e)    {
+        } catch (JSONException e) {
             e.printStackTrace();
             fail("Couldn't put long");
         }
@@ -118,7 +113,7 @@ public class JsonParserTest extends TestCase {
     @SmallTest
     public void testGetStringArray() {
         ArrayList<String> strings = new ArrayList<>();
-        for(int i = 0; i < 10; ++i) {
+        for (int i = 0; i < 10; ++i) {
             strings.add(RandomString.nextWord());
         }
 
@@ -131,8 +126,9 @@ public class JsonParserTest extends TestCase {
     @SmallTest
     public void testGetJsonObjectArray() {
         ArrayList<JSONObject> array = new ArrayList<>();
-        for(int i = 0; i < 10; ++i)
+        for (int i = 0; i < 10; ++i) {
             array.add(newJsonObject());
+        }
 
         String name = RandomString.nextWord();
         assertEquals(0, JsonParser.getJsonObjectArray(mResult, name).size());
@@ -146,7 +142,7 @@ public class JsonParserTest extends TestCase {
         String value = "value";
         String terms = "terms";
         ArrayList<JSONObject> termArray = new ArrayList<>();
-        for(int i = 0; i < 10; ++i) {
+        for (int i = 0; i < 10; ++i) {
             JSONObject term = new JSONObject();
             int offset_i = RAND.nextInt();
             String value_i = RandomString.nextWord();
@@ -164,7 +160,7 @@ public class JsonParserTest extends TestCase {
                 GpDescription.GpTerm.class);
         assertEquals(termArray.size(), parsed.size());
 
-        for(int i = 0; i < termArray.size(); ++i) {
+        for (int i = 0; i < termArray.size(); ++i) {
             try {
                 assertEquals(termArray.get(i).getInt(offset), parsed.get(i).getOffset());
                 assertEquals(termArray.get(i).getString(value), parsed.get(i).getValue());
@@ -173,6 +169,11 @@ public class JsonParserTest extends TestCase {
                 fail("Couldn't resolve term " + i);
             }
         }
+    }
+
+    @Override
+    protected void setUp() throws Exception {
+        mResult = new JSONObject();
     }
 
     private JSONObject newJsonObject() {
