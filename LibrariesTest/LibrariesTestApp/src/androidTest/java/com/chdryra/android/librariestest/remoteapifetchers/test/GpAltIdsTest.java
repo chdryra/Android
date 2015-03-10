@@ -37,23 +37,23 @@ public class GpAltIdsTest extends TestCase {
         ArrayList<GpAltIds.GpAltId> altids = parsed.getAlts();
         assertEquals(2, altids.size());
 
-        GpAltIds.GpAltId id0 = altids.get(0);
-        assertTrue(id0.isValid());
-        GpPlaceId id0Id = id0.getPlaceId();
-        assertTrue(id0Id.isValid());
-        assertEquals("D9iJyWEHuEmuEmsRm9hTkapTCrk", id0Id.getPlaceId());
-        GpScope id0Scope = id0.getScope();
-        assertTrue(id0Scope.isValid());
-        assertTrue(id0Scope.equals(GpScope.Scope.APP));
+        GpAltIds.GpAltId alt = altids.get(0);
+        assertTrue(alt.isValid());
+        GpPlaceId id = alt.getPlaceId();
+        assertTrue(id.isValid());
+        assertEquals("D9iJyWEHuEmuEmsRm9hTkapTCrk", id.getPlaceId());
+        GpScope scope = alt.getScope();
+        assertTrue(scope.isValid());
+        assertTrue(scope.equals(GpScope.Scope.APP));
 
-        GpAltIds.GpAltId id1 = altids.get(1);
-        assertTrue(id1.isValid());
-        GpPlaceId id1Id = id1.getPlaceId();
-        assertTrue(id1Id.isValid());
-        assertEquals("12345676890zdzddvvdzfdffdff", id1Id.getPlaceId());
-        GpScope id1Scope = id1.getScope();
-        assertTrue(id1Scope.isValid());
-        assertTrue(id1Scope.equals(GpScope.Scope.GOOGLE));
+        alt = altids.get(1);
+        assertTrue(alt.isValid());
+        id = alt.getPlaceId();
+        assertTrue(id.isValid());
+        assertEquals("12345676890zdzddvvdzfdffdff", id.getPlaceId());
+        scope = alt.getScope();
+        assertTrue(scope.isValid());
+        assertTrue(scope.equals(GpScope.Scope.GOOGLE));
     }
 
     private String getTestString() {

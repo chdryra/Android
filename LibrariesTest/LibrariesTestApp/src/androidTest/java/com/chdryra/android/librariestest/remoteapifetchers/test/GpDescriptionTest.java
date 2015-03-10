@@ -38,25 +38,25 @@ public class GpDescriptionTest extends TestCase {
         ArrayList<GpDescription.GpTerm> terms = parsed.getTerms();
         assertEquals(4, terms.size());
 
-        GpDescription.GpTerm term0 = terms.get(0);
-        assertTrue(term0.isValid());
-        assertEquals(0, term0.getOffset());
-        assertEquals("Paris Avenue", term0.getValue());
+        GpDescription.GpTerm term = terms.get(0);
+        assertTrue(term.isValid());
+        assertEquals(0, term.getOffset());
+        assertEquals("Paris Avenue", term.getValue());
 
-        GpDescription.GpTerm term1 = terms.get(1);
-        assertTrue(term1.isValid());
-        assertEquals(14, term1.getOffset());
-        assertEquals("Earlwood", term1.getValue());
+        term = terms.get(1);
+        assertTrue(term.isValid());
+        assertEquals(14, term.getOffset());
+        assertEquals("Earlwood", term.getValue());
 
-        GpDescription.GpTerm term2 = terms.get(2);
-        assertTrue(term2.isValid());
-        assertEquals(24, term2.getOffset());
-        assertEquals("New South Wales", term2.getValue());
+        term = terms.get(2);
+        assertTrue(term.isValid());
+        assertEquals(24, term.getOffset());
+        assertEquals("New South Wales", term.getValue());
 
-        GpDescription.GpTerm term3 = terms.get(3);
-        assertTrue(term3.isValid());
-        assertEquals(41, term3.getOffset());
-        assertEquals("Australia", term3.getValue());
+        term = terms.get(3);
+        assertTrue(term.isValid());
+        assertEquals(41, term.getOffset());
+        assertEquals("Australia", term.getValue());
     }
 
     private String getTestString() {

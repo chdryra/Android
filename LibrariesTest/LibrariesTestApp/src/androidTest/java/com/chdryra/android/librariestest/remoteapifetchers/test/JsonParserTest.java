@@ -133,10 +133,10 @@ public class JsonParserTest extends TestCase {
 
         JSONArray array = new JSONArray(termArray);
 
-        assertEquals(0, JsonParser.getArrayList(mResult, terms,
+        assertEquals(0, JsonParser.getDataList(mResult, terms,
                 GpDescription.GpTerm.class).size());
         JsonPutter.put(mResult, terms, array);
-        ArrayList<GpDescription.GpTerm> parsed = JsonParser.getArrayList(mResult, terms,
+        ArrayList<GpDescription.GpTerm> parsed = JsonParser.getDataList(mResult, terms,
                 GpDescription.GpTerm.class);
         assertEquals(termArray.size(), parsed.size());
 

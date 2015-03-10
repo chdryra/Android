@@ -11,7 +11,7 @@ package com.chdryra.android.librariestest.remoteapifetchers.test;
 import android.test.suitebuilder.annotation.SmallTest;
 
 import com.chdryra.android.librariestest.remoteapifetchers.test.TestUtils.JsonMaker;
-import com.chdryra.android.remoteapifetchers.GpName;
+import com.chdryra.android.remoteapifetchers.GpString;
 
 import junit.framework.TestCase;
 
@@ -22,13 +22,13 @@ import org.json.JSONObject;
  * On: 09/03/2015
  * Email: rizwan.choudrey@gmail.com
  */
-public class GpNameTest extends TestCase {
+public class GpStringTest extends TestCase {
 
     @SmallTest
     public void testGpName() {
         JSONObject result = JsonMaker.newJsonObject(getTestString());
 
-        GpName parsed = new GpName(result);
+        GpString parsed = new GpString(result);
         assertTrue(parsed.isValid());
 
         assertEquals("Google Sydney", parsed.getName());

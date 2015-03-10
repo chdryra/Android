@@ -37,23 +37,23 @@ public class GpOpeningHoursTest extends TestCase {
         ArrayList<GpOpeningHours.GpPeriod> periods = parsed.getPeriods();
         assertEquals(3, periods.size());
 
-        GpOpeningHours.GpPeriod day0 = periods.get(0);
-        assertEquals(0, day0.getOpen().getDay());
-        assertEquals("0900", day0.getOpen().getTime());
-        assertEquals(0, day0.getClose().getDay());
-        assertEquals("1700", day0.getClose().getTime());
+        GpOpeningHours.GpPeriod day = periods.get(0);
+        assertEquals(0, day.getOpen().getDay());
+        assertEquals("0900", day.getOpen().getTime());
+        assertEquals(0, day.getClose().getDay());
+        assertEquals("1700", day.getClose().getTime());
 
-        GpOpeningHours.GpPeriod day1 = periods.get(1);
-        assertEquals(1, day1.getOpen().getDay());
-        assertEquals("0910", day1.getOpen().getTime());
-        assertEquals(1, day1.getClose().getDay());
-        assertEquals("1710", day1.getClose().getTime());
+        day = periods.get(1);
+        assertEquals(1, day.getOpen().getDay());
+        assertEquals("0910", day.getOpen().getTime());
+        assertEquals(1, day.getClose().getDay());
+        assertEquals("1710", day.getClose().getTime());
 
-        GpOpeningHours.GpPeriod day2 = periods.get(2);
-        assertEquals(2, day2.getOpen().getDay());
-        assertEquals("0920", day2.getOpen().getTime());
-        assertEquals(2, day2.getClose().getDay());
-        assertEquals("1720", day2.getClose().getTime());
+        day = periods.get(2);
+        assertEquals(2, day.getOpen().getDay());
+        assertEquals("0920", day.getOpen().getTime());
+        assertEquals(2, day.getClose().getDay());
+        assertEquals("1720", day.getClose().getTime());
     }
 
     @SmallTest

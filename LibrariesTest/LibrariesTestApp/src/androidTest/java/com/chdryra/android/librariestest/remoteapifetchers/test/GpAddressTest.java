@@ -44,50 +44,50 @@ public class GpAddressTest extends TestCase {
         ArrayList<GpAddress.GpAddressComponent> components = parsed.getComponents();
         assertEquals(6, components.size());
 
-        GpAddress.GpAddressComponent c = components.get(0);
-        assertEquals("48", c.getLongName());
-        assertEquals("48", c.getShortName());
+        GpAddress.GpAddressComponent component = components.get(0);
+        assertEquals("48", component.getLongName());
+        assertEquals("48", component.getShortName());
         ArrayList<String> types = new ArrayList<>();
         types.add("street_number");
-        assertEquals(types, c.getComponentTypes());
+        assertEquals(types, component.getComponentTypes());
 
-        c = components.get(1);
-        assertEquals("Pirrama Road", c.getLongName());
-        assertEquals("Pirrama Road", c.getShortName());
+        component = components.get(1);
+        assertEquals("Pirrama Road", component.getLongName());
+        assertEquals("Pirrama Road", component.getShortName());
         types = new ArrayList<>();
         types.add("route");
-        assertEquals(types, c.getComponentTypes());
+        assertEquals(types, component.getComponentTypes());
 
-        c = components.get(2);
-        assertEquals("Pyrmont", c.getLongName());
-        assertEquals("Pyrmont", c.getShortName());
+        component = components.get(2);
+        assertEquals("Pyrmont", component.getLongName());
+        assertEquals("Pyrmont", component.getShortName());
         types = new ArrayList<>();
         types.add("locality");
         types.add("political");
-        assertEquals(types, c.getComponentTypes());
+        assertEquals(types, component.getComponentTypes());
 
-        c = components.get(3);
-        assertEquals("NSW", c.getLongName());
-        assertEquals("NSW", c.getShortName());
+        component = components.get(3);
+        assertEquals("NSW", component.getLongName());
+        assertEquals("NSW", component.getShortName());
         types = new ArrayList<>();
         types.add("administrative_area_level_1");
         types.add("political");
-        assertEquals(types, c.getComponentTypes());
+        assertEquals(types, component.getComponentTypes());
 
-        c = components.get(4);
-        assertEquals("AU", c.getLongName());
-        assertEquals("AU", c.getShortName());
+        component = components.get(4);
+        assertEquals("AU", component.getLongName());
+        assertEquals("AU", component.getShortName());
         types = new ArrayList<>();
         types.add("country");
         types.add("political");
-        assertEquals(types, c.getComponentTypes());
+        assertEquals(types, component.getComponentTypes());
 
-        c = components.get(5);
-        assertEquals("2009", c.getLongName());
-        assertEquals("2009", c.getShortName());
+        component = components.get(5);
+        assertEquals("2009", component.getLongName());
+        assertEquals("2009", component.getShortName());
         types = new ArrayList<>();
         types.add("postal_code");
-        assertEquals(types, c.getComponentTypes());
+        assertEquals(types, component.getComponentTypes());
     }
 
     private String getTestString() {
