@@ -17,8 +17,6 @@ import junit.framework.TestCase;
 
 import org.json.JSONObject;
 
-import java.util.ArrayList;
-
 /**
  * Created by: Rizwan Choudrey
  * On: 09/03/2015
@@ -34,22 +32,22 @@ public class GpOpeningHoursTest extends TestCase {
 
         assertTrue(parsed.isOpenNow());
         assertFalse(parsed.isPermanentlyClosed());
-        ArrayList<GpOpeningHours.GpPeriod> periods = parsed.getPeriods();
+        GpOpeningHours.GpPeriods periods = parsed.getPeriods();
         assertEquals(3, periods.size());
 
-        GpOpeningHours.GpPeriod day = periods.get(0);
+        GpOpeningHours.GpPeriod day = periods.getItem(0);
         assertEquals(0, day.getOpen().getDay());
         assertEquals("0900", day.getOpen().getTime());
         assertEquals(0, day.getClose().getDay());
         assertEquals("1700", day.getClose().getTime());
 
-        day = periods.get(1);
+        day = periods.getItem(1);
         assertEquals(1, day.getOpen().getDay());
         assertEquals("0910", day.getOpen().getTime());
         assertEquals(1, day.getClose().getDay());
         assertEquals("1710", day.getClose().getTime());
 
-        day = periods.get(2);
+        day = periods.getItem(2);
         assertEquals(2, day.getOpen().getDay());
         assertEquals("0920", day.getOpen().getTime());
         assertEquals(2, day.getClose().getDay());

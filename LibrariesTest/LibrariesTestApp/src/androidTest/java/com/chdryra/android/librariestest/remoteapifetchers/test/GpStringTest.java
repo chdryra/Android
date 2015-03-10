@@ -23,18 +23,23 @@ import org.json.JSONObject;
  * Email: rizwan.choudrey@gmail.com
  */
 public class GpStringTest extends TestCase {
-
     @SmallTest
-    public void testGpName() {
+    public void testGpString() {
         JSONObject result = JsonMaker.newJsonObject(getTestString());
 
-        GpString parsed = new GpString(result);
+        GpString parsed = new GpString(result, "name1");
         assertTrue(parsed.isValid());
+        assertEquals("Google", parsed.getString());
 
-        assertEquals("Google Sydney", parsed.getName());
+        parsed = new GpString(result, "name2");
+        assertTrue(parsed.isValid());
+        assertEquals("Sydney", parsed.getString());
     }
 
     private String getTestString() {
-        return "{\n" + "\"name\" : \"Google Sydney\"\n }";
+        return "{\n" +
+                "  \"name1\" : \"Google\", \n" +
+                "  \"name2\" : \"Sydney\"\n" +
+                "}";
     }
 }

@@ -14,6 +14,7 @@ import com.chdryra.android.librariestest.remoteapifetchers.test.TestUtils.JsonMa
 import com.chdryra.android.remoteapifetchers.GpDescription;
 import com.chdryra.android.remoteapifetchers.GpPlaceId;
 import com.chdryra.android.remoteapifetchers.GpPredictions;
+import com.chdryra.android.remoteapifetchers.GpTypes;
 
 import junit.framework.TestCase;
 
@@ -34,31 +35,34 @@ public class GpPredictionsTest extends TestCase {
 
         GpPredictions parsed = new GpPredictions(result);
         assertTrue(parsed.isValid());
+        assertEquals(3, parsed.size());
 
-        ArrayList<GpPredictions.GpPrediction> predictions = parsed.getPredictions();
-        assertEquals(3, predictions.size());
+        checkPrediction1(parsed.getItem(0));
+        checkPrediction2(parsed.getItem(1));
+        checkPrediction3(parsed.getItem(2));
+    }
 
-        //Prediction 1
-        GpPredictions.GpPrediction pred = predictions.get(0);
+    private void checkPrediction1(GpPredictions.GpPrediction pred) {
         assertTrue(pred.isValid());
+
         //Description
         GpDescription description = pred.getDescription();
         assertTrue(description.isValid());
         assertEquals("Paris, France", description.getDescription());
-        ArrayList<GpDescription.GpTerm> terms = description.getTerms();
+        GpDescription.GpTerms terms = description.getTerms();
         assertEquals(2, terms.size());
-        GpDescription.GpTerm term = terms.get(0);
+        GpDescription.GpTerm term = terms.getItem(0);
         assertTrue(term.isValid());
         assertEquals(0, term.getOffset());
         assertEquals("Paris", term.getValue());
-        term = terms.get(1);
+        term = terms.getItem(1);
         assertTrue(term.isValid());
         assertEquals(7, term.getOffset());
         assertEquals("France", term.getValue());
         //PlaceId
         GpPlaceId id = pred.getPlaceId();
         assertTrue(id.isValid());
-        assertEquals("ChIJD7fiBh9u5kcRYJSMaMOCCwQ", id.getPlaceId());
+        assertEquals("ChIJD7fiBh9u5kcRYJSMaMOCCwQ", id.getString());
         //MatchedSubString
         GpPredictions.GpPrediction.GpMatchedSubstrings subStrings = pred.getMatched();
         assertTrue(subStrings.isValid());
@@ -69,7 +73,106 @@ public class GpPredictionsTest extends TestCase {
         assertEquals(5, sub.getLength());
         assertEquals(0, sub.getOffset());
         //Types
-        ArrayList
+        GpTypes types = pred.getTypes();
+        assertTrue(types.isValid());
+        assertEquals(3, types.size());
+        assertEquals("locality", types.getItem(0));
+        assertEquals("political", types.getItem(1));
+        assertEquals("geocode", types.getItem(2));
+    }
+
+    private void checkPrediction2(GpPredictions.GpPrediction pred) {
+        assertTrue(pred.isValid());
+
+        //Description
+        GpDescription description = pred.getDescription();
+        assertTrue(description.isValid());
+        assertEquals("Paris Avenue, Earlwood, New South Wales, Australia",
+                description.getDescription());
+        GpDescription.GpTerms terms = description.getTerms();
+        assertEquals(4, terms.size());
+        GpDescription.GpTerm term = terms.getItem(0);
+        assertTrue(term.isValid());
+        assertEquals(0, term.getOffset());
+        assertEquals("Paris Avenue", term.getValue());
+        term = terms.getItem(1);
+        assertTrue(term.isValid());
+        assertEquals(14, term.getOffset());
+        assertEquals("Earlwood", term.getValue());
+        term = terms.getItem(2);
+        assertTrue(term.isValid());
+        assertEquals(24, term.getOffset());
+        assertEquals("New South Wales", term.getValue());
+        term = terms.getItem(3);
+        assertTrue(term.isValid());
+        assertEquals(41, term.getOffset());
+        assertEquals("Australia", term.getValue());
+        //PlaceId
+        GpPlaceId id = pred.getPlaceId();
+        assertTrue(id.isValid());
+        assertEquals("ChIJrU3KAHG6EmsR5Uwfrk7azrI", id.getString());
+        //MatchedSubString
+        GpPredictions.GpPrediction.GpMatchedSubstrings subStrings = pred.getMatched();
+        assertTrue(subStrings.isValid());
+        ArrayList<GpPredictions.GpPrediction.GpMatchedSubstring> subs = subStrings.getMatches();
+        assertEquals(1, subs.size());
+        GpPredictions.GpPrediction.GpMatchedSubstring sub = subs.get(0);
+        assertTrue(sub.isValid());
+        assertEquals(5, sub.getLength());
+        assertEquals(0, sub.getOffset());
+        //Types
+        GpTypes types = pred.getTypes();
+        assertTrue(types.isValid());
+        assertEquals(2, types.size());
+        assertEquals("route", types.getItem(0));
+        assertEquals("geocode", types.getItem(1));
+    }
+
+    private void checkPrediction3(GpPredictions.GpPrediction pred) {
+        assertTrue(pred.isValid());
+
+        //Description
+        GpDescription description = pred.getDescription();
+        assertTrue(description.isValid());
+        assertEquals("Paris Street, Carlton, New South Wales, Australia",
+                description.getDescription());
+        GpDescription.GpTerms terms = description.getTerms();
+        assertEquals(4, terms.size());
+        GpDescription.GpTerm term = terms.getItem(0);
+        assertTrue(term.isValid());
+        assertEquals(0, term.getOffset());
+        assertEquals("Paris Street", term.getValue());
+        term = terms.getItem(1);
+        assertTrue(term.isValid());
+        assertEquals(14, term.getOffset());
+        assertEquals("Carlton", term.getValue());
+        term = terms.getItem(2);
+        assertTrue(term.isValid());
+        assertEquals(23, term.getOffset());
+        assertEquals("New South Wales", term.getValue());
+        term = terms.getItem(3);
+        assertTrue(term.isValid());
+        assertEquals(40, term.getOffset());
+        assertEquals("Australia", term.getValue());
+        //PlaceId
+        GpPlaceId id = pred.getPlaceId();
+        assertTrue(id.isValid());
+        assertEquals("ChIJCfeffMi5EmsRp7ykjcnb3VY", id.getString());
+        //MatchedSubString
+        GpPredictions.GpPrediction.GpMatchedSubstrings subStrings = pred.getMatched();
+        assertTrue(subStrings.isValid());
+        ArrayList<GpPredictions.GpPrediction.GpMatchedSubstring> subs = subStrings.getMatches();
+        assertEquals(1, subs.size());
+        GpPredictions.GpPrediction.GpMatchedSubstring sub = subs.get(0);
+        assertTrue(sub.isValid());
+        assertEquals(5, sub.getLength());
+        assertEquals(0, sub.getOffset());
+        //Types
+        GpTypes types = pred.getTypes();
+        assertTrue(types.isValid());
+        assertEquals(2, types.size());
+        assertEquals("route", types.getItem(0));
+        assertEquals("geocode", types.getItem(1));
     }
 
     private String getTestString() {

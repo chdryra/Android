@@ -18,8 +18,6 @@ import junit.framework.TestCase;
 
 import org.json.JSONObject;
 
-import java.util.ArrayList;
-
 /**
  * Created by: Rizwan Choudrey
  * On: 10/03/2015
@@ -33,40 +31,36 @@ public class GpPhotosTest extends TestCase {
 
         GpPhotos parsed = new GpPhotos(result);
         assertTrue(parsed.isValid());
+        assertEquals(3, parsed.size());
 
-        ArrayList<GpPhotos.GpPhoto> photos = parsed.getPhotos();
-        assertEquals(3, photos.size());
-
-        GpPhotos.GpPhoto photo = photos.get(0);
+        GpPhotos.GpPhoto photo = parsed.getItem(0);
         assertTrue(photo.isValid());
         GpAttributions attrs = photo.getAttributions();
         assertTrue(attrs.isValid());
-        ArrayList<String> attrsList = new ArrayList<>();
-        attrsList.add("Attribution A");
-        attrsList.add("Attribution B");
-        assertEquals(attrsList, attrs.getAttributions());
+        assertEquals(2, attrs.size());
+        assertEquals("Attribution A", attrs.getItem(0));
+        assertEquals("Attribution B", attrs.getItem(1));
         assertEquals(123, photo.getHeight());
         assertEquals(234, photo.getWidth());
         assertEquals("AAA", photo.getReference());
 
-        photo = photos.get(1);
+        photo = parsed.getItem(1);
         assertTrue(photo.isValid());
         attrs = photo.getAttributions();
         assertTrue(attrs.isValid());
-        assertEquals(0, attrs.getAttributions().size());
+        assertEquals(0, attrs.size());
         assertEquals(234, photo.getHeight());
         assertEquals(345, photo.getWidth());
         assertEquals("BBB", photo.getReference());
 
-        photo = photos.get(2);
+        photo = parsed.getItem(2);
         assertTrue(photo.isValid());
         attrs = photo.getAttributions();
         assertTrue(attrs.isValid());
-        attrsList = new ArrayList<>();
-        attrsList.add("Attribution A");
-        attrsList.add("Attribution C");
-        attrsList.add("Attribution D");
-        assertEquals(attrsList, attrs.getAttributions());
+        assertEquals(3, attrs.size());
+        assertEquals("Attribution A", attrs.getItem(0));
+        assertEquals("Attribution C", attrs.getItem(1));
+        assertEquals("Attribution D", attrs.getItem(2));
         assertEquals(345, photo.getHeight());
         assertEquals(456, photo.getWidth());
         assertEquals("CCC", photo.getReference());

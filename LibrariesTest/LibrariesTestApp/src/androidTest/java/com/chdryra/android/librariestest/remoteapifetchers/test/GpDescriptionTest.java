@@ -17,8 +17,6 @@ import junit.framework.TestCase;
 
 import org.json.JSONObject;
 
-import java.util.ArrayList;
-
 /**
  * Created by: Rizwan Choudrey
  * On: 09/03/2015
@@ -35,25 +33,25 @@ public class GpDescriptionTest extends TestCase {
 
         assertEquals("Paris Avenue, Earlwood, New South Wales, Australia", parsed.getDescription());
 
-        ArrayList<GpDescription.GpTerm> terms = parsed.getTerms();
+        GpDescription.GpTerms terms = parsed.getTerms();
         assertEquals(4, terms.size());
 
-        GpDescription.GpTerm term = terms.get(0);
+        GpDescription.GpTerm term = terms.getItem(0);
         assertTrue(term.isValid());
         assertEquals(0, term.getOffset());
         assertEquals("Paris Avenue", term.getValue());
 
-        term = terms.get(1);
+        term = terms.getItem(1);
         assertTrue(term.isValid());
         assertEquals(14, term.getOffset());
         assertEquals("Earlwood", term.getValue());
 
-        term = terms.get(2);
+        term = terms.getItem(2);
         assertTrue(term.isValid());
         assertEquals(24, term.getOffset());
         assertEquals("New South Wales", term.getValue());
 
-        term = terms.get(3);
+        term = terms.getItem(3);
         assertTrue(term.isValid());
         assertEquals(41, term.getOffset());
         assertEquals("Australia", term.getValue());

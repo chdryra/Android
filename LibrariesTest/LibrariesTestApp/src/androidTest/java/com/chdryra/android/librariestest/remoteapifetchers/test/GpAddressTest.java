@@ -12,12 +12,11 @@ import android.test.suitebuilder.annotation.SmallTest;
 
 import com.chdryra.android.librariestest.remoteapifetchers.test.TestUtils.JsonMaker;
 import com.chdryra.android.remoteapifetchers.GpAddress;
+import com.chdryra.android.remoteapifetchers.GpTypes;
 
 import junit.framework.TestCase;
 
 import org.json.JSONObject;
-
-import java.util.ArrayList;
 
 /**
  * Created by: Rizwan Choudrey
@@ -41,53 +40,55 @@ public class GpAddressTest extends TestCase {
         String formatted = parsed.getFormattedAddress();
         assertEquals("48 Pirrama Road, Pyrmont NSW, Australia", formatted);
 
-        ArrayList<GpAddress.GpAddressComponent> components = parsed.getComponents();
+        GpAddress.GpAddressComponents components = parsed.getComponents();
         assertEquals(6, components.size());
 
-        GpAddress.GpAddressComponent component = components.get(0);
+        GpAddress.GpAddressComponent component = components.getItem(0);
         assertEquals("48", component.getLongName());
         assertEquals("48", component.getShortName());
-        ArrayList<String> types = new ArrayList<>();
-        types.add("street_number");
-        assertEquals(types, component.getComponentTypes());
+        GpTypes types = component.getComponentTypes();
+        assertEquals(1, types.size());
+        assertEquals("street_number", types.getItem(0));
 
-        component = components.get(1);
+        component = components.getItem(1);
         assertEquals("Pirrama Road", component.getLongName());
         assertEquals("Pirrama Road", component.getShortName());
-        types = new ArrayList<>();
-        types.add("route");
-        assertEquals(types, component.getComponentTypes());
+        types = component.getComponentTypes();
+        assertEquals(1, types.size());
+        assertEquals("route", types.getItem(0));
 
-        component = components.get(2);
+        component = components.getItem(2);
         assertEquals("Pyrmont", component.getLongName());
         assertEquals("Pyrmont", component.getShortName());
-        types = new ArrayList<>();
-        types.add("locality");
-        types.add("political");
-        assertEquals(types, component.getComponentTypes());
+        types = component.getComponentTypes();
+        assertEquals(2, types.size());
+        assertEquals("locality", types.getItem(0));
+        assertEquals("political", types.getItem(1));
 
-        component = components.get(3);
+        component = components.getItem(3);
         assertEquals("NSW", component.getLongName());
         assertEquals("NSW", component.getShortName());
-        types = new ArrayList<>();
-        types.add("administrative_area_level_1");
-        types.add("political");
-        assertEquals(types, component.getComponentTypes());
+        types = component.getComponentTypes();
+        assertEquals(2, types.size());
+        assertEquals("administrative_area_level_1", types.getItem(0));
+        assertEquals("political", types.getItem(1));
 
-        component = components.get(4);
+
+        component = components.getItem(4);
         assertEquals("AU", component.getLongName());
         assertEquals("AU", component.getShortName());
-        types = new ArrayList<>();
-        types.add("country");
-        types.add("political");
-        assertEquals(types, component.getComponentTypes());
+        types = component.getComponentTypes();
+        assertEquals(2, types.size());
+        assertEquals("country", types.getItem(0));
+        assertEquals("political", types.getItem(1));
 
-        component = components.get(5);
+
+        component = components.getItem(5);
         assertEquals("2009", component.getLongName());
         assertEquals("2009", component.getShortName());
-        types = new ArrayList<>();
-        types.add("postal_code");
-        assertEquals(types, component.getComponentTypes());
+        types = component.getComponentTypes();
+        assertEquals(1, types.size());
+        assertEquals("postal_code", types.getItem(0));
     }
 
     private String getTestString() {

@@ -17,8 +17,6 @@ import junit.framework.TestCase;
 
 import org.json.JSONObject;
 
-import java.util.ArrayList;
-
 /**
  * Created by: Rizwan Choudrey
  * On: 09/03/2015
@@ -32,13 +30,11 @@ public class GpAttributionsTest extends TestCase {
 
         GpAttributions parsed = new GpAttributions(result);
         assertTrue(parsed.isValid());
-
-        ArrayList<String> attributions = parsed.getAttributions();
-        assertEquals(2, attributions.size());
+        assertEquals(2, parsed.size());
         String a1 = "Listings by <a href=\"http://www.example1.com/\">Example Company 1</a>";
-        assertEquals(a1, attributions.get(0));
+        assertEquals(a1, parsed.getItem(0));
         String a2 = "Listings by <a href=\"http://www.example2.com/\">Example Company 2</a>";
-        assertEquals(a2, attributions.get(1));
+        assertEquals(a2, parsed.getItem(1));
     }
 
     private String getTestString() {

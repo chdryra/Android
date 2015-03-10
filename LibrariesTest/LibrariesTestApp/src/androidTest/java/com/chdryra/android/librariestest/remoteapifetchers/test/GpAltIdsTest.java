@@ -19,8 +19,6 @@ import junit.framework.TestCase;
 
 import org.json.JSONObject;
 
-import java.util.ArrayList;
-
 /**
  * Created by: Rizwan Choudrey
  * On: 09/03/2015
@@ -33,24 +31,22 @@ public class GpAltIdsTest extends TestCase {
 
         GpAltIds parsed = new GpAltIds(result);
         assertTrue(parsed.isValid());
+        assertEquals(2, parsed.size());
 
-        ArrayList<GpAltIds.GpAltId> altids = parsed.getAlts();
-        assertEquals(2, altids.size());
-
-        GpAltIds.GpAltId alt = altids.get(0);
+        GpAltIds.GpAltId alt = parsed.getItem(0);
         assertTrue(alt.isValid());
         GpPlaceId id = alt.getPlaceId();
         assertTrue(id.isValid());
-        assertEquals("D9iJyWEHuEmuEmsRm9hTkapTCrk", id.getPlaceId());
+        assertEquals("D9iJyWEHuEmuEmsRm9hTkapTCrk", id.getString());
         GpScope scope = alt.getScope();
         assertTrue(scope.isValid());
         assertTrue(scope.equals(GpScope.Scope.APP));
 
-        alt = altids.get(1);
+        alt = parsed.getItem(1);
         assertTrue(alt.isValid());
         id = alt.getPlaceId();
         assertTrue(id.isValid());
-        assertEquals("12345676890zdzddvvdzfdffdff", id.getPlaceId());
+        assertEquals("12345676890zdzddvvdzfdffdff", id.getString());
         scope = alt.getScope();
         assertTrue(scope.isValid());
         assertTrue(scope.equals(GpScope.Scope.GOOGLE));
