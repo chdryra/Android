@@ -30,7 +30,7 @@ public class GpReviewsTest extends TestCase {
         GpReviews parsed = new GpReviews(result);
         assertTrue(parsed.isValid());
         assertEquals(5, parsed.size());
-        assertEquals(3.5, parsed.getRating());
+        assertEquals(3.5, parsed.getRating().getRating());
 
         checkReview1(parsed.getItem(0));
         checkReview2(parsed.getItem(1));
