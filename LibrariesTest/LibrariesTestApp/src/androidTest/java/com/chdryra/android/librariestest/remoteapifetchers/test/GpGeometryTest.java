@@ -27,7 +27,7 @@ public class GpGeometryTest extends TestCase {
 
     @SmallTest
     public void testGpGeometry() {
-        JSONObject result = JsonMaker.getJsonObject(getTestString());
+        JSONObject result = JsonMaker.newJsonObject(getTestString());
 
         GpGeometry parsed = new GpGeometry(result);
         assertTrue(parsed.isValid());

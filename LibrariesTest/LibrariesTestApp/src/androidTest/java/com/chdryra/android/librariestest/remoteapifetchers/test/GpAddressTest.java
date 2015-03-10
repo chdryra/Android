@@ -33,7 +33,7 @@ import java.util.ArrayList;
 public class GpAddressTest extends TestCase {
     @SmallTest
     public void testGpAddress() {
-        JSONObject result = JsonMaker.getJsonObject(getTestString());
+        JSONObject result = JsonMaker.newJsonObject(getTestString());
 
         GpAddress parsed = new GpAddress(result);
         assertTrue(parsed.isValid());

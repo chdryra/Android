@@ -3,7 +3,7 @@
  * Unauthorized copying of this file, via any medium is strictly prohibited
  * Proprietary and confidential
  * Author: Rizwan Choudrey
- * Date: 9 March, 2015
+ * Date: 10 March, 2015
  */
 
 package com.chdryra.android.librariestest.remoteapifetchers.test;
@@ -11,7 +11,7 @@ package com.chdryra.android.librariestest.remoteapifetchers.test;
 import android.test.suitebuilder.annotation.SmallTest;
 
 import com.chdryra.android.librariestest.remoteapifetchers.test.TestUtils.JsonMaker;
-import com.chdryra.android.remoteapifetchers.GpName;
+import com.chdryra.android.remoteapifetchers.GpPhoneNumber;
 
 import junit.framework.TestCase;
 
@@ -19,22 +19,26 @@ import org.json.JSONObject;
 
 /**
  * Created by: Rizwan Choudrey
- * On: 09/03/2015
+ * On: 10/03/2015
  * Email: rizwan.choudrey@gmail.com
  */
-public class GpNameTest extends TestCase {
+public class GpPhoneNumberTest extends TestCase {
 
     @SmallTest
-    public void testGpName() {
+    public void testGpPhoneNumber() {
         JSONObject result = JsonMaker.newJsonObject(getTestString());
 
-        GpName parsed = new GpName(result);
+        GpPhoneNumber parsed = new GpPhoneNumber(result);
         assertTrue(parsed.isValid());
 
-        assertEquals("Google Sydney", parsed.getName());
+        assertEquals("(02) 9374 4000", parsed.getFormatted());
+        assertEquals("+61 2 9374 4000", parsed.getInternational());
     }
 
     private String getTestString() {
-        return "{\n" + "\"name\" : \"Google Sydney\"\n }";
+        return "{\n" +
+                "\"formatted_phone_number\" : \"(02) 9374 4000\", \n" +
+                "\"international_phone_number\" : \"+61 2 9374 4000\"\n" +
+                "}";
     }
 }

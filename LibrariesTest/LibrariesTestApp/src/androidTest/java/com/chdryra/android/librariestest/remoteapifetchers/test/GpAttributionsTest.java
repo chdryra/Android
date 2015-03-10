@@ -28,7 +28,7 @@ public class GpAttributionsTest extends TestCase {
 
     @SmallTest
     public void testGpAttributions() {
-        JSONObject result = JsonMaker.getJsonObject(getTestString());
+        JSONObject result = JsonMaker.newJsonObject(getTestString());
 
         GpAttributions parsed = new GpAttributions(result);
         assertTrue(parsed.isValid());

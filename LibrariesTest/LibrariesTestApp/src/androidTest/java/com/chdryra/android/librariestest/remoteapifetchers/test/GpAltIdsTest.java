@@ -29,7 +29,7 @@ import java.util.ArrayList;
 public class GpAltIdsTest extends TestCase {
     @SmallTest
     public void testGpAltIds() {
-        JSONObject result = JsonMaker.getJsonObject(getTestString());
+        JSONObject result = JsonMaker.newJsonObject(getTestString());
 
         GpAltIds parsed = new GpAltIds(result);
         assertTrue(parsed.isValid());

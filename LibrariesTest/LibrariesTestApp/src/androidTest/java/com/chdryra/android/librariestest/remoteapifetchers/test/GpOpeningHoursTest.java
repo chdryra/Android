@@ -27,7 +27,7 @@ import java.util.ArrayList;
 public class GpOpeningHoursTest extends TestCase {
     @SmallTest
     public void testPeriods() {
-        JSONObject result = JsonMaker.getJsonObject(getTestStringPeriods());
+        JSONObject result = JsonMaker.newJsonObject(getTestStringPeriods());
 
         GpOpeningHours parsed = new GpOpeningHours(result);
         assertTrue(parsed.isValid());
@@ -58,7 +58,7 @@ public class GpOpeningHoursTest extends TestCase {
 
     @SmallTest
     public void testAlwaysOpen() {
-        JSONObject result = JsonMaker.getJsonObject(getTestStringAlwaysOpen());
+        JSONObject result = JsonMaker.newJsonObject(getTestStringAlwaysOpen());
 
         GpOpeningHours parsed = new GpOpeningHours(result);
         assertTrue(parsed.isValid());
@@ -70,7 +70,7 @@ public class GpOpeningHoursTest extends TestCase {
 
     @SmallTest
     public void testPermanentlyClosed() {
-        JSONObject result = JsonMaker.getJsonObject(getTestStringClosed());
+        JSONObject result = JsonMaker.newJsonObject(getTestStringClosed());
 
         GpOpeningHours parsed = new GpOpeningHours(result);
         assertTrue(parsed.isValid());

@@ -28,7 +28,7 @@ public class GpDescriptionTest extends TestCase {
 
     @SmallTest
     public void testGpDescription() {
-        JSONObject result = JsonMaker.getJsonObject(getTestString());
+        JSONObject result = JsonMaker.newJsonObject(getTestString());
 
         GpDescription parsed = new GpDescription(result);
         assertTrue(parsed.isValid());
