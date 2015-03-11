@@ -11,9 +11,9 @@ package com.chdryra.android.librariestest.remoteapifetchers.test;
 import android.test.suitebuilder.annotation.SmallTest;
 
 import com.chdryra.android.librariestest.remoteapifetchers.test.TestUtils.JsonMaker;
+import com.chdryra.android.remoteapifetchers.GpAutoCompletePredictions;
 import com.chdryra.android.remoteapifetchers.GpDescription;
 import com.chdryra.android.remoteapifetchers.GpPlaceId;
-import com.chdryra.android.remoteapifetchers.GpPredictions;
 import com.chdryra.android.remoteapifetchers.GpTypes;
 
 import junit.framework.TestCase;
@@ -27,13 +27,13 @@ import java.util.ArrayList;
  * On: 10/03/2015
  * Email: rizwan.choudrey@gmail.com
  */
-public class GpPredictionsTest extends TestCase {
+public class GpAutoCompletePredictionsTest extends TestCase {
 
     @SmallTest
     public void testGpPredictions() {
         JSONObject result = JsonMaker.newJsonObject(getTestString());
 
-        GpPredictions parsed = new GpPredictions(result);
+        GpAutoCompletePredictions parsed = new GpAutoCompletePredictions(result);
         assertTrue(parsed.isValid());
         assertEquals(3, parsed.size());
 
@@ -42,7 +42,7 @@ public class GpPredictionsTest extends TestCase {
         checkPrediction3(parsed.getItem(2));
     }
 
-    private void checkPrediction1(GpPredictions.GpPrediction pred) {
+    private void checkPrediction1(GpAutoCompletePredictions.GpPrediction pred) {
         assertTrue(pred.isValid());
 
         //Description
@@ -64,11 +64,12 @@ public class GpPredictionsTest extends TestCase {
         assertTrue(id.isValid());
         assertEquals("ChIJD7fiBh9u5kcRYJSMaMOCCwQ", id.getString());
         //MatchedSubString
-        GpPredictions.GpPrediction.GpMatchedSubstrings subStrings = pred.getMatched();
+        GpAutoCompletePredictions.GpPrediction.GpMatchedSubstrings subStrings = pred.getMatched();
         assertTrue(subStrings.isValid());
-        ArrayList<GpPredictions.GpPrediction.GpMatchedSubstring> subs = subStrings.getMatches();
+        ArrayList<GpAutoCompletePredictions.GpPrediction.GpMatchedSubstring> subs = subStrings
+                .getMatches();
         assertEquals(1, subs.size());
-        GpPredictions.GpPrediction.GpMatchedSubstring sub = subs.get(0);
+        GpAutoCompletePredictions.GpPrediction.GpMatchedSubstring sub = subs.get(0);
         assertTrue(sub.isValid());
         assertEquals(5, sub.getLength());
         assertEquals(0, sub.getOffset());
@@ -81,7 +82,7 @@ public class GpPredictionsTest extends TestCase {
         assertEquals("geocode", types.getItem(2));
     }
 
-    private void checkPrediction2(GpPredictions.GpPrediction pred) {
+    private void checkPrediction2(GpAutoCompletePredictions.GpPrediction pred) {
         assertTrue(pred.isValid());
 
         //Description
@@ -112,11 +113,12 @@ public class GpPredictionsTest extends TestCase {
         assertTrue(id.isValid());
         assertEquals("ChIJrU3KAHG6EmsR5Uwfrk7azrI", id.getString());
         //MatchedSubString
-        GpPredictions.GpPrediction.GpMatchedSubstrings subStrings = pred.getMatched();
+        GpAutoCompletePredictions.GpPrediction.GpMatchedSubstrings subStrings = pred.getMatched();
         assertTrue(subStrings.isValid());
-        ArrayList<GpPredictions.GpPrediction.GpMatchedSubstring> subs = subStrings.getMatches();
+        ArrayList<GpAutoCompletePredictions.GpPrediction.GpMatchedSubstring> subs = subStrings
+                .getMatches();
         assertEquals(1, subs.size());
-        GpPredictions.GpPrediction.GpMatchedSubstring sub = subs.get(0);
+        GpAutoCompletePredictions.GpPrediction.GpMatchedSubstring sub = subs.get(0);
         assertTrue(sub.isValid());
         assertEquals(5, sub.getLength());
         assertEquals(0, sub.getOffset());
@@ -128,7 +130,7 @@ public class GpPredictionsTest extends TestCase {
         assertEquals("geocode", types.getItem(1));
     }
 
-    private void checkPrediction3(GpPredictions.GpPrediction pred) {
+    private void checkPrediction3(GpAutoCompletePredictions.GpPrediction pred) {
         assertTrue(pred.isValid());
 
         //Description
@@ -159,11 +161,12 @@ public class GpPredictionsTest extends TestCase {
         assertTrue(id.isValid());
         assertEquals("ChIJCfeffMi5EmsRp7ykjcnb3VY", id.getString());
         //MatchedSubString
-        GpPredictions.GpPrediction.GpMatchedSubstrings subStrings = pred.getMatched();
+        GpAutoCompletePredictions.GpPrediction.GpMatchedSubstrings subStrings = pred.getMatched();
         assertTrue(subStrings.isValid());
-        ArrayList<GpPredictions.GpPrediction.GpMatchedSubstring> subs = subStrings.getMatches();
+        ArrayList<GpAutoCompletePredictions.GpPrediction.GpMatchedSubstring> subs = subStrings
+                .getMatches();
         assertEquals(1, subs.size());
-        GpPredictions.GpPrediction.GpMatchedSubstring sub = subs.get(0);
+        GpAutoCompletePredictions.GpPrediction.GpMatchedSubstring sub = subs.get(0);
         assertTrue(sub.isValid());
         assertEquals(5, sub.getLength());
         assertEquals(0, sub.getOffset());
