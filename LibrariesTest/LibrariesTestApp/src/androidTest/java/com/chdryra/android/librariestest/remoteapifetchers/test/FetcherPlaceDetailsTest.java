@@ -25,7 +25,7 @@ public class FetcherPlaceDetailsTest extends TestCase {
     public void testFetcherPlaceDetails() {
         String placeId = "ChIJN1t_tDeuEmsRUsoyG83frY4";
         FetcherPlaceDetails fetcher = new FetcherPlaceDetails(placeId);
-        FetchedPlaceDetails results = fetcher.getFetched(FetchedPlaceDetails.class);
+        FetchedPlaceDetails results = fetcher.getFetched();
         assertTrue(results.isValid());
         assertEquals(placeId, results.getPlaceId().getString());
         assertEquals("Google", results.getDetails().getName().getString());
