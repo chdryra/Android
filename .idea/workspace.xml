@@ -26,18 +26,16 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.chdryra.android.reviewer" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbecc251-2e59-4e4e-b243-801cf0d21d57" name="Default" comment="Changed location dialog to show distances to autocomplete suggestions">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MyGeneralLibrary/src/main/java/com/chdryra/android/mygenerallibrary/DistanceFormatter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MyGeneralLibrary/src/main/java/com/chdryra/android/mygenerallibrary/MathRounder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MyGeneralLibrary/src/main/java/com/chdryra/android/mygenerallibrary/NumberFormatter.java" />
+    <list default="true" id="cbecc251-2e59-4e4e-b243-801cf0d21d57" name="Default" comment="Changed location dialog to show distances to autocomplete suggestions. When locations added, sets correct latLng depending on what was selected">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyAndroidWidgets" afterPath="$PROJECT_DIR$/MyAndroidWidgets" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyGeneralLibrary" afterPath="$PROJECT_DIR$/MyGeneralLibrary" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RemoteAPIFetchers" afterPath="$PROJECT_DIR$/RemoteAPIFetchers" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer" afterPath="$PROJECT_DIR$/Reviewer" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/LayoutLocationAdd.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/LayoutLocationAdd.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/RatingFormatter.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/RatingFormatter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/Reviewer.iml" afterPath="$PROJECT_DIR$/Reviewer/Reviewer.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/VhLocatedPlaceDistance.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/VhLocatedPlaceDistance.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/VhdLocatedPlaceDistance.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/VhdLocatedPlaceDistance.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestUtils" afterPath="$PROJECT_DIR$/TestUtils" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyAndroidWidgets/MyAndroidWidgets.iml" afterPath="$PROJECT_DIR$/MyAndroidWidgets/MyAndroidWidgets.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyGeneralLibrary/MyGeneralLibrary.iml" afterPath="$PROJECT_DIR$/MyGeneralLibrary/MyGeneralLibrary.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RemoteAPIFetchers/RemoteAPIFetchers.iml" afterPath="$PROJECT_DIR$/RemoteAPIFetchers/RemoteAPIFetchers.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestUtils/TestUtils.iml" afterPath="$PROJECT_DIR$/TestUtils/TestUtils.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AndroidStudio.iws" />
@@ -69,7 +67,7 @@
       <file leaf-file-name="LayoutLocationAdd.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/LayoutLocationAdd.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="760" max-vertical-offset="3500">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2960" max-vertical-offset="3540">
               <caret line="70" column="54" selection-start-line="70" selection-start-column="54" selection-end-line="70" selection-end-column="54" />
               <folding />
             </state>
@@ -105,8 +103,8 @@
             <state vertical-scroll-proportion="0.0" vertical-offset="490" max-vertical-offset="1180">
               <caret line="48" column="42" selection-start-line="48" selection-start-column="42" selection-end-line="48" selection-end-column="42" />
               <folding>
-                <element signature="e#1174#1175#0" expanded="true" />
-                <element signature="e#1229#1230#0" expanded="true" />
+                <element signature="e#1175#1176#0" expanded="true" />
+                <element signature="e#1230#1231#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -125,9 +123,11 @@
       <file leaf-file-name="NumberFormatter.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MyGeneralLibrary/src/main/java/com/chdryra/android/mygenerallibrary/NumberFormatter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3327032" vertical-offset="384" max-vertical-offset="940">
-              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.68688524" vertical-offset="201" max-vertical-offset="1100">
+              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -3463,8 +3463,8 @@
         <option value="$PROJECT_DIR$/MyGeneralLibrary/src/main/java/com/chdryra/android/mygenerallibrary/NumberToStringFormatter.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/VhLocatedPlaceDistance.java" />
         <option value="$PROJECT_DIR$/MyGeneralLibrary/src/main/java/com/chdryra/android/mygenerallibrary/DistanceFormatter.java" />
-        <option value="$PROJECT_DIR$/MyGeneralLibrary/src/main/java/com/chdryra/android/mygenerallibrary/NumberFormatter.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/LayoutLocationAdd.java" />
+        <option value="$PROJECT_DIR$/MyGeneralLibrary/src/main/java/com/chdryra/android/mygenerallibrary/NumberFormatter.java" />
       </list>
     </option>
   </component>
@@ -5232,7 +5232,11 @@
       <created>1426172318259</created>
       <updated>1426172318259</updated>
     </task>
-    <option name="localTasksCounter" value="261" />
+    <task id="LOCAL-00261" summary="Changed location dialog to show distances to autocomplete suggestions. When locations added, sets correct latLng depending on what was selected">
+      <created>1426182362029</created>
+      <updated>1426182362029</updated>
+    </task>
+    <option name="localTasksCounter" value="262" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -5271,14 +5275,14 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33619764" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32867885" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32867885" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3104189" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3104189" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39742213" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23906083" sideWeight="0.4992" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23906083" sideWeight="0.4992" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39742213" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39742213" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -5338,7 +5342,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Some renaming" />
     <MESSAGE value="Commit for backup. In the middle of more refactoring. Doesn't compile yet." />
     <MESSAGE value="Refactoring mostly done. COmpiles and works. However trying to change activity for context in NewReviewBuilder seems to screw up inflation. Leaving activity for time being although messes up tests." />
     <MESSAGE value="Refactoring almost done. Rewrote some tests. They seem to pass." />
@@ -5363,7 +5366,8 @@
     <MESSAGE value="Split out FetcherPlacesAPI from RemoteAPIFetchers. That library is purely about fetching and parsing results. GeneralLibrary and Reviewer have copies of the old FetcherPlacesAPI (GooglePlacesApi and PlacesApi respectively) to extract primitives etc. as they see fit." />
     <MESSAGE value="Some adjustments for changing to PlacesApi" />
     <MESSAGE value="Changed location dialog to show distances to autocomplete suggestions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed location dialog to show distances to autocomplete suggestions" />
+    <MESSAGE value="Changed location dialog to show distances to autocomplete suggestions. When locations added, sets correct latLng depending on what was selected" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed location dialog to show distances to autocomplete suggestions. When locations added, sets correct latLng depending on what was selected" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -5822,8 +5826,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="490" max-vertical-offset="1180">
           <caret line="48" column="42" selection-start-line="48" selection-start-column="42" selection-end-line="48" selection-end-column="42" />
           <folding>
-            <element signature="e#1174#1175#0" expanded="true" />
-            <element signature="e#1229#1230#0" expanded="true" />
+            <element signature="e#1175#1176#0" expanded="true" />
+            <element signature="e#1230#1231#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -5854,9 +5858,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MyGeneralLibrary/src/main/java/com/chdryra/android/mygenerallibrary/NumberFormatter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3327032" vertical-offset="384" max-vertical-offset="940">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.68688524" vertical-offset="201" max-vertical-offset="1100">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
