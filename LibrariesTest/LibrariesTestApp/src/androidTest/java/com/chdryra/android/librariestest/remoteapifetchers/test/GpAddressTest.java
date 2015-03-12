@@ -12,6 +12,7 @@ import android.test.suitebuilder.annotation.SmallTest;
 
 import com.chdryra.android.librariestest.remoteapifetchers.test.TestUtils.JsonMaker;
 import com.chdryra.android.remoteapifetchers.GpAddress;
+import com.chdryra.android.remoteapifetchers.GpString;
 import com.chdryra.android.remoteapifetchers.GpTypes;
 
 import junit.framework.TestCase;
@@ -37,8 +38,8 @@ public class GpAddressTest extends TestCase {
         GpAddress parsed = new GpAddress(result);
         assertTrue(parsed.isValid());
 
-        String formatted = parsed.getFormattedAddress();
-        assertEquals("48 Pirrama Road, Pyrmont NSW, Australia", formatted);
+        GpString formatted = parsed.getFormattedAddress();
+        assertEquals("48 Pirrama Road, Pyrmont NSW, Australia", formatted.getString());
 
         GpAddress.GpAddressComponents components = parsed.getComponents();
         assertEquals(6, components.size());
