@@ -8,6 +8,7 @@
 
 package com.chdryra.android.librariestest.mygenerallibrary.test;
 
+import android.location.Location;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.UiThreadTest;
 import android.test.suitebuilder.annotation.SmallTest;
@@ -15,7 +16,6 @@ import android.test.suitebuilder.annotation.SmallTest;
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.mygenerallibrary.LocationClientConnector;
 import com.chdryra.android.testutils.CallBackSignaler;
-import com.google.android.gms.maps.model.LatLng;
 
 /**
  * Created by: Rizwan Choudrey
@@ -70,13 +70,13 @@ public class ZZZLocationClientConnectorTest extends
 
         LocationClientConnector.Locatable listener = new LocationClientConnector.Locatable() {
             @Override
-            public void onLocated(LatLng latLng) {
-                assertNotNull(latLng);
+            public void onLocated(Location location) {
+                assertNotNull(location);
             }
 
             @Override
-            public void onLocationClientConnected(LatLng latLng) {
-                assertNotNull(latLng);
+            public void onLocationClientConnected(Location location) {
+                assertNotNull(location);
                 mConnected = true;
                 mSignaler.signal();
             }
