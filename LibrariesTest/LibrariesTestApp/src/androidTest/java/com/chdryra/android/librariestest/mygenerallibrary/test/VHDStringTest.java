@@ -25,7 +25,7 @@ public class VHDStringTest extends TestCase {
     @SmallTest
     public void testNewViewHolderNotNull() {
         VHDString vs = new VHDString(TEST);
-        assertNotNull(vs.newViewHolder());
+        assertNotNull(vs.getViewHolder());
     }
 
     @SmallTest

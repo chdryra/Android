@@ -26,7 +26,7 @@ public class VHDDualStringTest extends TestCase {
 
     @SmallTest
     public void testNewViewHolderNotNull() {
-        assertNotNull(mDualString.newViewHolder());
+        assertNotNull(mDualString.getViewHolder());
     }
 
     @SmallTest

@@ -18,8 +18,6 @@ import com.google.android.gms.maps.model.LatLng;
 
 import junit.framework.TestCase;
 
-import org.json.JSONException;
-
 /**
  * Created by: Rizwan Choudrey
  * On: 13/03/2015
@@ -47,7 +45,7 @@ public class PlacesApiTest extends TestCase {
             Location.distanceBetween(LATLNG.latitude, LATLNG.longitude, latLng.latitude,
                     latLng.longitude, results);
             assertTrue(results[0] < 100);
-        } catch (JSONException e) {
+        } catch (Exception e) {
             e.printStackTrace();
             fail();
         }
