@@ -10,7 +10,7 @@ package com.chdryra.android.librariestest.mygenerallibrary.test;
 
 import android.test.suitebuilder.annotation.SmallTest;
 
-import com.chdryra.android.mygenerallibrary.AverageLatLng;
+import com.chdryra.android.mygenerallibrary.LatLngMidpoint;
 import com.google.android.gms.maps.model.LatLng;
 
 import junit.framework.TestCase;
@@ -20,13 +20,15 @@ import junit.framework.TestCase;
  * On: 08/07/2015
  * Email: rizwan.choudrey@gmail.com
  */
-public class AverageLatLngTest extends TestCase {
+public class LatLngMidpointTest extends TestCase {
     private static final double NYC_LAT = 40.7143528;
     private static final double NYC_LNG = -74.0059731;
     private static final double CHI_LAT = 41.8781136;
     private static final double CHI_LNG = -87.6297982;
     private static final double ATL_LAT = 33.7489954;
     private static final double ATL_LNG = -84.3879824;
+    private static final double MID_LAT = 38.922418;
+    private static final double MID_LNG = -82.05615;
 
     @SmallTest
     public void testAverageLatLng() {
@@ -39,7 +41,7 @@ public class AverageLatLngTest extends TestCase {
         latLngs[0] = nyc;
         latLngs[1] = nyc;
         latLngs[2] = nyc;
-        AverageLatLng average = new AverageLatLng(latLngs);
+        LatLngMidpoint average = new LatLngMidpoint(latLngs);
         LatLng midpoint = average.getGeoMidpoint();
         assertEquals(NYC_LAT, midpoint.latitude, 0.01);
         assertEquals(NYC_LNG, midpoint.longitude, 0.01);
@@ -47,7 +49,7 @@ public class AverageLatLngTest extends TestCase {
         latLngs[0] = chi;
         latLngs[1] = chi;
         latLngs[2] = chi;
-        average = new AverageLatLng(latLngs);
+        average = new LatLngMidpoint(latLngs);
         midpoint = average.getGeoMidpoint();
         assertEquals(CHI_LAT, midpoint.latitude, 0.01);
         assertEquals(CHI_LNG, midpoint.longitude, 0.01);
@@ -55,7 +57,7 @@ public class AverageLatLngTest extends TestCase {
         latLngs[0] = atl;
         latLngs[1] = atl;
         latLngs[2] = atl;
-        average = new AverageLatLng(latLngs);
+        average = new LatLngMidpoint(latLngs);
         midpoint = average.getGeoMidpoint();
         assertEquals(ATL_LAT, midpoint.latitude, 0.01);
         assertEquals(ATL_LNG, midpoint.longitude, 0.01);
@@ -63,9 +65,9 @@ public class AverageLatLngTest extends TestCase {
         latLngs[0] = nyc;
         latLngs[1] = chi;
         latLngs[2] = atl;
-        average = new AverageLatLng(latLngs);
+        average = new LatLngMidpoint(latLngs);
         midpoint = average.getGeoMidpoint();
-        assertEquals(38.922418, midpoint.latitude, 0.01);
-        assertEquals(-82.05615, midpoint.longitude, 0.01);
+        assertEquals(MID_LAT, midpoint.latitude, 0.01);
+        assertEquals(MID_LNG, midpoint.longitude, 0.01);
     }
 }
