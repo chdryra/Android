@@ -48,6 +48,7 @@ public class GpPlaceDetailsResultTest extends TestCase {
         JSONObject result = JsonMaker.newJsonObject(getTestString());
 
         GpPlaceDetailsResult parsed = new GpPlaceDetailsResult(result);
+        assertNotNull(result);
         assertTrue(parsed.isValid());
 
         checkGpAddress(parsed);
@@ -71,38 +72,46 @@ public class GpPlaceDetailsResultTest extends TestCase {
 
     private void checkGpUtcOffSet(GpPlaceDetailsResult parsed) {
         GpUtcOffset offset = parsed.getUtcOffset();
+        assertNotNull(offset);
         assertTrue(offset.isValid());
         assertEquals(600, offset.getOffset());
     }
 
     private void checkGpPriceLevel(GpPlaceDetailsResult parsed) {
         GpPriceLevel level = parsed.getPriceLevel();
+        assertNotNull(level);
         assertTrue(level.isValid());
         assertEquals(GpPriceLevel.PriceLevel.MODERATE, level.getLevel());
     }
 
     private void checkGpPhotos(GpPlaceDetailsResult parsed) {
         GpPhotos photos = parsed.getPhotos();
+        assertNotNull(photos);
         assertTrue(photos.isValid());
         assertEquals(2, photos.size());
 
         GpPhotos.GpPhoto photo = photos.getItem(0);
+        assertNotNull(photo);
         assertTrue(photo.isValid());
         assertEquals(123, photo.getHeight());
         assertEquals(234, photo.getWidth());
         assertEquals("AAA", photo.getReference());
+
         GpAttributions attrs = photo.getAttributions();
+        assertNotNull(attrs);
         assertTrue(attrs.isValid());
         assertEquals(2, attrs.size());
         assertEquals("Attribution A", attrs.getItem(0));
         assertEquals("Attribution B", attrs.getItem(1));
 
         photo = photos.getItem(1);
+        assertNotNull(photo);
         assertTrue(photo.isValid());
         assertEquals(345, photo.getHeight());
         assertEquals(456, photo.getWidth());
         assertEquals("CCC", photo.getReference());
         attrs = photo.getAttributions();
+        assertNotNull(attrs);
         assertTrue(attrs.isValid());
         assertEquals(3, attrs.size());
         assertEquals("Attribution A", attrs.getItem(0));
@@ -112,32 +121,40 @@ public class GpPlaceDetailsResultTest extends TestCase {
 
     private void checkGpOpeningHours(GpPlaceDetailsResult parsed) {
         GpOpeningHours hours = parsed.getOpeningHours();
+        assertNotNull(hours);
         assertTrue(hours.isValid());
         assertTrue(hours.isOpenNow());
         assertFalse(hours.isAlwaysOpen());
         assertFalse(hours.isPermanentlyClosed());
         GpOpeningHours.GpPeriods periods = hours.getPeriods();
+        assertNotNull(periods);
         assertTrue(periods.isValid());
         assertEquals(2, periods.size());
 
         GpOpeningHours.GpPeriod period = periods.getItem(0);
+        assertNotNull(period);
         assertTrue(period.isValid());
         GpOpeningHours.GpDayTime dayTime = period.getOpen();
+        assertNotNull(dayTime);
         assertTrue(dayTime.isValid());
         assertEquals(0, dayTime.getDay());
         assertEquals("0900", dayTime.getTime());
         dayTime = period.getClose();
+        assertNotNull(dayTime);
         assertTrue(dayTime.isValid());
         assertEquals(0, dayTime.getDay());
         assertEquals("1700", dayTime.getTime());
 
         period = periods.getItem(1);
+        assertNotNull(period);
         assertTrue(period.isValid());
         dayTime = period.getOpen();
+        assertNotNull(dayTime);
         assertTrue(dayTime.isValid());
         assertEquals(1, dayTime.getDay());
         assertEquals("0911", dayTime.getTime());
         dayTime = period.getClose();
+        assertNotNull(dayTime);
         assertTrue(dayTime.isValid());
         assertEquals(1, dayTime.getDay());
         assertEquals("1711", dayTime.getTime());
@@ -145,24 +162,28 @@ public class GpPlaceDetailsResultTest extends TestCase {
 
     private void checkGpWebsite(GpPlaceDetailsResult parsed) {
         GpWebsite website = parsed.getWebsite();
+        assertNotNull(website);
         assertTrue(website.isValid());
         assertEquals("http://www.google.com.au/", website.getString());
     }
 
     private void checkGpVicinity(GpPlaceDetailsResult parsed) {
         GpVicinity vicinity = parsed.getVicinity();
+        assertNotNull(vicinity);
         assertTrue(vicinity.isValid());
         assertEquals("48 Pirrama Road, Pyrmont", vicinity.getString());
     }
 
     private void checkGpUrl(GpPlaceDetailsResult parsed) {
         GpUrl url = parsed.getUrl();
+        assertNotNull(url);
         assertTrue(url.isValid());
         assertEquals("http://maps.google.com/maps/place?cid=10281119596374313554", url.getString());
     }
 
     private void checkGpTypes(GpPlaceDetailsResult parsed) {
         GpTypes types = parsed.getTypes();
+        assertNotNull(types);
         assertTrue(types.isValid());
         assertEquals(1, types.size());
         assertEquals("establishment", types.getItem(0));
@@ -170,15 +191,18 @@ public class GpPlaceDetailsResultTest extends TestCase {
 
     private void checkGpReviews(GpPlaceDetailsResult parsed) {
         GpReviews reviews = parsed.getReviews();
+        assertNotNull(reviews);
         assertTrue(reviews.isValid());
 
         GpRating rating = reviews.getRating();
+        assertNotNull(rating);
         assertTrue(rating.isValid());
         assertEquals(4.7, rating.getRating());
 
         assertEquals(3, reviews.size());
 
         GpReviews.GpReview review = reviews.getItem(0);
+        assertNotNull(review);
         assertTrue(review.isValid());
         assertEquals("Simon Bengtsson", review.getAuthor());
         assertEquals("https://plus.google.com/104675092887960962573", review.getUrl());
@@ -187,14 +211,17 @@ public class GpPlaceDetailsResultTest extends TestCase {
         assertEquals(5, review.getRating());
         assertEquals(1338440552869L, review.getDate().getTime());
         GpReviews.GpAspects aspects = review.getAspects();
+        assertNotNull(aspects);
         assertTrue(aspects.isValid());
         assertEquals(1, aspects.size());
         GpReviews.GpAspect aspect = aspects.getItem(0);
+        assertNotNull(aspect);
         assertTrue(aspect.isValid());
         assertEquals(3, aspect.getRating());
         assertEquals(GpReviews.AspectType.QUALITY, aspect.getType());
 
         review = reviews.getItem(1);
+        assertNotNull(review);
         assertTrue(review.isValid());
         assertEquals("Felix Rauch Valenti", review.getAuthor());
         assertEquals("https://plus.google.com/103291556674373289857", review.getUrl());
@@ -202,15 +229,19 @@ public class GpPlaceDetailsResultTest extends TestCase {
         assertEquals("Best place to work :-)", review.getText());
         assertEquals(5, review.getRating());
         assertEquals(1338411244325L, review.getDate().getTime());
+
         aspects = review.getAspects();
+        assertNotNull(aspects);
         assertTrue(aspects.isValid());
         assertEquals(1, aspects.size());
         aspect = aspects.getItem(0);
+        assertNotNull(aspect);
         assertTrue(aspect.isValid());
         assertEquals(3, aspect.getRating());
         assertEquals(GpReviews.AspectType.QUALITY, aspect.getType());
 
         review = reviews.getItem(2);
+        assertNotNull(review);
         assertTrue(review.isValid());
         assertEquals("Chris", review.getAuthor());
         assertNull(review.getUrl());
@@ -219,9 +250,11 @@ public class GpPlaceDetailsResultTest extends TestCase {
         assertEquals(5, review.getRating());
         assertEquals(1330467089039L, review.getDate().getTime());
         aspects = review.getAspects();
+        assertNotNull(aspects);
         assertTrue(aspects.isValid());
         assertEquals(1, aspects.size());
         aspect = aspects.getItem(0);
+        assertNotNull(aspect);
         assertTrue(aspect.isValid());
         assertEquals(3, aspect.getRating());
         assertEquals(GpReviews.AspectType.QUALITY, aspect.getType());
@@ -229,86 +262,105 @@ public class GpPlaceDetailsResultTest extends TestCase {
 
     private void checkGpAltIds(GpPlaceDetailsResult parsed) {
         GpAltIds alts = parsed.getAltIds();
+        assertNotNull(alts);
         assertTrue(alts.isValid());
         assertEquals(1, alts.size());
         GpAltIds.GpAltId alt = alts.getItem(0);
+        assertNotNull(alt);
         assertTrue(alt.isValid());
         GpPlaceId id = alt.getPlaceId();
+        assertNotNull(id);
         assertTrue(id.isValid());
         assertEquals("D9iJyWEHuEmuEmsRm9hTkapTCrk", id.getString());
         GpScope scope = alt.getScope();
+        assertNotNull(scope);
         assertTrue(scope.isValid());
         assertTrue(scope.equals(GpScope.Scope.APP));
     }
 
     private void checkGpScope(GpPlaceDetailsResult parsed) {
         GpScope scope = parsed.getScope();
+        assertNotNull(scope);
         assertTrue(scope.isValid());
         assertTrue(scope.equals(GpScope.Scope.GOOGLE));
     }
 
     private void checkGpAddress(GpPlaceDetailsResult parsed) {
         GpAddress address = parsed.getAddress();
+        assertNotNull(address);
         assertTrue(address.isValid());
-        assertEquals("48 Pirrama Road, Pyrmont NSW, Australia", address.getFormattedAddress());
+        assertEquals("48 Pirrama Road, Pyrmont NSW, Australia", address.getFormattedAddress().getString());
 
         GpAddress.GpAddressComponents components = address.getComponents();
+        assertNotNull(components);
         assertTrue(components.isValid());
         assertEquals(6, components.size());
 
         GpAddress.GpAddressComponent c = components.getItem(0);
+        assertNotNull(c);
         assertTrue(c.isValid());
         assertEquals("48", c.getLongName());
         assertEquals("48", c.getShortName());
         GpTypes types = c.getComponentTypes();
+        assertNotNull(types);
         assertTrue(types.isValid());
         assertEquals(1, types.size());
         assertEquals("street_number", types.getItem(0));
 
         c = components.getItem(1);
+        assertNotNull(c);
         assertTrue(c.isValid());
         assertEquals("Pirrama Road", c.getLongName());
         assertEquals("Pirrama Rd", c.getShortName());
         types = c.getComponentTypes();
+        assertNotNull(types);
         assertTrue(types.isValid());
         assertEquals(1, types.size());
         assertEquals("route", types.getItem(0));
 
         c = components.getItem(2);
+        assertNotNull(c);
         assertTrue(c.isValid());
         assertEquals("Pyrmont", c.getLongName());
         assertEquals("Pyrmont", c.getShortName());
         types = c.getComponentTypes();
+        assertNotNull(types);
         assertTrue(types.isValid());
         assertEquals(2, types.size());
         assertEquals("locality", types.getItem(0));
         assertEquals("political", types.getItem(1));
 
         c = components.getItem(3);
+        assertNotNull(c);
         assertTrue(c.isValid());
         assertEquals("NSW", c.getLongName());
         assertEquals("NSW", c.getShortName());
         types = c.getComponentTypes();
+        assertNotNull(types);
         assertTrue(types.isValid());
         assertEquals(2, types.size());
         assertEquals("administrative_area_level_1", types.getItem(0));
         assertEquals("political", types.getItem(1));
 
         c = components.getItem(4);
+        assertNotNull(c);
         assertTrue(c.isValid());
         assertEquals("AU", c.getLongName());
         assertEquals("AU", c.getShortName());
         types = c.getComponentTypes();
+        assertNotNull(types);
         assertTrue(types.isValid());
         assertEquals(2, types.size());
         assertEquals("country", types.getItem(0));
         assertEquals("political", types.getItem(1));
 
         c = components.getItem(5);
+        assertNotNull(c);
         assertTrue(c.isValid());
         assertEquals("2009", c.getLongName());
         assertEquals("2009", c.getShortName());
         types = c.getComponentTypes();
+        assertNotNull(types);
         assertTrue(types.isValid());
         assertEquals(1, types.size());
         assertEquals("postal_code", types.getItem(0));
@@ -316,6 +368,7 @@ public class GpPlaceDetailsResultTest extends TestCase {
 
     private void checkGpPhoneNumber(GpPlaceDetailsResult parsed) {
         GpPhoneNumber number = parsed.getPhoneNumber();
+        assertNotNull(number);
         assertTrue(number.isValid());
         assertEquals("(02) 9374 4000", number.getFormatted());
         assertEquals("+61 2 9374 4000", number.getInternational());
@@ -323,14 +376,17 @@ public class GpPlaceDetailsResultTest extends TestCase {
 
     private void checkGpGeometry(GpPlaceDetailsResult parsed) {
         GpGeometry geo = parsed.getGeometry();
+        assertNotNull(geo);
         assertTrue(geo.isValid());
         LatLng latLng = geo.getLatLng();
+        assertNotNull(latLng);
         assertEquals(-33.8669710, latLng.latitude);
         assertEquals(151.1958750, latLng.longitude);
     }
 
     private void checkGpIcon(GpPlaceDetailsResult parsed) {
         GpIcon icon = parsed.getIcon();
+        assertNotNull(icon);
         assertTrue(icon.isValid());
         assertEquals("http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
                 icon.getString());
@@ -338,12 +394,14 @@ public class GpPlaceDetailsResultTest extends TestCase {
 
     private void checkGpName(GpPlaceDetailsResult parsed) {
         GpName name = parsed.getName();
+        assertNotNull(name);
         assertTrue(name.isValid());
         assertEquals("Google Sydney", name.getString());
     }
 
     private void checkGpPlaceId(GpPlaceDetailsResult parsed) {
         GpPlaceId id = parsed.getPlaceId();
+        assertNotNull(id);
         assertTrue(id.isValid());
         assertEquals("ChIJN1t_tDeuEmsRUsoyG83frY4", id.getString());
     }
