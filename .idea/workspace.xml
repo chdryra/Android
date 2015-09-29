@@ -40,33 +40,63 @@
     <bookmark url="file://$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/TestUtils/TestReviews.java" description="review.mPublishDate = cal.getTime();" line="263" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d705fcbe-517c-42a0-9055-f982038e4276" name="Default" comment="Tag automatically includes subject in camel case&#10;&#10;zero changed to plus in build review screen.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/AdapterCommentsAggregate.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/DefaultScreenMenus.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/DefaultScreenParameters.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/MaiSplitComments.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/res/menu/menu_view_comments.xml" />
-      <change type="DELETED" beforePath="C:\Dev\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\View\Screens\SubjectEdit.java" afterPath="" />
-      <change type="MOVED" beforePath="C:\Dev\Android\Reviewer\src\main\res\menu\fragment_feed.xml" afterPath="$PROJECT_DIR$/Reviewer/src/main/res/menu/menu_feed.xml" />
-      <change type="MOVED" beforePath="C:\Dev\Android\Reviewer\src\main\res\menu\fragment_review_children.xml" afterPath="$PROJECT_DIR$/Reviewer/src/main/res/menu/menu_edit_children.xml" />
-      <change type="MOVED" beforePath="C:\Dev\Android\Reviewer\src\main\res\menu\fragment_review_comment.xml" afterPath="$PROJECT_DIR$/Reviewer/src/main/res/menu/menu_edit_comments.xml" />
-      <change type="MOVED" beforePath="C:\Dev\Android\Reviewer\src\main\res\menu\fragment_review_options.xml" afterPath="$PROJECT_DIR$/Reviewer/src/main/res/menu/menu_build_review.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RemoteAPIFetchers" afterPath="$PROJECT_DIR$/RemoteAPIFetchers" />
+    <list default="true" id="d705fcbe-517c-42a0-9055-f982038e4276" name="Default" comment="Fixed bug where tree data view with zero data cell was trying to launch a dialog.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/AdapterCriteriaAggregate.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataAggregation/CanonicalCriterionMode.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataAggregation/ComparitorGvCriterion.java" />
+      <change type="MOVED" beforePath="C:\Dev\Android\Reviewer\src\androidTest\java\com\chdryra\android\reviewer\test\View\GvDataAggregation\CanonicalChildReviewTest.java" afterPath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/GvDataAggregation/CanonicalCriterionAverageTest.java" />
+      <change type="MOVED" beforePath="C:\Dev\Android\Reviewer\src\androidTest\java\com\chdryra\android\reviewer\test\View\GvDataAggregation\ComparitorGvChildReviewTest.java" afterPath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/GvDataAggregation/ComparitorGvCriterionTest.java" />
+      <change type="MOVED" beforePath="C:\Dev\Android\Reviewer\src\androidTest\java\com\chdryra\android\reviewer\test\View\GvDataModel\GvChildReviewListTest.java" afterPath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/GvDataModel/GvCriterionListTest.java" />
+      <change type="MOVED" beforePath="C:\Dev\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\View\GvDataAggregation\CanonicalChildReview.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataAggregation/CanonicalCriterionAverage.java" />
+      <change type="MOVED" beforePath="C:\Dev\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\View\GvDataAggregation\ComparitorGvChildReview.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataAggregation/ComparitorGvCriterionSubject.java" />
+      <change type="MOVED" beforePath="C:\Dev\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\View\GvDataModel\GvChildReviewList.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataModel/GvCriterionList.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer" afterPath="$PROJECT_DIR$/Reviewer" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/AdapterReviewNode.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/AdapterReviewNode.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/AdapterReviewViewAdapter.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/AdapterReviewViewAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/BuildScreen.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/BuildScreen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/ActivitiesFragmentsScreens/ActivityBuildReviewTest.java" afterPath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/ActivitiesFragmentsScreens/ActivityBuildReviewTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/ActivitiesFragmentsScreens/ActivityEditChildrenTest.java" afterPath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/ActivitiesFragmentsScreens/ActivityEditChildrenTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/ActivitiesFragmentsScreens/ActivityEditScreenTest.java" afterPath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/ActivitiesFragmentsScreens/ActivityEditScreenTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Dialogs/AddEditChildReview.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Dialogs/AddEditChildReview.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/GvDataModel/AddEditChildReviewTest.java" afterPath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/GvDataModel/AddEditChildReviewTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataAggregation/Aggregater.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataAggregation/Aggregater.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/GvDataAggregation/AggregaterTest.java" afterPath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/GvDataAggregation/AggregaterTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataSorting/ChildReviewComparators.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataSorting/ChildReviewComparators.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/GvDataSorting/ChildReviewComparatorsTest.java" afterPath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/GvDataSorting/ChildReviewComparatorsTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Configs/ConfigGvDataAddEditView.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Configs/ConfigGvDataAddEditView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Configs/ConfigGvDataUi.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Configs/ConfigGvDataUi.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/Dialogs/DialogAddChildTest.java" afterPath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/Dialogs/DialogAddChildTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/Dialogs/DialogEditChildTest.java" afterPath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/Dialogs/DialogEditChildTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/EditScreen.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/EditScreen.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/EditScreenChildren.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/EditScreenChildren.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/EditScreenComments.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/EditScreenComments.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/Adapter/ReviewAdapterModel/ExpanderToDataTest.java" afterPath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/Adapter/ReviewAdapterModel/ExpanderToDataTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataModel/FactoryGvData.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataModel/FactoryGvData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataModel/FactoryGvDataHandler.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataModel/FactoryGvDataHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/GvDataModel/FactoryGvDataTest.java" afterPath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/GvDataModel/FactoryGvDataTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Dialogs/FactoryGvDataViewLayout.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Dialogs/FactoryGvDataViewLayout.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/FactoryReviewViewAdapter.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/FactoryReviewViewAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/FeedScreen.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/FeedScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/GiLaunchReviewDataScreen.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/GiLaunchReviewDataScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataModel/GvCommentList.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataModel/GvCommentList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/ReviewDataScreen.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/ReviewDataScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/ReviewViewAction.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/ReviewViewAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/GvDataModel/GvAuthorListTest.java" afterPath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/GvDataModel/GvAuthorListTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataModel/GvBuildReviewList.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataModel/GvBuildReviewList.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/GvDataModel/GvCanonicalCollectionTest.java" afterPath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/GvDataModel/GvCanonicalCollectionTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/GvDataModel/GvCommentListTest.java" afterPath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/GvDataModel/GvCommentListTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataSorting/GvDataComparators.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataSorting/GvDataComparators.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/GvDataSorting/GvDataComparatorsTest.java" afterPath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/GvDataSorting/GvDataComparatorsTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/TestUtils/GvDataListClasses.java" afterPath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/TestUtils/GvDataListClasses.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/TestUtils/GvDataMocker.java" afterPath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/TestUtils/GvDataMocker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/GvDataModel/GvFactListTest.java" afterPath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/GvDataModel/GvFactListTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/GvDataModel/GvImageListTest.java" afterPath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/GvDataModel/GvImageListTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/GvDataModel/GvLocationListTest.java" afterPath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/GvDataModel/GvLocationListTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/GvDataModel/GvReviewOverviewListTest.java" afterPath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/GvDataModel/GvReviewOverviewListTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/GvDataModel/GvSubjectListTest.java" afterPath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/GvDataModel/GvSubjectListTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/GvDataModel/GvTagListTest.java" afterPath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/GvDataModel/GvTagListTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/GvDataModel/GvUrlListTest.java" afterPath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/View/GvDataModel/GvUrlListTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/DataAdapterModel/MdGvConverter.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/DataAdapterModel/MdGvConverter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/ReviewBuilder.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/ReviewBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/ReviewBuilderAdapter.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/ReviewBuilderAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/Adapter/ReviewAdapterModel/ReviewBuilderAdapterTest.java" afterPath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/Adapter/ReviewAdapterModel/ReviewBuilderAdapterTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/TestUtils/SoloDataEntry.java" afterPath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/TestUtils/SoloDataEntry.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/TestUtils/TestReviews.java" afterPath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/TestUtils/TestReviews.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataModel/VhChild.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataModel/VhChild.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Dialogs/ViewChildReview.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Dialogs/ViewChildReview.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/ViewerTreeData.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/ViewerTreeData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/Adapter/ReviewAdapterModel/ViewerTreeDataTest.java" afterPath="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/Adapter/ReviewAdapterModel/ViewerTreeDataTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Android.iws" />
@@ -97,21 +127,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ViewerTreeData.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/ViewerTreeData.java">
+      <file leaf-file-name="CanonicalCriterionAverage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataAggregation/CanonicalCriterionAverage.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="123" column="88" selection-start-line="123" selection-start-column="88" selection-end-line="123" selection-end-column="88" />
+              <caret line="41" column="1" selection-start-line="18" selection-start-column="39" selection-end-line="41" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FactoryReviewViewAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/FactoryReviewViewAdapter.java">
+      <file leaf-file-name="CanonicalCriterionMode.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataAggregation/CanonicalCriterionMode.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="52" column="54" selection-start-line="52" selection-start-column="54" selection-end-line="52" selection-end-column="54" />
+              <caret line="33" column="88" selection-start-line="33" selection-start-column="88" selection-end-line="33" selection-end-column="88" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#730#985#0" expanded="true" />
+                <element signature="e#984#985#0" expanded="true" />
+                <element signature="e#1087#1299#0" expanded="true" />
+                <element signature="e#1298#1299#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GvDataAggregater.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataAggregation/GvDataAggregater.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Aggregater.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataAggregation/Aggregater.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="66" column="90" selection-start-line="66" selection-start-column="90" selection-end-line="66" selection-end-column="90" />
               <folding />
             </state>
           </provider>
@@ -121,7 +177,7 @@
         <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/AdapterCommentsAggregate.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+              <caret line="50" column="5" selection-start-line="42" selection-start-column="4" selection-end-line="50" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -129,31 +185,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExpanderToReviews.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/ExpanderToReviews.java">
+      <file leaf-file-name="AdapterCriteriaAggregate.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/AdapterCriteriaAggregate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GvCanonicalCollection.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataModel/GvCanonicalCollection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MaiSplitComments.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/MaiSplitComments.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40199336">
-              <caret line="49" column="26" selection-start-line="49" selection-start-column="26" selection-end-line="49" selection-end-column="26" />
+            <state vertical-scroll-proportion="-7.3103447">
+              <caret line="39" column="50" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -161,41 +197,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReviewViewAdapterBasic.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/ReviewViewAdapterBasic.java">
+      <file leaf-file-name="FactoryReviewViewAdapter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/FactoryReviewViewAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="73" column="16" selection-start-line="73" selection-start-column="16" selection-end-line="73" selection-end-column="16" />
+              <caret line="59" column="77" selection-start-line="59" selection-start-column="77" selection-end-line="59" selection-end-column="77" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReviewView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/ReviewView.java">
+      <file leaf-file-name="ViewerTreeData.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/ViewerTreeData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="132" column="16" selection-start-line="132" selection-start-column="16" selection-end-line="132" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.43521595">
+              <caret line="91" column="18" selection-start-line="91" selection-start-column="18" selection-end-line="91" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GvCommentList.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataModel/GvCommentList.java">
+      <file leaf-file-name="GvCanonical.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataModel/GvCanonical.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
-              <folding />
+              <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
+              <folding>
+                <element signature="e#1777#1778#0" expanded="true" />
+                <element signature="e#1805#1806#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ViewerGvDataCollection.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/ViewerGvDataCollection.java">
+      <file leaf-file-name="ComparitorGvCriterion.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataAggregation/ComparitorGvCriterion.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+              <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -5122,19 +5161,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/ApplicationSingletons/TagsManager.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/ReviewerDb.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/Database/ReviewerDbTest.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Model/ReviewData/ReviewId.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Model/ReviewData/MdCriterionList.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/Model/ReviewData/MdCriterionListTest.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/ReviewerDbRow.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/Database/ReviewerDbRowTest.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/ApplicationSingletons/TagsManagerTest.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/ApplicationSingletons/ApplicationSingleton.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/TestUtils/TestDatabase.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/ApplicationSingletons/ReviewsManagerTest.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/ApplicationSingletons/ReviewMakerTest.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataModel/VhDataCollection.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataModel/VhBuildReviewData.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataModel/GvBuildReviewList.java" />
@@ -5156,11 +5182,8 @@
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/ScreenParameters.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/DefaultScreenParameters.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/res/menu/menu_view_comments.xml" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/DefaultScreenMenus.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/FeedScreen.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/TestUtils/TestReviews.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/GiLaunchReviewDataScreen.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/ReviewDataScreen.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/AdapterReviewViewAdapter.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/ViewerChildList.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/ReviewViewAdapter.java" />
@@ -5168,11 +5191,27 @@
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataModel/GvCommentSplitter.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/AdapterReviewNode.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataModel/GvCommentList.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/FactoryReviewViewAdapter.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataModel/GvCanonicalCollection.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/ViewerTreeData.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/AdapterCommentsAggregate.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/MaiSplitComments.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/TestUtils/TestReviews.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/Adapter/ReviewAdapterModel/AdapterReviewViewAdapterTest.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/DefaultScreenMenus.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/DefaultMenus.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/DefaultGridActions.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/ViewScreenComments.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/ReviewDataScreen.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataAggregation/CanonicalChildReview.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataAggregation/CanonicalCriterion.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataAggregation/CanonicalCriterionAverage.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataAggregation/ComparitorGvChildReview.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataAggregation/ComparitorGvCriterionSubject.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataAggregation/ComparitorGvCriterion.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataAggregation/CanonicalCriterionMode.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataAggregation/Aggregater.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/AdapterCriteriaAggregate.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/FactoryReviewViewAdapter.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/ViewerTreeData.java" />
       </list>
     </option>
   </component>
@@ -5320,82 +5359,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Reviewer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reviewer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Screens" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Reviewer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reviewer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GvDataModel" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -6180,7 +6143,19 @@
       <option name="project" value="LOCAL" />
       <updated>1443313154791</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Default parameters for particular data screens e.g. square tiles for images.&#10;&#10;Split comment menu item. AdapterCommentsAggregate facillitates comment splitting.">
+      <created>1443484662368</created>
+      <option name="number" value="00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1443484662368</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Fixed bug where tree data view with zero data cell was trying to launch a dialog.">
+      <created>1443487976267</created>
+      <option name="number" value="00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1443487976267</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TodoView">
@@ -6269,8 +6244,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Typed the GridDataViewers, ReviewViewAdapters and GridCellExpanders" />
-    <MESSAGE value="Typed the GridDataViewers, ReviewViewAdapters and GridCellExpanders. Adjusted tests accordingly." />
     <MESSAGE value="Simplified ReviewAdapterModel by simplifying some classes and removing some others. Adjusted tests accordingly. Added tests for TagCollector and ViewerGvDataMap." />
     <MESSAGE value="Added another test review" />
     <MESSAGE value="better separated ReviewFeed from FeedScreen.&#10;&#10;Added ReviewChildListScreen to abstract main functionality from FeedScreen&#10;&#10;Added ReviewsManager to find reviews based on id" />
@@ -6294,7 +6267,9 @@
     <MESSAGE value="Fixed tests in light of recent changes.&#10;&#10;Changed TagsManager to be ApplicationSingleton. Adjusted appropriate classes so as to pass context to TagsManager now.&#10;&#10;Changed ReviewUser back to take Id, Author and publication date. ReviewerDb creates ReviewUser directly instead of using ReviewBuilder." />
     <MESSAGE value="Added tests for ReviewMaker and ReviewsManager.&#10;&#10;Adjusted other tests in light of recent changes." />
     <MESSAGE value="Tag automatically includes subject in camel case&#10;&#10;zero changed to plus in build review screen." />
-    <option name="LAST_COMMIT_MESSAGE" value="Tag automatically includes subject in camel case&#10;&#10;zero changed to plus in build review screen." />
+    <MESSAGE value="Default parameters for particular data screens e.g. square tiles for images.&#10;&#10;Split comment menu item. AdapterCommentsAggregate facillitates comment splitting." />
+    <MESSAGE value="Fixed bug where tree data view with zero data cell was trying to launch a dialog." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug where tree data view with zero data cell was trying to launch a dialog." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -6332,153 +6307,27 @@
           <properties />
           <option name="timeStamp" value="145" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/ExpanderToData.java</url>
+          <line>27</line>
+          <properties />
+          <option name="timeStamp" value="206" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/ViewerTreeData.java</url>
+          <line>55</line>
+          <properties />
+          <option name="timeStamp" value="207" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="206" />
+      <option name="time" value="208" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/ReviewViewParams.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/ApplicationSingletons/ReviewFeed.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/EditScreenChildren.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="85" column="9" selection-start-line="85" selection-start-column="9" selection-end-line="85" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/EditScreenFacts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/EditScreenImages.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/EditScreenLocations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/BuildScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="324" column="40" selection-start-line="324" selection-start-column="40" selection-end-line="324" selection-end-column="40" />
-          <folding>
-            <element signature="e#8814#9167#0" expanded="true" />
-            <element signature="e#9166#9167#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/EditScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="56" selection-start-line="58" selection-start-column="56" selection-end-line="58" selection-end-column="56" />
-          <folding>
-            <element signature="e#14529#14750#0" expanded="false" />
-            <element signature="e#14749#14750#0" expanded="false" />
-            <element signature="e#14779#15013#0" expanded="false" />
-            <element signature="e#15012#15013#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataModel/GvCanonical.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="97" column="13" selection-start-line="97" selection-start-column="13" selection-end-line="97" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/GridDataObservable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/res/menu/menu_edit_comments.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/res/menu/menu_edit_children.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/res/menu/menu_build_review.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/res/menu/menu_feed.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/res/menu/menu_view_comments.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/DefaultScreenParameters.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/ReviewViewAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -6486,26 +6335,6 @@
           <folding>
             <element signature="e#4528#4529#0" expanded="true" />
             <element signature="e#4573#4574#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/EditScreenComments.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="109" column="5" selection-start-line="109" selection-start-column="5" selection-end-line="109" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/DefaultScreenMenus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1097#1098#0" expanded="true" />
-            <element signature="e#1172#1173#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -6523,17 +6352,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="75" column="67" selection-start-line="75" selection-start-column="67" selection-end-line="75" selection-end-column="67" />
           <folding>
-            <element signature="e#2635#3071#0" expanded="true" />
-            <element signature="e#3070#3071#0" expanded="true" />
+            <element signature="e#2621#3057#0" expanded="false" />
+            <element signature="e#3056#3057#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/TestUtils/TestDatabaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -6549,33 +6370,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="316" column="0" selection-start-line="316" selection-start-column="0" selection-end-line="316" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/ExpanderToData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
-          <folding>
-            <element signature="e#704#705#0" expanded="false" />
-            <element signature="e#736#737#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/GridItemExpander.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/TestUtils/TestReviews.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="176" column="33" selection-start-line="176" selection-start-column="33" selection-end-line="176" selection-end-column="33" />
           <folding />
         </state>
       </provider>
@@ -6604,18 +6398,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/ReviewDataScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="47" column="46" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="46" />
-          <folding>
-            <element signature="e#2109#2110#0" expanded="true" />
-            <element signature="e#2143#2144#0" expanded="true" />
-            <element signature="e#3954#4020#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Utils/CommentFormatter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -6632,30 +6414,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataAggregation/Aggregater.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="22" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataModel/GvDataBasic.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
           <folding>
-            <element signature="e#1072#1073#0" expanded="true" />
-            <element signature="e#1104#1105#0" expanded="true" />
+            <element signature="e#1072#1073#0" expanded="false" />
+            <element signature="e#1104#1105#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/AdapterReviewViewAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -6683,17 +6449,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/AdapterReviewNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-          <folding>
-            <element signature="e#1111#1112#0" expanded="true" />
-            <element signature="e#1139#1140#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/ExpanderToReviews.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -6718,18 +6473,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/ViewerTreeData.java">
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/TestUtils/TestReviews.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="123" column="88" selection-start-line="123" selection-start-column="88" selection-end-line="123" selection-end-column="88" />
+          <caret line="234" column="52" selection-start-line="234" selection-start-column="52" selection-end-line="234" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/FactoryReviewViewAdapter.java">
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/TestUtils/TestDatabaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="54" selection-start-line="52" selection-start-column="54" selection-end-line="52" selection-end-column="54" />
+          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/androidTest/java/com/chdryra/android/reviewer/test/Adapter/ReviewAdapterModel/AdapterReviewViewAdapterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="89" column="71" selection-start-line="89" selection-start-column="71" selection-end-line="89" selection-end-column="71" />
           <folding />
         </state>
       </provider>
@@ -6737,7 +6500,15 @@
     <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/ReviewView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="132" column="16" selection-start-line="132" selection-start-column="16" selection-end-line="132" selection-end-column="16" />
+          <caret line="101" column="5" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/AdapterReviewViewAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -6745,23 +6516,44 @@
     <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/ViewerGvDataCollection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+          <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/ReviewViewAdapterBasic.java">
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/ExpanderToData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="73" column="16" selection-start-line="73" selection-start-column="16" selection-end-line="73" selection-end-column="16" />
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="e#704#705#0" expanded="true" />
+            <element signature="e#736#737#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/EditScreenComments.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="56" selection-start-line="31" selection-start-column="56" selection-end-line="31" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/AdapterCommentsAggregate.java">
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/DefaultMenus.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+          <caret line="19" column="5" selection-start-line="11" selection-start-column="4" selection-end-line="19" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/DefaultGridActions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="55" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -6770,11 +6562,220 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/MaiSplitComments.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40199336">
-          <caret line="49" column="26" selection-start-line="49" selection-start-column="26" selection-end-line="49" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="52" column="17" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Dialogs/ViewComment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Dialogs/DialogLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding>
+            <element signature="e#878#879#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/ViewScreenComments.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="42" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/AdapterReviewNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="50" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/ReviewViewAdapterBasic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/GridItemExpander.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataModel/GvDataList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+          <folding>
+            <element signature="e#2902#2903#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/ReviewDataScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="81" column="35" selection-start-line="81" selection-start-column="35" selection-end-line="81" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataAggregation/ComparitorStringable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataAggregation/ComparitorGvDate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataAggregation/ComparitorGvReviewOverview.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataAggregation/ComparitorGvCriterionSubject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+          <folding>
+            <element signature="e#612#841#0" expanded="true" />
+            <element signature="e#840#841#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataAggregation/DifferenceBoolean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
+          <folding>
+            <element signature="e#576#577#0" expanded="true" />
+            <element signature="e#606#607#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataAggregation/ComparitorGvCriterion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataAggregation/CanonicalCriterionAverage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="1" selection-start-line="18" selection-start-column="39" selection-end-line="41" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataAggregation/CanonicalCriterionMode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="88" selection-start-line="33" selection-start-column="88" selection-end-line="33" selection-end-column="88" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#730#985#0" expanded="true" />
+            <element signature="e#984#985#0" expanded="true" />
+            <element signature="e#1087#1299#0" expanded="true" />
+            <element signature="e#1298#1299#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataAggregation/GvDataAggregater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/AdapterCommentsAggregate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="50" column="5" selection-start-line="42" selection-start-column="4" selection-end-line="50" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataAggregation/Aggregater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="66" column="90" selection-start-line="66" selection-start-column="90" selection-end-line="66" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/GvDataModel/GvCanonical.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
+          <folding>
+            <element signature="e#1777#1778#0" expanded="true" />
+            <element signature="e#1805#1806#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/AdapterCriteriaAggregate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.3103447">
+          <caret line="39" column="50" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/FactoryReviewViewAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="59" column="77" selection-start-line="59" selection-start-column="77" selection-end-line="59" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Adapter/ReviewAdapterModel/ViewerTreeData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43521595">
+          <caret line="91" column="18" selection-start-line="91" selection-start-column="18" selection-end-line="91" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
