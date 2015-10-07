@@ -26,6 +26,7 @@ public class PlaceAutoCompleteSuggesterTest extends
         ActivityInstrumentationTestCase2<TestingActivity> {
     private final static LatLng LATLNG = new LatLng(51.5072, -0.1275);
 
+//Constructors
     public PlaceAutoCompleteSuggesterTest() {
         super(TestingActivity.class);
     }

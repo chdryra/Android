@@ -130,6 +130,27 @@ public class SortableListTest extends TestCase {
         mList = new SortableList<String>();
     }
 
+//private methods
+    private SortableList<String> getReverseSortableList() {
+        return new SortableList<String>() {
+//protected methods
+            @Override
+            protected Comparator<String> getDefaultComparator() {
+                return getReverseComparator();
+            }
+        };
+    }
+
+    private Comparator<String> getReverseComparator() {
+        return new Comparator<String>() {
+//Overridden
+            @Override
+            public int compare(String lhs, String rhs) {
+                return rhs.compareTo(lhs);
+            }
+        };
+    }
+
     private void addDataAndTestSize() {
         addDataAndTest(mList);
     }
@@ -140,23 +161,5 @@ public class SortableListTest extends TestCase {
         assertEquals(1, list.size());
         list.add(DATUM2);
         assertEquals(2, list.size());
-    }
-
-    private SortableList<String> getReverseSortableList() {
-        return new SortableList<String>() {
-            @Override
-            protected Comparator<String> getDefaultComparator() {
-                return getReverseComparator();
-            }
-        };
-    }
-
-    private Comparator<String> getReverseComparator() {
-        return new Comparator<String>() {
-            @Override
-            public int compare(String lhs, String rhs) {
-                return rhs.compareTo(lhs);
-            }
-        };
     }
 }

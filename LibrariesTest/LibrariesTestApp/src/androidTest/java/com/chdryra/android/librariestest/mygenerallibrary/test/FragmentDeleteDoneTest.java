@@ -35,19 +35,20 @@ import com.chdryra.android.mygenerallibrary.FragmentDeleteDone;
 // "FragmentDeleteDoneActivity".
 // Can't test "Up" because doesn't appear to be a way of touching "up" programatically!
 public class FragmentDeleteDoneTest extends ActivityInstrumentationTestCase2<TestingActivity> {
-    private static final int                REQUEST_CODE  = 314;
-    private static final int                UP            = FragmentDeleteDone.MENU_UP_ID;
-    private static final int                DELETE        = FragmentDeleteDone.MENU_DELETE_ID;
-    private static final int                DONE          = FragmentDeleteDone.MENU_DONE_ID;
-    private static final ActivityResultCode RESULT_UP     = FragmentDeleteDone.RESULT_UP;
+    private static final int REQUEST_CODE = 314;
+    private static final int UP = FragmentDeleteDone.MENU_UP_ID;
+    private static final int DELETE = FragmentDeleteDone.MENU_DELETE_ID;
+    private static final int DONE = FragmentDeleteDone.MENU_DONE_ID;
+    private static final ActivityResultCode RESULT_UP = FragmentDeleteDone.RESULT_UP;
     private static final ActivityResultCode RESULT_DELETE = FragmentDeleteDone.RESULT_DELETE;
-    private static final ActivityResultCode RESULT_DONE   = FragmentDeleteDone.RESULT_DONE;
-    private static final String             FRAG_TAG      = "Tag";
+    private static final ActivityResultCode RESULT_DONE = FragmentDeleteDone.RESULT_DONE;
+    private static final String FRAG_TAG = "Tag";
 
-    private TestingActivity    mCommissioner;
+    private TestingActivity mCommissioner;
     private FragmentDeleteDone mDefaultFragment;
     private boolean mData = true;
 
+//Constructors
     public FragmentDeleteDoneTest() {
         super(TestingActivity.class);
     }
@@ -118,6 +119,29 @@ public class FragmentDeleteDoneTest extends ActivityInstrumentationTestCase2<Tes
         mDefaultFragment = new FragmentDeleteDone();
     }
 
+//private methods
+    private FragmentDeleteDone getFragmentWithData() {
+        mData = true;
+        return new FragmentDeleteDone() {
+
+            @Override
+            public void onCreate(Bundle savedInstanceState) {
+                super.onCreate(savedInstanceState);
+                dismissOnDelete(); //otherwise won't send data
+            }
+
+            @Override
+            protected boolean hasDataToDelete() {
+                return mData;
+            }
+
+            @Override
+            protected void onDeleteSelected() {
+                mData = false;
+            }
+        };
+    }
+
     private void testMenuItemSelect(int menuItemId, ActivityResultCode expectedResult) {
         final FragmentDeleteDoneActivity activity = startFragmentForResult(mDefaultFragment);
         FragmentDeleteDone frag = (FragmentDeleteDone) activity.getFragmentManager()
@@ -166,27 +190,5 @@ public class FragmentDeleteDoneTest extends ActivityInstrumentationTestCase2<Tes
         assertNotNull(fragmentActivity);
 
         return fragmentActivity;
-    }
-
-    private FragmentDeleteDone getFragmentWithData() {
-        mData = true;
-        return new FragmentDeleteDone() {
-
-            @Override
-            public void onCreate(Bundle savedInstanceState) {
-                super.onCreate(savedInstanceState);
-                dismissOnDelete(); //otherwise won't send data
-            }
-
-            @Override
-            protected boolean hasDataToDelete() {
-                return mData;
-            }
-
-            @Override
-            protected void onDeleteSelected() {
-                mData = false;
-            }
-        };
     }
 }

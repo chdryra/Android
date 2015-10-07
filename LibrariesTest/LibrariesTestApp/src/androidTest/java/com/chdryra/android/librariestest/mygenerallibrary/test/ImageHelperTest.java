@@ -31,11 +31,12 @@ import java.util.Date;
  * Email: rizwan.choudrey@gmail.com
  */
 public class ImageHelperTest extends ActivityInstrumentationTestCase2<TestingActivity> {
-    private static final int WIDTH  = BitmapFileMocker.WIDTH;
+    private static final int WIDTH = BitmapFileMocker.WIDTH;
     private static final int HEIGHT = BitmapFileMocker.HEIGHT;
 
     private BitmapFileMocker mBitmapMocker;
 
+//Constructors
     public ImageHelperTest() {
         super(TestingActivity.class);
     }

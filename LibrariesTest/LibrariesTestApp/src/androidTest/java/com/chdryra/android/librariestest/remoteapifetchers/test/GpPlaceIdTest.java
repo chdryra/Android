@@ -34,6 +34,7 @@ public class GpPlaceIdTest extends TestCase {
         assertEquals("ChIJN1t_tDeuEmsRUsoyG83frY4", parsed.getString());
     }
 
+//private methods
     private String getTestString() {
         return "{\n" +
                 "\"place_id\" : \"ChIJN1t_tDeuEmsRUsoyG83frY4\"\n" +

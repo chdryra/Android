@@ -32,13 +32,14 @@ public class DialogCancelActionDoneFragmentTest
             DialogCancelActionDoneFragment.CANCEL_ACTION;
     private static final DialogTwoButtonFragment.ActionType ACTION =
             DialogCancelActionDoneFragment.ACTION_ACTION;
-    private static final DialogTwoButtonFragment.ActionType DONE   =
+    private static final DialogTwoButtonFragment.ActionType DONE =
             DialogCancelActionDoneFragment.DONE_ACTION;
 
-    private Activity                       mActivity;
-    private DialogTester                   mTester;
+    private Activity mActivity;
+    private DialogTester mTester;
     private DialogCancelActionDoneFragment mDefaultDialog;
 
+//Constructors
     public DialogCancelActionDoneFragmentTest() {
         super(TestingActivity.class);
     }
@@ -223,6 +224,7 @@ public class DialogCancelActionDoneFragmentTest
         mTester = new DialogTester(mDefaultDialog, mActivity);
     }
 
+//private methods
     private DialogCancelActionDoneFragment getDialogWithPerformActionOnDone() {
         return new DialogCancelActionDoneFragment() {
 

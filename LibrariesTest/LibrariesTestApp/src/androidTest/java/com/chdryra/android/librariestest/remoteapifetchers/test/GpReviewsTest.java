@@ -39,6 +39,103 @@ public class GpReviewsTest extends TestCase {
         checkReview5(parsed.getItem(4));
     }
 
+//private methods
+    private String getTestString() {
+        return "{\n" +
+                "\"rating\" : 3.5,\n" +
+                "\"reviews\" : [\n" +
+                "         {\n" +
+                "            \"aspects\" : [\n" +
+                "               {\n" +
+                "                  \"rating\" : 3,\n" +
+                "                  \"type\" : \"appeal\"\n" +
+                "               }\n" +
+                "            ],\n" +
+                "            \"author_name\" : \"Simon Bengtsson\",\n" +
+                "            \"author_url\" : \"https://plus.google.com/104675092887960962573\"," +
+                "\n" +
+                "            \"language\" : \"en\",\n" +
+                "            \"rating\" : 5,\n" +
+                "            \"text\" : \"Just went inside to have a look at Google. Amazing.\"," +
+                "\n" +
+                "            \"time\" : 1338440552869\n" +
+                "         },\n" +
+                "         {\n" +
+                "           \"aspects\" : [\n" +
+                "              {\n" +
+                "                 \"rating\" : 1,\n" +
+                "                 \"type\" : \"atmosphere\"\n" +
+                "              }\n" +
+                "             ],\n" +
+                "            \"author_name\" : \"Felix Rauch Valenti\",\n" +
+                "            \"author_url\" : \"https://plus.google.com/103291556674373289857\"," +
+                "\n" +
+                "            \"language\" : \"en\",\n" +
+                "            \"rating\" : 5,\n" +
+                "            \"text\" : \"Best place to work :-)\",\n" +
+                "            \"time\" : 1338411244325\n" +
+                "         },\n" +
+                "         {\n" +
+                "           \"aspects\" : [\n" +
+                "              {\n" +
+                "                 \"rating\" : 2,\n" +
+                "                 \"type\" : \"decor\"\n" +
+                "              }\n" +
+                "             ],\n" +
+                "            \"author_name\" : \"Chris\",\n" +
+                "            \"language\" : \"en\",\n" +
+                "            \"rating\" : 5,\n" +
+                "            \"text\" : \"Great place to work, always lots of free food!\",\n" +
+                "            \"time\" : 1330467089039\n" +
+                "         },\n" +
+                "         {\n" +
+                "           \"aspects\" : [\n" +
+                "              {\n" +
+                "                 \"rating\" : 3,\n" +
+                "                 \"type\" : \"facilities\"\n" +
+                "              },\n" +
+                "        {\n" +
+                "                 \"rating\" : 3,\n" +
+                "                 \"type\" : \"quality\"\n" +
+                "              }\n" +
+                "             ],\n" +
+                "            \"author_name\" : \"Felix Rauch Valenti\",\n" +
+                "            \"author_url\" : \"https://plus.google.com/103291556674373289857\"," +
+                "\n" +
+                "            \"language\" : \"en\",\n" +
+                "            \"rating\" : 5,\n" +
+                "            \"text\" : \"Best place to work :-)\",\n" +
+                "            \"time\" : 1338411244325\n" +
+                "         },\n" +
+                "         {\n" +
+                "           \"aspects\" : [\n" +
+                "              {\n" +
+                "                 \"rating\" : 2,\n" +
+                "                 \"type\" : \"food\"\n" +
+                "              },\n" +
+                "        {\n" +
+                "                 \"rating\" : 3,\n" +
+                "                 \"type\" : \"overall\"\n" +
+                "              },\n" +
+                "        {\n" +
+                "                 \"rating\" : 0,\n" +
+                "                 \"type\" : \"service\"\n" +
+                "              },\n" +
+                "              {\n" +
+                "                 \"rating\" : 1,\n" +
+                "                 \"type\" : \"innit\"\n" +
+                "              }\n" +
+                "             ],\n" +
+                "            \"author_name\" : \"Chris\",\n" +
+                "            \"language\" : \"en\",\n" +
+                "            \"rating\" : 5,\n" +
+                "            \"text\" : \"Great place to work, always lots of free food!\",\n" +
+                "            \"time\" : 1330467089039\n" +
+                "         }\n" +
+                "      ]\n" +
+                "}";
+    }
+
     private void checkReview1(GpReviews.GpReview review) {
         assertTrue(review.isValid());
         assertEquals("Simon Bengtsson", review.getAuthor());
@@ -138,101 +235,5 @@ public class GpReviewsTest extends TestCase {
         assertFalse(aspect.isValid());
         assertEquals(1, aspect.getRating());
         assertEquals(GpReviews.AspectType.UNKNOWN, aspect.getType());
-    }
-
-    private String getTestString() {
-        return "{\n" +
-                "\"rating\" : 3.5,\n" +
-                "\"reviews\" : [\n" +
-                "         {\n" +
-                "            \"aspects\" : [\n" +
-                "               {\n" +
-                "                  \"rating\" : 3,\n" +
-                "                  \"type\" : \"appeal\"\n" +
-                "               }\n" +
-                "            ],\n" +
-                "            \"author_name\" : \"Simon Bengtsson\",\n" +
-                "            \"author_url\" : \"https://plus.google.com/104675092887960962573\"," +
-                "\n" +
-                "            \"language\" : \"en\",\n" +
-                "            \"rating\" : 5,\n" +
-                "            \"text\" : \"Just went inside to have a look at Google. Amazing.\"," +
-                "\n" +
-                "            \"time\" : 1338440552869\n" +
-                "         },\n" +
-                "         {\n" +
-                "           \"aspects\" : [\n" +
-                "              {\n" +
-                "                 \"rating\" : 1,\n" +
-                "                 \"type\" : \"atmosphere\"\n" +
-                "              }\n" +
-                "             ],\n" +
-                "            \"author_name\" : \"Felix Rauch Valenti\",\n" +
-                "            \"author_url\" : \"https://plus.google.com/103291556674373289857\"," +
-                "\n" +
-                "            \"language\" : \"en\",\n" +
-                "            \"rating\" : 5,\n" +
-                "            \"text\" : \"Best place to work :-)\",\n" +
-                "            \"time\" : 1338411244325\n" +
-                "         },\n" +
-                "         {\n" +
-                "           \"aspects\" : [\n" +
-                "              {\n" +
-                "                 \"rating\" : 2,\n" +
-                "                 \"type\" : \"decor\"\n" +
-                "              }\n" +
-                "             ],\n" +
-                "            \"author_name\" : \"Chris\",\n" +
-                "            \"language\" : \"en\",\n" +
-                "            \"rating\" : 5,\n" +
-                "            \"text\" : \"Great place to work, always lots of free food!\",\n" +
-                "            \"time\" : 1330467089039\n" +
-                "         },\n" +
-                "         {\n" +
-                "           \"aspects\" : [\n" +
-                "              {\n" +
-                "                 \"rating\" : 3,\n" +
-                "                 \"type\" : \"facilities\"\n" +
-                "              },\n" +
-                "        {\n" +
-                "                 \"rating\" : 3,\n" +
-                "                 \"type\" : \"quality\"\n" +
-                "              }\n" +
-                "             ],\n" +
-                "            \"author_name\" : \"Felix Rauch Valenti\",\n" +
-                "            \"author_url\" : \"https://plus.google.com/103291556674373289857\"," +
-                "\n" +
-                "            \"language\" : \"en\",\n" +
-                "            \"rating\" : 5,\n" +
-                "            \"text\" : \"Best place to work :-)\",\n" +
-                "            \"time\" : 1338411244325\n" +
-                "         },\n" +
-                "         {\n" +
-                "           \"aspects\" : [\n" +
-                "              {\n" +
-                "                 \"rating\" : 2,\n" +
-                "                 \"type\" : \"food\"\n" +
-                "              },\n" +
-                "        {\n" +
-                "                 \"rating\" : 3,\n" +
-                "                 \"type\" : \"overall\"\n" +
-                "              },\n" +
-                "        {\n" +
-                "                 \"rating\" : 0,\n" +
-                "                 \"type\" : \"service\"\n" +
-                "              },\n" +
-                "              {\n" +
-                "                 \"rating\" : 1,\n" +
-                "                 \"type\" : \"innit\"\n" +
-                "              }\n" +
-                "             ],\n" +
-                "            \"author_name\" : \"Chris\",\n" +
-                "            \"language\" : \"en\",\n" +
-                "            \"rating\" : 5,\n" +
-                "            \"text\" : \"Great place to work, always lots of free food!\",\n" +
-                "            \"time\" : 1330467089039\n" +
-                "         }\n" +
-                "      ]\n" +
-                "}";
     }
 }

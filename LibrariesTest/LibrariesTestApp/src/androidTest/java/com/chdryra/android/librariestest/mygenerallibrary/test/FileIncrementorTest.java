@@ -23,14 +23,15 @@ import java.io.IOException;
  * Email: rizwan.choudrey@gmail.com
  */
 public class FileIncrementorTest extends ActivityInstrumentationTestCase2<TestingActivity> {
-    private static final String EXTDIR    = "MyGeneralLibrary";
-    private static final String DIR       = "FileCreatorTest";
-    private static final String FILE      = "FileCreator";
-    private static final String EXT       = "txt";
-    private static final int    NUM_FILES = 5;
+    private static final String EXTDIR = "MyGeneralLibrary";
+    private static final String DIR = "FileCreatorTest";
+    private static final String FILE = "FileCreator";
+    private static final String EXT = "txt";
+    private static final int NUM_FILES = 5;
 
     private File mExternalDir;
 
+//Constructors
     public FileIncrementorTest() {
         super(TestingActivity.class);
     }
@@ -139,6 +140,19 @@ public class FileIncrementorTest extends ActivityInstrumentationTestCase2<Testin
         super.tearDown();
     }
 
+//private methods
+    private File getDir() {
+        return new File(mExternalDir, DIR);
+    }
+
+    private File getFile() {
+        return new File(getDir(), FILE + "." + EXT);
+    }
+
+    private FileIncrementor getFileIncrementor() {
+        return new FileIncrementor(mExternalDir, DIR, FILE, EXT);
+    }
+
     private File createNewFile(FileIncrementor incrementor) {
         File file = null;
         try {
@@ -166,20 +180,8 @@ public class FileIncrementorTest extends ActivityInstrumentationTestCase2<Testin
         assertTrue(fileOrDirectory.delete());
     }
 
-    private File getDir() {
-        return new File(mExternalDir, DIR);
-    }
-
-    private File getFile() {
-        return new File(getDir(), FILE + "." + EXT);
-    }
-
     private File getFile(int suffix) {
         if (suffix == 0) return getFile();
         return new File(getDir(), FILE + "_" + String.valueOf(suffix) + "." + EXT);
-    }
-
-    private FileIncrementor getFileIncrementor() {
-        return new FileIncrementor(mExternalDir, DIR, FILE, EXT);
     }
 }

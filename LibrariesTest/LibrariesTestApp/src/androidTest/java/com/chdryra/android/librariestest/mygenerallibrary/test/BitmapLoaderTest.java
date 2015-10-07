@@ -23,12 +23,13 @@ import com.chdryra.android.testutils.CallBackSignaler;
  * Email: rizwan.choudrey@gmail.com
  */
 public class BitmapLoaderTest extends ActivityInstrumentationTestCase2<TestingActivity> {
-    private CallBackSignaler          mSignaler;
+    private CallBackSignaler mSignaler;
     private BitmapLoader.LoadListener mListener;
-    private BitmapFileMocker          mBitmapMocker;
-    private Bitmap                    mBitmap;
+    private BitmapFileMocker mBitmapMocker;
+    private Bitmap mBitmap;
     private boolean mLoaded = false;
 
+//Constructors
     public BitmapLoaderTest() {
         super(TestingActivity.class);
     }

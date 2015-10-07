@@ -32,14 +32,15 @@ import com.chdryra.android.mygenerallibrary.ViewHolderDataList;
 // seem to respond to properly. publishResults never called in ViewHolderAdapterFiltered.
 public class ZZZViewHolderAdapterFilteredTest extends
         ActivityInstrumentationTestCase2<TestingActivity> {
-    private static final String[] DATA       = {"Alpha", "Beta", "Gamma", "Delta"};
-    private static final int      UPDATEABLE = com.chdryra.android.mygenerallibrary.R.id.text_view;
-    private static final int      WIDTH      = 100;
-    private static final int      HEIGHT     = 100;
-    private              boolean  mDataSet   = false;
+    private static final String[] DATA = {"Alpha", "Beta", "Gamma", "Delta"};
+    private static final int UPDATEABLE = com.chdryra.android.mygenerallibrary.R.id.text_view;
+    private static final int WIDTH = 100;
+    private static final int HEIGHT = 100;
+    private boolean mDataSet = false;
     private ViewHolderDataList<VHDString> mDataList;
-    private ViewHolderAdapterFiltered     mAdapter;
+    private ViewHolderAdapterFiltered mAdapter;
 
+//Constructors
     public ZZZViewHolderAdapterFilteredTest() {
         super(TestingActivity.class);
     }
@@ -104,17 +105,7 @@ public class ZZZViewHolderAdapterFilteredTest extends
         mAdapter = new ViewHolderAdapterFiltered(getActivity(), mDataList, getFilter());
     }
 
-    private void testViewi(View v, int i) {
-        assertNotNull(v);
-        assertEquals(WIDTH, v.getLayoutParams().width);
-        assertEquals(HEIGHT, v.getLayoutParams().height);
-        ViewHolder vh = (ViewHolder) v.getTag();
-        assertNotNull(vh);
-        assertEquals(v, vh.getView());
-        TextView tv = (TextView) v.findViewById(UPDATEABLE);
-        assertEquals(DATA[i], tv.getText().toString());
-    }
-
+//private methods
     private DataSetObserver getObserver() {
         return new DataSetObserver() {
             @Override
@@ -145,6 +136,17 @@ public class ZZZViewHolderAdapterFilteredTest extends
                 return filtered;
             }
         };
+    }
+
+    private void testViewi(View v, int i) {
+        assertNotNull(v);
+        assertEquals(WIDTH, v.getLayoutParams().width);
+        assertEquals(HEIGHT, v.getLayoutParams().height);
+        ViewHolder vh = (ViewHolder) v.getTag();
+        assertNotNull(vh);
+        assertEquals(v, vh.getView());
+        TextView tv = (TextView) v.findViewById(UPDATEABLE);
+        assertEquals(DATA[i], tv.getText().toString());
     }
 }
 

@@ -25,9 +25,10 @@ import com.chdryra.android.testutils.CallBackSignaler;
 public class ZZZLocationClientConnectorTest extends
         ActivityInstrumentationTestCase2<TestingActivity> {
     private LocationClientConnector mConnector;
-    private CallBackSignaler        mSignaler;
+    private CallBackSignaler mSignaler;
     private boolean mConnected = false;
 
+//Constructors
     public ZZZLocationClientConnectorTest() {
         super(TestingActivity.class);
     }

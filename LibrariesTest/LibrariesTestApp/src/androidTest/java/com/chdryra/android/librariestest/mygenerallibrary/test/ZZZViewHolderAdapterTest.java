@@ -27,14 +27,15 @@ import com.chdryra.android.mygenerallibrary.ViewHolderDataList;
  * Email: rizwan.choudrey@gmail.com
  */
 public class ZZZViewHolderAdapterTest extends ActivityInstrumentationTestCase2<TestingActivity> {
-    private static final String[] DATA       = {"Alpha", "Beta", "Gamma", "Delta"};
-    private static final int      UPDATEABLE = com.chdryra.android.mygenerallibrary.R.id.text_view;
-    private static final int      WIDTH      = 100;
-    private static final int      HEIGHT     = 100;
-    private              boolean  mDataSet   = false;
+    private static final String[] DATA = {"Alpha", "Beta", "Gamma", "Delta"};
+    private static final int UPDATEABLE = com.chdryra.android.mygenerallibrary.R.id.text_view;
+    private static final int WIDTH = 100;
+    private static final int HEIGHT = 100;
+    private boolean mDataSet = false;
     private ViewHolderDataList<VHDString> mDataList;
-    private ViewHolderAdapter             mAdapter;
+    private ViewHolderAdapter mAdapter;
 
+//Constructors
     public ZZZViewHolderAdapterTest() {
         super(TestingActivity.class);
     }
@@ -85,6 +86,17 @@ public class ZZZViewHolderAdapterTest extends ActivityInstrumentationTestCase2<T
         mAdapter = new ViewHolderAdapter(getActivity(), mDataList, WIDTH, HEIGHT);
     }
 
+//private methods
+    private DataSetObserver getObserver() {
+        return new DataSetObserver() {
+            @Override
+            public void onChanged() {
+                super.onChanged();
+                mDataSet = true;
+            }
+        };
+    }
+
     private void testViewi(View v, int i) {
         assertNotNull(v);
         assertEquals(WIDTH, v.getLayoutParams().width);
@@ -94,15 +106,5 @@ public class ZZZViewHolderAdapterTest extends ActivityInstrumentationTestCase2<T
         assertEquals(v, vh.getView());
         TextView tv = (TextView) v.findViewById(UPDATEABLE);
         assertEquals(DATA[i], tv.getText().toString());
-    }
-
-    private DataSetObserver getObserver() {
-        return new DataSetObserver() {
-            @Override
-            public void onChanged() {
-                super.onChanged();
-                mDataSet = true;
-            }
-        };
     }
 }

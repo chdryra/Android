@@ -57,6 +57,7 @@ public class GpDescriptionTest extends TestCase {
         assertEquals("Australia", term.getValue());
     }
 
+//private methods
     private String getTestString() {
         return "{\n" +
                 "         \"description\" : \"Paris Avenue, Earlwood, New South Wales, " +

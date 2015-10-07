@@ -23,15 +23,16 @@ import com.chdryra.android.mygenerallibrary.VHDualString;
  * Email: rizwan.choudrey@gmail.com
  */
 public class ZZZVHDualStringTest extends ActivityInstrumentationTestCase2<TestingActivity> {
-    private static final int    UPPER        = com.chdryra.android.mygenerallibrary.R.id
+    private static final int UPPER = com.chdryra.android.mygenerallibrary.R.id
             .upper_text_view;
-    private static final int    LOWER        = com.chdryra.android.mygenerallibrary.R.id
+    private static final int LOWER = com.chdryra.android.mygenerallibrary.R.id
             .lower_text_view;
     private static final String UPPER_STRING = "upper";
     private static final String LOWER_STRING = "lower";
 
     private VHDualString mDual;
 
+//Constructors
     public ZZZVHDualStringTest() {
         super(TestingActivity.class);
     }

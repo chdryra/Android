@@ -92,6 +92,7 @@ public class GpAddressTest extends TestCase {
         assertEquals("postal_code", types.getItem(0));
     }
 
+//private methods
     private String getTestString() {
         return "{\n" +
                 "   \"address_components\" : [\n" +

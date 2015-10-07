@@ -19,9 +19,10 @@ import com.chdryra.android.myandroidwidgets.ClearableEditText;
 public class ClearableEditTextTest extends
         ActivityInstrumentationTestCase2<ClearableEditTextActivity> {
     private static final String TEST_TEXT = "Test text";
-    private Activity          mActivity;
+    private Activity mActivity;
     private ClearableEditText mEditText;
 
+//Constructors
     public ClearableEditTextTest() {
         super(ClearableEditTextActivity.class);
     }

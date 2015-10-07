@@ -37,6 +37,7 @@ public class GpAttributionsTest extends TestCase {
         assertEquals(a2, parsed.getItem(1));
     }
 
+//private methods
     private String getTestString() {
         return "{\"html_attributions\" : [\n" +
                 "      \"Listings by \\u003ca href=\\\"http://www.example1.com/\\\"\\u003eExample" +

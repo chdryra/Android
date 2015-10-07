@@ -29,15 +29,16 @@ public class DialogCancelAddDoneFragmentTest extends
         ActivityInstrumentationTestCase2<TestingActivity> {
     private static final DialogTwoButtonFragment.ActionType CANCEL =
             DialogCancelAddDoneFragment.CANCEL_ACTION;
-    private static final DialogTwoButtonFragment.ActionType ADD    =
+    private static final DialogTwoButtonFragment.ActionType ADD =
             DialogCancelAddDoneFragment.ADD_ACTION;
-    private static final DialogTwoButtonFragment.ActionType DONE   =
+    private static final DialogTwoButtonFragment.ActionType DONE =
             DialogCancelAddDoneFragment.DONE_ACTION;
 
     private DialogCancelAddDoneFragment mDefaultDialog;
-    private DialogTester                mTester;
-    private Activity                    mActivity;
+    private DialogTester mTester;
+    private Activity mActivity;
 
+//Constructors
     public DialogCancelAddDoneFragmentTest() {
         super(TestingActivity.class);
     }
@@ -104,6 +105,7 @@ public class DialogCancelAddDoneFragmentTest extends
         mTester = new DialogTester(mDefaultDialog, mActivity);
     }
 
+//private methods
     private DialogCancelAddDoneFragment getDialogWithDataOnAddClick() {
 
         return new DialogCancelAddDoneFragment() {

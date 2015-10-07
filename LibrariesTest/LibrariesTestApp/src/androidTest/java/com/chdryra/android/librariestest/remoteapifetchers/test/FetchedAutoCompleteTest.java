@@ -32,6 +32,7 @@ public class FetchedAutoCompleteTest extends TestCase {
         assertEquals(3, parsed.getPredictions().size());
     }
 
+//private methods
     private String getTestString() {
         return "{\n" +
                 "  \"status\": \"OK\",\n" +

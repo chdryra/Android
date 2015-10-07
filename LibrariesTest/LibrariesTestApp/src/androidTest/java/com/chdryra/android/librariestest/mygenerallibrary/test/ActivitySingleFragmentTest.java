@@ -23,6 +23,7 @@ import com.chdryra.android.mygenerallibrary.ActivitySingleFragment;
  */
 public class ActivitySingleFragmentTest extends SingleLaunchActivityTestCase<TestingActivity> {
 
+//Constructors
     public ActivitySingleFragmentTest() {
         //Note package is that specified in manifest for "app", not java package of class.
         super("com.chdryra.android.librariestest", TestingActivity.class);

@@ -25,12 +25,13 @@ import java.util.ArrayList;
  * Email: rizwan.choudrey@gmail.com
  */
 public class ZZZStringFilterAdapterTest extends ActivityInstrumentationTestCase2<TestingActivity> {
-    private ArrayList<String>                mDefaultSuggestions;
-    private ArrayList<String>                mFilteredResults;
+    private ArrayList<String> mDefaultSuggestions;
+    private ArrayList<String> mFilteredResults;
     private StringFilterAdapter.StringFilter mStringFilter;
-    private CallBackSignaler                 mSignaler;
-    private StringFilterAdapter              mAdapter;
+    private CallBackSignaler mSignaler;
+    private StringFilterAdapter mAdapter;
 
+//Constructors
     public ZZZStringFilterAdapterTest() {
         super(TestingActivity.class);
     }

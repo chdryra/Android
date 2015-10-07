@@ -28,10 +28,11 @@ import java.util.ArrayList;
 
 //TODO more robust testing
 public class GooglePlacesApiTest extends ActivityInstrumentationTestCase2<TestingActivity> {
-    private final static LatLng LATLNG  = new LatLng(51.5072, -0.1275);
-    private final static String QUERY   = "Charing Cross";
+    private final static LatLng LATLNG = new LatLng(51.5072, -0.1275);
+    private final static String QUERY = "Charing Cross";
     private final static String ACQUERY = "Ch";
 
+//Constructors
     public GooglePlacesApiTest() {
         super(TestingActivity.class);
     }

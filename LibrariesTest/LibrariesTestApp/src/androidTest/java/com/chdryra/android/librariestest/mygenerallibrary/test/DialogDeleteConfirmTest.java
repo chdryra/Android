@@ -28,6 +28,7 @@ import com.chdryra.android.testutils.RandomString;
 public class DialogDeleteConfirmTest extends
         ActivityInstrumentationTestCase2<TestingActivity> {
 
+//Constructors
     public DialogDeleteConfirmTest() {
         super(TestingActivity.class);
     }
@@ -49,6 +50,7 @@ public class DialogDeleteConfirmTest extends
         assertNotNull(confirmDialog);
     }
 
+//Classes
     public static class FragmentListener extends Fragment implements DialogAlertFragment
             .DialogAlertListener {
         @Override

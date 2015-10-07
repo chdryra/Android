@@ -30,11 +30,12 @@ public class DialogAlertFragmentTest extends
             .POSITVE_ACTION;
     private static final DialogTwoButtonFragment.ActionType NEGATIVE = DialogAlertFragment
             .NEGATIVE_ACTION;
-    private static final String                             ARGS_KEY = "com.chdryra.android" +
+    private static final String ARGS_KEY = "com.chdryra.android" +
             ".mygenerallibrary.test" +
             ".DialogAlertFragmentTest.args_key";
     private DialogTester mTester;
 
+//Constructors
     public DialogAlertFragmentTest() {
         super(TestingActivity.class);
     }
@@ -140,11 +141,12 @@ public class DialogAlertFragmentTest extends
         assertEquals(argsValue, listener.mArgs.getString(ARGS_KEY));
     }
 
+//Classes
     public static class FragmentListener extends DialogTester.DialogResultListener
             implements DialogAlertFragment.DialogAlertListener {
         boolean mNegative = false;
         boolean mPositive = false;
-        int    mRequestCode;
+        int mRequestCode;
         Bundle mArgs;
 
         @Override

@@ -28,9 +28,10 @@ import com.chdryra.android.mygenerallibrary.DialogTwoButtonFragment;
  */
 public class DialogTwoButtonFragmentTest extends
         ActivityInstrumentationTestCase2<TestingActivity> {
-    private Activity     mActivity;
+    private Activity mActivity;
     private DialogTester mTester;
 
+//Constructors
     public DialogTwoButtonFragmentTest() {
         super(TestingActivity.class);
     }
@@ -158,7 +159,8 @@ public class DialogTwoButtonFragmentTest extends
     }
 
     private DialogTwoButtonFragment getDialogWithAction(final ButtonLMR button,
-            final DialogTwoButtonFragment.ActionType actionType) {
+                                                        final DialogTwoButtonFragment.ActionType
+                                                                actionType) {
         return new DialogTwoButtonFragment() {
             @Override
             public void onCreate(Bundle savedInstanceState) {

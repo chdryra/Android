@@ -32,6 +32,7 @@ public class GpVicinityTest extends TestCase {
         assertEquals("48 Pirrama Road, Pyrmont", parsed.getString());
     }
 
+//private methods
     private String getTestString() {
         return "{\n" +
                 "  \"vicinity\" : \"48 Pirrama Road, Pyrmont\"\n" +

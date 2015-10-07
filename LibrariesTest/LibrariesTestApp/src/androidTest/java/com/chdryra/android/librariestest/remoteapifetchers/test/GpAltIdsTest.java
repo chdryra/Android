@@ -52,6 +52,7 @@ public class GpAltIdsTest extends TestCase {
         assertTrue(scope.equals(GpScope.Scope.GOOGLE));
     }
 
+//private methods
     private String getTestString() {
         return "{ \"alt_ids\" : [\n" +
                 "         {\n" +

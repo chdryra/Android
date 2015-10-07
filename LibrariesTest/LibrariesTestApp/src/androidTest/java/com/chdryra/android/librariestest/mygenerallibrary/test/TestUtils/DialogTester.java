@@ -28,23 +28,25 @@ import junit.framework.Assert;
  * Email: rizwan.choudrey@gmail.com
  */
 public class DialogTester {
-    public static final  int    REQUEST_CODE = 314;
-    private static final String TAG          = "DialogTester";
-    private static final String DATA_KEY     = "com.chdryra.android.librariestest" +
+    public static final int REQUEST_CODE = 314;
+    private static final String TAG = "DialogTester";
+    private static final String DATA_KEY = "com.chdryra.android.librariestest" +
             ".mygenerallibrary.test.dialog_tester";
-    private static final String DATA_STRING  = "Data";
+    private static final String DATA_STRING = "Data";
 
     private DialogTwoButtonFragment mDialog;
-    private Activity                mActivity;
-    private DialogResultListener    mListener;
-    private ButtonManager           mButtonManager;
+    private Activity mActivity;
+    private DialogResultListener mListener;
+    private ButtonManager mButtonManager;
 
     public enum ButtonLMR {LEFT, MIDDLE, RIGHT}
 
     public interface ButtonClick<T extends DialogTwoButtonFragment> {
+//abstract
         public void doClick(T dialog);
     }
 
+//Constructors
     public DialogTester(DialogTwoButtonFragment dialog, Activity activity) {
         mDialog = dialog;
         mActivity = activity;
@@ -67,38 +69,43 @@ public class DialogTester {
         mButtonManager = new Button3Manager(dialog);
     }
 
+//Static methods
     public static void testButtonAction(DialogTwoButtonFragment dialog, Activity activity,
-            DialogTwoButtonFragment.ActionType expectedAction, ButtonLMR button) {
+                                        DialogTwoButtonFragment.ActionType expectedAction,
+                                        ButtonLMR button) {
         DialogTester tester = new DialogTester(dialog, activity);
         tester.testButtonAction(expectedAction, button);
     }
 
     public static void testButtonAction(DialogThreeButtonFragment dialog, Activity activity,
-            DialogThreeButtonFragment.ActionType expectedAction, ButtonLMR button) {
+                                        DialogThreeButtonFragment.ActionType expectedAction,
+                                        ButtonLMR button) {
         DialogTester tester = new DialogTester(dialog, activity);
         tester.testButtonAction(expectedAction, button);
     }
 
     public static void testDismissOrNotOnClick(DialogTwoButtonFragment dialog,
-            Activity activity, ButtonLMR button, boolean testDismiss) {
+                                               Activity activity, ButtonLMR button, boolean
+                                                       testDismiss) {
         DialogTester tester = new DialogTester(dialog, activity);
         tester.testDismissOrNotOnClick(button, testDismiss);
     }
 
     public static void testDismissOrNotOnClick(DialogThreeButtonFragment dialog,
-            Activity activity, ButtonLMR button, boolean testDismiss) {
+                                               Activity activity, ButtonLMR button, boolean
+                                                       testDismiss) {
         DialogTester tester = new DialogTester(dialog, activity);
         tester.testDismissOrNotOnClick(button, testDismiss);
     }
 
     public static void testIntentDataPassBack(DialogTwoButtonFragment dialog, Activity activity,
-            ButtonLMR button) {
+                                              ButtonLMR button) {
         DialogTester tester = new DialogTester(dialog, activity);
         tester.testReturnDataOnClick(button);
     }
 
     public static void testIntentDataPassBack(DialogThreeButtonFragment dialog, Activity activity,
-            ButtonLMR button) {
+                                              ButtonLMR button) {
         DialogTester tester = new DialogTester(dialog, activity);
         tester.testReturnDataOnClick(button);
     }
@@ -113,6 +120,7 @@ public class DialogTester {
         Assert.assertTrue(dialog.getDialog().isShowing());
     }
 
+//public methods
     public DialogResultListener getListener() {
         return mListener;
     }
@@ -133,7 +141,7 @@ public class DialogTester {
     }
 
     public void testButtonAction(DialogTwoButtonFragment.ActionType expectedAction,
-            ButtonLMR button) {
+                                 ButtonLMR button) {
         showDialogAndTestIsShowing();
 
         Assert.assertEquals(expectedAction.getLabel(mActivity), mButtonManager.getButtonText
@@ -147,7 +155,9 @@ public class DialogTester {
     }
 
     public <T extends DialogTwoButtonFragment> void testClickButton(DialogTwoButtonFragment
-            .ActionType expectedAction, ButtonClick<T> click) {
+                                                                            .ActionType
+                                                                            expectedAction,
+                                                                    ButtonClick<T> click) {
         showDialogAndTestIsShowing();
 
         try {
@@ -231,16 +241,17 @@ public class DialogTester {
         mListener.reset();
     }
 
+//Classes
     public static class DialogResultListener extends Fragment {
-        private static final String FILTER_KEY        = "com.chdryra.android.librariestest" +
+        private static final String FILTER_KEY = "com.chdryra.android.librariestest" +
                 ".mygenerallibrary.test.dialog_result_listener";
-        private static final int    INIT_REQUEST_CODE = 161019;
-        private static final int    INIT_RESULT_CODE  = 910161;
+        private static final int INIT_REQUEST_CODE = 161019;
+        private static final int INIT_RESULT_CODE = 910161;
 
-        private int     mRequestCode = INIT_REQUEST_CODE;
-        private int     mResultCode  = INIT_RESULT_CODE;
-        private Intent  mData        = null;
-        private boolean mCallback    = false;
+        private int mRequestCode = INIT_REQUEST_CODE;
+        private int mResultCode = INIT_RESULT_CODE;
+        private Intent mData = null;
+        private boolean mCallback = false;
         private DialogTwoButtonFragment.ActionType mResultFilter;
 
         private static DialogResultListener newInstance() {
@@ -256,6 +267,7 @@ public class DialogTester {
             return listener;
         }
 
+//public methods
         public int getRequestCode() {
             return mRequestCode;
         }
@@ -289,6 +301,7 @@ public class DialogTester {
             }
         }
 
+//private methods
         private DialogTwoButtonFragment.ActionType getResultFilter() {
             if (getArguments() != null && mResultFilter == null) {
                 mResultFilter = (DialogTwoButtonFragment.ActionType) getArguments().getSerializable
@@ -307,6 +320,7 @@ public class DialogTester {
             mDialog = dialog;
         }
 
+//package private methods
         ButtonLMR[] getButtons() {
             return BUTTONS2;
         }
@@ -339,6 +353,7 @@ public class DialogTester {
             mDialog = dialog;
         }
 
+//package private methods
         ButtonLMR[] getButtons() {
             return BUTTONS3;
         }

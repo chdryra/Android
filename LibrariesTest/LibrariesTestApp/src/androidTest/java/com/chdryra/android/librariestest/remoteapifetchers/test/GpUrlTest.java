@@ -33,6 +33,7 @@ public class GpUrlTest extends TestCase {
                 parsed.getString());
     }
 
+//private methods
     private String getTestString() {
         return "{\n" +
                 "  \"url\" : \"http://maps.google.com/maps/place?cid=10281119596374313554\"\n" +

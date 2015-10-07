@@ -29,12 +29,13 @@ import com.chdryra.android.mygenerallibrary.ViewHolderLayout;
 public class ViewHolderLayoutTest extends
         ActivityInstrumentationTestCase2<TestingActivityViewHolder> {
     public static final int PARENT_GRID_CELL_ID = R.id.view_holder_parent;
-    public static final int RELATIVE_LAYOUT_ID  = R.id.vh_relative_layout;
-    public static final int LINEAR_LAYOUT_ID    = R.id.vh_linear_layout;
-    public static final int IMAGE_VIEW_ID       = R.id.vh_image_view;
-    public static final int TEXT_VIEW_ID        = R.id.vh_text_view;
-    public static final int CHILD_GRID_CELL_ID  = R.id.view_holder_child;
+    public static final int RELATIVE_LAYOUT_ID = R.id.vh_relative_layout;
+    public static final int LINEAR_LAYOUT_ID = R.id.vh_linear_layout;
+    public static final int IMAGE_VIEW_ID = R.id.vh_image_view;
+    public static final int TEXT_VIEW_ID = R.id.vh_text_view;
+    public static final int CHILD_GRID_CELL_ID = R.id.view_holder_child;
 
+//Constructors
     public ViewHolderLayoutTest() {
         super(TestingActivityViewHolder.class);
     }

@@ -48,6 +48,7 @@ public class GpDataListTest extends TestCase {
         assertEquals("Australia", term.getValue());
     }
 
+//private methods
     private String getTestString() {
         return "{\n" +
                 " \"terms\" : [\n" +

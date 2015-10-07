@@ -22,12 +22,25 @@ import com.chdryra.android.mygenerallibrary.ActivityResultCode;
 import com.chdryra.android.mygenerallibrary.ActivitySingleFragment;
 
 public class TestingActivity extends ActivitySingleFragment {
-    private static final int     INIT_REQUEST_CODE = 161019;
-    private              int     mRequestCode      = INIT_REQUEST_CODE;
-    private static final int     INIT_RESULT_CODE  = 910161;
-    private              int     mResultCode       = INIT_RESULT_CODE;
-    private              boolean mCallBack         = false;
+    private static final int INIT_REQUEST_CODE = 161019;
+    private static final int INIT_RESULT_CODE = 910161;
+    private int mRequestCode = INIT_REQUEST_CODE;
+    private int mResultCode = INIT_RESULT_CODE;
+    private boolean mCallBack = false;
     private Intent mData;
+
+//public methods
+    public ActivityResultCode getResultCode() {
+        return ActivityResultCode.get(mResultCode);
+    }
+
+    public int getRequestCode() {
+        return mRequestCode;
+    }
+
+    public Intent getData() {
+        return mData;
+    }
 
     public void startActivityForResult(Class<? extends Activity> classToStart, int requestCode) {
         Intent i = new Intent(this, classToStart);
@@ -39,18 +52,6 @@ public class TestingActivity extends ActivitySingleFragment {
         mResultCode = INIT_RESULT_CODE;
         mData = null;
         mCallBack = false;
-    }
-
-    public ActivityResultCode getResultCode() {
-        return ActivityResultCode.get(mResultCode);
-    }
-
-    public int getRequestCode() {
-        return mRequestCode;
-    }
-
-    public Intent getData() {
-        return mData;
     }
 
     public boolean called() {
@@ -70,6 +71,7 @@ public class TestingActivity extends ActivitySingleFragment {
         mData = data;
     }
 
+//Classes
     public static class TestingActivityFragment extends Fragment {
         @Nullable
         @Override

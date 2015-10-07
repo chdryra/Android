@@ -27,9 +27,10 @@ import com.chdryra.android.myandroidwidgets.ClearableAutoCompleteTextView;
 public class ClearableAutoCompleteTextViewTest extends
         ActivityInstrumentationTestCase2<ClearableAutoCompleteTextViewActivity> {
     private static final String TEST_TEXT = "Test text";
-    private Activity                      mActivity;
+    private Activity mActivity;
     private ClearableAutoCompleteTextView mEditText;
 
+//Constructors
     public ClearableAutoCompleteTextViewTest() {
         super(ClearableAutoCompleteTextViewActivity.class);
     }

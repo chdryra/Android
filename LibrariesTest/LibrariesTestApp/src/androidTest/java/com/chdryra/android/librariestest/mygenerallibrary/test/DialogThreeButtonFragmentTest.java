@@ -28,9 +28,10 @@ import com.chdryra.android.mygenerallibrary.DialogTwoButtonFragment;
  */
 public class DialogThreeButtonFragmentTest extends
         ActivityInstrumentationTestCase2<TestingActivity> {
-    private Activity     mActivity;
+    private Activity mActivity;
     private DialogTester mTester;
 
+//Constructors
     public DialogThreeButtonFragmentTest() {
         super(TestingActivity.class);
     }
@@ -116,6 +117,7 @@ public class DialogThreeButtonFragmentTest extends
         mTester = new DialogTester(defaultDialog, mActivity);
     }
 
+//private methods
     private DialogThreeButtonFragment getDialogWithDataOnRightClick() {
 
         return new DialogThreeButtonFragment() {
@@ -168,7 +170,7 @@ public class DialogThreeButtonFragmentTest extends
     }
 
     private DialogThreeButtonFragment getDialogWithDismissOnClick(final DialogTester.ButtonLMR
-            button) {
+                                                                          button) {
         return new DialogThreeButtonFragment() {
 
             @Override
@@ -191,7 +193,8 @@ public class DialogThreeButtonFragmentTest extends
     }
 
     private DialogThreeButtonFragment getDialogWithAction(final DialogTester.ButtonLMR button,
-            final DialogTwoButtonFragment.ActionType actionType) {
+                                                          final DialogTwoButtonFragment
+                                                                  .ActionType actionType) {
         return new DialogThreeButtonFragment() {
             @Override
             public void onCreate(Bundle savedInstanceState) {

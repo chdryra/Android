@@ -22,14 +22,15 @@ import com.chdryra.android.librariestest.R;
 public class FragmentDeleteDoneActivity extends Activity {
     private Menu mMenu;
 
+//public methods
+    public Menu getMenu() {
+        return mMenu;
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         mMenu = menu;
         return super.onCreateOptionsMenu(menu);
-    }
-
-    public Menu getMenu() {
-        return mMenu;
     }
 
     @Override

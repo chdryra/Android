@@ -25,12 +25,13 @@ import java.util.ArrayList;
  * Email: rizwan.choudrey@gmail.com
  */
 public class ZZZPlaceSuggesterTest extends
-ActivityInstrumentationTestCase2<TestingActivity> {
+        ActivityInstrumentationTestCase2<TestingActivity> {
     private final static LatLng LATLNG = new LatLng(51.5072, -0.1275);
     private PlaceSuggester.SuggestionsListener mListener;
-    private ArrayList<String>                  mAddresses;
-    private CallBackSignaler                   mSignaler;
+    private ArrayList<String> mAddresses;
+    private CallBackSignaler mSignaler;
 
+//Constructors
     public ZZZPlaceSuggesterTest() {
         super(TestingActivity.class);
     }

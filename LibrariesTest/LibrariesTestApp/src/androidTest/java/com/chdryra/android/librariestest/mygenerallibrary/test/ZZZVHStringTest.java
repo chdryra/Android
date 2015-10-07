@@ -25,14 +25,15 @@ import com.chdryra.android.mygenerallibrary.ViewHolderData;
  * Email: rizwan.choudrey@gmail.com
  */
 public class ZZZVHStringTest extends ActivityInstrumentationTestCase2<TestingActivity> {
-    private static final int    UPDATEABLE = com.chdryra.android.mygenerallibrary.R.id.text_view;
-    private static final int    LAYOUT     = R.layout.mygenerallibrary_view_holder_test_layout;
-    private static final int    TEXTVIEW   = R.id.vh_text_view;
-    private static final String TEST       = "test";
-    private static final String INNIT      = "innit";
+    private static final int UPDATEABLE = com.chdryra.android.mygenerallibrary.R.id.text_view;
+    private static final int LAYOUT = R.layout.mygenerallibrary_view_holder_test_layout;
+    private static final int TEXTVIEW = R.id.vh_text_view;
+    private static final String TEST = "test";
+    private static final String INNIT = "innit";
 
     private VHString mVHString;
 
+//Constructors
     public ZZZVHStringTest() {
         super(TestingActivity.class);
     }
@@ -78,6 +79,7 @@ public class ZZZVHStringTest extends ActivityInstrumentationTestCase2<TestingAct
     }
 
     private class VHStringChild extends VHString {
+//Constructors
         public VHStringChild() {
             super(LAYOUT, TEXTVIEW, new VHString.VHDataStringGetter() {
                 @Override

@@ -33,14 +33,15 @@ public class DialogCancelDeleteDoneFragmentTest extends
             DialogCancelDeleteDoneFragment.CANCEL_ACTION;
     private static final DialogTwoButtonFragment.ActionType DELETE =
             DialogCancelDeleteDoneFragment.DELETE_ACTION;
-    private static final DialogTwoButtonFragment.ActionType DONE   =
+    private static final DialogTwoButtonFragment.ActionType DONE =
             DialogCancelDeleteDoneFragment.DONE_ACTION;
 
     private DialogTester mTester;
-    private Activity     mActivity;
+    private Activity mActivity;
 
     private boolean mData = true;
 
+//Constructors
     public DialogCancelDeleteDoneFragmentTest() {
         super(TestingActivity.class);
     }
@@ -106,6 +107,27 @@ public class DialogCancelDeleteDoneFragmentTest extends
         mTester = new DialogTester(dialog, mActivity);
     }
 
+//private methods
+    private DialogCancelDeleteDoneFragment getDialogHasData() {
+        mData = true;
+        return new DialogCancelDeleteDoneFragment() {
+            @Override
+            protected View createDialogUi() {
+                return null;
+            }
+
+            @Override
+            protected boolean hasDataToDelete() {
+                return mData;
+            }
+
+            @Override
+            protected void onConfirmedDeleteButtonClick() {
+                mData = false;
+            }
+        };
+    }
+
     private void testDelete(boolean confirmDelete) {
         DialogCancelDeleteDoneFragment dialog = getDialogHasData();
         DialogTester tester = new DialogTester(dialog, mActivity);
@@ -131,25 +153,5 @@ public class DialogCancelDeleteDoneFragmentTest extends
             confirmDialog.clickNegativeButton();
             assertTrue(mData);
         }
-    }
-
-    private DialogCancelDeleteDoneFragment getDialogHasData() {
-        mData = true;
-        return new DialogCancelDeleteDoneFragment() {
-            @Override
-            protected View createDialogUi() {
-                return null;
-            }
-
-            @Override
-            protected boolean hasDataToDelete() {
-                return mData;
-            }
-
-            @Override
-            protected void onConfirmedDeleteButtonClick() {
-                mData = false;
-            }
-        };
     }
 }
