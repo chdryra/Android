@@ -41,13 +41,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d705fcbe-517c-42a0-9055-f982038e4276" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer" afterPath="$PROJECT_DIR$/Reviewer" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/ActivitiesFragments/ActivityReviewView.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/ActivitiesFragments/ActivityReviewView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/FeedScreen.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/FeedScreen.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/ActivitiesFragments/FragmentReviewView.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/ActivitiesFragments/FragmentReviewView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/ReviewView.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/ReviewView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/ReviewViewAction.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/ReviewViewAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/ApplicationSingletons/ReviewViewPacker.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/ApplicationSingletons/ReviewViewPacker.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Android.iws" />
@@ -165,8 +159,8 @@
       <file leaf-file-name="FragmentReviewView.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/ActivitiesFragments/FragmentReviewView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.7641196">
+              <caret line="331" column="9" selection-start-line="331" selection-start-column="9" selection-end-line="331" selection-end-column="9" />
               <folding>
                 <element signature="e#2844#2845#0" expanded="true" />
                 <element signature="e#2889#2890#0" expanded="true" />
@@ -199,7 +193,7 @@
         <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/ActivitiesFragments/ActivityReviewView.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+              <caret line="40" column="35" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
               <folding>
                 <element signature="e#915#916#0" expanded="true" />
                 <element signature="e#943#944#0" expanded="true" />
@@ -5189,9 +5183,9 @@
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/FeedScreen.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/ReviewViewAction.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/Screens/ReviewView.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/ActivitiesFragments/FragmentReviewView.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/ApplicationSingletons/ReviewViewPacker.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/ActivitiesFragments/ActivityReviewView.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/ActivitiesFragments/FragmentReviewView.java" />
       </list>
     </option>
   </component>
@@ -5875,12 +5869,6 @@
       <option name="number" value="Default" />
       <updated>1436871130528</updated>
     </task>
-    <task id="LOCAL-00018" summary="Simplified GvDataList so as not to need data class.">
-      <created>1441241916736</created>
-      <option name="number" value="00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1441241916736</updated>
-    </task>
     <task id="LOCAL-00019" summary="Added GvCanonical and GvCanonicalList to take place of GvDataMap for aggregation">
       <created>1441243877151</created>
       <option name="number" value="00019" />
@@ -6169,7 +6157,13 @@
       <option name="project" value="LOCAL" />
       <updated>1445381865857</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="Some code cleanup">
+      <created>1445386220336</created>
+      <option name="number" value="00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1445386220336</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TodoView">
@@ -6281,9 +6275,9 @@
     <MESSAGE value="Tests now recompile" />
     <MESSAGE value="Have to remove my abstract fragment listeners as turns out need empty public constructors in order to restore fragments. Must be self contained so can't be inner classes. Activities will have to be listeners for dialogs and activity results." />
     <MESSAGE value="Moved fragment listeners for EditScreenReviewData stuff to a new ActivityEditData that calls same methods on EditScreenReviewData" />
-    <MESSAGE value="Some code cleanup" />
     <MESSAGE value="Tests compile in light of recent changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tests compile in light of recent changes" />
+    <MESSAGE value="Some code cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some code cleanup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -6586,10 +6580,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="243" column="35" selection-start-line="243" selection-start-column="35" selection-end-line="243" selection-end-column="35" />
           <folding>
-            <element signature="e#8319#8320#0" expanded="true" />
-            <element signature="e#8361#8362#0" expanded="true" />
-            <element signature="e#9499#9500#0" expanded="true" />
-            <element signature="e#9553#9554#0" expanded="true" />
+            <element signature="e#8319#8320#0" expanded="false" />
+            <element signature="e#8361#8362#0" expanded="false" />
+            <element signature="e#9499#9500#0" expanded="false" />
+            <element signature="e#9553#9554#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -6802,7 +6796,7 @@
     <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/ActivitiesFragments/ActivityReviewView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <caret line="40" column="35" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
           <folding>
             <element signature="e#915#916#0" expanded="true" />
             <element signature="e#943#944#0" expanded="true" />
@@ -6814,8 +6808,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/ActivitiesFragments/FragmentReviewView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.7641196">
+          <caret line="331" column="9" selection-start-line="331" selection-start-column="9" selection-end-line="331" selection-end-column="9" />
           <folding>
             <element signature="e#2844#2845#0" expanded="true" />
             <element signature="e#2889#2890#0" expanded="true" />
