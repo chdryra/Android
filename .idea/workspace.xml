@@ -37,64 +37,59 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d705fcbe-517c-42a0-9055-f982038e4276" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/DatabaseInstance.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/DatabaseInstanceSqlLite.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Interfaces/DatabaseProvider.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/DatabaseProviderSqlLite.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/FactorySqLiteDatabaseInstance.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/LocationServices/Interfaces/LocatedPlace.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/LocationServices/Implementation/LocationId.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Factories/PersistenceSuite.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/PersistenceSuiteAndroidSqlLite.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Interfaces/StorageType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Interfaces/StorageTypeDefinitions.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/StorageTypeDefinitionsSqlLite.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Implementation/StorageTypeImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Implementation/ValueNullable.java" />
-      <change type="DELETED" beforePath="C:\Dev\Android\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\Database\GenericDb\Factories\FactoryDbContractExecutor.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Dev\Android\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\Database\GenericDb\Implementation\DbHelper.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Dev\Android\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\Database\Implementation\ReviewerReadableDbImpl.java" afterPath="" />
-      <change type="MOVED" beforePath="C:\Dev\Android\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\Database\GenericDb\Implementation\DbContractExecutorImpl.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/SqlLiteContractExecutorImpl.java" />
-      <change type="MOVED" beforePath="C:\Dev\Android\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\Database\GenericDb\Implementation\SQL.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/SQL.java" />
-      <change type="MOVED" beforePath="C:\Dev\Android\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\Database\GenericDb\Interfaces\DbContractExecutor.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/SqlLiteContractExecutor.java" />
-      <change type="MOVED" beforePath="C:\Dev\Android\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\LocationServices\Implementation\LocatedPlace.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/LocationServices/Implementation/LocatedPlaceImpl.java" />
-      <change type="MOVED" beforePath="C:\Dev\Android\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\Utils\CommentFormatter.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Presenter/ReviewViewModel/Implementation/Data/Utils/CommentFormatter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyGeneralLibrary" afterPath="$PROJECT_DIR$/MyGeneralLibrary" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RemoteAPIFetchers" afterPath="$PROJECT_DIR$/RemoteAPIFetchers" />
+    <list default="true" id="d705fcbe-517c-42a0-9055-f982038e4276" name="Default" comment="Removed Cursor from DbTableRow construction">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/CursorRowValues.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/FactoryRowConverter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/RowAuthorConverter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/RowCommentConverter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/RowConverter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/RowFactConverter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/RowImageConverter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/RowLocationConverter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/RowReviewConverter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/RowTagConverter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Interfaces/RowValueTypeDefinitions.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/RowValueTypeDefinitionsSqlLite.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Interfaces/RowValues.java" />
+      <change type="DELETED" beforePath="C:\Dev\Android\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\Database\AndroidSqLite\StorageTypeDefinitionsSqlLite.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dev\Android\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\Database\GenericDb\Interfaces\StorageTypeDefinitions.java" afterPath="" />
+      <change type="MOVED" beforePath="C:\Dev\Android\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\Database\GenericDb\Implementation\StorageTypeImpl.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Implementation/RowValueTypeImpl.java" />
+      <change type="MOVED" beforePath="C:\Dev\Android\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\Database\GenericDb\Interfaces\StorageType.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Interfaces/RowValueType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer" afterPath="$PROJECT_DIR$/Reviewer" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/AndroidViews/Dialogs/Layouts/Implementation/AddLocation.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/AndroidViews/Dialogs/Layouts/Implementation/AddLocation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/LocationServices/Interfaces/AddressSuggestionsListener.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/LocationServices/Interfaces/AddressSuggestionsListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/LocationServices/Interfaces/AddressesSuggester.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/LocationServices/Interfaces/AddressesSuggester.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/LocationServices/Implementation/ProviderGoogle/AddressesSuggesterGp.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/LocationServices/Implementation/ProviderGoogle/AddressesSuggesterGp.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/LocationServices/Implementation/ProviderGoogle/AutoCompleterGp.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/LocationServices/Implementation/ProviderGoogle/AutoCompleterGp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/DatabaseInstance.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/DatabaseInstance.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/DatabaseInstanceSqlLite.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/DatabaseInstanceSqlLite.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Interfaces/DbColumnDef.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Interfaces/DbColumnDef.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Implementation/DbColumnDefImpl.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Implementation/DbColumnDefImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Implementation/DbSpecificationImpl.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Implementation/DbSpecificationImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Interfaces/DbTable.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Interfaces/DbTable.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Implementation/DbTableImpl.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Implementation/DbTableImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Interfaces/DbTableRow.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Interfaces/DbTableRow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Utils/DialogShower.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Utils/DialogShower.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Factories/FactoryDbColumnDef.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Factories/FactoryDbColumnDef.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Factories/FactoryReviewerDb.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Factories/FactoryReviewerDb.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Factories/FactoryReviewerDbContract.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Factories/FactoryReviewerDbContract.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/AndroidViews/Fragments/FragmentEditLocationMap.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/AndroidViews/Fragments/FragmentEditLocationMap.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/LocationServices/Implementation/ProviderGoogle/GpLocatedPlaceConverter.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/LocationServices/Implementation/ProviderGoogle/GpLocatedPlaceConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Presenter/ReviewViewModel/Implementation/Data/GvData/GvComment.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Presenter/ReviewViewModel/Implementation/Data/GvData/GvComment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/LocationServices/Interfaces/LocationDetailsFetcher.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/LocationServices/Interfaces/LocationDetailsFetcher.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/LocationServices/Implementation/ProviderGoogle/LocationDetailsFetcherGp.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/LocationServices/Implementation/ProviderGoogle/LocationDetailsFetcherGp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/LocationServices/Implementation/ProviderGoogle/LocationServicesGoogle.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/LocationServices/Implementation/ProviderGoogle/LocationServicesGoogle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/LocationServices/Interfaces/LocationServicesProvider.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/LocationServices/Interfaces/LocationServicesProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/LocationServices/Interfaces/NearestNamesSuggester.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/LocationServices/Interfaces/NearestNamesSuggester.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/LocationServices/Implementation/ProviderGoogle/NearestNamesSuggesterGp.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/LocationServices/Implementation/ProviderGoogle/NearestNamesSuggesterGp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/LocationServices/Interfaces/NearestNamesSuggestionsListener.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/LocationServices/Interfaces/NearestNamesSuggestionsListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/LocationServices/Interfaces/PlaceSearchResultsListener.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/LocationServices/Interfaces/PlaceSearchResultsListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Factories/FactoryReviewerDbTableRow.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Factories/FactoryReviewerDbTableRow.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/FactorySqLiteDatabaseInstance.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/FactorySqLiteDatabaseInstance.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Factories/PersistenceSuite.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Factories/PersistenceSuite.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/PersistenceSuiteAndroidSqlLite.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/PersistenceSuiteAndroidSqlLite.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/ApplicationContexts/Implementation/ReleaseModelContext.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/ApplicationContexts/Implementation/ReleaseModelContext.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/ReviewLoader.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/ReviewLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/ReviewLoaderStatic.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/ReviewLoaderStatic.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/ReviewUserDb.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/ReviewUserDb.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/Reviewer.iml" afterPath="$PROJECT_DIR$/Reviewer/Reviewer.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/ReviewerDb.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/ReviewerDb.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/ReviewerDbImpl.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/ReviewerDbImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/ReviewerReadableDb.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/ReviewerReadableDb.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/ReviewDataRow.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/ReviewDataRow.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/ReviewLoaderDynamic.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/ReviewLoaderDynamic.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Model/Implementation/ReviewsRepositoryModel/ReviewerDbRepository.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Model/Implementation/ReviewsRepositoryModel/ReviewerDbRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/test/java/test/Model/ReviewsRepositoryModel/ReviewerDbRepositoryTest.java" afterPath="$PROJECT_DIR$/Reviewer/src/test/java/test/Model/ReviewsRepositoryModel/ReviewerDbRepositoryTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/RowAuthor.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/RowAuthor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/RowAuthorImpl.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/RowAuthorImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/RowComment.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/RowComment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/RowCommentImpl.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/RowCommentImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/RowFact.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/RowFact.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/RowFactImpl.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/RowFactImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/RowImage.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/RowImage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/RowImageImpl.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/RowImageImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/RowLocation.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/RowLocation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/RowLocationImpl.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/RowLocationImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/RowReview.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/RowReview.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/RowReviewImpl.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/RowReviewImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/RowTag.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/RowTag.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/RowTagImpl.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/RowTagImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/TableAuthors.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/TableAuthors.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/TableComments.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/TableComments.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/TableFacts.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/TableFacts.java" />
@@ -133,32 +128,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FactoryReviewerDbTableRow.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Factories/FactoryReviewerDbTableRow.java">
+      <file leaf-file-name="RowLocationImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/RowLocationImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="51" column="36" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
-              <folding />
+              <caret line="71" column="5" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
+              <folding>
+                <element signature="e#2097#2098#0" expanded="true" />
+                <element signature="e#2138#2139#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RowAuthorImpl.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/RowAuthorImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.76285243">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RowCommentImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/RowCommentImpl.java">
+      <file leaf-file-name="RowReviewImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/RowReviewImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="40" column="36" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
-              <folding />
+              <caret line="108" column="5" selection-start-line="108" selection-start-column="5" selection-end-line="108" selection-end-column="5" />
+              <folding>
+                <element signature="e#3077#3078#0" expanded="true" />
+                <element signature="e#3116#3117#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -167,17 +158,34 @@
         <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/RowTagImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+              <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+              <folding>
+                <element signature="e#1153#1154#0" expanded="true" />
+                <element signature="e#1180#1181#0" expanded="true" />
+                <element signature="e#1236#1237#0" expanded="true" />
+                <element signature="e#1267#1268#0" expanded="true" />
+                <element signature="e#1537#1538#0" expanded="true" />
+                <element signature="e#1570#1571#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RowTag.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/RowTag.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FactorySqLiteDatabaseInstance.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/FactorySqLiteDatabaseInstance.java">
+      <file leaf-file-name="FactoryRowConverter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/FactoryRowConverter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+              <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -185,60 +193,52 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatabaseInstanceSqlLite.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/DatabaseInstanceSqlLite.java">
+      <file leaf-file-name="ReviewerDbRepositoryTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/test/java/test/Model/ReviewsRepositoryModel/ReviewerDbRepositoryTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="63" column="38" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DatabaseInstance.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/DatabaseInstance.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DatabaseProviderSqlLite.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/DatabaseProviderSqlLite.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="42" column="71" selection-start-line="42" selection-start-column="71" selection-end-line="42" selection-end-column="71" />
+            <state vertical-scroll-proportion="0.26206142">
+              <caret line="172" column="25" selection-start-line="172" selection-start-column="25" selection-end-line="172" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReviewerDbImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/ReviewerDbImpl.java">
+      <file leaf-file-name="RowFactConverter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/RowFactConverter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="82" column="73" selection-start-line="82" selection-start-column="73" selection-end-line="82" selection-end-column="73" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <caret line="19" column="53" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatabaseProvider.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Interfaces/DatabaseProvider.java">
+      <file leaf-file-name="RowReviewConverter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/RowReviewConverter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="78" selection-start-line="15" selection-start-column="78" selection-end-line="15" selection-end-column="78" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <caret line="22" column="78" selection-start-line="22" selection-start-column="78" selection-end-line="22" selection-end-column="78" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RowTagConverter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/RowTagConverter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="66" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RowLocationConverter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/RowLocationConverter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="48" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -249,8 +249,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Singleton" />
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -5317,57 +5317,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Implementation/DbSpecificationImpl.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Implementation/DbTableImpl.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Implementation/DbContractExecutorImpl.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Interfaces/DbContractExecutor.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Implementation/DbHelperImpl.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Implementation/DbHelper.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Factories/FactoryDatabaseProvider.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Factories/FactoryDatabaseInstance.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Implementation/DatabaseProviderImpl.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/ReviewerReadableDb.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/ReviewerDb.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/ReviewLoader.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/DatabaseInstance.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/DatabaseInstanceSqlLite.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/ReviewLoaderStatic.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/ReviewUserDb.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Implementation/DatabaseProviderSqlLite.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Implementation/DatabaseProvider.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Factories/FactoryDbContractExecutor.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Factories/FactorySqLiteContractExecutor.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Implementation/Nullable.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Implementation/StorageTypeSqlLite.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Implementation/StorageType.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Implementation/StorageTypeImpl.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/FactoryStorageType.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Interfaces/DbColumnDef.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Implementation/DbColumnDefImpl.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Factories/FactoryDbColumnDef.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Implementation/ValueNullable.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/SqlLiteContractExecutorImpl.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Interfaces/StorageType.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/TableAuthors.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/TableComments.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/FactoryStorageTypeSqlLite.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/TableFacts.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/TableImages.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/TableLocations.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Interfaces/RowContents.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/CursorRowEntry.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Interfaces/RowEntry.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Interfaces/RowEntryType.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Interfaces/RowValueType.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/RowValueTypeDefinitionsSqlLite.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/TableReviews.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/TableTags.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Factories/FactoryReviewerDbContract.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Factories/FactoryReviewerDb.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/FactoryDatabaseInstance.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/ApplicationContexts/Implementation/ReleaseModelContext.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Interfaces/FactoryStorageType.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/PersistenceSuiteAndroidSqlLite.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Factories/PersistenceSuite.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Factories/FactoryReviewerDbTableRow.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/DatabaseInstance.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Interfaces/RowConverter.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/DbTableRowConverter.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/RowConverter.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/FactoryContentValues.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Interfaces/DbTableRow.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Interfaces/DbTable.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/DatabaseInstanceSqlLite.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Interfaces/DatabaseProvider.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/ReviewerDbImpl.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/ReviewDataRow.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/RowAuthor.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/FactorySqLiteDatabaseInstance.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/DatabaseProviderSqlLite.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/PersistenceSuiteAndroidSqlLite.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Implementation/DbTableImpl.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/ApplicationContexts/Implementation/ReleaseModelContext.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/RowReview.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/RowComment.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/RowFact.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/RowLocation.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/ReviewLoaderDynamic.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/RowAuthorImpl.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/RowImage.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/RowImageImpl.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/LocationServices/Implementation/ProviderGoogle/AutoCompleterGp.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Model/Implementation/ReviewsRepositoryModel/ReviewerDbRepository.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/AndroidViews/Dialogs/Layouts/Implementation/AddLocation.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Presenter/ReviewViewModel/Implementation/Data/ViewHolders/VhdLocatedPlace.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/RowAuthorConverter.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/RowImageConverter.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/RowCommentConverter.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/RowCommentImpl.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/RowFactConverter.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/RowFactImpl.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Interfaces/RowValues.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/CursorRowValues.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/RowLocationImpl.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/RowLocationConverter.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/RowReviewConverter.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/RowReviewImpl.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/RowTag.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/RowTagConverter.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/RowTagImpl.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/FactoryRowConverter.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/test/java/test/Model/ReviewsRepositoryModel/ReviewerDbRepositoryTest.java" />
       </list>
     </option>
   </component>
@@ -5901,11 +5901,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.chdryra.android.reviewer.Database.AndroidSqLite" />
       <recent name="test.DataAlgorithms.Sorting" />
       <recent name="test.DataAlgorithms" />
       <recent name="com.chdryra.android.reviewer.DataDefinitions.Implementation" />
       <recent name="test.Model.ReviewsModel.MdConverters" />
-      <recent name="com.chdryra.android.reviewer.Model.Implementation.ReviewsModel.Implementation" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Dev\Android\Android\Reviewer\src\test\java\test\DataAlgorithms\Sorting" />
@@ -6259,12 +6259,6 @@
       <option name="number" value="Default" />
       <updated>1436871130528</updated>
     </task>
-    <task id="LOCAL-00168" summary="Added test for ReviewGetter">
-      <created>1449776115721</created>
-      <option name="number" value="00168" />
-      <option name="project" value="LOCAL" />
-      <updated>1449776115721</updated>
-    </task>
     <task id="LOCAL-00169" summary="Added ability for @NonNull annotations">
       <created>1449777123954</created>
       <option name="number" value="00169" />
@@ -6553,7 +6547,13 @@
       <option name="project" value="LOCAL" />
       <updated>1452540983261</updated>
     </task>
-    <option name="localTasksCounter" value="217" />
+    <task id="LOCAL-00217" summary="In the process of splitting out database from android implementation">
+      <created>1452606329183</created>
+      <option name="number" value="00217" />
+      <option name="project" value="LOCAL" />
+      <updated>1452606329184</updated>
+    </task>
+    <option name="localTasksCounter" value="218" />
     <servers />
   </component>
   <component name="TodoView">
@@ -6574,7 +6574,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32765958" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3287234" sideWeight="0.4402985" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287234" sideWeight="0.4402985" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -6653,7 +6653,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Added tests for Differences in DataAggregation" />
     <MESSAGE value="Refactored ItemCounter and some Canonical code to aid readability" />
     <MESSAGE value="Added ItemCounterTest" />
     <MESSAGE value="Added some comparitor tests and DataAggregatorParams to easily change aggregation parameters. &#10;&#10;ComparitorString is now an interface and ComparitorStringable takes an implementation of a CoparitorString." />
@@ -6678,7 +6677,8 @@
     <MESSAGE value="Added comparator tests for Comments" />
     <MESSAGE value="Added som comparator tests" />
     <MESSAGE value="Separated out LocationServices as a separate package to allow easier plug in of different providers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Separated out LocationServices as a separate package to allow easier plug in of different providers" />
+    <MESSAGE value="In the process of splitting out database from android implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="In the process of splitting out database from android implementation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -6710,116 +6710,50 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/FactoryReviewFromDataHolder.java">
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Interfaces/RowValueTypeDefinitions.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/ReviewDataHolder.java">
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/TableReviews.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+          <caret line="34" column="41" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/ReviewDataRow.java">
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/RowValueTypeDefinitionsSqlLite.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-23/android/database/Cursor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Model/Implementation/ReviewsRepositoryModel/ReviewerDbRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="50" selection-start-line="45" selection-start-column="50" selection-end-line="45" selection-end-column="50" />
-          <folding />
+          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+          <folding>
+            <element signature="e#763#764#0" expanded="true" />
+            <element signature="e#802#803#0" expanded="true" />
+            <element signature="e#860#861#0" expanded="true" />
+            <element signature="e#899#900#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-23/android/database/sqlite/SQLiteDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="1473" column="13" selection-start-line="1473" selection-start-column="13" selection-end-line="1473" selection-end-column="13" />
+          <caret line="1411" column="16" selection-start-line="1411" selection-start-column="16" selection-end-line="1411" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/ReviewerDbContract.java">
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-23/android/content/ContentValues.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Interfaces/DbSpecification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-23/android/database/sqlite/SQLiteOpenHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="160" column="26" selection-start-line="160" selection-start-column="26" selection-end-line="160" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/SqlLiteContractExecutor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/ReviewerReadableDb.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="64" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/ReviewerDb.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="62" selection-start-line="30" selection-start-column="62" selection-end-line="30" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/ReviewLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/ReviewLoaderStatic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+          <caret line="279" column="18" selection-start-line="279" selection-start-column="18" selection-end-line="279" selection-end-column="18" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#6029#6030#0" expanded="false" />
+            <element signature="e#6068#6069#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -6828,255 +6762,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
-          <folding>
-            <element signature="e#3248#3249#0" expanded="true" />
-            <element signature="e#3280#3281#0" expanded="true" />
-            <element signature="e#3333#3334#0" expanded="true" />
-            <element signature="e#3360#3361#0" expanded="true" />
-            <element signature="e#3411#3412#0" expanded="true" />
-            <element signature="e#3438#3439#0" expanded="true" />
-            <element signature="e#3770#3771#0" expanded="true" />
-            <element signature="e#3797#3798#0" expanded="true" />
-            <element signature="e#3860#3861#0" expanded="true" />
-            <element signature="e#3888#3889#0" expanded="true" />
-            <element signature="e#3952#3953#0" expanded="true" />
-            <element signature="e#3999#4000#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Implementation/DbSpecificationImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Implementation/DbTableImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="92" column="33" selection-start-line="92" selection-start-column="33" selection-end-line="92" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Implementation/ForeignKeyConstraintImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/SQL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Implementation/StorageTypeImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="e#367#368#0" expanded="true" />
-            <element signature="e#395#396#0" expanded="true" />
-            <element signature="e#446#447#0" expanded="true" />
-            <element signature="e#474#475#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Factories/FactoryDbColumnDef.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="72" selection-start-line="18" selection-start-column="72" selection-end-line="18" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Implementation/ValueNullable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-          <folding>
-            <element signature="e#338#339#0" expanded="true" />
-            <element signature="e#370#371#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Interfaces/DbColumnDef.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Interfaces/StorageType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/SqlLiteContractExecutorImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="82" column="82" selection-start-line="82" selection-start-column="82" selection-end-line="82" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/TableAuthors.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="62" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Implementation/DbColumnDefImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#788#789#0" expanded="true" />
-            <element signature="e#816#817#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/StorageTypeDefinitionsSqlLite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/TableComments.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="59" selection-start-line="34" selection-start-column="59" selection-end-line="34" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/TableFacts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/TableImages.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/TableLocations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="41" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/TableReviews.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="44" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/TableRowList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/TableTags.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Factories/FactoryReviewerDbContract.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Factories/FactoryReviewerDb.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="50" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Interfaces/StorageTypeDefinitions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/ApplicationContexts/Implementation/ReleaseModelContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="160" column="104" selection-start-line="160" selection-start-column="104" selection-end-line="160" selection-end-column="104" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Factories/PersistenceSuite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/PersistenceSuiteAndroidSqlLite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#947#948#0" expanded="true" />
-            <element signature="e#975#976#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/DatabaseInstance.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+          <caret line="29" column="68" selection-start-line="29" selection-start-column="68" selection-end-line="29" selection-end-column="68" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -7086,45 +6779,33 @@
     <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/ReviewerDbImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="82" column="73" selection-start-line="82" selection-start-column="73" selection-end-line="82" selection-end-column="73" />
+          <caret line="338" column="37" selection-start-line="338" selection-start-column="37" selection-end-line="338" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Interfaces/DatabaseProvider.java">
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Interfaces/DbTableRow.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="78" selection-start-line="15" selection-start-column="78" selection-end-line="15" selection-end-column="78" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/FactorySqLiteDatabaseInstance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/DatabaseProviderSqlLite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="71" selection-start-line="42" selection-start-column="71" selection-end-line="42" selection-end-column="71" />
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/RowTagImpl.java">
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Implementation/ForeignKeyConstraintImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Interfaces/DbTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -7132,9 +6813,122 @@
     <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/DatabaseInstanceSqlLite.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="63" column="38" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="38" />
+          <caret line="81" column="13" selection-start-line="81" selection-start-column="13" selection-end-line="81" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1394#1395#0" expanded="true" />
+            <element signature="e#1432#1433#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/ReviewDataRow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/RowAuthor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/FactorySqLiteDatabaseInstance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="76" selection-start-line="20" selection-start-column="76" selection-end-line="20" selection-end-column="76" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/PersistenceSuiteAndroidSqlLite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="117" selection-start-line="26" selection-start-column="117" selection-end-line="26" selection-end-column="117" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/TableAuthors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Implementation/DbTableImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="85" column="44" selection-start-line="85" selection-start-column="44" selection-end-line="85" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/TableComments.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/ApplicationContexts/Implementation/ReleaseModelContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="159" column="117" selection-start-line="159" selection-start-column="117" selection-end-line="159" selection-end-column="117" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/RowReview.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/RowComment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/RowFact.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/ReviewLoaderDynamic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/RowAuthorImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="52" column="4" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="4" />
+          <folding>
+            <element signature="e#1380#1381#0" expanded="true" />
+            <element signature="e#1417#1418#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -7142,7 +6936,89 @@
     <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Factories/FactoryReviewerDbTableRow.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="36" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
+          <caret line="55" column="43" selection-start-line="55" selection-start-column="43" selection-end-line="55" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/RowImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/RowConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/RowImageImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="50" column="46" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
+          <folding>
+            <element signature="e#2283#2284#0" expanded="true" />
+            <element signature="e#2334#2335#0" expanded="true" />
+            <element signature="e#2947#2948#0" expanded="true" />
+            <element signature="e#2985#2986#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/LocationServices/Implementation/ProviderGoogle/AutoCompleterGp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Model/Implementation/ReviewsRepositoryModel/ReviewerDbRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Presenter/ReviewViewModel/Implementation/Data/ViewHolders/VhdLocatedPlace.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+          <folding>
+            <element signature="e#776#777#0" expanded="true" />
+            <element signature="e#806#807#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/AndroidViews/Dialogs/Layouts/Implementation/AddLocation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="214" column="56" selection-start-line="214" selection-start-column="56" selection-end-line="214" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/RowAuthorConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/RowCommentConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="66" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
           <folding />
         </state>
       </provider>
@@ -7150,15 +7026,152 @@
     <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/RowCommentImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="36" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
+          <caret line="59" column="25" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="25" />
+          <folding>
+            <element signature="e#1893#1894#0" expanded="true" />
+            <element signature="e#1933#1934#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/RowImageConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/RowAuthorImpl.java">
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/RowFactImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.76285243">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+          <folding>
+            <element signature="e#1978#1979#0" expanded="true" />
+            <element signature="e#2015#2016#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/GenericDb/Interfaces/RowValues.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/CursorRowValues.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="52" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#755#756#0" expanded="true" />
+            <element signature="e#817#818#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/RowLocation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/RowLocationConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="48" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/RowLocationImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="71" column="5" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
+          <folding>
+            <element signature="e#2097#2098#0" expanded="true" />
+            <element signature="e#2138#2139#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/RowFactConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="53" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/RowReviewImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="108" column="5" selection-start-line="108" selection-start-column="5" selection-end-line="108" selection-end-column="5" />
+          <folding>
+            <element signature="e#3077#3078#0" expanded="true" />
+            <element signature="e#3116#3117#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Interfaces/RowTag.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/RowReviewConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="78" selection-start-line="22" selection-start-column="78" selection-end-line="22" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/RowTagConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="66" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/Implementation/RowTagImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+          <folding>
+            <element signature="e#1153#1154#0" expanded="true" />
+            <element signature="e#1180#1181#0" expanded="true" />
+            <element signature="e#1236#1237#0" expanded="true" />
+            <element signature="e#1267#1268#0" expanded="true" />
+            <element signature="e#1537#1538#0" expanded="true" />
+            <element signature="e#1570#1571#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Database/AndroidSqLite/FactoryRowConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/test/java/test/Model/ReviewsRepositoryModel/ReviewerDbRepositoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26206142">
+          <caret line="172" column="25" selection-start-line="172" selection-start-column="25" selection-end-line="172" selection-end-column="25" />
           <folding />
         </state>
       </provider>
