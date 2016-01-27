@@ -38,9 +38,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d705fcbe-517c-42a0-9055-f982038e4276" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/test/java/test/Plugins/PersistencePlugin/PersistenceReviewerDb/ReviewerDbImplTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer" afterPath="$PROJECT_DIR$/Reviewer" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/PersistencePlugin/PersistenceDatabase/PersistenceReviewerDb/Interfaces/ReviewerDbContract.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/PersistencePlugin/PersistenceDatabase/PersistenceReviewerDb/Interfaces/ReviewerDbContract.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/PersistencePlugin/PersistenceDatabase/PersistenceReviewerDb/Implementation/ReviewerDbImpl.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/PersistencePlugin/PersistenceDatabase/PersistenceReviewerDb/Implementation/ReviewerDbImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/test/java/test/Plugins/PersistencePlugin/PersistenceReviewerDb/ReviewerDbImplTest.java" afterPath="$PROJECT_DIR$/Reviewer/src/test/java/test/Plugins/PersistencePlugin/PersistenceReviewerDb/ReviewerDbImplTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Android.iws" />
@@ -75,20 +75,44 @@
         <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/PersistencePlugin/PersistenceDatabase/PersistenceReviewerDb/Implementation/ReviewerDbImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="227" column="35" selection-start-line="227" selection-start-column="35" selection-end-line="227" selection-end-column="35" />
+              <caret line="142" column="64" selection-start-line="142" selection-start-column="64" selection-end-line="142" selection-end-column="64" />
               <folding>
-                <element signature="e#7144#7145#0" expanded="true" />
-                <element signature="e#7192#7193#0" expanded="true" />
+                <element signature="e#7377#7378#0" expanded="true" />
+                <element signature="e#7425#7426#0" expanded="true" />
+                <element signature="e#7492#7493#0" expanded="true" />
+                <element signature="e#7541#7542#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MethodInterceptorFilter.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/1.10.19/8269667b73d9616600359a9b0ba1b1c7d0cf7a97/mockito-core-1.10.19-sources.jar!/org/mockito/internal/creation/cglib/MethodInterceptorFilter.java">
+      <file leaf-file-name="ReviewerDbContract.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/PersistencePlugin/PersistenceDatabase/PersistenceReviewerDb/Interfaces/ReviewerDbContract.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+              <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReviewerDbContractImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/PersistencePlugin/PersistenceDatabase/PersistenceReviewerDb/Implementation/ReviewerDbContractImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FactoryReviewerDbContract.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/PersistencePlugin/PersistenceDatabase/PersistenceReviewerDb/Factories/FactoryReviewerDbContract.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -104,71 +128,55 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TableRowList.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/PersistencePlugin/PersistenceDatabase/PersistenceReviewerDb/Implementation/TableRowList.java">
+      <file leaf-file-name="RowEntry.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/PersistencePlugin/PersistenceDatabase/RelationalDb/Interfaces/RowEntry.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.39800996">
+              <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FactoryDbTableRow.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/PersistencePlugin/PersistenceDatabase/RelationalDb/Interfaces/FactoryDbTableRow.java">
+      <file leaf-file-name="TableTransactorSqlLite.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/PersistencePlugin/PersistenceDatabase/DatabasePlugin/DatabaseAndroidSqLite/Implementation/TableTransactorSqlLite.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReviewerDbImplTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/test/java/test/Plugins/PersistencePlugin/PersistenceReviewerDb/ReviewerDbImplTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8291874">
-              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+              <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
               <folding>
-                <element signature="e#5109#5110#0" expanded="true" />
-                <element signature="e#5175#5176#0" expanded="true" />
-                <element signature="e#6928#6958#0" expanded="true" />
-                <element signature="e#7574#7604#0" expanded="true" />
-                <element signature="e#8424#8425#0" expanded="true" />
-                <element signature="e#8446#8447#0" expanded="true" />
-                <element signature="e#8960#8990#0" expanded="true" />
-                <element signature="e#9521#9551#0" expanded="true" />
-                <element signature="e#10222#10252#0" expanded="true" />
+                <element signature="e#2118#2119#0" expanded="true" />
+                <element signature="e#2156#2157#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReflectiveCallable.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
+      <file leaf-file-name="ReviewerDbImplTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/test/java/test/Plugins/PersistencePlugin/PersistenceReviewerDb/ReviewerDbImplTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding />
+              <caret line="270" column="21" selection-start-line="270" selection-start-column="21" selection-end-line="270" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#4920#4921#0" expanded="true" />
+                <element signature="e#4986#4987#0" expanded="true" />
+                <element signature="e#6739#6769#0" expanded="true" />
+                <element signature="e#7337#7367#0" expanded="true" />
+                <element signature="e#8441#8471#0" expanded="true" />
+                <element signature="e#9390#9420#0" expanded="true" />
+                <element signature="e#9890#9920#0" expanded="true" />
+                <element signature="e#10530#10560#0" expanded="true" />
+                <element signature="e#10917#10947#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RowReview.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/PersistencePlugin/PersistenceDatabase/PersistenceReviewerDb/Interfaces/RowReview.java">
+      <file leaf-file-name="RowEntryImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/PersistencePlugin/PersistenceDatabase/PersistenceReviewerDb/Implementation/RowEntryImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RowReviewImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/PersistencePlugin/PersistenceDatabase/PersistenceReviewerDb/Implementation/RowReviewImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="78" column="13" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="13" />
+              <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -178,7 +186,7 @@
         <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/PersistencePlugin/PersistenceDatabase/PersistenceReviewerDb/Factories/FactoryReviewerDbTableRow.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="77" column="58" selection-start-line="77" selection-start-column="58" selection-end-line="77" selection-end-column="58" />
+              <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -5991,7 +5999,7 @@
     <property name="recentsLimit" value="5" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="C8D15E333467" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="AndroidVD" />
-    <property name="settings.editor.selected.configurable" value="copyright" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.folding" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
@@ -6046,59 +6054,7 @@
       <recent name="com.chdryra.android.reviewer.Model" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ReviewerDbImplTest.deleteReviewFromDbForRecognisedReviewIdDoesCallReviewTransactorReturnsTrue">
-    <configuration default="false" name="ReviewerDbImplTest.getUniqueRowWhereReturnsRowIfOneRowFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="test.Plugins.PersistencePlugin.PersistenceReviewerDb.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Reviewer" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="test.Plugins.PersistencePlugin.PersistenceReviewerDb" />
-      <option name="MAIN_CLASS_NAME" value="test.Plugins.PersistencePlugin.PersistenceReviewerDb.ReviewerDbImplTest" />
-      <option name="METHOD_NAME" value="getUniqueRowWhereReturnsRowIfOneRowFound" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="ReviewerDbImplTest.getRowsWhere" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="test.Plugins.PersistencePlugin.PersistenceReviewerDb.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Reviewer" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="test.Plugins.PersistencePlugin.PersistenceReviewerDb" />
-      <option name="MAIN_CLASS_NAME" value="test.Plugins.PersistencePlugin.PersistenceReviewerDb.ReviewerDbImplTest" />
-      <option name="METHOD_NAME" value="getRowsWhere" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.ReviewerDbImplTest">
     <configuration default="false" name="ReviewerDbImplTest.deleteReviewFromDbForRecognisedReviewIdDoesCallReviewTransactorReturnsTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -6165,6 +6121,58 @@
       <option name="MAIN_CLASS_NAME" value="test.Plugins.PersistencePlugin.PersistenceReviewerDb.ReviewerDbImplTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ReviewerDbImplTest.getUniqueRowWhereReturnsEmptyRowIfInvalidClause" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="test.Plugins.PersistencePlugin.PersistenceReviewerDb.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Reviewer" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="test.Plugins.PersistencePlugin.PersistenceReviewerDb" />
+      <option name="MAIN_CLASS_NAME" value="test.Plugins.PersistencePlugin.PersistenceReviewerDb.ReviewerDbImplTest" />
+      <option name="METHOD_NAME" value="getUniqueRowWhereReturnsEmptyRowIfInvalidClause" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ReviewerDbImplTest.getRowsWhereReturnsEmptyListIfInvalidClause" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="test.Plugins.PersistencePlugin.PersistenceReviewerDb.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Reviewer" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="test.Plugins.PersistencePlugin.PersistenceReviewerDb" />
+      <option name="MAIN_CLASS_NAME" value="test.Plugins.PersistencePlugin.PersistenceReviewerDb.ReviewerDbImplTest" />
+      <option name="METHOD_NAME" value="getRowsWhereReturnsEmptyListIfInvalidClause" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -6330,19 +6338,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Android Application.Reviewer" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.ReviewerDbImplTest.getUniqueRowWhereReturnsRowIfOneRowFound" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ReviewerDbImplTest.getRowsWhere" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ReviewerDbImplTest.deleteReviewFromDbForRecognisedReviewIdDoesCallReviewTransactorReturnsTrue" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.ReviewerDbImplTest.deleteReviewFromDbForUnrecognisedReviewIdDoesNotCallReviewTransactorReturnsFalse" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.ReviewerDbImplTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ReviewerDbImplTest.deleteReviewFromDbForRecognisedReviewIdDoesCallReviewTransactorReturnsTrue" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ReviewerDbImplTest.deleteReviewFromDbForUnrecognisedReviewIdDoesNotCallReviewTransactorReturnsFalse" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ReviewerDbImplTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ReviewerDbImplTest.getUniqueRowWhereReturnsEmptyRowIfInvalidClause" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.ReviewerDbImplTest.getRowsWhereReturnsEmptyListIfInvalidClause" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ReviewerDbImplTest.deleteReviewFromDbForRecognisedReviewIdDoesCallReviewTransactorReturnsTrue" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ReviewerDbImplTest.deleteReviewFromDbForUnrecognisedReviewIdDoesNotCallReviewTransactorReturnsFalse" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ReviewerDbImplTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.ReviewerDbImplTest.getRowsWhere" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.ReviewerDbImplTest.getUniqueRowWhereReturnsRowIfOneRowFound" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ReviewerDbImplTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ReviewerDbImplTest.deleteReviewFromDbForRecognisedReviewIdDoesCallReviewTransactorReturnsTrue" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ReviewerDbImplTest.getRowsWhereReturnsEmptyListIfInvalidClause" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ReviewerDbImplTest.getUniqueRowWhereReturnsEmptyRowIfInvalidClause" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ReviewerDbImplTest.deleteReviewFromDbForUnrecognisedReviewIdDoesNotCallReviewTransactorReturnsFalse" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="Applet" default="true" selected="false">
@@ -6368,12 +6376,6 @@
       <created>1436871130528</created>
       <option name="number" value="Default" />
       <updated>1436871130528</updated>
-    </task>
-    <task id="LOCAL-00238" summary="Trying to better separate ReviewerDb from DbPlugin">
-      <created>1452863661605</created>
-      <option name="number" value="00238" />
-      <option name="project" value="LOCAL" />
-      <updated>1452863661606</updated>
     </task>
     <task id="LOCAL-00239" summary="Trying to better separate ReviewerDb from DbPlugin">
       <created>1452872168753</created>
@@ -6663,7 +6665,13 @@
       <option name="project" value="LOCAL" />
       <updated>1453892611959</updated>
     </task>
-    <option name="localTasksCounter" value="287" />
+    <task id="LOCAL-00287" summary="In process of adding ReviewerDbImplTest">
+      <created>1453909167113</created>
+      <option name="number" value="00287" />
+      <option name="project" value="LOCAL" />
+      <updated>1453909167113</updated>
+    </task>
+    <option name="localTasksCounter" value="288" />
     <servers />
   </component>
   <component name="TodoView">
@@ -6763,7 +6771,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Added tests for ReviewerDb tables" />
     <MESSAGE value="Added test for RowTagImpl" />
     <MESSAGE value="Added test for RowReviewImpl" />
     <MESSAGE value="Added test for RowLocationImpl" />
@@ -6788,7 +6795,8 @@
     <MESSAGE value="Added test for ReviewInserter" />
     <MESSAGE value="Added test for ReviewLoaderStatic" />
     <MESSAGE value="Some code cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some code cleanup" />
+    <MESSAGE value="In process of adding ReviewerDbImplTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="In process of adding ReviewerDbImplTest" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -6817,76 +6825,21 @@
           <properties />
           <option name="timeStamp" value="306" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/PersistencePlugin/PersistenceDatabase/PersistenceReviewerDb/Implementation/ReviewerDbImpl.java</url>
+          <line>158</line>
+          <properties />
+          <option name="timeStamp" value="308" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="308" />
+      <option name="time" value="309" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DataDefinitions/Implementation/DatumUserId.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="78" selection-start-line="36" selection-start-column="78" selection-end-line="36" selection-end-column="78" />
-          <folding>
-            <element signature="e#616#617#0" expanded="false" />
-            <element signature="e#642#643#0" expanded="false" />
-            <element signature="e#955#956#0" expanded="false" />
-            <element signature="e#1010#1011#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Model/Implementation/ReviewsModel/Implementation/MdComment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#2190#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#985#986#0" expanded="false" />
-            <element signature="e#1017#1018#0" expanded="false" />
-            <element signature="e#1090#1091#0" expanded="false" />
-            <element signature="e#1141#1142#0" expanded="false" />
-            <element signature="e#1189#1190#0" expanded="false" />
-            <element signature="e#1220#1221#0" expanded="false" />
-            <element signature="e#1269#1270#0" expanded="false" />
-            <element signature="e#1303#1304#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/test/java/test/TestUtils/DataEquivalence.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42982456">
-          <caret line="58" column="23" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#3585#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/PersistencePlugin/PersistenceDatabase/PersistenceReviewerDb/Implementation/ReviewLoaderDynamic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/test/java/test/Plugins/PersistencePlugin/PersistenceReviewerDb/ReviewLoaderStaticTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="314" column="9" selection-start-line="314" selection-start-column="9" selection-end-line="314" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/PersistencePlugin/PersistenceDatabase/PersistenceReviewerDb/Implementation/TableComments.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -7055,25 +7008,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/PersistencePlugin/PersistenceDatabase/DatabasePlugin/DatabaseAndroidSqLite/Implementation/TableTransactorSqlLite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
-          <folding>
-            <element signature="e#2118#2119#0" expanded="false" />
-            <element signature="e#2156#2157#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/PersistencePlugin/PersistenceDatabase/PersistenceReviewerDb/Implementation/ReviewerDbContractImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/PersistencePlugin/PersistenceDatabase/RelationalDb/Implementation/DbTableImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -7138,23 +7072,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/PersistencePlugin/PersistenceDatabase/DatabasePlugin/Api/TableTransactor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="12" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/1.10.19/8269667b73d9616600359a9b0ba1b1c7d0cf7a97/mockito-core-1.10.19-sources.jar!/org/mockito/Matchers.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="590" column="24" selection-start-line="590" selection-start-column="24" selection-end-line="590" selection-end-column="24" />
           <folding>
-            <element signature="e#10601#10602#0" expanded="true" />
-            <element signature="e#10667#10668#0" expanded="true" />
-            <element signature="e#11146#11147#0" expanded="true" />
-            <element signature="e#11184#11185#0" expanded="true" />
+            <element signature="e#10601#10602#0" expanded="false" />
+            <element signature="e#10667#10668#0" expanded="false" />
+            <element signature="e#11146#11147#0" expanded="false" />
+            <element signature="e#11184#11185#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -7183,16 +7109,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/PersistencePlugin/PersistenceDatabase/PersistenceReviewerDb/Interfaces/ReviewerDbContract.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/PersistencePlugin/PersistenceDatabase/RelationalDb/Interfaces/FactoryDbTableRow.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -7213,22 +7129,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/PersistencePlugin/PersistenceDatabase/RelationalDb/Interfaces/DbTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/PersistencePlugin/PersistenceDatabase/PersistenceReviewerDb/Factories/FactoryReviewerDbTableRow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="77" column="58" selection-start-line="77" selection-start-column="58" selection-end-line="77" selection-end-column="58" />
           <folding />
         </state>
       </provider>
@@ -7257,32 +7157,128 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Model/Implementation/TagsModel/TagsManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/PersistencePlugin/PersistenceDatabase/PersistenceReviewerDb/Implementation/ColumnInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/PersistencePlugin/PersistenceDatabase/DatabasePlugin/Api/TableTransactor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="57" selection-start-line="34" selection-start-column="57" selection-end-line="34" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/PersistencePlugin/PersistenceDatabase/RelationalDb/Interfaces/DbTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/PersistencePlugin/PersistenceDatabase/PersistenceReviewerDb/Factories/FactoryReviewerDbTableRow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/PersistencePlugin/PersistenceDatabase/PersistenceReviewerDb/Interfaces/ReviewerDbContract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/PersistencePlugin/PersistenceDatabase/PersistenceReviewerDb/Factories/FactoryReviewerDbContract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/PersistencePlugin/PersistenceDatabase/PersistenceReviewerDb/Implementation/ReviewerDbContractImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/PersistencePlugin/PersistenceDatabase/PersistenceReviewerDb/Implementation/ReviewerDbImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="227" column="35" selection-start-line="227" selection-start-column="35" selection-end-line="227" selection-end-column="35" />
+          <caret line="142" column="64" selection-start-line="142" selection-start-column="64" selection-end-line="142" selection-end-column="64" />
           <folding>
-            <element signature="e#7144#7145#0" expanded="true" />
-            <element signature="e#7192#7193#0" expanded="true" />
+            <element signature="e#7377#7378#0" expanded="true" />
+            <element signature="e#7425#7426#0" expanded="true" />
+            <element signature="e#7492#7493#0" expanded="true" />
+            <element signature="e#7541#7542#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/PersistencePlugin/PersistenceDatabase/PersistenceReviewerDb/Implementation/RowEntryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Reviewer/src/test/java/test/Plugins/PersistencePlugin/PersistenceReviewerDb/ReviewerDbImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8291874">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="270" column="21" selection-start-line="270" selection-start-column="21" selection-end-line="270" selection-end-column="21" />
           <folding>
-            <element signature="e#5109#5110#0" expanded="true" />
-            <element signature="e#5175#5176#0" expanded="true" />
-            <element signature="e#6928#6958#0" expanded="true" />
-            <element signature="e#7574#7604#0" expanded="true" />
-            <element signature="e#8424#8425#0" expanded="true" />
-            <element signature="e#8446#8447#0" expanded="true" />
-            <element signature="e#8960#8990#0" expanded="true" />
-            <element signature="e#9521#9551#0" expanded="true" />
-            <element signature="e#10222#10252#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#4920#4921#0" expanded="true" />
+            <element signature="e#4986#4987#0" expanded="true" />
+            <element signature="e#6739#6769#0" expanded="true" />
+            <element signature="e#7337#7367#0" expanded="true" />
+            <element signature="e#8441#8471#0" expanded="true" />
+            <element signature="e#9390#9420#0" expanded="true" />
+            <element signature="e#9890#9920#0" expanded="true" />
+            <element signature="e#10530#10560#0" expanded="true" />
+            <element signature="e#10917#10947#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/PersistencePlugin/PersistenceDatabase/DatabasePlugin/DatabaseAndroidSqLite/Implementation/TableTransactorSqlLite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+          <folding>
+            <element signature="e#2118#2119#0" expanded="true" />
+            <element signature="e#2156#2157#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/PersistencePlugin/PersistenceDatabase/RelationalDb/Interfaces/RowEntry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39800996">
+          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
