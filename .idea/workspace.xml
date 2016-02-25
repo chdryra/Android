@@ -37,27 +37,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d705fcbe-517c-42a0-9055-f982038e4276" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Interfaces/BatchReviewSharer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Interfaces/BatchReviewSharerListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Factories/FactoryAuthorisationSeeker.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Fragments/FragmentTwitterLogin.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Interfaces/OAuthListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/res/layout/twitter_login.xml" />
-      <change type="DELETED" beforePath="C:\Dev\Android\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\PlugIns\UiPlugin\UiAndroid\Implementation\Utils\FactoryAuthorisationSeeker.java" afterPath="" />
-      <change type="MOVED" beforePath="C:\Dev\Android\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\PlugIns\UiPlugin\UiAndroid\Implementation\Activities\ActivityFacebookLogin.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Activities/ActivitySocialLogin.java" />
-      <change type="MOVED" beforePath="C:\Dev\Android\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\PlugIns\UiPlugin\UiAndroid\Implementation\Utils\BatchReviewSharer.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/BatchReviewSharerImpl.java" />
-      <change type="MOVED" beforePath="C:\Dev\Android\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\PlugIns\UiPlugin\UiAndroid\Implementation\Utils\DialogAuthorisationSeeker.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/DefaultOAuthSeeker.java" />
-      <change type="MOVED" beforePath="C:\Dev\Android\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\PlugIns\UiPlugin\UiAndroid\Implementation\Utils\FacebookAuthorisationSeeker.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformAuthorisationSeekerBasic.java" />
-      <change type="MOVED" beforePath="C:\Dev\Android\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\PlugIns\UiPlugin\UiAndroid\Implementation\Utils\PlatformAuthorisationSeeker.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Interfaces/PlatformAuthorisationSeeker.java" />
-      <change type="MOVED" beforePath="C:\Dev\Android\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\PlugIns\UiPlugin\UiAndroid\Implementation\Utils\PublishingAction.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PublishingAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer" afterPath="$PROJECT_DIR$/Reviewer" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Activities/ActivityFeed.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Activities/ActivityFeed.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Interfaces/AccessTokenGetter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Interfaces/AuthorisationListener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Factories/FactoryAuthorisationUi.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformTwitterFabric.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PublisherTwitterFabric.java" />
+      <change type="DELETED" beforePath="C:\Dev\Android\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\Social\Factories\FactoryAuthorisationSeeker.java" afterPath="" />
+      <change type="MOVED" beforePath="C:\Dev\Android\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\PlugIns\UiPlugin\UiAndroid\Implementation\Dialogs\Implementation\DialogAuthSharing.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Dialogs/Implementation/DialogSocialLogin.java" />
+      <change type="MOVED" beforePath="C:\Dev\Android\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\Social\Implementation\DefaultOAuthSeeker.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/DefaultOAuthUi.java" />
+      <change type="MOVED" beforePath="C:\Dev\Android\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\Social\Implementation\PlatformAuthorisationSeekerBasic.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/SocialPlatformAuthUiDefault.java" />
+      <change type="MOVED" beforePath="C:\Dev\Android\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\Social\Implementation\PlatformTwitter.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformTwitter4j.java" />
+      <change type="MOVED" beforePath="C:\Dev\Android\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\Social\Implementation\PublisherTwitter.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PublisherTwitter4j.java" />
+      <change type="MOVED" beforePath="C:\Dev\Android\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\Social\Implementation\SocialPlatformImpl.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/SocialPlatformBasic.java" />
+      <change type="MOVED" beforePath="C:\Dev\Android\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\Social\Interfaces\PlatformAuthorisationSeeker.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Interfaces/SocialPlatformAuthUi.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Activities/ActivityShareReview.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Activities/ActivityShareReview.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Activities/ActivityViewLocation.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Activities/ActivityViewLocation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/Reviewer/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Dialogs/Implementation/DialogAuthSharing.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Dialogs/Implementation/DialogAuthSharing.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Fragments/FragmentFacebookLogin.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Fragments/FragmentFacebookLogin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/res/layout/facebook_login.xml" afterPath="$PROJECT_DIR$/Reviewer/src/main/res/layout/facebook_login.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Activities/ActivitySocialLogin.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Activities/ActivitySocialLogin.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Factories/FactorySocialPlatformList.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Factories/FactorySocialPlatformList.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Fragments/FragmentTwitterLogin.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Fragments/FragmentTwitterLogin.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Presenter/ReviewBuilding/Implementation/GridItemShareScreen.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Presenter/ReviewBuilding/Implementation/GridItemShareScreen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Interfaces/PlatformAuthoriser.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Interfaces/PlatformAuthoriser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformFacebook.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformFacebook.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformFoursquare.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformFoursquare.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformTumblr.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformTumblr.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformTwitter.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformTwitter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PublisherFacebook.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PublisherFacebook.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Interfaces/SocialPlatform.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Interfaces/SocialPlatform.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/res/layout/twitter_login.xml" afterPath="$PROJECT_DIR$/Reviewer/src/main/res/layout/twitter_login.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Android.iws" />
@@ -122,79 +127,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FactoryAuthorisationSeeker.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Factories/FactoryAuthorisationSeeker.java">
+      <file leaf-file-name="PlatformFacebook.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformFacebook.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <caret line="82" column="16" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="16" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2869#2870#0" expanded="true" />
-                <element signature="e#2935#2936#0" expanded="true" />
+                <element signature="e#2764#2958#0" expanded="true" />
+                <element signature="e#2957#2958#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlatformAuthorisationSeekerBasic.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformAuthorisationSeekerBasic.java">
+      <file leaf-file-name="PlatformTumblr.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformTumblr.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+              <caret line="43" column="5" selection-start-line="36" selection-start-column="4" selection-end-line="43" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlatformFoursquare.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformFoursquare.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1092#1121#0" expanded="true" />
+                <element signature="e#1169#1201#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlatformAuthorisationSeeker.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Interfaces/PlatformAuthorisationSeeker.java">
+      <file leaf-file-name="FactoryAuthorisationUi.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Factories/FactoryAuthorisationUi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DefaultOAuthSeeker.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/DefaultOAuthSeeker.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FragmentFacebookLogin.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Fragments/FragmentFacebookLogin.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ActivitySocialLogin.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Activities/ActivitySocialLogin.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9335548">
-              <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DialogAuthSharing.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Dialogs/Implementation/DialogAuthSharing.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="77" selection-start-line="25" selection-start-column="77" selection-end-line="25" selection-end-column="77" />
+            <state vertical-scroll-proportion="0.66832507">
+              <caret line="45" column="69" selection-start-line="45" selection-start-column="69" selection-end-line="45" selection-end-column="69" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -202,34 +175,69 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OAuthListener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Interfaces/OAuthListener.java">
+      <file leaf-file-name="SocialPlatformAuthUiDefault.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/SocialPlatformAuthUiDefault.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FactoryLauncherUi.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/LauncherModel/Factories/FactoryLauncherUi.java">
+      <file leaf-file-name="PublisherTumblr.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PublisherTumblr.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ActivityShareReview.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Activities/ActivityShareReview.java">
+      <file leaf-file-name="PlatformTwitterFabric.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformTwitterFabric.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+              <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlatformTwitter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformTwitter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+              <folding>
+                <element signature="e#1411#1440#0" expanded="true" />
+                <element signature="e#1479#1511#0" expanded="true" />
+                <element signature="e#2286#2462#0" expanded="true" />
+                <element signature="e#2461#2462#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlatformTwitter4j.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformTwitter4j.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FactorySocialPlatformList.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Factories/FactorySocialPlatformList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="102" column="29" selection-start-line="102" selection-start-column="29" selection-end-line="102" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -4773,57 +4781,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/SocialPublisherBasic.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Interfaces/SocialPublisher.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Dialogs/Layouts/Implementation/AddEditTag.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Presenter/ReviewViewModel/Implementation/Data/ViewHolders/VhTag.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Presenter/ReviewViewModel/Implementation/Data/GvData/GvTag.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Presenter/ReviewBuilding/Implementation/ReviewBuilderAdapterImpl.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Presenter/ReviewBuilding/Implementation/TagAdjuster.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/ReviewFormatterDefault.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/ReviewFormatterFacebook.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/BatchSocialPublisher.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Factories/FactoryAuthorisationRequester.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PublisherFacebook.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/SocialPlatformImpl.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformFacebook.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PublisherTwitter.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PublisherTumblr.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformTumblr.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PublisherFourSquare.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformFoursquare.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Factories/FactorySocialPlatforms.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Factories/FactorySocialPlatformList.java" />
-        <option value="$PROJECT_DIR$/Reviewer/build.gradle" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformTwitter.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/res/layout/facebook_login.xml" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/res/layout/twitter_login.xml" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Fragments/FragmentTwitterLogin.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Activities/ActivityFacebookLogin.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Utils/BatchReviewSharer.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/BatchReviewSharer.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/BatchReviewSharerListener.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Interfaces/BatchReviewSharerListener.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/BatchReviewSharerImpl.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Activities/ActivityFeed.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PublishingAction.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Activities/ActivityViewLocation.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Activities/ActivitySocialLogin.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Utils/FacebookAuthorisationSeeker.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Utils/PlatformAuthorisationSeekerBasic.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Utils/FactoryAuthorisationSeeker.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformAuthorisationSeekerBasic.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Interfaces/PlatformAuthorisationSeeker.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Dialogs/Implementation/AuthorisationListener.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Dialogs/Implementation/OAuthListener.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Interfaces/OAuthListener.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Utils/DialogOAuthSeeker.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Dialogs/Implementation/DialogAuthSharing.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Utils/DefaultOAuthSeeker.java" />
-        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Activities/ActivityShareReview.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Activities/ActivitySocialLogin.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Fragments/FragmentTwitterLogin.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/res/layout/twitter_login.xml" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PublisherTwitter2.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PublisherFacebook.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PublisherTwitter.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PublisherTwitterFabric.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PublisherTwitter4j.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformTwitter2.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformAuthorisationSeekerBasic.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Interfaces/PlatformAuthorisationSeeker.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Interfaces/SocialPlatformAuthorisationUi.java" />
         <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Factories/FactoryAuthorisationSeeker.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Activities/ActivityShareReview.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Factories/TwitterFabricAuthUi.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/TwitterFabricAuthUi.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Factories/Twitter4jAuthUi.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Factories/FacebookAuthUi.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/FacebookAuthUi.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Interfaces/SocialPlatform.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Interfaces/AuthorisationListener.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Interfaces/PlatformAuthoriser.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/SocialPlatformImpl.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/SocialPlatformBasic.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/Twitter4jAuthUi.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/SocialPlatformAuthUiBasic.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/AccessTokenGetter.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Interfaces/AccessTokenGetter.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformTwitterFabric.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformTwitter4j.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformTwitter.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Factories/FactorySocialPlatformList.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformFacebook.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformTumblr.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformFoursquare.java" />
+        <option value="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Factories/FactoryAuthorisationUi.java" />
       </list>
     </option>
   </component>
@@ -5808,8 +5816,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.chdryra.android.reviewer.PlugIns.UiPlugin.UiAndroid.Implementation.Fragments" />
       <recent name="com.chdryra.android.reviewer.Social.Implementation" />
+      <recent name="com.chdryra.android.reviewer.PlugIns.UiPlugin.UiAndroid.Implementation.Fragments" />
       <recent name="com.chdryra.android.reviewer.PlugIns.UiPlugin.UiAndroid.Implementation.Utils" />
       <recent name="com.chdryra.android.reviewer.PlugIns.UiPlugin.UiAndroid.Implementation.Dialogs.Implementation" />
       <recent name="com.chdryra.android.reviewer.PlugIns.UiPlugin.UiAndroid.Implementation.Activities" />
@@ -6180,12 +6188,6 @@
       <option name="number" value="Default" />
       <updated>1436871130528</updated>
     </task>
-    <task id="LOCAL-00323" summary="Got rid of tree flattener as no longer needed">
-      <created>1454955235919</created>
-      <option name="number" value="00323" />
-      <option name="project" value="LOCAL" />
-      <updated>1454955235919</updated>
-    </task>
     <task id="LOCAL-00324" summary="Some code cleanup">
       <created>1454956146301</created>
       <option name="number" value="00324" />
@@ -6474,7 +6476,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456406264330</updated>
     </task>
-    <option name="localTasksCounter" value="372" />
+    <task id="LOCAL-00372" summary="Reduced dependency on Android for authorisation seekers">
+      <created>1456412668285</created>
+      <option name="number" value="00372" />
+      <option name="project" value="LOCAL" />
+      <updated>1456412668285</updated>
+    </task>
+    <option name="localTasksCounter" value="373" />
     <servers />
   </component>
   <component name="TodoView">
@@ -6492,7 +6500,7 @@
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Fabric" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32978722" sideWeight="0.4978678" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.4978678" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5021322" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26599148" sideWeight="0.5253968" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5021322" order="10" side_tool="true" content_ui="tabs" />
@@ -6507,7 +6515,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32765958" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287234" sideWeight="0.4402985" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3287234" sideWeight="0.4402985" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39893618" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26599148" sideWeight="0.5253968" order="2" side_tool="true" content_ui="tabs" />
@@ -6575,7 +6583,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Fixed bug in buildscreenmodifier. was using wrong share ui" />
     <MESSAGE value="ome code cleanup" />
     <MESSAGE value="In the process of trying to use Twitter API programatically from hShare screen" />
     <MESSAGE value="Added SocialPublishers which manage social platform info. Added SocialContext to construct appropriate platforms." />
@@ -6600,296 +6607,19 @@
     <MESSAGE value="Can publish to facebook now" />
     <MESSAGE value="Some code cleanup" />
     <MESSAGE value="Added Twitter Fabric SDK" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Twitter Fabric SDK" />
+    <MESSAGE value="Reduced dependency on Android for authorisation seekers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reduced dependency on Android for authorisation seekers" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="539" />
+      <option name="time" value="543" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Factories/FactoryAuthorisationRequester.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="91" selection-start-line="44" selection-start-column="91" selection-end-line="44" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PublisherTumblr.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="79" selection-start-line="18" selection-start-column="79" selection-end-line="18" selection-end-column="79" />
-          <folding>
-            <element signature="e#0#1098#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#968#969#0" expanded="false" />
-            <element signature="e#1013#1014#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformFacebook.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="47" column="11" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#1953#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#1239#1240#0" expanded="false" />
-            <element signature="e#1287#1288#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformTumblr.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#929#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PublisherFourSquare.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#1137#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#1007#1008#0" expanded="false" />
-            <element signature="e#1052#1053#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformFoursquare.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#950#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/SocialPlatformImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#1770#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#922#923#0" expanded="false" />
-            <element signature="e#960#961#0" expanded="false" />
-            <element signature="e#1167#1168#0" expanded="false" />
-            <element signature="e#1218#1219#0" expanded="false" />
-            <element signature="e#1292#1293#0" expanded="false" />
-            <element signature="e#1346#1347#0" expanded="false" />
-            <element signature="e#1405#1406#0" expanded="false" />
-            <element signature="e#1438#1439#0" expanded="false" />
-            <element signature="e#1504#1505#0" expanded="false" />
-            <element signature="e#1537#1538#0" expanded="false" />
-            <element signature="e#1588#1589#0" expanded="false" />
-            <element signature="e#1631#1632#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.222221">
-          <caret line="110" column="33" selection-start-line="110" selection-start-column="33" selection-end-line="110" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="e#7711#7736#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Factories/FactorySocialPlatformList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="96" column="59" selection-start-line="96" selection-start-column="59" selection-end-line="96" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#205#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#205#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformTwitter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-          <folding>
-            <element signature="e#869#898#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Presenter/ReviewViewModel/Implementation/View/ReviewViewDefault.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Presenter/ReviewViewModel/Implementation/View/ViewerAggregateToData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/OldTests/Model/TreeMethods/TreeDataGetterTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49833888">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/OldTests/View/ActivitiesFragmentsScreens/ActivityEditChildrenTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33222592">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/OldTests/View/GvDataAggregation/AuthorReviewDatumMakerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33222592">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding>
-            <element signature="e#1359#1360#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/DataDefinitions/Implementation/PublishDate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4651163">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Presenter/ReviewBuilding/Implementation/SubjectDataEditTags.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46843854">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Presenter/ReviewBuilding/Implementation/GridItemDataEdit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33222592">
-          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/res/layout/facebook_login.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.586207">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/res/layout/twitter_login.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.8965516">
-          <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Fragments/FragmentTwitterLogin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Interfaces/BatchReviewSharerListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/BatchReviewSharerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
-          <folding>
-            <element signature="e#1069#1070#0" expanded="true" />
-            <element signature="e#1105#1106#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/BatchSocialPublisher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="43" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/FollowersFetcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/AsyncSocialPublisher.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -6914,14 +6644,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/OAuthRequester10a.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Activities/ActivityViewUrlBrowser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -6942,14 +6664,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Activities/ActivityViewLocation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="61" selection-start-line="42" selection-start-column="61" selection-end-line="42" selection-end-column="61" />
           <folding />
         </state>
       </provider>
@@ -6980,10 +6694,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/LauncherModel/Factories/LaunchableUiLauncher.java">
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Interfaces/OAuthListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Activities/ActivityViewLocation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="51" column="5" selection-start-line="45" selection-start-column="4" selection-end-line="51" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -6991,7 +6713,7 @@
     <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/LauncherModel/Implementation/LauncherUiImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="63" column="11" selection-start-line="63" selection-start-column="11" selection-end-line="63" selection-end-column="11" />
+          <caret line="61" column="11" selection-start-line="61" selection-start-column="11" selection-end-line="61" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -7004,87 +6726,342 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformAuthorisationSeekerBasic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Interfaces/PlatformAuthorisationSeeker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Interfaces/OAuthListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Dialogs/Implementation/DialogAuthSharing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="77" selection-start-line="25" selection-start-column="77" selection-end-line="25" selection-end-column="77" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Activities/ActivityShareReview.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Factories/FactoryAuthorisationSeeker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2869#2870#0" expanded="true" />
-            <element signature="e#2935#2936#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/DefaultOAuthSeeker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Fragments/FragmentFacebookLogin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.twitter4j/twitter4j-core/4.0.2/3f60b832b27bf85a46c18ec57385d3902a3d0c93/twitter4j-core-4.0.2-sources.jar!/twitter4j/auth/AccessToken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="53" column="13" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/res/layout/facebook_login.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.034483">
+          <caret line="16" column="38" selection-start-line="12" selection-start-column="4" selection-end-line="16" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/res/layout/twitter_login.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.344828">
+          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PublisherFacebook.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/SocialPublisherBasic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/ReviewSummary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/Reviewer/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.6.4/jars/classes.jar!/com/twitter/sdk/android/core/TwitterApiClient.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.7407407">
+          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/Reviewer/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.6.4/jars/classes.jar!/com/twitter/sdk/android/core/services/AccountService.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.9259257">
+          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/Reviewer/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.6.4/jars/classes.jar!/com/twitter/sdk/android/core/services/StatusesService.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.6296296">
+          <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Fragments/FragmentTwitterLogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/Reviewer/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.6.4/jars/classes.jar!/com/twitter/sdk/android/core/TwitterCore.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PublisherTwitterFabric.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PublisherTwitter4j.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/OAuthRequester10a.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/OAuthRequesterTwitter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="55" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Activities/ActivitySocialLogin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9335548">
-          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Dialogs/Implementation/DialogSocialLogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1563#1564#0" expanded="true" />
+            <element signature="e#1618#1619#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Presenter/ReviewBuilding/Implementation/GridItemShareScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Activities/ActivityShareReview.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/DefaultOAuthUi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="77" column="13" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/View/LauncherModel/Factories/LaunchableUiLauncher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Interfaces/AuthorisationListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Interfaces/PlatformAuthoriser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="87" selection-start-line="16" selection-start-column="87" selection-end-line="16" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Interfaces/SocialPlatform.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/SocialPlatformBasic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Interfaces/SocialPlatformAuthUi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Interfaces/AccessTokenGetter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/SocialPlatformAuthUiDefault.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformTwitterFabric.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformTwitter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+          <folding>
+            <element signature="e#1411#1440#0" expanded="true" />
+            <element signature="e#1479#1511#0" expanded="true" />
+            <element signature="e#2286#2462#0" expanded="true" />
+            <element signature="e#2461#2462#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformTwitter4j.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Factories/FactorySocialPlatformList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="102" column="29" selection-start-line="102" selection-start-column="29" selection-end-line="102" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformFacebook.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="82" column="16" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="16" />
+          <folding>
+            <element signature="e#2764#2958#0" expanded="true" />
+            <element signature="e#2957#2958#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PublisherTumblr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformTumblr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="5" selection-start-line="36" selection-start-column="4" selection-end-line="43" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/PlatformFoursquare.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+          <folding>
+            <element signature="e#1092#1121#0" expanded="true" />
+            <element signature="e#1169#1201#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Factories/FactoryAuthorisationUi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.66832507">
+          <caret line="45" column="69" selection-start-line="45" selection-start-column="69" selection-end-line="45" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
