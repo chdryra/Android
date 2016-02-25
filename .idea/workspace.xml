@@ -37,16 +37,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d705fcbe-517c-42a0-9055-f982038e4276" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Fragments/FragmentOAuthLogin.java" />
-      <change type="DELETED" beforePath="C:\Dev\Android\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\PlugIns\UiPlugin\UiAndroid\Implementation\Dialogs\Implementation\DialogSocialLogin.java" afterPath="" />
-      <change type="MOVED" beforePath="C:\Dev\Android\Android\Reviewer\src\main\java\com\chdryra\android\reviewer\PlugIns\UiPlugin\UiAndroid\Implementation\Activities\ActivitySocialLogin.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Activities/ActivitySocialAuthUi.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer" afterPath="$PROJECT_DIR$/Reviewer" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Activities/ActivityShareReview.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Activities/ActivityShareReview.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/Reviewer/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/DefaultOAuthUi.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/DefaultOAuthUi.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Factories/FactoryAuthorisationUi.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Factories/FactoryAuthorisationUi.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Interfaces/SocialPlatformAuthUi.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Interfaces/SocialPlatformAuthUi.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/SocialPlatformAuthUiDefault.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/SocialPlatformAuthUiDefault.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Android.iws" />
@@ -205,8 +196,8 @@
       <file leaf-file-name="ActivityShareReview.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Activities/ActivityShareReview.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5970149">
-              <caret line="56" column="23" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.033167496">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -6028,12 +6019,6 @@
       <option name="number" value="Default" />
       <updated>1436871130528</updated>
     </task>
-    <task id="LOCAL-00325" summary="Fixed tests that relied on TreeFlattener which has been removed">
-      <created>1455027295137</created>
-      <option name="number" value="00325" />
-      <option name="project" value="LOCAL" />
-      <updated>1455027295138</updated>
-    </task>
     <task id="LOCAL-00326" summary="Cleaned up gradle file a bit">
       <created>1455027567060</created>
       <option name="number" value="00326" />
@@ -6322,7 +6307,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456424461498</updated>
     </task>
-    <option name="localTasksCounter" value="374" />
+    <task id="LOCAL-00374" summary="Simplified and separated out authorisation uis for social platform login. Removed the dialog login">
+      <created>1456428195756</created>
+      <option name="number" value="00374" />
+      <option name="project" value="LOCAL" />
+      <updated>1456428195756</updated>
+    </task>
+    <option name="localTasksCounter" value="375" />
     <servers />
   </component>
   <component name="TodoView">
@@ -6423,7 +6414,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="In the process of trying to use Twitter API programatically from hShare screen" />
     <MESSAGE value="Added SocialPublishers which manage social platform info. Added SocialContext to construct appropriate platforms." />
     <MESSAGE value="Added AsyncSocialPublisher to do network stuff on async thread" />
     <MESSAGE value="FollowersFetcher is async task for GvSocialPLatform to find number followers" />
@@ -6448,7 +6438,8 @@
     <MESSAGE value="Added Twitter Fabric SDK" />
     <MESSAGE value="Reduced dependency on Android for authorisation seekers" />
     <MESSAGE value="Simplified and separated out authorisation uis for social platform login" />
-    <option name="LAST_COMMIT_MESSAGE" value="Simplified and separated out authorisation uis for social platform login" />
+    <MESSAGE value="Simplified and separated out authorisation uis for social platform login. Removed the dialog login" />
+    <option name="LAST_COMMIT_MESSAGE" value="Simplified and separated out authorisation uis for social platform login. Removed the dialog login" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -6884,8 +6875,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Activities/ActivityShareReview.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5970149">
-          <caret line="56" column="23" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.033167496">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
