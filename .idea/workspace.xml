@@ -32,20 +32,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d705fcbe-517c-42a0-9055-f982038e4276" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/ReviewSharerService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyGeneralLibrary" afterPath="$PROJECT_DIR$/MyGeneralLibrary" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer" afterPath="$PROJECT_DIR$/Reviewer" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestUtils" afterPath="$PROJECT_DIR$/TestUtils" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Activities/ActivityFeed.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/PlugIns/UiPlugin/UiAndroid/Implementation/Activities/ActivityFeed.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/Reviewer/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Interfaces/BatchReviewSharer.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Interfaces/BatchReviewSharer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/BatchReviewSharerImpl.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Social/Implementation/BatchReviewSharerImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Presenter/ReviewBuilding/Interfaces/DataBuilder.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Presenter/ReviewBuilding/Interfaces/DataBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Presenter/ReviewBuilding/Implementation/DataBuilderAdapterImpl.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Presenter/ReviewBuilding/Implementation/DataBuilderAdapterImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Presenter/ReviewBuilding/Implementation/DataBuilderImpl.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Presenter/ReviewBuilding/Implementation/DataBuilderImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Presenter/ReviewBuilding/Factories/FactoryReviewBuilder.java" afterPath="$PROJECT_DIR$/Reviewer/src/main/java/com/chdryra/android/reviewer/Presenter/ReviewBuilding/Factories/FactoryReviewBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reviewer/Reviewer.iml" afterPath="$PROJECT_DIR$/Reviewer/Reviewer.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_23_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_23_0_0.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Android.iws" />
@@ -5992,12 +5978,6 @@
       <option name="number" value="Default" />
       <updated>1436871130528</updated>
     </task>
-    <task id="LOCAL-00342" summary="Added SocialPublishers which manage social platform info. Added SocialContext to construct appropriate platforms.">
-      <created>1455291662116</created>
-      <option name="number" value="00342" />
-      <option name="project" value="LOCAL" />
-      <updated>1455291662116</updated>
-    </task>
     <task id="LOCAL-00343" summary="Added AsyncSocialPublisher to do network stuff on async thread">
       <created>1455296338666</created>
       <option name="number" value="00343" />
@@ -6286,7 +6266,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457030050100</updated>
     </task>
-    <option name="localTasksCounter" value="391" />
+    <task id="LOCAL-00391" summary="Addeda ReviewSharerService">
+      <created>1457091348581</created>
+      <option name="number" value="00391" />
+      <option name="project" value="LOCAL" />
+      <updated>1457091348582</updated>
+    </task>
+    <option name="localTasksCounter" value="392" />
     <servers />
   </component>
   <component name="TodoView">
@@ -6387,7 +6373,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Some code cleanup. Moved social plaform construction to FactorySocialPlatformList, added interface for credential authorisation" />
     <MESSAGE value="Added some code for checking whether social platforms are authorised on click on share screen." />
     <MESSAGE value="Added scribe java library for OAuth stuff" />
     <MESSAGE value="Added dialog for OAuth authorisation" />
@@ -6412,7 +6397,8 @@
     <MESSAGE value="Some code cleanup" />
     <MESSAGE value="Implemented Another Like This in feed screen pop up menu to use review as tremplate for new review" />
     <MESSAGE value="Added a possible solution for retaining review view in ActivityReviewView when OS kills activity. Retain fragment and get review view from fragment." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a possible solution for retaining review view in ActivityReviewView when OS kills activity. Retain fragment and get review view from fragment." />
+    <MESSAGE value="Addeda ReviewSharerService" />
+    <option name="LAST_COMMIT_MESSAGE" value="Addeda ReviewSharerService" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
