@@ -15,8 +15,8 @@ import android.test.suitebuilder.annotation.SmallTest;
 
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.librariestest.mygenerallibrary.test.TestUtils.DialogTester;
-import com.chdryra.android.mygenerallibrary.DialogAlertFragment;
-import com.chdryra.android.mygenerallibrary.DialogTwoButtonFragment;
+import com.chdryra.android.corelibrary.DialogAlertFragment;
+import com.chdryra.android.corelibrary.DialogTwoButtonFragment;
 import com.chdryra.android.testutils.RandomString;
 
 /**

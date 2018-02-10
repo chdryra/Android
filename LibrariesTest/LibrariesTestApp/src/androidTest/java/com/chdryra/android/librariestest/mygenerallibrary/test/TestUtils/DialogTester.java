@@ -16,9 +16,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.chdryra.android.mygenerallibrary.ActivityResultCode;
-import com.chdryra.android.mygenerallibrary.DialogThreeButtonFragment;
-import com.chdryra.android.mygenerallibrary.DialogTwoButtonFragment;
+import com.chdryra.android.corelibrary.ActivityResultCode;
+import com.chdryra.android.corelibrary.DialogThreeButtonFragment;
+import com.chdryra.android.corelibrary.DialogTwoButtonFragment;
 
 import junit.framework.Assert;
 

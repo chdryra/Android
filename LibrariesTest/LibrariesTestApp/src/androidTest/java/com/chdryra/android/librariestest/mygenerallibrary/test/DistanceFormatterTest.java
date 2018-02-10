@@ -10,7 +10,7 @@ package com.chdryra.android.librariestest.mygenerallibrary.test;
 
 import android.test.suitebuilder.annotation.SmallTest;
 
-import com.chdryra.android.mygenerallibrary.DistanceFormatter;
+import com.chdryra.android.corelibrary.DistanceFormatter;
 
 import junit.framework.TestCase;
 

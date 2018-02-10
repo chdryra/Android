@@ -13,7 +13,7 @@ import android.test.SingleLaunchActivityTestCase;
 import android.test.UiThreadTest;
 
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
-import com.chdryra.android.mygenerallibrary.ActivitySingleFragment;
+import com.chdryra.android.corelibrary.ActivitySingleFragment;
 
 
 /**

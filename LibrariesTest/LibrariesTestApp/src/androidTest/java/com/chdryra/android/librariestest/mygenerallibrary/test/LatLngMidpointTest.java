@@ -10,7 +10,7 @@ package com.chdryra.android.librariestest.mygenerallibrary.test;
 
 import android.test.suitebuilder.annotation.SmallTest;
 
-import com.chdryra.android.mygenerallibrary.LatLngMidpoint;
+import com.chdryra.android.corelibrary.LatLngMidpoint;
 import com.google.android.gms.maps.model.LatLng;
 
 import junit.framework.TestCase;

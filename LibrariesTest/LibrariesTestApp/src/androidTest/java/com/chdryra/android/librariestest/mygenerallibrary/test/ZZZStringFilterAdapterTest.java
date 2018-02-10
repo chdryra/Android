@@ -14,7 +14,7 @@ import android.test.UiThreadTest;
 import android.test.suitebuilder.annotation.SmallTest;
 
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
-import com.chdryra.android.mygenerallibrary.StringFilterAdapter;
+import com.chdryra.android.corelibrary.StringFilterAdapter;
 import com.chdryra.android.testutils.CallBackSignaler;
 
 import java.util.ArrayList;

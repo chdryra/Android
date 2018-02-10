@@ -14,7 +14,7 @@ import android.test.ActivityInstrumentationTestCase2;
 import android.test.suitebuilder.annotation.SmallTest;
 
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
-import com.chdryra.android.mygenerallibrary.ImageHelper;
+import com.chdryra.android.corelibrary.ImageHelper;
 import com.chdryra.android.testutils.BitmapFileMocker;
 import com.chdryra.android.testutils.RandomLatLng;
 import com.google.android.gms.maps.model.LatLng;

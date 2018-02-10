@@ -12,7 +12,7 @@ import android.test.ActivityInstrumentationTestCase2;
 import android.test.suitebuilder.annotation.SmallTest;
 
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
-import com.chdryra.android.mygenerallibrary.FileIncrementor;
+import com.chdryra.android.corelibrary.FileIncrementor;
 
 import java.io.File;
 import java.io.IOException;

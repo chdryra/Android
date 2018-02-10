@@ -12,7 +12,7 @@ import android.test.ActivityInstrumentationTestCase2;
 import android.test.suitebuilder.annotation.SmallTest;
 
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
-import com.chdryra.android.mygenerallibrary.PlaceAutoCompleteSuggester;
+import com.chdryra.android.corelibrary.PlaceAutoCompleteSuggester;
 import com.google.android.gms.maps.model.LatLng;
 
 import java.util.ArrayList;

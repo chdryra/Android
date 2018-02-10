@@ -13,7 +13,7 @@ import android.test.ActivityInstrumentationTestCase2;
 import android.test.suitebuilder.annotation.SmallTest;
 
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
-import com.chdryra.android.mygenerallibrary.GooglePlacesApi;
+import com.chdryra.android.corelibrary.GooglePlacesApi;
 import com.google.android.gms.maps.model.LatLng;
 
 import org.json.JSONException;

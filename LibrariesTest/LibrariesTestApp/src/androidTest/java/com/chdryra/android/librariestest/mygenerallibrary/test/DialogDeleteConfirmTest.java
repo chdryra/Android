@@ -14,8 +14,8 @@ import android.os.Bundle;
 import android.test.ActivityInstrumentationTestCase2;
 
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
-import com.chdryra.android.mygenerallibrary.DialogAlertFragment;
-import com.chdryra.android.mygenerallibrary.DialogDeleteConfirm;
+import com.chdryra.android.corelibrary.DialogAlertFragment;
+import com.chdryra.android.corelibrary.DialogDeleteConfirm;
 import com.chdryra.android.testutils.RandomString;
 
 /**

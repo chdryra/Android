@@ -16,11 +16,11 @@ import android.view.View;
 
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.librariestest.mygenerallibrary.test.TestUtils.DialogTester;
-import com.chdryra.android.mygenerallibrary.DialogAlertFragment;
-import com.chdryra.android.mygenerallibrary.DialogCancelDeleteDoneFragment;
-import com.chdryra.android.mygenerallibrary.DialogDeleteConfirm;
-import com.chdryra.android.mygenerallibrary.DialogThreeButtonFragment;
-import com.chdryra.android.mygenerallibrary.DialogTwoButtonFragment;
+import com.chdryra.android.corelibrary.DialogAlertFragment;
+import com.chdryra.android.corelibrary.DialogCancelDeleteDoneFragment;
+import com.chdryra.android.corelibrary.DialogDeleteConfirm;
+import com.chdryra.android.corelibrary.DialogThreeButtonFragment;
+import com.chdryra.android.corelibrary.DialogTwoButtonFragment;
 
 /**
  * Created by: Rizwan Choudrey

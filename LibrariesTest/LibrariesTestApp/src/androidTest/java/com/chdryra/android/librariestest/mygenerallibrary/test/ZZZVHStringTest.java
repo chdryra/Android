@@ -15,9 +15,9 @@ import android.widget.TextView;
 
 import com.chdryra.android.librariestest.R;
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
-import com.chdryra.android.mygenerallibrary.VHDString;
-import com.chdryra.android.mygenerallibrary.VHString;
-import com.chdryra.android.mygenerallibrary.ViewHolderData;
+import com.chdryra.android.corelibrary.VHDString;
+import com.chdryra.android.corelibrary.VHString;
+import com.chdryra.android.corelibrary.ViewHolderData;
 
 /**
  * Created by: Rizwan Choudrey
@@ -25,7 +25,7 @@ import com.chdryra.android.mygenerallibrary.ViewHolderData;
  * Email: rizwan.choudrey@gmail.com
  */
 public class ZZZVHStringTest extends ActivityInstrumentationTestCase2<TestingActivity> {
-    private static final int UPDATEABLE = com.chdryra.android.mygenerallibrary.R.id.text_view;
+    private static final int UPDATEABLE = com.chdryra.android.corelibrary.R.id.text_view;
     private static final int LAYOUT = R.layout.mygenerallibrary_view_holder_test_layout;
     private static final int TEXTVIEW = R.id.vh_text_view;
     private static final String TEST = "test";

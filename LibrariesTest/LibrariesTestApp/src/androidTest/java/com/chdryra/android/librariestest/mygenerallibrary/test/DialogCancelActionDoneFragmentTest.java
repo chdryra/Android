@@ -18,8 +18,8 @@ import android.widget.EditText;
 
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.librariestest.mygenerallibrary.test.TestUtils.DialogTester;
-import com.chdryra.android.mygenerallibrary.DialogCancelActionDoneFragment;
-import com.chdryra.android.mygenerallibrary.DialogTwoButtonFragment;
+import com.chdryra.android.corelibrary.DialogCancelActionDoneFragment;
+import com.chdryra.android.corelibrary.DialogTwoButtonFragment;
 
 /**
  * Created by: Rizwan Choudrey

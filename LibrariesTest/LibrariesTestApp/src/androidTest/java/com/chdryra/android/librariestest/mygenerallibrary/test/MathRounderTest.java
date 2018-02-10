@@ -10,7 +10,7 @@ package com.chdryra.android.librariestest.mygenerallibrary.test;
 
 import android.test.suitebuilder.annotation.SmallTest;
 
-import com.chdryra.android.mygenerallibrary.MathRounder;
+import com.chdryra.android.corelibrary.MathRounder;
 
 import junit.framework.TestCase;
 

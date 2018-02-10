@@ -17,10 +17,10 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
-import com.chdryra.android.mygenerallibrary.VHDString;
-import com.chdryra.android.mygenerallibrary.ViewHolder;
-import com.chdryra.android.mygenerallibrary.ViewHolderAdapterFiltered;
-import com.chdryra.android.mygenerallibrary.ViewHolderDataList;
+import com.chdryra.android.corelibrary.VHDString;
+import com.chdryra.android.corelibrary.ViewHolder;
+import com.chdryra.android.corelibrary.ViewHolderAdapterFiltered;
+import com.chdryra.android.corelibrary.ViewHolderDataList;
 
 /**
  * Created by: Rizwan Choudrey
@@ -33,7 +33,7 @@ import com.chdryra.android.mygenerallibrary.ViewHolderDataList;
 public class ZZZViewHolderAdapterFilteredTest extends
         ActivityInstrumentationTestCase2<TestingActivity> {
     private static final String[] DATA = {"Alpha", "Beta", "Gamma", "Delta"};
-    private static final int UPDATEABLE = com.chdryra.android.mygenerallibrary.R.id.text_view;
+    private static final int UPDATEABLE = com.chdryra.android.corelibrary.R.id.text_view;
     private static final int WIDTH = 100;
     private static final int HEIGHT = 100;
     private boolean mDataSet = false;

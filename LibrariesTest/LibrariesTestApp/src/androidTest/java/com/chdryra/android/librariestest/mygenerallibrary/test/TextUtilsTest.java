@@ -10,7 +10,7 @@ package com.chdryra.android.librariestest.mygenerallibrary.test;
 
 import android.test.suitebuilder.annotation.SmallTest;
 
-import com.chdryra.android.mygenerallibrary.TextUtils;
+import com.chdryra.android.corelibrary.TextUtils;
 
 import junit.framework.TestCase;
 

@@ -19,7 +19,7 @@ import android.view.View;
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.librariestest.mygenerallibrary.test.TestUtils.DialogTester;
 import com.chdryra.android.librariestest.mygenerallibrary.test.TestUtils.DialogTester.ButtonLMR;
-import com.chdryra.android.mygenerallibrary.DialogTwoButtonFragment;
+import com.chdryra.android.corelibrary.DialogTwoButtonFragment;
 
 /**
  * Created by: Rizwan Choudrey

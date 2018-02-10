@@ -14,7 +14,7 @@ import android.test.UiThreadTest;
 import android.test.suitebuilder.annotation.SmallTest;
 
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
-import com.chdryra.android.mygenerallibrary.LocationClientConnector;
+import com.chdryra.android.corelibrary.LocationClientConnector;
 import com.chdryra.android.testutils.CallBackSignaler;
 
 /**

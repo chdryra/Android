@@ -18,8 +18,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.chdryra.android.librariestest.R;
-import com.chdryra.android.mygenerallibrary.ActivityResultCode;
-import com.chdryra.android.mygenerallibrary.ActivitySingleFragment;
+import com.chdryra.android.corelibrary.ActivityResultCode;
+import com.chdryra.android.corelibrary.ActivitySingleFragment;
 
 public class TestingActivity extends ActivitySingleFragment {
     private static final int INIT_REQUEST_CODE = 161019;

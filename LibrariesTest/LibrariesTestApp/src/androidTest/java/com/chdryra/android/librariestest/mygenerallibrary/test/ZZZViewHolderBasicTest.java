@@ -14,8 +14,8 @@ import android.view.View;
 
 import com.chdryra.android.librariestest.R;
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
-import com.chdryra.android.mygenerallibrary.ViewHolderBasic;
-import com.chdryra.android.mygenerallibrary.ViewHolderData;
+import com.chdryra.android.corelibrary.ViewHolderBasic;
+import com.chdryra.android.corelibrary.ViewHolderData;
 
 /**
  * Created by: Rizwan Choudrey

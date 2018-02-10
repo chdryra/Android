@@ -19,7 +19,7 @@ import android.widget.TextView;
 
 import com.chdryra.android.librariestest.R;
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivityViewHolder;
-import com.chdryra.android.mygenerallibrary.ViewHolderLayout;
+import com.chdryra.android.corelibrary.ViewHolderLayout;
 
 /**
  * Created by: Rizwan Choudrey

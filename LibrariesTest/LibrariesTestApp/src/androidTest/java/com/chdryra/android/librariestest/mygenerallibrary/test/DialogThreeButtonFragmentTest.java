@@ -18,8 +18,8 @@ import android.view.View;
 
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.librariestest.mygenerallibrary.test.TestUtils.DialogTester;
-import com.chdryra.android.mygenerallibrary.DialogThreeButtonFragment;
-import com.chdryra.android.mygenerallibrary.DialogTwoButtonFragment;
+import com.chdryra.android.corelibrary.DialogThreeButtonFragment;
+import com.chdryra.android.corelibrary.DialogTwoButtonFragment;
 
 /**
  * Created by: Rizwan Choudrey

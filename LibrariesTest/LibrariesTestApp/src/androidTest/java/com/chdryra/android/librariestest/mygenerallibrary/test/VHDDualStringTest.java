@@ -10,7 +10,7 @@ package com.chdryra.android.librariestest.mygenerallibrary.test;
 
 import android.test.suitebuilder.annotation.SmallTest;
 
-import com.chdryra.android.mygenerallibrary.VHDDualString;
+import com.chdryra.android.corelibrary.VHDDualString;
 
 import junit.framework.TestCase;
 

@@ -19,10 +19,10 @@ import android.view.Menu;
 import com.chdryra.android.librariestest.R;
 import com.chdryra.android.librariestest.mygenerallibrary.FragmentDeleteDoneActivity;
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
-import com.chdryra.android.mygenerallibrary.ActivityResultCode;
-import com.chdryra.android.mygenerallibrary.DialogAlertFragment;
-import com.chdryra.android.mygenerallibrary.DialogDeleteConfirm;
-import com.chdryra.android.mygenerallibrary.FragmentDeleteDone;
+import com.chdryra.android.corelibrary.ActivityResultCode;
+import com.chdryra.android.corelibrary.DialogAlertFragment;
+import com.chdryra.android.corelibrary.DialogDeleteConfirm;
+import com.chdryra.android.corelibrary.FragmentDeleteDone;
 
 /**
  * Created by: Rizwan Choudrey
