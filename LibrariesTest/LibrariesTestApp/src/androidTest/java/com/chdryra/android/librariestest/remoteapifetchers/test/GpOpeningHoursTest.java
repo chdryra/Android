@@ -77,7 +77,7 @@ public class GpOpeningHoursTest extends TestCase {
         assertTrue(parsed.isPermanentlyClosed());
     }
 
-//private methods
+    //private methods
     private String getTestStringPeriods() {
         return "{\n" +
                 "\"opening_hours\" : {\n" +

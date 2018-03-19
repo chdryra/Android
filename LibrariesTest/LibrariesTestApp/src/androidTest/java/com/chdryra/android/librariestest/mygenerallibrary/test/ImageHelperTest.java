@@ -13,8 +13,8 @@ import android.media.ExifInterface;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.suitebuilder.annotation.SmallTest;
 
-import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.corelibrary.ImageHelper;
+import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.testutils.BitmapFileMocker;
 import com.chdryra.android.testutils.RandomLatLng;
 import com.google.android.gms.maps.model.LatLng;
@@ -36,7 +36,7 @@ public class ImageHelperTest extends ActivityInstrumentationTestCase2<TestingAct
 
     private BitmapFileMocker mBitmapMocker;
 
-//Constructors
+    //Constructors
     public ImageHelperTest() {
         super(TestingActivity.class);
     }

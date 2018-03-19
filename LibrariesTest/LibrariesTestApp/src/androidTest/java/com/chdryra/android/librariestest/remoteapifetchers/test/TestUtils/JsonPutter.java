@@ -19,7 +19,7 @@ import org.json.JSONObject;
  * Email: rizwan.choudrey@gmail.com
  */
 public class JsonPutter {
-//Static methods
+    //Static methods
     public static void put(JSONObject json, String name, boolean value) {
         try {
             json.put(name, value);

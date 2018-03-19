@@ -17,9 +17,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.chdryra.android.librariestest.R;
 import com.chdryra.android.corelibrary.ActivityResultCode;
 import com.chdryra.android.corelibrary.ActivitySingleFragment;
+import com.chdryra.android.librariestest.R;
 
 public class TestingActivity extends ActivitySingleFragment {
     private static final int INIT_REQUEST_CODE = 161019;
@@ -29,7 +29,7 @@ public class TestingActivity extends ActivitySingleFragment {
     private boolean mCallBack = false;
     private Intent mData;
 
-//public methods
+    //public methods
     public ActivityResultCode getResultCode() {
         return ActivityResultCode.get(mResultCode);
     }
@@ -71,7 +71,7 @@ public class TestingActivity extends ActivitySingleFragment {
         mData = data;
     }
 
-//Classes
+    //Classes
     public static class TestingActivityFragment extends Fragment {
         @Nullable
         @Override

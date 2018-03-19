@@ -32,7 +32,7 @@ public class GpNextPageTokenTest extends TestCase {
         assertEquals("AAA", parsed.getString());
     }
 
-//private methods
+    //private methods
     private String getTestString() {
         return "{\n" +
                 "  \"next_page_token\" : \"AAA\"\n" +

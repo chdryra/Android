@@ -36,7 +36,7 @@ public class GpStringTest extends TestCase {
         assertEquals("Sydney", parsed.getString());
     }
 
-//private methods
+    //private methods
     private String getTestString() {
         return "{\n" +
                 "  \"name1\" : \"Google\", \n" +

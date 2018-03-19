@@ -13,8 +13,8 @@ import android.test.ActivityInstrumentationTestCase2;
 import android.test.UiThreadTest;
 import android.test.suitebuilder.annotation.SmallTest;
 
-import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.corelibrary.StringFilterAdapter;
+import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.testutils.CallBackSignaler;
 
 import java.util.ArrayList;
@@ -31,7 +31,7 @@ public class ZZZStringFilterAdapterTest extends ActivityInstrumentationTestCase2
     private CallBackSignaler mSignaler;
     private StringFilterAdapter mAdapter;
 
-//Constructors
+    //Constructors
     public ZZZStringFilterAdapterTest() {
         super(TestingActivity.class);
     }

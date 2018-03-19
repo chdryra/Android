@@ -12,8 +12,8 @@ import android.app.FragmentManager;
 import android.test.SingleLaunchActivityTestCase;
 import android.test.UiThreadTest;
 
-import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.corelibrary.ActivitySingleFragment;
+import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 
 
 /**
@@ -23,7 +23,7 @@ import com.chdryra.android.corelibrary.ActivitySingleFragment;
  */
 public class ActivitySingleFragmentTest extends SingleLaunchActivityTestCase<TestingActivity> {
 
-//Constructors
+    //Constructors
     public ActivitySingleFragmentTest() {
         //Note package is that specified in manifest for "app", not java package of class.
         super("com.chdryra.android.librariestest", TestingActivity.class);

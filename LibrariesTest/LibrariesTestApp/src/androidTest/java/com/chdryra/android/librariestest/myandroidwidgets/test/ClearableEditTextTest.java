@@ -22,7 +22,7 @@ public class ClearableEditTextTest extends
     private Activity mActivity;
     private ClearableEditText mEditText;
 
-//Constructors
+    //Constructors
     public ClearableEditTextTest() {
         super(ClearableEditTextActivity.class);
     }

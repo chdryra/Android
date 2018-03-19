@@ -14,13 +14,13 @@ import android.test.UiThreadTest;
 import android.test.suitebuilder.annotation.SmallTest;
 import android.view.View;
 
-import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
-import com.chdryra.android.librariestest.mygenerallibrary.test.TestUtils.DialogTester;
 import com.chdryra.android.corelibrary.DialogAlertFragment;
 import com.chdryra.android.corelibrary.DialogCancelDeleteDoneFragment;
 import com.chdryra.android.corelibrary.DialogDeleteConfirm;
 import com.chdryra.android.corelibrary.DialogThreeButtonFragment;
 import com.chdryra.android.corelibrary.DialogTwoButtonFragment;
+import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
+import com.chdryra.android.librariestest.mygenerallibrary.test.TestUtils.DialogTester;
 
 /**
  * Created by: Rizwan Choudrey
@@ -41,7 +41,7 @@ public class DialogCancelDeleteDoneFragmentTest extends
 
     private boolean mData = true;
 
-//Constructors
+    //Constructors
     public DialogCancelDeleteDoneFragmentTest() {
         super(TestingActivity.class);
     }
@@ -107,7 +107,7 @@ public class DialogCancelDeleteDoneFragmentTest extends
         mTester = new DialogTester(dialog, mActivity);
     }
 
-//private methods
+    //private methods
     private DialogCancelDeleteDoneFragment getDialogHasData() {
         mData = true;
         return new DialogCancelDeleteDoneFragment() {

@@ -12,8 +12,8 @@ import android.graphics.Bitmap;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.suitebuilder.annotation.SmallTest;
 
-import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.corelibrary.BitmapLoader;
+import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.testutils.BitmapFileMocker;
 import com.chdryra.android.testutils.CallBackSignaler;
 
@@ -29,7 +29,7 @@ public class BitmapLoaderTest extends ActivityInstrumentationTestCase2<TestingAc
     private Bitmap mBitmap;
     private boolean mLoaded = false;
 
-//Constructors
+    //Constructors
     public BitmapLoaderTest() {
         super(TestingActivity.class);
     }

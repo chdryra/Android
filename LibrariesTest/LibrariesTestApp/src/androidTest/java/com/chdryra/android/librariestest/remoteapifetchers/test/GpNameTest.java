@@ -32,7 +32,7 @@ public class GpNameTest extends TestCase {
         assertEquals("Google", parsed.getString());
     }
 
-//private methods
+    //private methods
     private String getTestString() {
         return "{\n" +
                 "  \"name\" : \"Google\" \n" +

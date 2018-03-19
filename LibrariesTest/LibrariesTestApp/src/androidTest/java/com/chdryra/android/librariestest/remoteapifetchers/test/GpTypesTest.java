@@ -36,7 +36,7 @@ public class GpTypesTest extends TestCase {
         assertEquals("value3", parsed.getItem(2));
     }
 
-//private methods
+    //private methods
     private String getTestString() {
         return "{\n" +
                 "\"types\" : [\"value1\", \"value2\", \"value3\"] \n" +

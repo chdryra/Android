@@ -42,11 +42,11 @@ public class DialogTester {
     public enum ButtonLMR {LEFT, MIDDLE, RIGHT}
 
     public interface ButtonClick<T extends DialogTwoButtonFragment> {
-//abstract
+        //abstract
         public void doClick(T dialog);
     }
 
-//Constructors
+    //Constructors
     public DialogTester(DialogTwoButtonFragment dialog, Activity activity) {
         mDialog = dialog;
         mActivity = activity;
@@ -69,7 +69,7 @@ public class DialogTester {
         mButtonManager = new Button3Manager(dialog);
     }
 
-//Static methods
+    //Static methods
     public static void testButtonAction(DialogTwoButtonFragment dialog, Activity activity,
                                         DialogTwoButtonFragment.ActionType expectedAction,
                                         ButtonLMR button) {
@@ -120,7 +120,7 @@ public class DialogTester {
         Assert.assertTrue(dialog.getDialog().isShowing());
     }
 
-//public methods
+    //public methods
     public DialogResultListener getListener() {
         return mListener;
     }
@@ -241,7 +241,7 @@ public class DialogTester {
         mListener.reset();
     }
 
-//Classes
+    //Classes
     public static class DialogResultListener extends Fragment {
         private static final String FILTER_KEY = "com.chdryra.android.librariestest" +
                 ".mygenerallibrary.test.dialog_result_listener";
@@ -267,7 +267,7 @@ public class DialogTester {
             return listener;
         }
 
-//public methods
+        //public methods
         public int getRequestCode() {
             return mRequestCode;
         }
@@ -301,7 +301,7 @@ public class DialogTester {
             }
         }
 
-//private methods
+        //private methods
         private DialogTwoButtonFragment.ActionType getResultFilter() {
             if (getArguments() != null && mResultFilter == null) {
                 mResultFilter = (DialogTwoButtonFragment.ActionType) getArguments().getSerializable
@@ -320,7 +320,7 @@ public class DialogTester {
             mDialog = dialog;
         }
 
-//package private methods
+        //package private methods
         ButtonLMR[] getButtons() {
             return BUTTONS2;
         }
@@ -353,7 +353,7 @@ public class DialogTester {
             mDialog = dialog;
         }
 
-//package private methods
+        //package private methods
         ButtonLMR[] getButtons() {
             return BUTTONS3;
         }

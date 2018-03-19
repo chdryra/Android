@@ -36,7 +36,7 @@ public class GpStringListTest extends TestCase {
         assertEquals("value3", parsed.getItem(2));
     }
 
-//private methods
+    //private methods
     private String getTestString() {
         return "{\n" +
                 "\"string_array\" : [\"value1\", \"value2\", \"value3\"] \n" +

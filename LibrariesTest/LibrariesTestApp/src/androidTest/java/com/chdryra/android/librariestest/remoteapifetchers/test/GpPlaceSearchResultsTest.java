@@ -47,7 +47,7 @@ public class GpPlaceSearchResultsTest extends TestCase {
         checkResult2(parsed.getItem(1));
     }
 
-//private methods
+    //private methods
     private String getTestString() {
         return "{\n" +
                 "\"results\" : [\n" +

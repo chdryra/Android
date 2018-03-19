@@ -35,7 +35,7 @@ public class GpPhoneNumberTest extends TestCase {
         assertEquals("+61 2 9374 4000", parsed.getInternational());
     }
 
-//private methods
+    //private methods
     private String getTestString() {
         return "{\n" +
                 "\"formatted_phone_number\" : \"(02) 9374 4000\", \n" +

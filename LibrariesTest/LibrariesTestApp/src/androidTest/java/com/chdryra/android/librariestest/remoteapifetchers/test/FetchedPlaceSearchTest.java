@@ -47,7 +47,7 @@ public class FetchedPlaceSearchTest extends TestCase {
         assertEquals("NPT", token.getString());
     }
 
-//private methods
+    //private methods
     private String getTestString() {
         return "{\n" +
                 "\"html_attributions\" : [\"AAA\"],\n" +

@@ -66,7 +66,7 @@ public class GpPhotosTest extends TestCase {
         assertEquals("CCC", photo.getReference());
     }
 
-//private methods
+    //private methods
     private String getTestString() {
         return "{\n" +
                 "\"photos\" : [\n" +

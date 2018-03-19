@@ -15,11 +15,11 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.corelibrary.VHDString;
 import com.chdryra.android.corelibrary.ViewHolder;
 import com.chdryra.android.corelibrary.ViewHolderAdapter;
 import com.chdryra.android.corelibrary.ViewHolderDataList;
+import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 
 /**
  * Created by: Rizwan Choudrey
@@ -35,7 +35,7 @@ public class ZZZViewHolderAdapterTest extends ActivityInstrumentationTestCase2<T
     private ViewHolderDataList<VHDString> mDataList;
     private ViewHolderAdapter mAdapter;
 
-//Constructors
+    //Constructors
     public ZZZViewHolderAdapterTest() {
         super(TestingActivity.class);
     }
@@ -86,7 +86,7 @@ public class ZZZViewHolderAdapterTest extends ActivityInstrumentationTestCase2<T
         mAdapter = new ViewHolderAdapter(getActivity(), mDataList, WIDTH, HEIGHT);
     }
 
-//private methods
+    //private methods
     private DataSetObserver getObserver() {
         return new DataSetObserver() {
             @Override

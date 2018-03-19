@@ -33,7 +33,7 @@ public class GpIconTest extends TestCase {
                 parsed.getString());
     }
 
-//private methods
+    //private methods
     private String getTestString() {
         return "{\n" +
                 "  \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/travel_agent-71" +

@@ -16,10 +16,10 @@ import android.test.UiThreadTest;
 import android.test.suitebuilder.annotation.SmallTest;
 import android.view.View;
 
-import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
-import com.chdryra.android.librariestest.mygenerallibrary.test.TestUtils.DialogTester;
 import com.chdryra.android.corelibrary.DialogThreeButtonFragment;
 import com.chdryra.android.corelibrary.DialogTwoButtonFragment;
+import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
+import com.chdryra.android.librariestest.mygenerallibrary.test.TestUtils.DialogTester;
 
 /**
  * Created by: Rizwan Choudrey
@@ -31,7 +31,7 @@ public class DialogThreeButtonFragmentTest extends
     private Activity mActivity;
     private DialogTester mTester;
 
-//Constructors
+    //Constructors
     public DialogThreeButtonFragmentTest() {
         super(TestingActivity.class);
     }
@@ -80,13 +80,13 @@ public class DialogThreeButtonFragmentTest extends
         for (final DialogTwoButtonFragment.ActionType actionType : DialogTwoButtonFragment
                 .ActionType.values()) {
             DialogTester.testButtonAction(getDialogWithAction(DialogTester.ButtonLMR.LEFT,
-                            actionType), mActivity,
+                    actionType), mActivity,
                     actionType, DialogTester.ButtonLMR.LEFT);
             DialogTester.testButtonAction(getDialogWithAction(DialogTester.ButtonLMR.RIGHT,
-                            actionType), mActivity,
+                    actionType), mActivity,
                     actionType, DialogTester.ButtonLMR.RIGHT);
             DialogTester.testButtonAction(getDialogWithAction(DialogTester.ButtonLMR.MIDDLE,
-                            actionType), mActivity,
+                    actionType), mActivity,
                     actionType, DialogTester.ButtonLMR.MIDDLE);
         }
     }
@@ -117,7 +117,7 @@ public class DialogThreeButtonFragmentTest extends
         mTester = new DialogTester(defaultDialog, mActivity);
     }
 
-//private methods
+    //private methods
     private DialogThreeButtonFragment getDialogWithDataOnRightClick() {
 
         return new DialogThreeButtonFragment() {

@@ -22,7 +22,7 @@ import com.chdryra.android.librariestest.R;
 public class FragmentDeleteDoneActivity extends Activity {
     private Menu mMenu;
 
-//public methods
+    //public methods
     public Menu getMenu() {
         return mMenu;
     }

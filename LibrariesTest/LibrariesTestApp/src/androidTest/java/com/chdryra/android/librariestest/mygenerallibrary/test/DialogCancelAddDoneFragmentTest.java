@@ -15,10 +15,10 @@ import android.test.UiThreadTest;
 import android.test.suitebuilder.annotation.SmallTest;
 import android.view.View;
 
-import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
-import com.chdryra.android.librariestest.mygenerallibrary.test.TestUtils.DialogTester;
 import com.chdryra.android.corelibrary.DialogCancelAddDoneFragment;
 import com.chdryra.android.corelibrary.DialogTwoButtonFragment;
+import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
+import com.chdryra.android.librariestest.mygenerallibrary.test.TestUtils.DialogTester;
 
 /**
  * Created by: Rizwan Choudrey
@@ -38,7 +38,7 @@ public class DialogCancelAddDoneFragmentTest extends
     private DialogTester mTester;
     private Activity mActivity;
 
-//Constructors
+    //Constructors
     public DialogCancelAddDoneFragmentTest() {
         super(TestingActivity.class);
     }
@@ -105,7 +105,7 @@ public class DialogCancelAddDoneFragmentTest extends
         mTester = new DialogTester(mDefaultDialog, mActivity);
     }
 
-//private methods
+    //private methods
     private DialogCancelAddDoneFragment getDialogWithDataOnAddClick() {
 
         return new DialogCancelAddDoneFragment() {

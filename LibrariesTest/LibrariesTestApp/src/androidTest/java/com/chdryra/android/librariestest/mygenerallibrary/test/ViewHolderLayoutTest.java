@@ -17,9 +17,9 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.chdryra.android.corelibrary.ViewHolderLayout;
 import com.chdryra.android.librariestest.R;
 import com.chdryra.android.librariestest.mygenerallibrary.TestingActivityViewHolder;
-import com.chdryra.android.corelibrary.ViewHolderLayout;
 
 /**
  * Created by: Rizwan Choudrey
@@ -35,7 +35,7 @@ public class ViewHolderLayoutTest extends
     public static final int TEXT_VIEW_ID = R.id.vh_text_view;
     public static final int CHILD_GRID_CELL_ID = R.id.view_holder_child;
 
-//Constructors
+    //Constructors
     public ViewHolderLayoutTest() {
         super(TestingActivityViewHolder.class);
     }

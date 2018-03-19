@@ -12,8 +12,8 @@ import android.test.ActivityInstrumentationTestCase2;
 import android.test.UiThreadTest;
 import android.test.suitebuilder.annotation.SmallTest;
 
-import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.corelibrary.PlaceSuggester;
+import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.testutils.CallBackSignaler;
 import com.google.android.gms.maps.model.LatLng;
 
@@ -31,7 +31,7 @@ public class ZZZPlaceSuggesterTest extends
     private ArrayList<String> mAddresses;
     private CallBackSignaler mSignaler;
 
-//Constructors
+    //Constructors
     public ZZZPlaceSuggesterTest() {
         super(TestingActivity.class);
     }

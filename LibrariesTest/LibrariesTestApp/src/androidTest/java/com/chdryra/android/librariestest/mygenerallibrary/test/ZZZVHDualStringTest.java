@@ -13,9 +13,9 @@ import android.test.suitebuilder.annotation.SmallTest;
 import android.view.View;
 import android.widget.TextView;
 
-import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.corelibrary.VHDDualString;
 import com.chdryra.android.corelibrary.VHDualString;
+import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 
 /**
  * Created by: Rizwan Choudrey
@@ -32,7 +32,7 @@ public class ZZZVHDualStringTest extends ActivityInstrumentationTestCase2<Testin
 
     private VHDualString mDual;
 
-//Constructors
+    //Constructors
     public ZZZVHDualStringTest() {
         super(TestingActivity.class);
     }

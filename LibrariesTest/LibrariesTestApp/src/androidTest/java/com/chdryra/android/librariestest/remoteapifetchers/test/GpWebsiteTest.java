@@ -32,7 +32,7 @@ public class GpWebsiteTest extends TestCase {
         assertEquals("http://www.google.com.au/", parsed.getString());
     }
 
-//private methods
+    //private methods
     private String getTestString() {
         return "{\n" +
                 "  \"website\" : \"http://www.google.com.au/\"\n" +

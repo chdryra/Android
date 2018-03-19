@@ -37,7 +37,7 @@ public class FetchedPlaceDetailsTest extends TestCase {
         assertEquals("AAA", attrs.getItem(0));
     }
 
-//private methods
+    //private methods
     private String getTestString() {
         return "{\n" +
                 "\"html_attributions\" : [\"AAA\"],\n" +

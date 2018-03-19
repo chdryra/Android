@@ -13,11 +13,11 @@ import android.test.suitebuilder.annotation.SmallTest;
 import android.view.View;
 import android.widget.TextView;
 
-import com.chdryra.android.librariestest.R;
-import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.corelibrary.VHDString;
 import com.chdryra.android.corelibrary.VHString;
 import com.chdryra.android.corelibrary.ViewHolderData;
+import com.chdryra.android.librariestest.R;
+import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 
 /**
  * Created by: Rizwan Choudrey
@@ -33,7 +33,7 @@ public class ZZZVHStringTest extends ActivityInstrumentationTestCase2<TestingAct
 
     private VHString mVHString;
 
-//Constructors
+    //Constructors
     public ZZZVHStringTest() {
         super(TestingActivity.class);
     }
@@ -79,7 +79,7 @@ public class ZZZVHStringTest extends ActivityInstrumentationTestCase2<TestingAct
     }
 
     private class VHStringChild extends VHString {
-//Constructors
+        //Constructors
         public VHStringChild() {
             super(LAYOUT, TEXTVIEW, new VHString.VHDataStringGetter() {
                 @Override

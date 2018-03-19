@@ -13,9 +13,9 @@ import android.app.Fragment;
 import android.os.Bundle;
 import android.test.ActivityInstrumentationTestCase2;
 
-import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.corelibrary.DialogAlertFragment;
 import com.chdryra.android.corelibrary.DialogDeleteConfirm;
+import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.testutils.RandomString;
 
 /**
@@ -28,7 +28,7 @@ import com.chdryra.android.testutils.RandomString;
 public class DialogDeleteConfirmTest extends
         ActivityInstrumentationTestCase2<TestingActivity> {
 
-//Constructors
+    //Constructors
     public DialogDeleteConfirmTest() {
         super(TestingActivity.class);
     }
@@ -50,7 +50,7 @@ public class DialogDeleteConfirmTest extends
         assertNotNull(confirmDialog);
     }
 
-//Classes
+    //Classes
     public static class FragmentListener extends Fragment implements DialogAlertFragment
             .DialogAlertListener {
         @Override

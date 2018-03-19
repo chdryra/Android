@@ -130,10 +130,10 @@ public class SortableListTest extends TestCase {
         mList = new SortableList<String>();
     }
 
-//private methods
+    //private methods
     private SortableList<String> getReverseSortableList() {
         return new SortableList<String>() {
-//protected methods
+            //protected methods
             @Override
             protected Comparator<String> getDefaultComparator() {
                 return getReverseComparator();
@@ -143,7 +143,7 @@ public class SortableListTest extends TestCase {
 
     private Comparator<String> getReverseComparator() {
         return new Comparator<String>() {
-//Overridden
+            //Overridden
             @Override
             public int compare(String lhs, String rhs) {
                 return rhs.compareTo(lhs);

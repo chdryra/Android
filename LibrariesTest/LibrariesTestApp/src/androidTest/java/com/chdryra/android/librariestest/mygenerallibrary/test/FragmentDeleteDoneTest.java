@@ -16,13 +16,13 @@ import android.test.ActivityInstrumentationTestCase2;
 import android.test.suitebuilder.annotation.SmallTest;
 import android.view.Menu;
 
-import com.chdryra.android.librariestest.R;
-import com.chdryra.android.librariestest.mygenerallibrary.FragmentDeleteDoneActivity;
-import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.corelibrary.ActivityResultCode;
 import com.chdryra.android.corelibrary.DialogAlertFragment;
 import com.chdryra.android.corelibrary.DialogDeleteConfirm;
 import com.chdryra.android.corelibrary.FragmentDeleteDone;
+import com.chdryra.android.librariestest.R;
+import com.chdryra.android.librariestest.mygenerallibrary.FragmentDeleteDoneActivity;
+import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 
 /**
  * Created by: Rizwan Choudrey
@@ -48,7 +48,7 @@ public class FragmentDeleteDoneTest extends ActivityInstrumentationTestCase2<Tes
     private FragmentDeleteDone mDefaultFragment;
     private boolean mData = true;
 
-//Constructors
+    //Constructors
     public FragmentDeleteDoneTest() {
         super(TestingActivity.class);
     }
@@ -119,7 +119,7 @@ public class FragmentDeleteDoneTest extends ActivityInstrumentationTestCase2<Tes
         mDefaultFragment = new FragmentDeleteDone();
     }
 
-//private methods
+    //private methods
     private FragmentDeleteDone getFragmentWithData() {
         mData = true;
         return new FragmentDeleteDone() {

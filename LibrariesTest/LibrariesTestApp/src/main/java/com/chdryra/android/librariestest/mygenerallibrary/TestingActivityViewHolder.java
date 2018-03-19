@@ -28,7 +28,7 @@ public class TestingActivityViewHolder extends TestingActivity {
         return new TestingActivityGCFragment();
     }
 
-//Classes
+    //Classes
     public static class TestingActivityGCFragment extends Fragment {
         @Nullable
         @Override

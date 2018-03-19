@@ -20,7 +20,7 @@ import org.json.JSONObject;
  */
 public class JsonMaker {
 
-//Static methods
+    //Static methods
     public static JSONObject newJsonObject(String jsonString) {
         JSONObject result = null;
         try {

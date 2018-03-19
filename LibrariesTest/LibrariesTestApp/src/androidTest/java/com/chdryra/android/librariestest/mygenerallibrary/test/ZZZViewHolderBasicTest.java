@@ -12,10 +12,10 @@ import android.test.ActivityInstrumentationTestCase2;
 import android.test.suitebuilder.annotation.SmallTest;
 import android.view.View;
 
-import com.chdryra.android.librariestest.R;
-import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.corelibrary.ViewHolderBasic;
 import com.chdryra.android.corelibrary.ViewHolderData;
+import com.chdryra.android.librariestest.R;
+import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 
 /**
  * Created by: Rizwan Choudrey
@@ -28,7 +28,7 @@ public class ZZZViewHolderBasicTest extends ActivityInstrumentationTestCase2<Tes
     private ViewHolderBasic mViewHolder;
     private View mUpdateable;
 
-//Constructors
+    //Constructors
     public ZZZViewHolderBasicTest() {
         super(TestingActivity.class);
     }

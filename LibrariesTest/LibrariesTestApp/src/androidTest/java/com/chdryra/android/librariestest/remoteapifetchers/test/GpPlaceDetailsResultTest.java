@@ -70,7 +70,7 @@ public class GpPlaceDetailsResultTest extends TestCase {
         checkGpUtcOffSet(parsed);
     }
 
-//private methods
+    //private methods
     private String getTestString() {
         return "{\n" +
                 "\"result\" : {\n" +

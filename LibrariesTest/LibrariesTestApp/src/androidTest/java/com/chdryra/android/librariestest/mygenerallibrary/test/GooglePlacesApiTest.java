@@ -12,8 +12,8 @@ import android.location.Location;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.suitebuilder.annotation.SmallTest;
 
-import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.corelibrary.GooglePlacesApi;
+import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.google.android.gms.maps.model.LatLng;
 
 import org.json.JSONException;
@@ -32,7 +32,7 @@ public class GooglePlacesApiTest extends ActivityInstrumentationTestCase2<Testin
     private final static String QUERY = "Charing Cross";
     private final static String ACQUERY = "Ch";
 
-//Constructors
+    //Constructors
     public GooglePlacesApiTest() {
         super(TestingActivity.class);
     }

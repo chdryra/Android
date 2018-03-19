@@ -13,10 +13,10 @@ import android.test.ActivityInstrumentationTestCase2;
 import android.test.UiThreadTest;
 import android.test.suitebuilder.annotation.SmallTest;
 
-import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
-import com.chdryra.android.librariestest.mygenerallibrary.test.TestUtils.DialogTester;
 import com.chdryra.android.corelibrary.DialogAlertFragment;
 import com.chdryra.android.corelibrary.DialogTwoButtonFragment;
+import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
+import com.chdryra.android.librariestest.mygenerallibrary.test.TestUtils.DialogTester;
 import com.chdryra.android.testutils.RandomString;
 
 /**
@@ -35,7 +35,7 @@ public class DialogAlertFragmentTest extends
             ".DialogAlertFragmentTest.args_key";
     private DialogTester mTester;
 
-//Constructors
+    //Constructors
     public DialogAlertFragmentTest() {
         super(TestingActivity.class);
     }
@@ -141,7 +141,7 @@ public class DialogAlertFragmentTest extends
         assertEquals(argsValue, listener.mArgs.getString(ARGS_KEY));
     }
 
-//Classes
+    //Classes
     public static class FragmentListener extends DialogTester.DialogResultListener
             implements DialogAlertFragment.DialogAlertListener {
         boolean mNegative = false;

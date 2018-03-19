@@ -39,7 +39,7 @@ public class GpReviewsTest extends TestCase {
         checkReview5(parsed.getItem(4));
     }
 
-//private methods
+    //private methods
     private String getTestString() {
         return "{\n" +
                 "\"rating\" : 3.5,\n" +

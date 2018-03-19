@@ -11,8 +11,8 @@ package com.chdryra.android.librariestest.mygenerallibrary.test;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.suitebuilder.annotation.SmallTest;
 
-import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.corelibrary.FileIncrementor;
+import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 
 import java.io.File;
 import java.io.IOException;
@@ -31,7 +31,7 @@ public class FileIncrementorTest extends ActivityInstrumentationTestCase2<Testin
 
     private File mExternalDir;
 
-//Constructors
+    //Constructors
     public FileIncrementorTest() {
         super(TestingActivity.class);
     }
@@ -140,7 +140,7 @@ public class FileIncrementorTest extends ActivityInstrumentationTestCase2<Testin
         super.tearDown();
     }
 
-//private methods
+    //private methods
     private File getDir() {
         return new File(mExternalDir, DIR);
     }

@@ -42,7 +42,7 @@ public class GpAutoCompletePredictionsTest extends TestCase {
         checkPrediction3(parsed.getItem(2));
     }
 
-//private methods
+    //private methods
     private String getTestString() {
         return "{\n" +
                 "  \"predictions\" : [\n" +

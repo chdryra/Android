@@ -30,7 +30,7 @@ public class ClearableAutoCompleteTextViewTest extends
     private Activity mActivity;
     private ClearableAutoCompleteTextView mEditText;
 
-//Constructors
+    //Constructors
     public ClearableAutoCompleteTextViewTest() {
         super(ClearableAutoCompleteTextViewActivity.class);
     }

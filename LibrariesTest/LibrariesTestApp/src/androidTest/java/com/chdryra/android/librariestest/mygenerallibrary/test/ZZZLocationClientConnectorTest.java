@@ -13,8 +13,8 @@ import android.test.ActivityInstrumentationTestCase2;
 import android.test.UiThreadTest;
 import android.test.suitebuilder.annotation.SmallTest;
 
-import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.corelibrary.LocationClientConnector;
+import com.chdryra.android.librariestest.mygenerallibrary.TestingActivity;
 import com.chdryra.android.testutils.CallBackSignaler;
 
 /**
@@ -28,7 +28,7 @@ public class ZZZLocationClientConnectorTest extends
     private CallBackSignaler mSignaler;
     private boolean mConnected = false;
 
-//Constructors
+    //Constructors
     public ZZZLocationClientConnectorTest() {
         super(TestingActivity.class);
     }

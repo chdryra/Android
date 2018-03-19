@@ -37,7 +37,7 @@ public class GpGeometryTest extends TestCase {
         assertEquals(151.1958750, latLng.longitude);
     }
 
-//private methods
+    //private methods
     private String getTestString() {
         return "{\n" +
                 "\"geometry\" : {\n" +
